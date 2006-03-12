@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Versión">
+<!ENTITY iz.about.createdby.label "Creada por">
+<!ENTITY iz.about.help.label "Ayuda">
+<!ENTITY iz.about.help.description "Ayuda para configurar y usar Image Zoom">
+<!ENTITY iz.about.forums.label "Foros">
+<!ENTITY iz.about.forums.description "Ayuda, sugerencias, bugs">
+<!ENTITY iz.about.walkthrough.label "Tutorial">
+<!ENTITY iz.about.walkthrough.description "Un resumen de las funciones de Image Zoom">
+<!ENTITY iz.about.close.label "Cerrar">
+<!ENTITY iz.install.installed "Image Zoom instalado">
+<!ENTITY iz.install.options.label "Opciones">
+<!ENTITY iz.install.close.label "Cerrar">
+<!ENTITY iz.install.continue.label "Continuar >>">
+<!ENTITY iz.install.desc.line1 "Visite la página web de Image Zoom para obtener información actualizada">
+<!ENTITY iz.install.desc.line2 "y un breve recorrido por todas las funciones de Image Zoom.">
+<!ENTITY iz.install.desc.line3 "Oprima 'Continuar' para ir a la página web de Image Zoom">
+<!ENTITY iz.customzoom.label "Introduzca factor de zoom">
+<!ENTITY iz.customzoom.title "Zoom personalizado">
+<!ENTITY iz.customdim.width.label "Ancho:">
+<!ENTITY iz.customdim.height.label "Altura:">
+<!ENTITY iz.customdim.title "Dimensiones personalizadas">
+<!ENTITY iz.customdim.aspect.label "Mantenga proporciones de la imagen">
+<!ENTITY iz.options.label "Opciones">
+<!ENTITY iz.options.help.label "Página de ayuda">
+<!ENTITY iz.options.defaultzoom.label "Factor de zoom +/-">
+<!ENTITY iz.options.defaultglobalzoom.label "Zoom global predeterminado">
+<!ENTITY iz.options.showviewmenu.label "Mostrar Image Zoom en menú Ver">
+<!ENTITY iz.options.defaultscroll.label "Incremento de zoom cada paso de rueda">
+<!ENTITY iz.options.singlezoom.label "Opciones de zoom individual">
+<!ENTITY iz.options.globalzoom.label "Opciones de zoom global">
+<!ENTITY iz.options.context.label "Menú contextual">
+<!ENTITY iz.options.contextdisplay.label "Opciones de visualización del menú contextual">
+<!ENTITY iz.options.tabs.contextmenu.label "Items del menú contextual">
+<!ENTITY iz.options.tabs.main.label "Global">
+<!ENTITY iz.options.reversescroll.label "Invertir sentido de rueda">
+<!ENTITY iz.options.autocenter.label "Autocentrar las imágenes al usar Ajustar imagen">
+<!ENTITY iz.options.mouseaccess.label1 "Acceso a funciones oprimiendo botón ">
+<!ENTITY iz.options.mouseaccess.label2 " del mouse.">
+<!ENTITY iz.options.imagefit.label "Botón ajustar imagen">
+<!ENTITY iz.options.imagereset.label "Botón restaurar imagen">
+<!ENTITY iz.options.none.label "desactivado">
+<!ENTITY iz.options.lmb.label "izquierdo">
+<!ENTITY iz.options.mmb.label "intermedio">
+<!ENTITY iz.options.rmb.label "derecho">
+<!ENTITY iz.options.usemouse.label "Utilizar funciones del mouse">
+<!ENTITY iz.options.contextdescription.label "Items a mostrar en el menú contextual de imágenes">
+<!ENTITY iz.options.menudummy.view.label "Ver imagen">
+<!ENTITY iz.options.menudummy.view.accesskey "v">
+<!ENTITY iz.options.menudummy.contents.label "Copiar imagen">
+<!ENTITY iz.options.menudummy.contents.accesskey "p">
+<!ENTITY iz.options.menudummy.image.label "Copiar dirección de imagen">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Guardar imagen como">
+<!ENTITY iz.options.menudummy.save.accesskey "g">
+<!ENTITY iz.menu.global.decrease.label "menor">
+<!ENTITY iz.menu.global.decrease.accesskey "n">
+<!ENTITY iz.menu.global.increase.label "mayor">
+<!ENTITY iz.menu.global.increase.accesskey "M">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "Zoom con texto">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "Zoom de imagen">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+  para zoom +">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "=  para anular zoom">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "-  para zoom -">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
+<!ENTITY iz.menu.context.customdim.label "Dimensiones personalizadas">
+<!ENTITY iz.menu.context.imagefit.label "Ajustar imagen">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "Z">
