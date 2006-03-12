@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+ 
+ <RDF:Description about="urn:mozilla:extension:{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}">
+ <em:version>0.1.1</em:version>
+ <em:updateLink>http://www.yellowgorilla.net/imagezoom/imagezoom.php</em:updateLink>
+ </RDF:Description>
+
+ </RDF:RDF>

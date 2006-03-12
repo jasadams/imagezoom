@@ -1,0 +1,28 @@
+<!ENTITY zoomimage:label "Zoom Image">
+<!ENTITY zoomimage:accesskey "Z">
+<!ENTITY zoomimagein:label "Zoom In">
+<!ENTITY zoomimagereset:label "Actual Size">
+<!ENTITY zoomimageout:label "Zoom Out">
+<!ENTITY zoomimagezcustom:label "Custom Zoom">
+<!ENTITY zoomimagedcustom:label "Custom Dimensions">
+<!ENTITY zoomimagefit:label "Image Fit">
+<!ENTITY pref.iz.window.label "Image Zoom Preferences">
+<!ENTITY pref.iz.defaultzoom.label "Zoom In/Out Factor">
+<!ENTITY pref.iz.header.label "Image Zoom">
+<!ENTITY pref.iz.advanced.label "Advanced Options">
+<!ENTITY pref.iz.showzoominout.label "Enable Zoom In/Out Options">
+<!ENTITY pref.iz.showzoominout.sub.label "Show Items in Zoom Sub Menu">
+<!ENTITY pref.iz.ContextDisplay.label "Main Context Menu : Display Options">
+<!ENTITY pref.iz.SubMenuDisplay.label "Zoom Sub Menu : Display Options">
+<!ENTITY pref.iz.ZoomIO.label "Zoom In/Out">
+<!ENTITY pref.iz.Reset.label "Reset Image">
+<!ENTITY pref.iz.ZoomPcts.label "Zoom Percentages">
+<!ENTITY pref.iz.CustomZoom.label "Custom Zoom">
+<!ENTITY pref.iz.CustomDim.label "Custom Dimensions">
+<!ENTITY pref.iz.FitWindow.label "Image Fit">
+<!ENTITY pref.iz.customzoom.label "Enter Zoom Factor">
+<!ENTITY pref.iz.customzoom.title "Custom Zoom">
+<!ENTITY pref.iz.customdimwidth.label "Width:">
+<!ENTITY pref.iz.customdimheight.label "Height:">
+<!ENTITY pref.iz.customdim.title "Custom Dimension">
+<!ENTITY pref.iz.customdimaspect.label "Maintain Aspect Ratio">
