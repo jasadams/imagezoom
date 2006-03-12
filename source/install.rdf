@@ -28,6 +28,7 @@
         <em:locale>locale/es-ES/</em:locale>
         <em:locale>locale/es-AR/</em:locale>         
         <em:locale>locale/it-IT/</em:locale>                 
+        <em:locale>locale/tr-TR/</em:locale>                 
       </Description>
     </em:file>
 

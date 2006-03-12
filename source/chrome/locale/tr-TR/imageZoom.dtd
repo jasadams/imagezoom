@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Versiyon">
+<!ENTITY iz.about.createdby.label "Hazırlayan">
+<!ENTITY iz.about.help.label "Yardım">
+<!ENTITY iz.about.help.description "Image Zoom'un ayarları ve kullanımı hakkında yardım">
+<!ENTITY iz.about.forums.label "Forumlar">
+<!ENTITY iz.about.forums.description "Destek, Öneriler, Hatalar">
+<!ENTITY iz.about.walkthrough.label "İlk adımlar">
+<!ENTITY iz.about.walkthrough.description "Image Zoom'un temel özellikleri hakkında bilgi">
+<!ENTITY iz.about.close.label "Kapat">
+<!ENTITY iz.install.installed "Image Zoom Kuruldu">
+<!ENTITY iz.install.options.label "Seçenekler">
+<!ENTITY iz.install.close.label "Kapat">
+<!ENTITY iz.install.continue.label "Devam >>">
+<!ENTITY iz.install.desc.line1 "Image Zoom web sitesini ziyaret edin, son bilgileri alın ve">
+<!ENTITY iz.install.desc.line2 "Image Zoom'un kullanımı ve özellikleri hakkında bilgi edinin.">
+<!ENTITY iz.install.desc.line3 "Image Zoom web sitesine gitmek için şimdi Devam'a tıklayın">
+<!ENTITY iz.customzoom.label "Boyutlandırma Oranını Girin">
+<!ENTITY iz.customzoom.title "Özel Boyutlandırma">
+<!ENTITY iz.customdim.width.label "Genişlik:">
+<!ENTITY iz.customdim.height.label "Yükseklik:">
+<!ENTITY iz.customdim.title "Özel Ölçüler">
+<!ENTITY iz.customdim.aspect.label "Ölçüleme Oranını Koru">
+<!ENTITY iz.options.label "Tercihleri">
+<!ENTITY iz.options.help.label "Yardım Sayfası">
+<!ENTITY iz.options.defaultzoom.label "Büyütme/Küçültme Oranı">
+<!ENTITY iz.options.defaultglobalzoom.label "Genel Boyutlandırma Oranı">
+<!ENTITY iz.options.showviewmenu.label "Görünüm Menüsü'nde Resim Boyutu'nu göster">
+<!ENTITY iz.options.defaultscroll.label "Tekerlek Boyutlandırma Artışı">
+<!ENTITY iz.options.singlezoom.label "Tek Tek Boyutlandırma Seçenekleri">
+<!ENTITY iz.options.globalzoom.label "Genel Boyutlandırma Seçenekleri">
+<!ENTITY iz.options.context.label "Açılır Menü">
+<!ENTITY iz.options.contextdisplay.label "Açılır Menü Görünüm Seçenekleri">
+<!ENTITY iz.options.tabs.contextmenu.label "Açılır Menü Öğeleri">
+<!ENTITY iz.options.tabs.main.label "Genel">
+<!ENTITY iz.options.reversescroll.label "Ters Tekerlek">
+<!ENTITY iz.options.autocenter.label "Resmi Uzat kullanıldığında otomatik ortala">
+<!ENTITY iz.options.mouseaccess.label1 "Fonksiyonları">
+<!ENTITY iz.options.mouseaccess.label2 "fare düğmesi basılı tutulduğunda kullan.">
+<!ENTITY iz.options.imagefit.label "Resmi Uzat Düğmesi">
+<!ENTITY iz.options.imagereset.label "Resmi Geriyükle Düğmesi">
+<!ENTITY iz.options.none.label "Kapalı">
+<!ENTITY iz.options.lmb.label "Sol">
+<!ENTITY iz.options.mmb.label "Orta">
+<!ENTITY iz.options.rmb.label "Sağ">
+<!ENTITY iz.options.usemouse.label "Fare Fonksiyonlarını Kullan">
+<!ENTITY iz.options.contextdescription.label "Resim Açılır Menüsü'nde gösterilmesini istediğiniz öğeleri işaretleyin">
+<!ENTITY iz.options.menudummy.view.label "Resmi göster">
+<!ENTITY iz.options.menudummy.view.accesskey "r">
+<!ENTITY iz.options.menudummy.contents.label "Resmi kopyala">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "Resmin konumunu kopyala">
+<!ENTITY iz.options.menudummy.image.accesskey "k">
+<!ENTITY iz.options.menudummy.save.label "Resmi farklı kaydet">
+<!ENTITY iz.options.menudummy.save.accesskey "R">
+<!ENTITY iz.menu.global.decrease.label "Küçült">
+<!ENTITY iz.menu.global.decrease.accesskey "k">
+<!ENTITY iz.menu.global.increase.label "Büyüt">
+<!ENTITY iz.menu.global.increase.accesskey "b">
+<!ENTITY iz.menu.global.custom.accesskey "D">
+<!ENTITY iz.menu.global.textscale.label "Metin boyutuyla">
+<!ENTITY iz.menu.global.textscale.accesskey "M">
+<!ENTITY iz.menu.context.zoomimage.label "Resim Boyutu">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Y">
+<!ENTITY iz.menu.context.increase.label "+ Büyüt">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Orijinal Boy">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Küçült">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Özel Boyutlandırma">
+<!ENTITY iz.menu.context.customdim.label "Özel Ölçüler">
+<!ENTITY iz.menu.context.imagefit.label "Resmi Uzat">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "O">
