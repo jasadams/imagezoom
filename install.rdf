@@ -5,14 +5,13 @@
   
     <em:id>{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}</em:id>
     <em:name>Image Zoom</em:name>
-    <em:version>0.1.1</em:version>
+    <em:version>0.1.2</em:version>
     <em:description>Adds zoom functionality for images</em:description>
     <em:creator>Jason Adams</em:creator>
     <em:homepageURL>http://www.yellowgorilla.net/imagezoom/</em:homepageURL>
     <em:optionsURL>chrome://imagezoom/content/options.xul</em:optionsURL>   
     <em:iconURL>chrome://imagezoom/content/imagezoom.png</em:iconURL>    
     <em:updateURL>http://www.yellowgorilla.net/imagezoom/updaterdf.php</em:updateURL>
-
 
     <em:file>
       <Description about="urn:mozilla:extension:file:imagezoom.jar">
@@ -25,7 +24,7 @@
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>0.7</em:minVersion>
-        <em:maxVersion>1.0</em:maxVersion>
+        <em:maxVersion>0.7.1</em:maxVersion>
       </Description>
     </em:targetApplication>
     
@@ -33,7 +32,7 @@
      <Description>
        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
        <em:minVersion>0.9</em:minVersion>
-       <em:maxVersion>1.0</em:maxVersion>
+       <em:maxVersion>0.9.1</em:maxVersion>
      </Description>
     </em:targetApplication>    
     

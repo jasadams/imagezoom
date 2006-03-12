@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- ***** BEGIN LICENSE BLOCK *****
       
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
       
     This file is part of Image Zoom.
 
@@ -30,43 +30,43 @@
 			<menuitem id="context-zoom-zin"
 				label="&zoomimagein:label;"
 				oncommand="izZoomIn();"
-				insertafter="context-copyimage"
+				insertbefore="context-sep-copyimage"
 				hidden="true"				
 			/>
 			<menuitem id="context-zoom-zreset"
 				label="&zoomimagereset:label;"
-				insertafter="context-copyimage"
+				insertbefore="context-sep-copyimage"
 				oncommand="izSetZoom(1);"
 				hidden="true"				
 			/>			
 			<menuitem id="context-zoom-zout"
 				label="&zoomimageout:label;"
-				insertafter="context-copyimage"
+				insertbefore="context-sep-copyimage"
 				oncommand="izZoomOut();"
 				hidden="true"				
 			/>
 			<menuitem id="context-zoom-zcustom"
 				label="&zoomimagezcustom:label;"
-				insertafter="context-copyimage"
+				insertbefore="context-sep-copyimage"
 				oncommand="izShowCustomZoom();"
 				hidden="true"				
 			/>				
 			<menuitem id="context-zoom-dcustom"
 				label="&zoomimagedcustom:label;"
-				insertafter="context-copyimage"
+				insertbefore="context-sep-copyimage"
 				oncommand="izShowCustomDim();"
 				hidden="true"				
 			/>			
 			<menuitem id="context-zoom-fit"
 				label="&zoomimagefit:label;"
-				insertafter="context-copyimage"
+				insertbefore="context-sep-copyimage"
 				oncommand="izImageFit();"
 				hidden="true"				
 			/>			
 		<menu id="context-zoomsub"
 			label="&zoomimage:label;"
 			accesskey="&zoomimage:accesskey;"
-			insertafter="context-copyimage"
+			insertbefore="context-sep-copyimage"
 			hidden="true"			
 		>
         	  <menupopup id="zoompopup">

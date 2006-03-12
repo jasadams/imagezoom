@@ -1,7 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 <!-- ***** BEGIN LICENSE BLOCK *****
        
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
      
     This file is part of Image Zoom.
 
@@ -27,3 +27,14 @@
     width: 40em;
 }
 
+#imagezoom-customdim-dialog
+{
+    height: 20em;
+    width: 40em;
+}
+
+#imagezoom-customzoom-dialog
+{
+    height: 20em;
+    width: 40em;
+}

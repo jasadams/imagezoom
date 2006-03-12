@@ -1,6 +1,6 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
 
     This file is part of Image Zoom.
 
@@ -33,18 +33,49 @@ function initImageZoom() {
     else if (document.getElementById("messagePaneContext")){
         document.getElementById("messagePaneContext").addEventListener("popupshowing", imageZoomMenu, false);
     }
+
+    initPrefs();
+}
+
+function initPrefs(){
+	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
+
+	if (!imagezoomPrefs.prefHasUserValue("mmZoomIO"))
+		imagezoomPrefs.setBoolPref("mmZoomIO", false);
+	if (!imagezoomPrefs.prefHasUserValue("mmReset"))
+		imagezoomPrefs.setBoolPref("mmReset", false);
+	if (!imagezoomPrefs.prefHasUserValue("mmCustomZoom"))
+		imagezoomPrefs.setBoolPref("mmCustomZoom", false);
+	if (!imagezoomPrefs.prefHasUserValue("mmCustomDim"))
+		imagezoomPrefs.setBoolPref("mmCustomDim", false);
+	if (!imagezoomPrefs.prefHasUserValue("mmFitWindow"))
+		imagezoomPrefs.setBoolPref("mmFitWindow", false);
+	if (!imagezoomPrefs.prefHasUserValue("mmZoomPcts"))
+		imagezoomPrefs.setBoolPref("mmZoomPcts", false);
+
+	if (!imagezoomPrefs.prefHasUserValue("smZoomIO"))
+		imagezoomPrefs.setBoolPref("smZoomIO", true);
+	if (!imagezoomPrefs.prefHasUserValue("smReset"))
+		imagezoomPrefs.setBoolPref("smReset", true);
+	if (!imagezoomPrefs.prefHasUserValue("smCustomZoom"))
+		imagezoomPrefs.setBoolPref("smCustomZoom", true);
+	if (!imagezoomPrefs.prefHasUserValue("smCustomDim"))
+		imagezoomPrefs.setBoolPref("smCustomDim", true);
+	if (!imagezoomPrefs.prefHasUserValue("smFitWindow"))
+		imagezoomPrefs.setBoolPref("smFitWindow", true);
+	if (!imagezoomPrefs.prefHasUserValue("smZoomPcts"))
+		imagezoomPrefs.setBoolPref("smZoomPcts", true);
+
+	if (!imagezoomPrefs.prefHasUserValue("zoomvalue"))
+		imagezoomPrefs.setIntPref("zoomvalue", 200);
+
 }
 
 function imageZoomMenu() {
 	if(gContextMenu) {
-		var preferencesService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("");
-  		try {
-			var hideString = preferencesService.getCharPref("imagezoom.hide");
-			var displayString = preferencesService.getCharPref("imagezoom.display");
-		} catch(e) {
-			var hideString = "";
-			var displayString = gDefaultDisplayString;
-		}
+
+		var displayString = imagezoom_getDisplayString();
+		var hideString = imagezoom_getHideString(displayString);
 
 		var menuItems = pGetArrayCSV(hideString);
 		for (var i=0; i<menuItems.length; i++)
@@ -109,24 +140,25 @@ function pZoomImageAbs(oImage, zFactor)
 {
   	oImage.style.width = parseInt((oImage.originalWidth * zFactor) + 0.5) + "px";
   	oImage.style.height = parseInt((oImage.originalHeight * zFactor) + 0.5) + "px";
-	oImage.zoomFactor = parseInt((oImage.offsetWidth / oImage.originalWidth)*100+0.5);
+	oImage.zoomFactor = parseInt((getWidth(oImage) / oImage.originalWidth)*100+0.5);
 }
 
 function pSetDim(oImage, iWidth, iHeight)
 {
   	oImage.style.width = iWidth + "px";
   	oImage.style.height = iHeight + "px";
-	oImage.zoomFactor = parseInt((oImage.offsetWidth / oImage.originalWidth)*100+0.5);
+	oImage.zoomFactor = parseInt((getWidth(oImage) / oImage.originalWidth)*100+0.5);
 }
 
 function pZoomImageRel(oImage,zoomValue)
 {
-	var oldWidth = oImage.offsetWidth;
-	var oldHeight = oImage.offsetHeight;
+	var oldWidth = getWidth(oImage);
+	var oldHeight = getHeight(oImage);
 	oImage.style.width = parseInt((oldWidth * zoomValue) + 0.5) + "px";
 	oImage.style.height = parseInt((oldHeight * zoomValue) + 0.5) + "px";
-	oImage.zoomFactor = parseInt((oImage.offsetWidth / oImage.originalWidth)*100+0.5);
+	oImage.zoomFactor = parseInt((getWidth(oImage) / oImage.originalWidth)*100+0.5);
 }
+
 
 function pIsNumeric(sText)
 {
@@ -142,4 +174,96 @@ function pIsNumeric(sText)
 	}
 	return IsNumber;
 }
+
+function imagezoom_getDisplayString()
+{
+  	var preferencesService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
+	var displayString = "";
+
+  	if (preferencesService.getBoolPref("mmZoomIO"))
+		displayString += "context-zoom-zin,context-zoom-zout,";
+	if (preferencesService.getBoolPref("mmReset"))
+		displayString += "context-zoom-zreset,";
+	if (preferencesService.getBoolPref("mmCustomZoom"))
+		displayString += "context-zoom-zcustom,";
+	if (preferencesService.getBoolPref("mmCustomDim"))
+		displayString += "context-zoom-dcustom,";
+	if (preferencesService.getBoolPref("mmFitWindow"))
+		displayString += "context-zoom-fit,";
+
+	if (preferencesService.getBoolPref("smZoomIO")){
+		displayString += "zoomsub-zin,zoomsub-zout,";
+		if ((preferencesService.getBoolPref("smCustomZoom")) ||
+			(preferencesService.getBoolPref("smCustomDim")) ||
+			(preferencesService.getBoolPref("smFitWindow")) ||
+			(preferencesService.getBoolPref("smZoomPcts")))
+			displayString += "zoomsub-s1,";
+	}
+	if (preferencesService.getBoolPref("smReset")){
+		displayString += "zoomsub-zreset,";
+		if (((preferencesService.getBoolPref("smCustomZoom")) ||
+			(preferencesService.getBoolPref("smCustomDim")) ||
+			(preferencesService.getBoolPref("smFitWindow")) ||
+			(preferencesService.getBoolPref("smZoomPcts"))) &&
+			!(preferencesService.getBoolPref("smZoomIO")))
+			displayString += "zoomsub-s1,";
+	}
+	if (preferencesService.getBoolPref("smCustomZoom")){
+		displayString += "zoomsub-zcustom,";
+		if (((preferencesService.getBoolPref("smFitWindow")) ||
+			(preferencesService.getBoolPref("smZoomPcts"))) &&
+			!(preferencesService.getBoolPref("smCustomDim")))
+			displayString += "zoomsub-s2,";
+	}
+	if (preferencesService.getBoolPref("smCustomDim")){
+		displayString += "zoomsub-dcustom,";
+		if ((preferencesService.getBoolPref("smFitWindow")) ||
+			(preferencesService.getBoolPref("smZoomPcts")))
+			displayString += "zoomsub-s2,";
+	}
+	if (preferencesService.getBoolPref("smFitWindow")){
+		displayString += "zoomsub-fit,";
+		if (preferencesService.getBoolPref("smZoomPcts"))
+			displayString += "zoomsub-s3,";
+	}
+	if (preferencesService.getBoolPref("smZoomPcts"))
+		displayString += "zoomsub-z400,zoomsub-z200,zoomsub-z150,zoomsub-z125,zoomsub-s4,zoomsub-z100,zoomsub-s5,zoomsub-z75,zoomsub-z50,zoomsub-z25,zoomsub-z10,";
+	if ((preferencesService.getBoolPref("smZoomIO")) ||
+		(preferencesService.getBoolPref("smReset")) ||
+		(preferencesService.getBoolPref("smCustomZoom")) ||
+		(preferencesService.getBoolPref("smCustomDim")) ||
+		(preferencesService.getBoolPref("smFitWindow")) ||
+		(preferencesService.getBoolPref("smZoomPcts")))
+		displayString += "context-zoomsub,";
+
+	displayString = displayString.substring(0, displayString.length-1);
+
+	return displayString;
+
+}
+
+function getHeight(oImage)
+{
+	return oImage.style.height.substring(0, oImage.style.height.length-2);
+}
+
+function getWidth(oImage)
+{
+	return oImage.style.width.substring(0, oImage.style.width.length-2);
+}
+
+function imagezoom_getHideString(displayString)
+{
+	var allitems = pGetArrayCSV(gAllMenuItems);
+	var hideString = "";
+	for (var i=0; i<allitems.length; i++) {
+		if (displayString.indexOf(allitems[i]) < 0)
+			hideString += allitems[i] + ",";
+	}
+
+	hideString = hideString.substring(0, hideString.length-1);
+
+	return hideString;
+}
+
 

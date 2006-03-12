@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- ***** BEGIN LICENSE BLOCK *****
     
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
         
     This file is part of Image Zoom.
 
@@ -21,7 +21,6 @@
 
 ***** END LICENSE BLOCK ***** -->
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
 
 <!DOCTYPE window SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
 
@@ -40,6 +39,7 @@
           <hbox>
           <label value="&pref.iz.customzoom.label;"/>          
           <textbox id="customZoom" size="2" onkeypress="return validateKeyPress(event);"/>
+          <label value="%"/>          
           </hbox>
     </vbox>
 </dialog>
