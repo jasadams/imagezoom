@@ -21,7 +21,6 @@
 
 ***** END LICENSE BLOCK ***** -->
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
 
 <!DOCTYPE window SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
 

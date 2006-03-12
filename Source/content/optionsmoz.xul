@@ -20,23 +20,28 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 ***** END LICENSE BLOCK ***** -->
-
-<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://imagezoom/content/options.css" type="text/css"?>
-<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
-
 <!DOCTYPE window SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
 
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
 
-<dialog buttons="accept, cancel"
-        id="imagezoom-options-dialog"
-        ondialogaccept="imagezoom_saveOptions()"
-        onload="imagezoom_initializeOptions()"
-        title="&pref.iz.window.label;"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<page xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      headertitle="&pref.iz.header.label;"
+      onload="parent.initPanel('chrome://imagezoom/content/optionsmoz.xul');">
+
 
     <script type="application/x-javascript" src="chrome://imagezoom/content/global.js"/>
     <script type="application/x-javascript" src="chrome://imagezoom/content/options.js"/>
+
+<script type="application/x-javascript">
+<![CDATA[
+    var _elementIDs = ["imagezoommmZoomIO", "imagezoommmReset", "imagezoommmCustomZoom", "imagezoommmCustomDim", 
+    			"imagezoommmFitWindow", "imagezoommmZoomPcts", "imagezoomsmZoomIO", "imagezoomsmReset", 
+    			"imagezoomsmCustomZoom", "imagezoomsmCustomDim", "imagezoomsmFitWindow", "imagezoomsmZoomPcts", 
+    			"imagezoomzoomvalue"];
+]]>
+</script>
 
     <vbox flex="1">
         <groupbox>
@@ -92,4 +97,4 @@
           </hbox>
         </groupbox>
     </vbox>
-</dialog>
+</page>

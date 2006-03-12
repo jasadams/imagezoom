@@ -1,4 +1,3 @@
-<!DOCTYPE window SYSTEM "chrome://dictionarysearch/locale/dictionarysearch.dtd" >
 <!-- ***** BEGIN LICENSE BLOCK *****
       
     Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
@@ -20,7 +19,7 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 ***** END LICENSE BLOCK ***** -->
-
+<!DOCTYPE overlay SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
 <overlay id="ImageZoomPrefOverlay"
          xmlns:html="http://www.w3.org/1999/xhtml"
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
@@ -28,7 +27,7 @@
   <treechildren id="panelChildren" container="true">
     <treeitem container="true" id="imagezoom" insertbefore="advancedItem">
       <treerow>
-        <treecell url="chrome://imagezoom/content/options.xul" label="Image Zoom"/>
+        <treecell url="chrome://imagezoom/content/optionsmoz.xul" label="Image Zoom"/>
       </treerow>
     </treeitem>
   </treechildren>

@@ -25,8 +25,12 @@ function retrieveImage()
 	var oImage = document.popupNode;
 	if (!(oImage.originalWidth && oImage.originalHeight && oImage.zoomFactor))
 	{
-		oImage.originalWidth = oImage.offsetWidth;
-		oImage.originalHeight = oImage.offsetHeight;
+		if (!oImage.style.width)
+			oImage.style.width = oImage.width + "px";
+		if (!oImage.style.height)
+			oImage.style.height = oImage.height + "px";
+		oImage.originalWidth = oImage.width;
+		oImage.originalHeight = oImage.height;
 		oImage.zoomFactor = 100;
 	}
 
@@ -50,10 +54,10 @@ function izShowCustomDim()
 function izImageFit(){
 
 	var oImage = retrieveImage();
-	var screenWidth = window._content.innerWidth-10;
-	var screenHeight = window._content.innerHeight-10;
+	var screenWidth = window._content.innerWidth-15;
+	var screenHeight = window._content.innerHeight-15;
 	var screenDim = screenWidth/screenHeight;
-	var imageDim = oImage.offsetWidth/oImage.offsetHeight;
+	var imageDim = getWidth(oImage)/getHeight(oImage);
 
 
 	if (screenDim < imageDim) {
