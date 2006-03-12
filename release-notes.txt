@@ -1,0 +1,4 @@
+Fixed bug with default image zoom for page, eg if set to 120% it wouldn't work
+Fixed bug with status bar text updating
+Fixed conflicts with AIO Gestures, Mouse Gestures, Answers and Smooth Scroll
+Added autofit function. Set imagezoom.showAutoFitInMenu in about:config to true to see this value in the main image zoom menu
