@@ -3,7 +3,7 @@
 const APP_DISPLAY_NAME = "Image Zoom";
 const APP_NAME = "imagezoom";
 const APP_PACKAGE = "imagezoom";
-const APP_VERSION = "0.1.5";
+const APP_VERSION = "0.1.6";
 
 const APP_JAR_FILE = APP_NAME+".jar";
 initInstall(APP_NAME, APP_PACKAGE, APP_VERSION);

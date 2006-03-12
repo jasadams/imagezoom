@@ -48,7 +48,7 @@ function init(){
     imagezoomData[11] = imagezoomPrefs.getBoolPref("smZoomPcts");
 
 	imagezoomData[12] = imagezoomPrefs.getIntPref("zoomvalue");
-	imagezoomData[13] = imagezoomPrefs.getIntPref("autocenter");
+	imagezoomData[13] = imagezoomPrefs.getBoolPref("autocenter");
 
     // Initialise dictionarysearchData here
     gData.imagezoomData = imagezoomData;
