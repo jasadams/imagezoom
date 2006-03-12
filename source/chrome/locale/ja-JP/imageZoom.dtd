@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "バージョン">
+<!ENTITY iz.about.createdby.label "作成者">
+<!ENTITY iz.about.help.label "ヘルプ (英語)">
+<!ENTITY iz.about.help.description "Image Zoom の設定や使用を助けます。">
+<!ENTITY iz.about.forums.label "フォーラム (英語)">
+<!ENTITY iz.about.forums.description "サポートや次期バージョンへの提案やバグの報告。">
+<!ENTITY iz.about.walkthrough.label "チュートリアル (英語)">
+<!ENTITY iz.about.walkthrough.description "Image Zoom の機能について説明します。">
+<!ENTITY iz.about.close.label "閉じる">
+<!ENTITY iz.install.installed "Image Zoom をインストールしました。">
+<!ENTITY iz.install.options.label "オプション">
+<!ENTITY iz.options.help.label "Help Page">
+<!ENTITY iz.install.close.label "閉じる">
+<!ENTITY iz.install.continue.label "続ける &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "あなたが Imaze Zoom を最大限に活用するのを助けるために">
+<!ENTITY iz.install.desc.line2 "Imaze Zoom のホームページにはこの拡張機能のチュートリアル(英語)が用意されています。">
+<!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は '続ける' をクリックしてください。">
+<!ENTITY iz.customzoom.label "画像の拡大/縮小率(&#37;)を入力">
+<!ENTITY iz.customzoom.title "画像の拡大/縮小">
+<!ENTITY iz.customdim.width.label "横幅:">
+<!ENTITY iz.customdim.height.label "高さ:">
+<!ENTITY iz.customdim.title "画像のサイズを入力">
+<!ENTITY iz.customdim.aspect.label "縦横比の保持">
+<!ENTITY iz.options.label "設定">
+<!ENTITY iz.options.defaultzoom.label "1回に行う 拡大/縮小 の量">
+<!ENTITY iz.options.defaultglobalzoom.label "ページの拡大率 (初期値)">
+<!ENTITY iz.options.showviewmenu.label "Image Zoom を [表示] メニューに表示">
+<!ENTITY iz.options.defaultscroll.label "ホイールの1目盛りで 拡大/縮小 する量">
+<!ENTITY iz.options.singlezoom.label "画像の拡大 オプション">
+<!ENTITY iz.options.globalzoom.label "ページの拡大 オプション (ブラウザの再起動後に適用)">
+<!ENTITY iz.options.context.label "コンテキストメニュー">
+<!ENTITY iz.options.contextdisplay.label "コンテキストメニュー 表示オプション">
+<!ENTITY iz.options.tabs.contextmenu.label "コンテキストメニューの項目">
+<!ENTITY iz.options.tabs.main.label "全般">
+<!ENTITY iz.options.reversescroll.label "スクロールの反転">
+<!ENTITY iz.options.autocenter.label "ウィンドウに合わせて表示するさいに自動的に中央に寄せる">
+<!ENTITY iz.options.mouseaccess.label1 "マウスの">
+<!ENTITY iz.options.mouseaccess.label2 " ボタンを押しっぱなしにしている時に下記の機能を実行する。">
+<!ENTITY iz.options.imagefit.label "画像をウィンドウに合わせる">
+<!ENTITY iz.options.imagereset.label "画像を元の大きさに戻す">
+<!ENTITY iz.options.none.label "使用しない">
+<!ENTITY iz.options.lmb.label "左">
+<!ENTITY iz.options.mmb.label "センター">
+<!ENTITY iz.options.rmb.label "右">
+<!ENTITY iz.options.usemouse.label "マウスジェスチャーを使用する">
+<!ENTITY iz.options.contextdescription.label "コンテキストメニューに表示する項目の選択">
+<!ENTITY iz.options.menudummy.view.label "画像の表示">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "画像のコピー">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "画像の URL のコピー">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "画像を名前を付けて保存">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "小さく">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "大きく">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "文字の大きさに合わせる">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "画像の大きさ">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ 拡大">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= 元の大きさ">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- 縮小">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "数値を入力して拡大/縮小">
+<!ENTITY iz.menu.context.customdim.label "数値を入力してサイズの変更">
+<!ENTITY iz.menu.context.imagefit.label "ウィンドウに合わせる">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "Z">

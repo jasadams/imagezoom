@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Različica">
+<!ENTITY iz.about.createdby.label "Avtor">
+<!ENTITY iz.about.help.label "Pomoč">
+<!ENTITY iz.about.help.description "Pomoč pri prilagajanju in uporabi Image Zooma">
+<!ENTITY iz.about.forums.label "Forumi">
+<!ENTITY iz.about.forums.description "Podpora, Predlogi, Napake">
+<!ENTITY iz.about.walkthrough.label "Povzetek">
+<!ENTITY iz.about.walkthrough.description "Kratek pregled značilnosti Image Zooma">
+<!ENTITY iz.about.close.label "Zapri">
+<!ENTITY iz.install.installed "Image Zoom je nameščen">
+<!ENTITY iz.install.options.label "Možnosti">
+<!ENTITY iz.install.close.label "Zapri">
+<!ENTITY iz.install.continue.label "Nadaljuj >>">
+<!ENTITY iz.install.desc.line1 "Obiščite Image Zoomovo spletno stran za najnovejše informacije in">
+<!ENTITY iz.install.desc.line2 "kratek pregled značilnosti Image Zooma.">
+<!ENTITY iz.install.desc.line3 "Pritisnite 'Nadaljuj', da se bo odprla Image Zoomova spletno stran">
+<!ENTITY iz.customzoom.label "Vnesite odstotek povečave">
+<!ENTITY iz.customzoom.title "Odstotek povečave">
+<!ENTITY iz.customdim.width.label "Širina:">
+<!ENTITY iz.customdim.height.label "Višina:">
+<!ENTITY iz.customdim.title "Mere povečave">
+<!ENTITY iz.customdim.aspect.label "Ohrani razmerje">
+<!ENTITY iz.options.label "Možnosti">
+<!ENTITY iz.options.help.label "Help Page">
+<!ENTITY iz.options.defaultzoom.label "Stopnja povečave/pomanjšave">
+<!ENTITY iz.options.defaultglobalzoom.label "Privzeta povečava">
+<!ENTITY iz.options.showviewmenu.label "Prikaz menija Image Zoom v meniju Pogled">
+<!ENTITY iz.options.defaultscroll.label "Korak povečave z vrtenjem koleščka">
+<!ENTITY iz.options.singlezoom.label "Možnosti posamezne povečave">
+<!ENTITY iz.options.globalzoom.label "Splošne možnosti povečave">
+<!ENTITY iz.options.context.label "Meni bližnjic">
+<!ENTITY iz.options.contextdisplay.label "Možnosti prikaza v meniju bližnjic">
+<!ENTITY iz.options.tabs.contextmenu.label "Možnosti menija bližnjic">
+<!ENTITY iz.options.tabs.main.label "Splošno">
+<!ENTITY iz.options.reversescroll.label "Vrtenje naprej">
+<!ENTITY iz.options.autocenter.label "Samodejno postavi slike na sredino pri povečavi Na velikost okna">
+<!ENTITY iz.options.mouseaccess.label1 "Omogoči opravila pri tiščanju ">
+<!ENTITY iz.options.mouseaccess.label2 " miškinega gumba.">
+<!ENTITY iz.options.imagefit.label "Gumb Na velikost okna">
+<!ENTITY iz.options.imagereset.label "Gumb Razveljavi">
+<!ENTITY iz.options.none.label "Onemogočeno">
+<!ENTITY iz.options.lmb.label "Levi">
+<!ENTITY iz.options.mmb.label "Srednji">
+<!ENTITY iz.options.rmb.label "Desni">
+<!ENTITY iz.options.usemouse.label "Opravila z miško">
+<!ENTITY iz.options.contextdescription.label "Označi možnosti, ki naj bodo prikazane v meniji bližnjic">
+<!ENTITY iz.options.menudummy.view.label "Prikaži sliko">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Kopiraj sliko">
+<!ENTITY iz.options.menudummy.contents.accesskey "a">
+<!ENTITY iz.options.menudummy.image.label "Kopiraj mesto slike">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Shrani sliko kot">
+<!ENTITY iz.options.menudummy.save.accesskey "s">
+<!ENTITY iz.menu.global.decrease.label "Pomanjšaj">
+<!ENTITY iz.menu.global.decrease.accesskey "M">
+<!ENTITY iz.menu.global.increase.label "Povečaj">
+<!ENTITY iz.menu.global.increase.accesskey "V">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "Povečava z besedilom">
+<!ENTITY iz.menu.global.textscale.accesskey "B">
+<!ENTITY iz.menu.context.zoomimage.label "Povečava">
+<!ENTITY iz.menu.context.zoomimage.accesskey "E">
+<!ENTITY iz.menu.context.increase.label "Povečaj (+)">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "Razveljavi (=)">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "Pomanjšaj (-)">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Odstotek ...">
+<!ENTITY iz.menu.context.customdim.label "Mere ...">
+<!ENTITY iz.menu.context.imagefit.label "Na velikost okna">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "P">

@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Version">
+<!ENTITY iz.about.createdby.label "Erstellt von">
+<!ENTITY iz.about.help.label "Hilfe">
+<!ENTITY iz.about.help.description "Hilfe bei der Konfiguration und Benutzung von Image Zoom">
+<!ENTITY iz.about.forums.label "Forum">
+<!ENTITY iz.about.forums.description "Unterstützung, Vorschläge, Fehler">
+<!ENTITY iz.about.walkthrough.label "Überblick">
+<!ENTITY iz.about.walkthrough.description "Überblick über die Eigenschaften von Image Zoom">
+<!ENTITY iz.about.close.label "Schließen">
+<!ENTITY iz.install.installed "Image Zoom installiert">
+<!ENTITY iz.install.options.label "Einstellungen">
+<!ENTITY iz.install.close.label "Schließen">
+<!ENTITY iz.install.continue.label "Weiter >>">
+<!ENTITY iz.install.desc.line1 "Besuche die Image Zoom Webseite um die neusten Informationen und">
+<!ENTITY iz.install.desc.line2 "einen Überblick über alle Eigenschaften von Image Zoom zu bekommen.">
+<!ENTITY iz.install.desc.line3 "Drücke 'Weiter' um zur Image Zoom Webseite zu gehen">
+<!ENTITY iz.customzoom.label "Zoom-Faktor eingeben">
+<!ENTITY iz.customzoom.title "Benutzerdefinierter Zoom">
+<!ENTITY iz.customdim.width.label "Breite:">
+<!ENTITY iz.customdim.height.label "Höhe:">
+<!ENTITY iz.customdim.title "Benutzerdefinierte Dimension">
+<!ENTITY iz.customdim.aspect.label "Seitenverhältnis beibehalten">
+<!ENTITY iz.options.label "Einstellungen">
+<!ENTITY iz.options.help.label "Hilfe (englisch)">
+<!ENTITY iz.options.defaultzoom.label "Zoomfaktor hinein/hinaus">
+<!ENTITY iz.options.defaultglobalzoom.label "Standard globaler Zoom">
+<!ENTITY iz.options.showviewmenu.label "Zeige Image Zoom im Ansichtmenü">
+<!ENTITY iz.options.defaultscroll.label "Zoomfaktor des Mausrads">
+<!ENTITY iz.options.singlezoom.label "Individuelle Zoom-Einstellungen">
+<!ENTITY iz.options.globalzoom.label "Globale Zoom-Einstellungen">
+<!ENTITY iz.options.context.label "Kontextmenü">
+<!ENTITY iz.options.contextdisplay.label "Kontextmenü Anzeigeeinstellungen">
+<!ENTITY iz.options.tabs.contextmenu.label "Kontextmenü-Einträge">
+<!ENTITY iz.options.tabs.main.label "Allgemein">
+<!ENTITY iz.options.reversescroll.label "Entgegengesetztes Scrollen">
+<!ENTITY iz.options.autocenter.label "Beim Anpassen der Grafik, diese automatisch zentrieren">
+<!ENTITY iz.options.mouseaccess.label1 "Erreiche Funktionen beim Festhalten der ">
+<!ENTITY iz.options.mouseaccess.label2 " Maustaste.">
+<!ENTITY iz.options.imagefit.label "Taste um Grafik anzupassen">
+<!ENTITY iz.options.imagereset.label "Taste um Grafik zurückzusetzen">
+<!ENTITY iz.options.none.label "Gesperrt">
+<!ENTITY iz.options.lmb.label "Linke">
+<!ENTITY iz.options.mmb.label "Mittlere">
+<!ENTITY iz.options.rmb.label "Rechte">
+<!ENTITY iz.options.usemouse.label "Benutze Mausfunktionen">
+<!ENTITY iz.options.contextdescription.label "Prüfe die Einträge, die du im Grafik-Kontextmenü angezeigt bekommen möchtest">
+<!ENTITY iz.options.menudummy.view.label "Betrachte Grafik">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Kopiere Grafik">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "Kopiere Grafik-Adresse">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Grafik speichern unter">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "Kleiner">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "Größer">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "Zoom mit Text">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "Grafik zoomen">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ Hineinzoomen">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Zoom zurücksetzen">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Herauszoomen">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Benutzerdefinierter Zoom">
+<!ENTITY iz.menu.context.customdim.label "Benutzerdefinierte Dimension">
+<!ENTITY iz.menu.context.imagefit.label "Grafik anpassen">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "Z">

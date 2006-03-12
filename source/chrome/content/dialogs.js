@@ -1,6 +1,6 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
 
     This file is part of Image Zoom.
 
@@ -25,6 +25,7 @@ var gDimWidth;
 var gDimHeight;
 var gDimAspect;
 
+// returns true if it was a numeric keypress and false if it was not
 function validateKeyPress(e){
 	switch(e.which) {
 	   case 0:  //misc
@@ -39,6 +40,22 @@ function validateKeyPress(e){
 				return false;
 			}
 	}
+}
+
+// Checks whether sText is an integer
+function pIsNumeric(sText)
+{
+	var ValidChars = "0123456789";
+	var IsNumber=true;
+	var Char;
+
+ 	for (i = 0; i < sText.length && IsNumber == true; i++){
+		Char = sText.charAt(i);
+		if (ValidChars.indexOf(Char) == -1){
+			IsNumber = false;
+		}
+	}
+	return IsNumber;
 }
 
 function widthPress(e)
@@ -93,16 +110,26 @@ function imagezoom_customZoom()
 {
 	var zoomValue = document.getElementById("customZoom").value;
 	if (pIsNumeric(zoomValue)){
-		var oImage = window.arguments[0];
-		pZoomImageAbs(oImage, zoomValue/100);
+		if (window.arguments[0] == "Image") {
+			var izoImage = window.arguments[1];
+			izoImage.setZoom(zoomValue);
+		} else {
+			var imgZoomManager = window.arguments[1];
+			imgZoomManager.imageZoom = zoomValue;
+		}
 	}
 }
 
 function imagezoom_loadCustomZoom()
 {
 	var zoomValueBox = document.getElementById("customZoom");
-	var oImage = window.arguments[0];
-	zoomValueBox.value = oImage.zoomFactor;
+	if (window.arguments[0] == "Image") {
+		var izoImage = window.arguments[1];
+		zoomValueBox.value = izoImage.zoomFactor();
+	} else {
+		var imgZoomManager = window.arguments[1];
+		zoomValueBox.value = imgZoomManager.factorOther;
+	}
 }
 
 function imagezoom_customDim()
@@ -110,8 +137,8 @@ function imagezoom_customDim()
 	var dimWidth = document.getElementById("dimWidth").value;
 	var dimHeight = document.getElementById("dimHeight").value;
 	if (pIsNumeric(dimWidth) && pIsNumeric(dimHeight)){
-		var oImage = window.arguments[0];
-		pSetDim(oImage, dimWidth, dimHeight, gDimAspect.checked);
+		var izoImage = window.arguments[0];
+		izoImage.setDimension(dimWidth, dimHeight);
 	}
 }
 
@@ -120,9 +147,9 @@ function imagezoom_loadCustomDim()
 	gDimWidth = document.getElementById("dimWidth");
 	gDimHeight = document.getElementById("dimHeight");
 	gDimAspect = document.getElementById("dimAspect");
-	var oImage = window.arguments[0];
-	gDimWidth.value = oImage.width;
-	gDimHeight.value = oImage.height;
-	gDimRatio = oImage.width/oImage.height;
+	var izoImage = window.arguments[0];
+	gDimWidth.value = izoImage.getWidth();
+	gDimHeight.value = izoImage.getHeight();
+	gDimRatio = izoImage.getWidth()/izoImage.getHeight();
 	gDimAspect.checked = true;
 }

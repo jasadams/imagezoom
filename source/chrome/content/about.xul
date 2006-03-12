@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!-- ***** BEGIN LICENSE BLOCK *****
+
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
+
+    This file is part of Image Zoom.
+
+    Image Zoom is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Image Zoom is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Image Zoom; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://imagezoom/skin/imagezoom.css" type="text/css"?>
+
+ <!DOCTYPE window [
+   <!ENTITY % imagezoomDTD SYSTEM "chrome://imagezoom/locale/imageZoom.dtd" >
+   %imagezoomDTD;
+   <!ENTITY % systemaboutDTD SYSTEM "chrome://mozapps/locale/extensions/about.dtd" >
+   %systemaboutDTD;
+ ]>
+  
+<window class="dialog about-dialog"
+	title="&iz.product.name; &iz.product.version;"
+	orient="vertical"
+	autostretch="always"
+	onload="initAbout()"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
+
+<groupbox align="start" orient="horizontal" class="about-box">
+  <vbox>
+    <text value="&iz.product.name;" class="main-title" onclick="openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=&iz.product.version;');"/>
+    <text value="&iz.about.version.label; &iz.product.version;" class="version"/>
+
+    <hbox>
+    <vbox>
+    	<separator class="thin"/>
+    	<text value="&creator.label;" class="sub-title"/>
+    	<text value="Jason Adams" class="author"/>
+    </vbox>
+    <spring flex="1"/>
+    <vbox>
+    	<separator class="thin"/>
+    	<text value="&contributors.label;" class="sub-title"/>
+    	<text value="Pierre Soubourou" class="author"/>
+    	<text value="Leon Zobec" class="author"/>
+    	<text value="Willy Young" class="author"/>
+    	<text value="Norah" class="author"/>
+    	<text value="Markus Fassbender" class="author"/>
+    </vbox>
+    </hbox>
+    
+    <separator class="thin"/>
+    <text value="&iz.about.help.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=&iz.product.version;');"/>
+    <text value="&iz.about.help.description;"/>
+
+    <separator class="thin"/>
+    <text value="&iz.about.forums.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=&iz.product.version;');"/>
+    <text value="&iz.about.forums.description;"/>
+
+    <separator class="thin"/>
+	<text value="&iz.about.walkthrough.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=&iz.product.version;');"/>
+    <text value="&iz.about.walkthrough.description;"/>
+
+  </vbox>
+  <spring flex="1"/>
+  <image src="chrome://imagezoom/skin/imagezoom.png"/>
+</groupbox>
+
+<hbox>
+  <spacer flex="1"/>
+  <button label="&iz.about.close.label;" oncommand="window.close();"/>
+</hbox>
+
+</window>

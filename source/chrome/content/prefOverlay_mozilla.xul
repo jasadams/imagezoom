@@ -1,7 +1,7 @@
 <!-- ***** BEGIN LICENSE BLOCK *****
-      
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
-      
+
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
+
     This file is part of Image Zoom.
 
     Image Zoom is free software; you can redistribute it and/or modify
@@ -27,8 +27,15 @@
   <treechildren id="panelChildren" container="true">
     <treeitem container="true" id="imagezoom" insertbefore="advancedItem">
       <treerow>
-        <treecell url="chrome://imagezoom/content/optionsmoz.xul" label="Image Zoom"/>
+        <treecell url="chrome://imagezoom/content/pref-main.xul" label="&iz.product.name;"/>
       </treerow>
+      <treechildren>
+        <treeitem id="imagezoom_contextmenu">
+          <treerow>
+            <treecell url="chrome://imagezoom/content/pref-context.xul" label="&iz.options.context.label;"/>
+          </treerow>
+       </treeitem>
+      </treechildren>
     </treeitem>
   </treechildren>
 

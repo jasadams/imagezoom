@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!-- ***** BEGIN LICENSE BLOCK *****
+
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
+
+    This file is part of Image Zoom.
+
+    Image Zoom is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Image Zoom is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Image Zoom; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+***** END LICENSE BLOCK ***** -->
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://imagezoom/skin/imagezoom.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
+
+<window class="dialog install-dialog"
+	title="&iz.product.name; &iz.product.version;"
+	orient="vertical"
+	autostretch="always"
+	onload="initInstall()"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="bundle_ImageZoom" src="chrome://imagezoom/locale/imageZoom.properties"/>
+  </stringbundleset>
+
+<groupbox align="start" orient="horizontal" class="install-box">
+  <vbox>
+    <text value="&iz.install.installed;" class="main-title" onclick="openURL('http://imagezoom.yellowgorilla.net/?source=install&amp;version=&iz.product.version;');"/>
+    <text id="install-notice"/>
+
+    <separator class="thick"/>
+    <text id="install-desc-line1" value="&iz.install.desc.line1;" class="install-description"/>
+    <text id="install-desc-line2" value="&iz.install.desc.line2;" class="install-description"/>
+    <separator class="thin"/>
+    <text id="install-desc-line3" value="&iz.install.desc.line3;" class="install-description"/>
+
+  </vbox>
+  <spring flex="1"/>
+  <image src="chrome://imagezoom/skin/imagezoom.png"/>
+</groupbox>
+
+<hbox>
+  <button label="&iz.install.options.label;" oncommand="window.open('chrome://imagezoom/content/options.xul', '', 'chrome,centerscreen') "/>
+  <spacer flex="1"/>
+  <button label="&iz.install.close.label;" oncommand="window.close();"/>
+  <button id="continue" label="&iz.install.continue.label;" default="true" />
+</hbox>
+
+</window>

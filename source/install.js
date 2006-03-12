@@ -3,7 +3,7 @@
 const APP_DISPLAY_NAME = "Image Zoom";
 const APP_NAME = "imagezoom";
 const APP_PACKAGE = "imagezoom";
-const APP_VERSION = "0.1.7";
+const APP_VERSION = "0.2";
 
 const APP_JAR_FILE = APP_NAME+".jar";
 initInstall(APP_NAME, APP_PACKAGE, APP_VERSION);
@@ -19,6 +19,11 @@ if (err == SUCCESS) {
 		var jar = getFolder(chromef, APP_JAR_FILE);
 		registerChrome(CONTENT | PROFILE_CHROME, jar, 'content/');
 		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/en-US/');
+		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/fr-FR/');
+		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/ja-JP/');
+		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/sl-SI/');
+		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/zh-TW/');
+		registerChrome(SKIN | PROFILE_CHROME, jar, 'skin/classic/imagezoom/');
 
 		err = performInstall();
 		if(err == SUCCESS || err == 999) {
@@ -43,3 +48,4 @@ if (err == SUCCESS) {
 		+"_____________________________\nError code:" + err);
 	cancelInstall(err);
 }
+

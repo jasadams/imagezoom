@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<!-- ***** BEGIN LICENSE BLOCK *****
+
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
+
+    This file is part of Image Zoom.
+
+    Image Zoom is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Image Zoom is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Image Zoom; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+***** END LICENSE BLOCK ***** -->
+<!DOCTYPE overlay SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
+<overlay id="imageZoomOverlay"
+    	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+    	
+    <script type="application/x-javascript" src="chrome://imagezoom/content/izImage.js"/>
+    <script type="application/x-javascript" src="chrome://imagezoom/content/ZoomImageManager.js"/>
+    <script type="application/x-javascript" src="chrome://imagezoom/content/overlay.js"/>
+    <script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="bundle_ImageZoom" src="chrome://imagezoom/locale/imageZoom.properties"/>
+  </stringbundleset>
+
+  <commandset id="mainCommandSet">
+    <command id="cmd_imageZoomReduce"  oncommand="ZoomImageManager.prototype.getInstance().decrease();"/>
+    <command id="cmd_imageZoomEnlarge" oncommand="ZoomImageManager.prototype.getInstance().increase();"/>
+    <command id="cmd_imageZoomReset" oncommand="ZoomImageManager.prototype.getInstance().reset();"/>
+    <command id="cmd_imageZoomTextScale" oncommand="ZoomImageManager.prototype.getInstance().textScale = true;"/>
+  </commandset>
+  <keyset id="mainKeyset">
+    <key id="key_imageZoomReduce"  key="&iz.command.reduce.commandkey;"   command="cmd_imageZoomReduce"  modifiers="accel"/>
+    <key id="key_imageZoomEnlarge" key="&iz.command.enlarge.commandkey;"  command="cmd_imageZoomEnlarge" modifiers="accel"/>
+    <key id="key_imageZoomReset"   key="&iz.command.reset.commandkey;"    command="cmd_imageZoomReset"   modifiers="accel"/>
+    <key id="key_imageZoomTextScale"   key="&iz.command.textscale.commandkey;"    command="cmd_imageZoomTextScale"   modifiers="accel"/>
+  </keyset>
+	<menupopup id="menu_viewPopup">
+		<menu id="menu_ImageZoomMain" position="9" hidden="true">
+		  <menupopup id="menu_imageZoomPopup" onpopupshowing="updateImageZoomMenu();">
+			<menuitem id="zoommain-decrease"
+				key="key_imageZoomReduce"
+				label="&iz.menu.global.decrease.label;"
+				accesskey="&iz.menu.global.decrease.accesskey;"
+				command="cmd_imageZoomReduce"
+			/>
+			<menuitem id="zoommain-increase"
+				key="key_imageZoomEnlarge"
+				label="&iz.menu.global.increase.label;"
+				accesskey="&iz.menu.global.increase.accesskey;"
+				command="cmd_imageZoomEnlarge"
+			/>
+			<menuseparator/>
+			<menuseparator id="menu_imageZoomInsertBefore"
+			/>
+			<menuitem id="zoommain-custom"
+				type="radio"
+				accesskey="&iz.menu.global.custom.accesskey;"
+				oncommand="izShowCustomZoomPage();"
+				name="imageZoom"
+			/>
+			<menuseparator id="zoommain-s3"
+			/>
+			<menuitem id="zoommain-scaleText"
+				key="key_imageZoomTextScale"
+				label="&iz.menu.global.textscale.label;"
+				type="radio"
+				accesskey="&iz.menu.global.textscale.accesskey;"
+				command="cmd_imageZoomTextScale"
+				value="text"
+				name="imageZoom"
+			/>
+		  </menupopup>
+		</menu>
+	</menupopup>
+
+	<popup id="contentAreaContextMenu">
+			<menuitem id="context-zoom-zin"
+				label="&iz.menu.context.increase.label;"
+				accesskey="&iz.menu.context.increase.accesskey;"
+				oncommand="izZoomIn();"
+				insertbefore="context-sep-copyimage"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-zreset"
+				label="&iz.menu.context.reset.label;"
+				accesskey="&iz.menu.context.reset.accesskey;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izSetZoom(100);"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-zout"
+				label="&iz.menu.context.decrease.label;"
+				accesskey="&iz.menu.context.decrease.accesskey;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izZoomOut();"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-zcustom"
+				label="&iz.menu.context.customzoom.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izShowCustomZoom();"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-dcustom"
+				label="&iz.menu.context.customdim.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izShowCustomDim();"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-fit"
+				label="&iz.menu.context.imagefit.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izImageFit();"
+				hidden="true"
+			/>
+		<menu id="context-zoomsub"
+			label="&iz.menu.context.zoomimage.label;"
+			accesskey="&iz.menu.context.zoomimage.accesskey;"
+			insertbefore="context-sep-copyimage"
+			hidden="true"
+		>
+        	  <menupopup id="zoompopup">
+			<menuitem id="zoomsub-zin"
+				label="&iz.menu.context.increase.label;"
+				accesskey="&iz.menu.context.increase.accesskey;"
+				oncommand="izZoomIn();"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-zreset"
+				label="&iz.menu.context.reset.label;"
+				accesskey="&iz.menu.context.reset.accesskey;"
+				oncommand="izSetZoom(100);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-zout"
+				label="&iz.menu.context.decrease.label;"
+				accesskey="&iz.menu.context.decrease.accesskey;"
+				oncommand="izZoomOut();"
+				hidden="true"
+			/>
+			<menuseparator id="zoomsub-s1"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-zcustom"
+				label="&iz.menu.context.customzoom.label;"
+				oncommand="izShowCustomZoom();"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-dcustom"
+				label="&iz.menu.context.customdim.label;"
+				oncommand="izShowCustomDim();"
+				hidden="true"
+			/>
+			<menuseparator id="zoomsub-s2"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-fit"
+				label="&iz.menu.context.imagefit.label;"
+				oncommand="izImageFit();"
+				hidden="true"
+			/>
+			<menuseparator id="zoomsub-s3"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z400"
+				label="400%"
+				oncommand="izSetZoom(400);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z200"
+				label="200%"
+				oncommand="izSetZoom(200);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z150"
+				label="150%"
+				oncommand="izSetZoom(150);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z125"
+				label="125%"
+				oncommand="izSetZoom(125);"
+				hidden="true"
+			/>
+			<menuseparator id="zoomsub-s4"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z100"
+				label="100%"
+				oncommand="izSetZoom(100);"
+				hidden="true"
+			/>
+			<menuseparator id="zoomsub-s5"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z75"
+				label="75%"
+				oncommand="izSetZoom(75);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z50"
+				label="50%"
+				oncommand="izSetZoom(50);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z25"
+				label="25%"
+				oncommand="izSetZoom(25);"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-z10"
+				label="10%"
+				oncommand="izSetZoom(10);"
+				hidden="true"
+			/>
+        	  </menupopup>
+        	</menu>
+	</popup> 
+</overlay>

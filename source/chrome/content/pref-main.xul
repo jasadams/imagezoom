@@ -20,36 +20,31 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 ***** END LICENSE BLOCK ***** -->
-
-<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://imagezoom/skin/imagezoom.css" type="text/css"?>
-<?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
-
 <!DOCTYPE window SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
 
-<dialog buttons="accept, cancel"
-        id="imagezoom-options-dialog"
-        ondialogaccept="return imagezoom_saveOptions()"
-        onload="imagezoom_initializeOptions()"
-        title="&iz.product.name; &iz.options.label;"
-        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<?xml-stylesheet href="chrome://communicator/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://imagezoom/skin/imagezoom.css" type="text/css"?>
+
+<page xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      headertitle="&iz.product.name; &iz.options.label;"
+      onload="parent.initPanel('chrome://imagezoom/content/pref-main.xul');">
+
 
     <script type="application/x-javascript" src="chrome://imagezoom/content/options.js"/>
     <script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
 
-  <stringbundleset id="stringbundleset">
-    <stringbundle id="bundle_ImageZoom" src="chrome://imagezoom/locale/imageZoom.properties"/>
-  </stringbundleset>
+<script type="application/x-javascript">
+<![CDATA[
+    var _elementIDs = [	"imagezoomusemouseoptions", "imagezoommouseaccess", "imagezoomimagefitbutton",
+    					"imagezoomimageresetbutton", "imagezoomscrollvalue", "imagezoomreversescroll",
+    					"imagezoomzoomvalue", "imagezoomautocenter", "imagezoomzoomvalueglobal", "imagezoomshowviewmenu"];
+]]>
+</script>
 
-  <tabbox id="wf_tabbox">
-    <tabs>
-      <tab label="&iz.options.tabs.main.label;"/>
-      <tab label="&iz.options.tabs.contextmenu.label;"/>
-    </tabs>
-    <tabpanels flex="1">
-      <tabpanel orient="vertical" flex="1">
        <vbox flex="1">
-       <label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
+       <label id="visitHome" class="url help" value="Help Page" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
         <groupbox align="start">
         <caption>
         	<checkbox id="imagezoomusemouseoptions" label="&iz.options.usemouse.label;" prefstring="imagezoom.usescroll" oncommand="setDisableAllChildren(document.getElementById('mouseoptions'), !this.checked);"/>
@@ -168,7 +163,7 @@
           <rows>
           	<row align="center">
           		<label style="width: 130px" value="&iz.options.defaultglobalzoom.label;" control="imagezoomzoomvalueglobal"/>
-			<menulist id="imagezoomzoomvalueglobal" prefstring="imagezoom.defaultGlobalZoom">
+			<menulist id="imagezoomzoomvalueglobal" prefstring="imagezoom.defaultGlobalZoom" preftype="string">
   	      			<menupopup>
     					<menuitem label="50%" value="50"/>
     					<menuitem label="75%" value="75"/>
@@ -177,7 +172,7 @@
     					<menuitem label="120%" value="120"/>
     					<menuitem label="150%" value="150"/>
     					<menuitem label="200%" value="200"/>
-    					<menuitem label="&iz.menu.global.textscale.label;" value="text"/>
+    					<menuitem label="Zoom With Text" value="text"/>
   	      			</menupopup>
 	    		</menulist>
           	</row>
@@ -186,163 +181,4 @@
         <checkbox id="imagezoomshowviewmenu" label="&iz.options.showviewmenu.label;" prefstring="imagezoom.showViewMenu"/>
       </groupbox>
     </vbox>
-   </tabpanel>
-   <tabpanel orient="vertical">
-       <hbox>
-        <spacer flex="1" />
-      	<label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
-       </hbox>
-   	<groupbox id="container" orient="horizontal" flex="1">
-        <caption label="&iz.options.contextdisplay.label;"/>
-        <label id="imagezoomcontextdescription" label="&iz.options.contextdescription.label;" />
-        <vbox flex="1" />
-	<vbox>
-	        <hbox flex="1" />
-		<box id="mainmenu">
-			<menuitem label="..."
-				  class="dummy"/>
-      			<menuseparator />
-      			<menuitem id="context-viewimage"
-      				  class="dummy"
-      			          label="&iz.options.menudummy.view.label;"
-      			          accesskey="&iz.options.menudummy.view.accesskey;"/>
-      			<menuitem id="context-copyimage-contents"
-      				  class="dummy"
-      			          label="&iz.options.menudummy.contents.label;"
-      			          accesskey="&iz.options.menudummy.contents.accesskey;"/>
-      			<menuitem id="context-copyimage"
-      			  	  class="dummy"
-      			          label="&iz.options.menudummy.image.label;"
-      			          accesskey="&iz.options.menudummy.image.accesskey;"/>
-			<checkbox id="context-zoom-zin"
-				label="&iz.menu.context.increase.label;"
-				oncommand="setOption(this);"
-				accesskey="&iz.menu.context.increase.label;"
-			/>
-			<checkbox id="context-zoom-zreset"
-				label="&iz.menu.context.reset.label;"
-				oncommand="setOption(this);"
-				accesskey="&iz.menu.context.reset.label;"
-			/>
-			<checkbox id="context-zoom-zout"
-				label="&iz.menu.context.decrease.label;"
-				oncommand="setOption(this);"
-				accesskey="&iz.menu.context.decrease.label;"
-			/>
-			<checkbox id="context-zoom-zcustom"
-				label="&iz.menu.context.customzoom.label;"
-				oncommand="setOption(this);"
-			/>
-			<checkbox id="context-zoom-dcustom"
-				label="&iz.menu.context.customdim.label;"
-				oncommand="setOption(this);"
-			/>
-			<checkbox id="context-zoom-fit"
-				label="&iz.menu.context.imagefit.label;"
-				oncommand="setOption(this);"
-			/>
-			<hbox>
-			<vbox flex="1">
-			<checkbox id="context-zoomsub"
-				label="&iz.menu.context.zoomimage.label;"
-				accesskey="&iz.menu.context.zoomimage.label;"
-				oncommand="toggleSubMenu();"
-			/></vbox>
-			<vbox><image class="right-arrow" src="chrome://global/skin/menu/Menu-arrow.png" /></vbox>
-			</hbox>
-   			<menuseparator />
-   		        <menuitem id="context-saveimage"
-   		        	  class="dummy"
-			          label="&iz.options.menudummy.save.label;"
-                		  accesskey="&iz.options.menudummy.save.accesskey;" />
-   			<menuitem label="..."
-   				  class="dummy"/>
-		</box>
-		<hbox flex="1" />
-	</vbox>
-	<vbox>
-		<box id="submenu">
-			<checkbox id="zoomsub-zin"
-				label="&iz.menu.context.increase.label;"
-				oncommand="setOption(this);"
-				accesskey="&iz.menu.context.increase.label;"
-			/>
-			<checkbox id="zoomsub-zreset"
-				label="&iz.menu.context.reset.label;"
-				oncommand="setOption(this);"
-				accesskey="&iz.menu.context.reset.label;"
-			/>
-			<checkbox id="zoomsub-zout"
-				label="&iz.menu.context.decrease.label;"
-				oncommand="setOption(this);"
-				accesskey="&iz.menu.context.decrease.label;"
-			/>
-			<menuseparator />
-			<checkbox id="zoomsub-zcustom"
-				label="&iz.menu.context.customzoom.label;"
-				oncommand="setOption(this);"
-			/>
-			<checkbox id="zoomsub-dcustom"
-				label="&iz.menu.context.customdim.label;"
-				oncommand="setOption(this);"
-			/>
-			<menuseparator />
-			<checkbox id="zoomsub-fit"
-				label="&iz.menu.context.imagefit.label;"
-				oncommand="setOption(this);"
-			/>
-			<menuseparator />
-			<menuitem id="zoomsub-z400"
-				class="dummy"
-				label="400%"
-				onclick="togglePercentages();"
-			/>
-			<menuitem id="zoomsub-z200"
-				label="200%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-			<menuitem id="zoomsub-z150"
-				label="150%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-			<menuitem id="zoomsub-z125"
-				label="125%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-			<menuseparator />
-			<checkbox id="zoomsub-z100"
-				label="100%"
-				oncommand="setOption(this);"
-			/>
-			<menuseparator />
-			<menuitem id="zoomsub-z75"
-				label="75%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-			<menuitem id="zoomsub-z50"
-				label="50%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-			<menuitem id="zoomsub-z25"
-				label="25%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-			<menuitem id="zoomsub-z10"
-				label="10%"
-				class="dummy"
-				onclick="togglePercentages();"
-			/>
-		</box>
-	</vbox>
-	<vbox flex="1" />
-</groupbox>
-   </tabpanel>
-  </tabpanels>
- </tabbox>
-</dialog>
+</page>

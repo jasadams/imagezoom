@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- ***** BEGIN LICENSE BLOCK *****
     
-    Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
     
     This file is part of Image Zoom.
 
@@ -29,19 +29,18 @@
         id="imagezoom-customdim-dialog"
         ondialogaccept="imagezoom_customDim()"
         onload="imagezoom_loadCustomDim()"
-        title="&pref.iz.customdim.title;"
+        title="&iz.customdim.title;"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript" src="chrome://imagezoom/content/global.js"/>
     <script type="application/x-javascript" src="chrome://imagezoom/content/dialogs.js"/>
 
     <vbox flex="1">
           <hbox>
-          <label value="&pref.iz.customdimwidth.label;"/>          
+          <label value="&iz.customdim.width.label;"/>          
           <textbox id="dimWidth" size="2" onkeypress="return validateKeyPress(event);" oninput="widthInput(event);"/>
-          <label value="&pref.iz.customdimheight.label;"/>          
+          <label value="&iz.customdim.height.label;"/>          
           <textbox id="dimHeight" size="2" onkeypress="return validateKeyPress(event);" oninput="heightInput(event);"/>          
           </hbox>
-          <checkbox id="dimAspect" class="indent" style="margin-top:5px;" label="&pref.iz.customdimaspect.label;" onclick="checkInput(event);"/>
+          <checkbox id="dimAspect" class="indent" style="margin-top:5px;" label="&iz.customdim.aspect.label;" onclick="checkInput(event);"/>
     </vbox>
 </dialog>

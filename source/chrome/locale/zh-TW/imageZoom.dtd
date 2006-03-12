@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "版本">
+<!ENTITY iz.about.createdby.label "作者">
+<!ENTITY iz.about.help.label "幫助">
+<!ENTITY iz.about.help.description "協助您設定與使用 Image Zoom">
+<!ENTITY iz.about.forums.label "討論區">
+<!ENTITY iz.about.forums.description "技術支援、程式建議以及錯誤回報">
+<!ENTITY iz.about.walkthrough.label "新手上路">
+<!ENTITY iz.about.walkthrough.description "簡單的介紹 Image Zoom 的特色">
+<!ENTITY iz.about.close.label "關閉">
+<!ENTITY iz.install.installed "Image Zoom 安裝完成">
+<!ENTITY iz.install.options.label "選項">
+<!ENTITY iz.install.close.label "關閉">
+<!ENTITY iz.install.continue.label "繼續 >>">
+<!ENTITY iz.install.desc.line1 "請拜訪 Image Zoom 網站以取得最新的資訊，">
+<!ENTITY iz.install.desc.line2 "以及 Image Zoom 的功能簡介。">
+<!ENTITY iz.install.desc.line3 "請按下「繼續」前往 Image Zoom 網站。">
+<!ENTITY iz.customzoom.label "請輸入縮放比例">
+<!ENTITY iz.customzoom.title "自定比例">
+<!ENTITY iz.customdim.width.label "寬度：">
+<!ENTITY iz.customdim.height.label "高度：">
+<!ENTITY iz.customdim.title "自定大小">
+<!ENTITY iz.customdim.aspect.label "保持寬高比例">
+<!ENTITY iz.options.help.label "Help Page">
+<!ENTITY iz.options.label "設定">
+<!ENTITY iz.options.defaultzoom.label "個別縮放比例">
+<!ENTITY iz.options.defaultglobalzoom.label "全域縮放比例">
+<!ENTITY iz.options.showviewmenu.label "在「檢視」選單中顯示「圖片縮放」選項">
+<!ENTITY iz.options.defaultscroll.label "滾輪圖片放大比例">
+<!ENTITY iz.options.singlezoom.label "個別縮放選項">
+<!ENTITY iz.options.globalzoom.label "全域縮放選項">
+<!ENTITY iz.options.context.label "快顯功能表">
+<!ENTITY iz.options.contextdisplay.label "快顯功能表選項">
+<!ENTITY iz.options.tabs.contextmenu.label "快顯功能表項目">
+<!ENTITY iz.options.tabs.main.label "一般設定">
+<!ENTITY iz.options.reversescroll.label "滾輪方向上下交換">
+<!ENTITY iz.options.autocenter.label "最適縮放後自動置中">
+<!ENTITY iz.options.mouseaccess.label1 "啟用圖片縮放功能的按鍵：滑鼠 ">
+<!ENTITY iz.options.mouseaccess.label2 " 鍵。">
+<!ENTITY iz.options.imagefit.label "最適縮放滑鼠按鍵">
+<!ENTITY iz.options.imagereset.label "圖片重置滑鼠按鍵">
+<!ENTITY iz.options.none.label "關閉">
+<!ENTITY iz.options.lmb.label "左">
+<!ENTITY iz.options.mmb.label "中">
+<!ENTITY iz.options.rmb.label "右">
+<!ENTITY iz.options.usemouse.label "使用滑鼠">
+<!ENTITY iz.options.contextdescription.label "請勾選您要顯示在快顯功能表中的選單項目。">
+<!ENTITY iz.options.menudummy.view.label "檢視圖片">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "複製圖片">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "複製圖片網址">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "圖片另存新檔...">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "較小">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "較大">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "依照字串寬度">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "縮放圖片">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "放大">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "重置">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "縮小">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "自定比例">
+<!ENTITY iz.menu.context.customdim.label "自定大小">
+<!ENTITY iz.menu.context.imagefit.label "最適縮放">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "Z">
