@@ -35,24 +35,25 @@ function retrieveImage()
 			oImage.originalHeightUnit = "px";
 			oImage.heightUnit = "px";
 			oImage.style.height = oImage.height + oImage.heightUnit;
-		} else if(oImage.style.width){
+		} else if(oImage.style.width && !oImage.style.height){
 			oImage.originalWidth = getDimInt(oImage.style.width);
 			oImage.originalPxWidth = oImage.width;
 			oImage.originalWidthUnit =  getDimUnit(oImage.style.width);
 			oImage.widthUnit = oImage.originalWidthUnit;
-			oImage.originalHeight = -1;
-			oImage.originalHeightUnit = "na";
-			oImage.heightUnit = "na";
-		} else if(oImage.style.height){
+		} else if(oImage.style.height && !oImage.style.width){
 			oImage.originalHeight = getDimInt(oImage.style.height);
 			oImage.originalHeightUnit =  getDimUnit(oImage.style.height);
 			oImage.heightUnit = oImage.originalHeightUnit;
-			oImage.originalWidth = -1;
 			oImage.originalPxWidth = oImage.width;
-			oImage.originalWidthUnit =  "na";
-			oImage.widthUnit = "na";
+		} else if(oImage.style.width && oImage.style.height){
+			oImage.originalWidth = getDimInt(oImage.style.width);
+			oImage.originalPxWidth = oImage.width;
+			oImage.originalWidthUnit =  getDimUnit(oImage.style.width);
+			oImage.widthUnit = oImage.originalWidthUnit;
+			oImage.originalHeight = getDimInt(oImage.style.height);
+			oImage.originalHeightUnit =  getDimUnit(oImage.style.height);
+			oImage.heightUnit = oImage.originalHeightUnit;
 		}
-
 		oImage.zoomFactor = 100;
 
 	}
@@ -84,8 +85,6 @@ function izImageFit(){
 	//var screenWidth = window._content.innerWidth-29;
 	//var screenHeight = window._content.innerHeight-29;
 	var screenDim = screenWidth/screenHeight;
-	var iWidth = 0;
-	var iHeight = 0;
 
 	var imageDim = oImage.width/oImage.height;
 

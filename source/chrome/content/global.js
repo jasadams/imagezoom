@@ -1,7 +1,7 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
     Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
-imagezoom
+
     This file is part of Image Zoom.
 
     Image Zoom is free software; you can redistribute it and/or modify
@@ -139,13 +139,13 @@ function pGetZoomFactor()
 
 function pZoomImageAbs(oImage, zFactor)
 {
-	if (oImage.originalWidth > 0){
+	if (oImage.originalWidth){
 		oImage.widthUnit = oImage.originalWidthUnit;
   		oImage.style.width = parseInt((oImage.originalWidth * zFactor) + 0.5) + oImage.widthUnit;
 	} else {
 		oImage.style.width = "";
 	}
-	if (oImage.originalHeight > 0){
+	if (oImage.originalHeight){
 		oImage.heightUnit = oImage.originalHeightUnit;
   		oImage.style.height = parseInt((oImage.originalHeight * zFactor) + 0.5) + oImage.heightUnit;
 	} else {
@@ -158,10 +158,13 @@ function pZoomImageAbs(oImage, zFactor)
 function pSetDim(oImage, iWidth, iHeight, bMaintainProportion)
 {
 	if (bMaintainProportion) {
-		oImage.heightUnit = "px";
+		if (!oImage.style.height && !oImage.style.width) {
+			oImage.widthUnit = "px";
+			oImage.style.width = oImage.width + oImage.widthUnit;
+		}
 		if (oImage.style.width) {
 			oImage.widthUnit = "px";
-			oImage.style.width = parseInt(iWidth) + oImage.heightUnit;
+			oImage.style.width = parseInt(iWidth) + oImage.widthUnit;
 		}
 		if (oImage.style.height) {
 			oImage.heightUnit = "px";
@@ -172,7 +175,7 @@ function pSetDim(oImage, iWidth, iHeight, bMaintainProportion)
 
 	} else {
 		oImage.widthUnit = "px";
-		oImage.style.width = parseInt(iWidth) + oImage.heightUnit;
+		oImage.style.width = parseInt(iWidth) + oImage.widthUnit;
 		oImage.heightUnit = "px";
 		oImage.style.height = parseInt(iHeight) + oImage.heightUnit;
 
@@ -183,6 +186,11 @@ function pSetDim(oImage, iWidth, iHeight, bMaintainProportion)
 
 function pZoomImageRel(oImage,zoomValue)
 {
+	if (!oImage.style.height && !oImage.style.width) {
+		oImage.widthUnit = "px";
+		oImage.style.width = oImage.width + oImage.widthUnit;
+	}
+
 	if (oImage.style.width) {
 		var oldWidth = getDimInt(oImage.style.width);
 		oImage.style.width = parseInt((oldWidth * zoomValue) + 0.5) + oImage.widthUnit;
