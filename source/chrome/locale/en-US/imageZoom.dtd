@@ -1,8 +1,11 @@
 <!ENTITY zoomimage:label "Zoom Image">
 <!ENTITY zoomimage:accesskey "Z">
-<!ENTITY zoomimagein:label "Zoom In">
-<!ENTITY zoomimagereset:label "Actual Size">
-<!ENTITY zoomimageout:label "Zoom Out">
+<!ENTITY zoomimagein:label "+ Zoom In">
+<!ENTITY zoomimagein:accesskey "+">
+<!ENTITY zoomimagereset:label "= Zoom Reset">
+<!ENTITY zoomimagereset:accesskey "=">
+<!ENTITY zoomimageout:label "- Zoom Out">
+<!ENTITY zoomimageout:accesskey "-">
 <!ENTITY zoomimagezcustom:label "Custom Zoom">
 <!ENTITY zoomimagedcustom:label "Custom Dimensions">
 <!ENTITY zoomimagefit:label "Image Fit">
@@ -15,7 +18,7 @@
 <!ENTITY pref.iz.ContextDisplay.label "Main Context Menu : Display Options">
 <!ENTITY pref.iz.SubMenuDisplay.label "Zoom Sub Menu : Display Options">
 <!ENTITY pref.iz.ZoomIO.label "Zoom In/Out">
-<!ENTITY pref.iz.Reset.label "Reset Image">
+<!ENTITY pref.iz.Reset.label "Zoom Reset">
 <!ENTITY pref.iz.ZoomPcts.label "Zoom Percentages">
 <!ENTITY pref.iz.CustomZoom.label "Custom Zoom">
 <!ENTITY pref.iz.CustomDim.label "Custom Dimensions">
@@ -26,3 +29,4 @@
 <!ENTITY pref.iz.customdimheight.label "Height:">
 <!ENTITY pref.iz.customdim.title "Custom Dimension">
 <!ENTITY pref.iz.customdimaspect.label "Maintain Aspect Ratio">
+<!ENTITY pref.iz.autocenter.label "Auto Center Images when using Image Fit">

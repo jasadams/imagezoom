@@ -90,6 +90,7 @@
 	    </menulist> 
 	    <label value="%"/>  
           </hbox>
+          <checkbox id="imagezoomautocenter" label="&pref.iz.autocenter.label;" prefstring="imagezoom.autocenter"/>  
         </groupbox>
     </vbox>
 </dialog>

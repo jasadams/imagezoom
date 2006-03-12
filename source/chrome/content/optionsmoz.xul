@@ -39,7 +39,7 @@
     var _elementIDs = ["imagezoommmZoomIO", "imagezoommmReset", "imagezoommmCustomZoom", "imagezoommmCustomDim", 
     			"imagezoommmFitWindow", "imagezoommmZoomPcts", "imagezoomsmZoomIO", "imagezoomsmReset", 
     			"imagezoomsmCustomZoom", "imagezoomsmCustomDim", "imagezoomsmFitWindow", "imagezoomsmZoomPcts", 
-    			"imagezoomzoomvalue"];
+    			"imagezoomzoomvalue", "imagezoomautocenter"];
 ]]>
 </script>
 
@@ -95,6 +95,7 @@
 	    </menulist> 
 	    <label value="%"/>  
           </hbox>
+          <checkbox id="imagezoomautocenter" label="&pref.iz.autocenter.label;" prefstring="imagezoom.autocenter"/>  
         </groupbox>
     </vbox>
 </page>

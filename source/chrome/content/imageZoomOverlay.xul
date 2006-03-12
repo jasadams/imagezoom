@@ -29,18 +29,21 @@
 	<popup id="contentAreaContextMenu">
 			<menuitem id="context-zoom-zin"
 				label="&zoomimagein:label;"
+				accesskey="&zoomimagein:accesskey;"
 				oncommand="izZoomIn();"
 				insertbefore="context-sep-copyimage"
 				hidden="true"				
 			/>
 			<menuitem id="context-zoom-zreset"
 				label="&zoomimagereset:label;"
+				accesskey="&zoomimagereset:accesskey;"
 				insertbefore="context-sep-copyimage"
 				oncommand="izSetZoom(1);"
 				hidden="true"				
 			/>			
 			<menuitem id="context-zoom-zout"
 				label="&zoomimageout:label;"
+				accesskey="&zoomimageout:accesskey;"
 				insertbefore="context-sep-copyimage"
 				oncommand="izZoomOut();"
 				hidden="true"				
@@ -72,16 +75,19 @@
         	  <menupopup id="zoompopup">
 			<menuitem id="zoomsub-zin"
 				label="&zoomimagein:label;"
+				accesskey="&zoomimagein:accesskey;"
 				oncommand="izZoomIn();"
 				hidden="true"				
 			/>
 			<menuitem id="zoomsub-zreset"
 				label="&zoomimagereset:label;"
+				accesskey="&zoomimagereset:accesskey;"
 				oncommand="izSetZoom(1);"
 				hidden="true"				
 			/>				
 			<menuitem id="zoomsub-zout"
 				label="&zoomimageout:label;"
+				accesskey="&zoomimageout:accesskey;"
 				oncommand="izZoomOut();"
 				hidden="true"				
 			/>

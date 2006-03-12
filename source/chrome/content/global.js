@@ -1,7 +1,7 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
     Copyright (c) 2004  Jason Adams <imagezoom@yellowgorilla.net>
-
+imagezoom
     This file is part of Image Zoom.
 
     Image Zoom is free software; you can redistribute it and/or modify
@@ -68,7 +68,8 @@ function initPrefs(){
 
 	if (!imagezoomPrefs.prefHasUserValue("zoomvalue"))
 		imagezoomPrefs.setIntPref("zoomvalue", 200);
-
+	if (!imagezoomPrefs.prefHasUserValue("autocenter"))
+		imagezoomPrefs.setBoolPref("autocenter", true);
 }
 
 function imageZoomMenu() {
@@ -126,8 +127,8 @@ function pGetZoomFactor()
 {
 	try
 	{
-		var preferencesService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("");
-		var zoomValue = preferencesService.getIntPref("imagezoom.zoomvalue");
+		var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("");
+		var zoomValue = imagezoomPrefs.getIntPref("imagezoom.zoomvalue");
 	}
 	catch(e)
 	{
@@ -138,25 +139,60 @@ function pGetZoomFactor()
 
 function pZoomImageAbs(oImage, zFactor)
 {
-  	oImage.style.width = parseInt((oImage.originalWidth * zFactor) + 0.5) + "px";
-  	oImage.style.height = parseInt((oImage.originalHeight * zFactor) + 0.5) + "px";
-	oImage.zoomFactor = parseInt((getWidth(oImage) / oImage.originalWidth)*100+0.5);
+	if (oImage.originalWidth > 0){
+		oImage.widthUnit = oImage.originalWidthUnit;
+  		oImage.style.width = parseInt((oImage.originalWidth * zFactor) + 0.5) + oImage.widthUnit;
+	} else {
+		oImage.style.width = "";
+	}
+	if (oImage.originalHeight > 0){
+		oImage.heightUnit = oImage.originalHeightUnit;
+  		oImage.style.height = parseInt((oImage.originalHeight * zFactor) + 0.5) + oImage.heightUnit;
+	} else {
+		oImage.style.height = "";
+	}
+
+	oImage.zoomFactor = parseInt((zFactor * 100)+0.5);
 }
 
-function pSetDim(oImage, iWidth, iHeight)
+function pSetDim(oImage, iWidth, iHeight, bMaintainProportion)
 {
-  	oImage.style.width = iWidth + "px";
-  	oImage.style.height = iHeight + "px";
-	oImage.zoomFactor = parseInt((getWidth(oImage) / oImage.originalWidth)*100+0.5);
+	if (bMaintainProportion) {
+		oImage.heightUnit = "px";
+		if (oImage.style.width) {
+			oImage.widthUnit = "px";
+			oImage.style.width = parseInt(iWidth) + oImage.heightUnit;
+		}
+		if (oImage.style.height) {
+			oImage.heightUnit = "px";
+			oImage.style.height = parseInt(iHeight) + oImage.heightUnit;
+		}
+
+		oImage.zoomFactor = parseInt((oImage.width / oImage.originalPxWidth)*100+0.5);
+
+	} else {
+		oImage.widthUnit = "px";
+		oImage.style.width = parseInt(iWidth) + oImage.heightUnit;
+		oImage.heightUnit = "px";
+		oImage.style.height = parseInt(iHeight) + oImage.heightUnit;
+
+		oImage.zoomFactor = parseInt((oImage.width / oImage.originalPxWidth)*100+0.5);
+	}
+
 }
 
 function pZoomImageRel(oImage,zoomValue)
 {
-	var oldWidth = getWidth(oImage);
-	var oldHeight = getHeight(oImage);
-	oImage.style.width = parseInt((oldWidth * zoomValue) + 0.5) + "px";
-	oImage.style.height = parseInt((oldHeight * zoomValue) + 0.5) + "px";
-	oImage.zoomFactor = parseInt((getWidth(oImage) / oImage.originalWidth)*100+0.5);
+	if (oImage.style.width) {
+		var oldWidth = getDimInt(oImage.style.width);
+		oImage.style.width = parseInt((oldWidth * zoomValue) + 0.5) + oImage.widthUnit;
+	}
+	if (oImage.style.height) {
+		var oldHeight = getDimInt(oImage.style.height);
+		oImage.style.height = parseInt((oldHeight * zoomValue) + 0.5) + oImage.heightUnit;
+	}
+
+	oImage.zoomFactor = parseInt((oImage.zoomFactor * zoomValue)+0.5);
 }
 
 
@@ -177,79 +213,69 @@ function pIsNumeric(sText)
 
 function imagezoom_getDisplayString()
 {
-  	var preferencesService = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
+  	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
 	var displayString = "";
 
-  	if (preferencesService.getBoolPref("mmZoomIO"))
+  	if (imagezoomPrefs.getBoolPref("mmZoomIO"))
 		displayString += "context-zoom-zin,context-zoom-zout,";
-	if (preferencesService.getBoolPref("mmReset"))
+	if (imagezoomPrefs.getBoolPref("mmReset"))
 		displayString += "context-zoom-zreset,";
-	if (preferencesService.getBoolPref("mmCustomZoom"))
+	if (imagezoomPrefs.getBoolPref("mmCustomZoom"))
 		displayString += "context-zoom-zcustom,";
-	if (preferencesService.getBoolPref("mmCustomDim"))
+	if (imagezoomPrefs.getBoolPref("mmCustomDim"))
 		displayString += "context-zoom-dcustom,";
-	if (preferencesService.getBoolPref("mmFitWindow"))
+	if (imagezoomPrefs.getBoolPref("mmFitWindow"))
 		displayString += "context-zoom-fit,";
 
-	if (preferencesService.getBoolPref("smZoomIO")){
+	if (imagezoomPrefs.getBoolPref("smZoomIO")){
 		displayString += "zoomsub-zin,zoomsub-zout,";
-		if ((preferencesService.getBoolPref("smCustomZoom")) ||
-			(preferencesService.getBoolPref("smCustomDim")) ||
-			(preferencesService.getBoolPref("smFitWindow")) ||
-			(preferencesService.getBoolPref("smZoomPcts")))
+		if ((imagezoomPrefs.getBoolPref("smCustomZoom")) ||
+			(imagezoomPrefs.getBoolPref("smCustomDim")) ||
+			(imagezoomPrefs.getBoolPref("smFitWindow")) ||
+			(imagezoomPrefs.getBoolPref("smZoomPcts")))
 			displayString += "zoomsub-s1,";
 	}
-	if (preferencesService.getBoolPref("smReset")){
+	if (imagezoomPrefs.getBoolPref("smReset")){
 		displayString += "zoomsub-zreset,";
-		if (((preferencesService.getBoolPref("smCustomZoom")) ||
-			(preferencesService.getBoolPref("smCustomDim")) ||
-			(preferencesService.getBoolPref("smFitWindow")) ||
-			(preferencesService.getBoolPref("smZoomPcts"))) &&
-			!(preferencesService.getBoolPref("smZoomIO")))
+		if (((imagezoomPrefs.getBoolPref("smCustomZoom")) ||
+			(imagezoomPrefs.getBoolPref("smCustomDim")) ||
+			(imagezoomPrefs.getBoolPref("smFitWindow")) ||
+			(imagezoomPrefs.getBoolPref("smZoomPcts"))) &&
+			!(imagezoomPrefs.getBoolPref("smZoomIO")))
 			displayString += "zoomsub-s1,";
 	}
-	if (preferencesService.getBoolPref("smCustomZoom")){
+	if (imagezoomPrefs.getBoolPref("smCustomZoom")){
 		displayString += "zoomsub-zcustom,";
-		if (((preferencesService.getBoolPref("smFitWindow")) ||
-			(preferencesService.getBoolPref("smZoomPcts"))) &&
-			!(preferencesService.getBoolPref("smCustomDim")))
+		if (((imagezoomPrefs.getBoolPref("smFitWindow")) ||
+			(imagezoomPrefs.getBoolPref("smZoomPcts"))) &&
+			!(imagezoomPrefs.getBoolPref("smCustomDim")))
 			displayString += "zoomsub-s2,";
 	}
-	if (preferencesService.getBoolPref("smCustomDim")){
+	if (imagezoomPrefs.getBoolPref("smCustomDim")){
 		displayString += "zoomsub-dcustom,";
-		if ((preferencesService.getBoolPref("smFitWindow")) ||
-			(preferencesService.getBoolPref("smZoomPcts")))
+		if ((imagezoomPrefs.getBoolPref("smFitWindow")) ||
+			(imagezoomPrefs.getBoolPref("smZoomPcts")))
 			displayString += "zoomsub-s2,";
 	}
-	if (preferencesService.getBoolPref("smFitWindow")){
+	if (imagezoomPrefs.getBoolPref("smFitWindow")){
 		displayString += "zoomsub-fit,";
-		if (preferencesService.getBoolPref("smZoomPcts"))
+		if (imagezoomPrefs.getBoolPref("smZoomPcts"))
 			displayString += "zoomsub-s3,";
 	}
-	if (preferencesService.getBoolPref("smZoomPcts"))
+	if (imagezoomPrefs.getBoolPref("smZoomPcts"))
 		displayString += "zoomsub-z400,zoomsub-z200,zoomsub-z150,zoomsub-z125,zoomsub-s4,zoomsub-z100,zoomsub-s5,zoomsub-z75,zoomsub-z50,zoomsub-z25,zoomsub-z10,";
-	if ((preferencesService.getBoolPref("smZoomIO")) ||
-		(preferencesService.getBoolPref("smReset")) ||
-		(preferencesService.getBoolPref("smCustomZoom")) ||
-		(preferencesService.getBoolPref("smCustomDim")) ||
-		(preferencesService.getBoolPref("smFitWindow")) ||
-		(preferencesService.getBoolPref("smZoomPcts")))
+	if ((imagezoomPrefs.getBoolPref("smZoomIO")) ||
+		(imagezoomPrefs.getBoolPref("smReset")) ||
+		(imagezoomPrefs.getBoolPref("smCustomZoom")) ||
+		(imagezoomPrefs.getBoolPref("smCustomDim")) ||
+		(imagezoomPrefs.getBoolPref("smFitWindow")) ||
+		(imagezoomPrefs.getBoolPref("smZoomPcts")))
 		displayString += "context-zoomsub,";
 
 	displayString = displayString.substring(0, displayString.length-1);
 
 	return displayString;
 
-}
-
-function getHeight(oImage)
-{
-	return oImage.style.height.substring(0, oImage.style.height.length-2);
-}
-
-function getWidth(oImage)
-{
-	return oImage.style.width.substring(0, oImage.style.width.length-2);
 }
 
 function imagezoom_getHideString(displayString)
@@ -267,3 +293,32 @@ function imagezoom_getHideString(displayString)
 }
 
 
+function getDimUnit(sText)
+{
+	var ValidChars = "0123456789";
+	var returnChar = "";
+	var Char;
+
+ 	for (i = 0; i < sText.length; i++){
+		Char = sText.charAt(i);
+		if (ValidChars.indexOf(Char) == -1){
+			returnChar += Char;
+		}
+	}
+	return returnChar;
+}
+
+function getDimInt(sText)
+{
+	var ValidChars = "0123456789";
+	var returnChar = "";
+	var Char;
+
+ 	for (i = 0; i < sText.length; i++){
+		Char = sText.charAt(i);
+		if (ValidChars.indexOf(Char) >= 0){
+			returnChar += Char;
+		}
+	}
+	return returnChar;
+}
