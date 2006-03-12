@@ -7,4 +7,5 @@ locale imagezoom sl-SI jar:chrome/imagezoom.jar!/locale/sl-SI/
 locale imagezoom zh-TW jar:chrome/imagezoom.jar!/locale/zh-TW/
 locale imagezoom ja-JP jar:chrome/imagezoom.jar!/locale/ja-JP/
 locale imagezoom de-DE jar:chrome/imagezoom.jar!/locale/de-DE/
+locale imagezoom de-DE jar:chrome/imagezoom.jar!/locale/cs-CZ/
 skin imagezoom classic/1.0 jar:chrome/imagezoom.jar!/skin/classic/imagezoom/

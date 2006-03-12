@@ -28,10 +28,11 @@ var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"]
 var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
 
 var linuxImage;
+var currentImage;
+var currentURL;
 var izContext;
 var contextDisabled = false;
 
-var gPanelContainer = window;
 var mousedown = false;
 
 // Initialise image zoom when the window has finished loading
@@ -66,9 +67,7 @@ function initImageZoom() {
     }
 
     // Add events for the mouse functions
-	gPanelContainer.addEventListener("mousedown",onMouseDown,true);
-
-	//document.getElementById("content").addEventListener("DOMNodeInserted", zoomAllImages, false);
+	gPanelContainer().addEventListener("mousedown",onMouseDown,true);
 
 	// Add Image Zooming to text reduce command
 	var cmdZoomReduce = document.getElementById("cmd_textZoomReduce");
@@ -85,9 +84,31 @@ function initImageZoom() {
 	prevCmd = cmdZoomReset.getAttribute("oncommand");
 	cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageLoad();");
 	
-	//window.addEventListener("load",registerImageZoomListener(),false);
-	//window.addEventListener("unload",unregisterImageZoomListener(),false);
-	
+}
+
+function gPanelContainer()
+{
+	//return document.getElementById("content");
+	return window;
+}
+
+function onMouseOut(e) {
+		if ((e.originalTarget.tagName.toUpperCase() == "HTML") || (e.originalTarget.tagName == "xul:browser")){
+			cancelScrollZoom();
+		}
+}
+
+function cancelScrollZoom() {
+	if (linuxImage)
+		linuxImage = null;
+
+	if (currentImage)
+		currentImage = null;
+
+	gPanelContainer().removeEventListener("DOMMouseScroll",ScrollImage,true);
+	gPanelContainer().removeEventListener("mouseup",onMouseUp,true);
+	gPanelContainer().removeEventListener("mouseout", onMouseOut, true);
+	mousedown = false;
 }
 
 function reportStatus(oizImage){
@@ -151,7 +172,7 @@ function izSetZoom(zFactor)
 
 function disableContextMenu(e) {
 	if (document.popupNode.tagName == "IMG") {
-		linuxImage = new izImage(document.popupNode);
+		linuxImage = document.popupNode;
 		izContext = e.originalTarget;
 		e.preventDefault();
 		contextDisabled = true;
@@ -161,16 +182,28 @@ function disableContextMenu(e) {
 
 function onMouseDown(e){
 	// prepare for the mouse functions on a right click when user option is true
-	if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll"))){
-		if (navigator.platform != "Win32" && navigator.platform != "OS/2") {
-			addEventListener("popupshowing", disableContextMenu, true);
+	if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")))
+	{
+				
+		if ((e.originalTarget.tagName == "IMG") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2))
+		{
+			if (nsIPrefBranchObj.getIntPref("scrollZoomMode") == 2) 
+			{
+				currentImage = e.originalTarget;
+				
+			}
+			if (navigator.platform != "Win32" && navigator.platform != "OS/2") 
+			{
+				addEventListener("popupshowing", disableContextMenu, true);
+			}
+			haveZoomed = false;
+			gPanelContainer().addEventListener("DOMMouseScroll",ScrollImage,true);
+			gPanelContainer().addEventListener("mouseup",onMouseUp,true);
+			gPanelContainer().addEventListener("click",onClick,true);
+			gPanelContainer().addEventListener("mouseout", onMouseOut, true);
+			currentURL = window._content.document.location;
+			mousedown = true;
 		}
-
-		haveZoomed = false;
-		gPanelContainer.addEventListener("DOMMouseScroll",ScrollImage,true);
-		gPanelContainer.addEventListener("mouseup",onMouseUp,true);
-		gPanelContainer.addEventListener("click",onClick,true);
-		mousedown = true;
 	}
 }
 
@@ -181,12 +214,7 @@ function onMouseUp(e){
 			e.preventDefault();
 			e.stopPropagation();
 		}
-		if (linuxImage)
-			linuxImage = null;
-
-		gPanelContainer.removeEventListener("DOMMouseScroll",ScrollImage,true);
-		gPanelContainer.removeEventListener("mouseup",onMouseUp,true);
-		mousedown = false;
+		cancelScrollZoom();
 	}
 }
 
@@ -202,7 +230,8 @@ function onClick(e){
 				izContext.showPopup(izContext.ownerDocument.documentElement, e.clientX, e.clientY, "context", "bottomleft", "topleft");
 			}
   		}
-		gPanelContainer.removeEventListener("click",onClick,true);
+		cancelScrollZoom();  		
+		gPanelContainer().removeEventListener("click",onClick,true);
 	}
 
 	if (mousedown){
@@ -229,31 +258,84 @@ function onClick(e){
 				break;
 			}
 		} else {
-			gPanelContainer.removeEventListener("click",onClick,true);
+			gPanelContainer().removeEventListener("click",onClick,true);
 		}
 	}
 }
 
 function ScrollImage(e){
+	var imageToScroll;
 	// Scroll wheel invoked while right button down, zoom target image
-	if (((e.target.tagName == "IMG") || (linuxImage != null)) && (nsIPrefBranchObj.getBoolPref("usescroll"))){
-		e.preventDefault();
-		e.stopPropagation();
-		haveZoomed = true;
-		if (linuxImage != null)
-			var oizImage = linuxImage
-		else
-			var oizImage = new izImage(e.target);
+	if ((window._content.document.location == currentURL) && (nsIPrefBranchObj.getBoolPref("usescroll"))) {
+		switch (nsIPrefBranchObj.getIntPref("scrollZoomMode")) {
+		
+		// Mixed Mode (default)
+		case 0:
+			if ((e.target.tagName == "IMG") || (linuxImage != null) || (currentImage != null))
+			{
+				if (linuxImage != null) {
+					currentImage = linuxImage;
+				} else if (e.target.tagName == "IMG") {
+					currentImage = e.target;
+				}
+			} 
+			else 
+			{
+				currentImage = null;
+			}
+			imageToScroll = currentImage;
+			break;
+		
+		// Only Scroll when mouse over image mode
+		case 1:
+			if ((e.target.tagName == "IMG") || (linuxImage != null))
+			{
+				if (linuxImage != null) {
+					imageToScroll = linuxImage;
+				} else if (e.target.tagName == "IMG") {
+					imageToScroll = e.target;
+				}				
+			}
+			else
+			{
+				imageToScroll = null;
+			}
+			break;
+			
+		// Only Scroll the image that was right mouse clicked mode
+		case 2:
+			if (currentImage != null)
+			{
+				imageToScroll = currentImage;
+			}
+			else
+			{	
+				imageToScroll = null;
+			}
+			break;
+		default:
+			imageToScroll = null;
+			break;
+		}
+			
+		if (imageToScroll != null)
+		{
+			e.preventDefault();
+			e.stopPropagation();
+			haveZoomed = true;
+			var oizImage = new izImage(imageToScroll);
 
+			if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) ||
+				((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom")))
+				var zoomFactor = 1/(1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100));
+			else
+				var zoomFactor = 1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100);
 
-		if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) ||
-			((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom")))
-			var zoomFactor = 1/(1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100));
-		else
-			var zoomFactor = 1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100);
-
-		oizImage.zoom(zoomFactor);
-		reportStatus(oizImage);
+			oizImage.zoom(zoomFactor);
+			reportStatus(oizImage);
+		}		
+	} else {
+		cancelScrollZoom();
 	}
 }
 
