@@ -111,7 +111,7 @@ function imagezoom_customDim()
 	var dimHeight = document.getElementById("dimHeight").value;
 	if (pIsNumeric(dimWidth) && pIsNumeric(dimHeight)){
 		var oImage = window.arguments[0];
-		pSetDim(oImage, dimWidth, dimHeight);
+		pSetDim(oImage, dimWidth, dimHeight, gDimAspect.checked);
 	}
 }
 
