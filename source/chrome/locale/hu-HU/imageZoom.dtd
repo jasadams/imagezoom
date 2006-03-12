@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "verzió">
+<!ENTITY iz.about.createdby.label "Készítő:">
+<!ENTITY iz.about.help.label "Súgó">
+<!ENTITY iz.about.help.description "Segítség az Image Zoom beállításához és használatához.">
+<!ENTITY iz.about.forums.label "Fórum">
+<!ENTITY iz.about.forums.description "Támogatás, tanácsok, hibák.">
+<!ENTITY iz.about.walkthrough.label "Jellemzők">
+<!ENTITY iz.about.walkthrough.description "Az Image Zoom tulajdonságainak rövid leírása.">
+<!ENTITY iz.about.close.label "Bezár">
+<!ENTITY iz.install.installed "Image Zoom telepítve">
+<!ENTITY iz.install.options.label "Beállítások">
+<!ENTITY iz.install.close.label "Bezár">
+<!ENTITY iz.install.continue.label "Folytatás">
+<!ENTITY iz.install.desc.line1 "Látogassa meg az Image Zoom honlapját, ha">
+<!ENTITY iz.install.desc.line2 "információkat és leírást akar kapni a kiterjesztésről.">
+<!ENTITY iz.install.desc.line3 "A honlap meglátogatásához kattintson a Folytatás gombra.">
+<!ENTITY iz.customzoom.label "A nagyítás mértéke">
+<!ENTITY iz.customzoom.title "Egyedi nagyítás">
+<!ENTITY iz.customdim.width.label "Szélesség:">
+<!ENTITY iz.customdim.height.label "Magasság:">
+<!ENTITY iz.customdim.title "Egyedi dimenzió">
+<!ENTITY iz.customdim.aspect.label "Oldalarány megtartása">
+<!ENTITY iz.options.label "beállítások">
+<!ENTITY iz.options.help.label "Image Zoom honlapja">
+<!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
+<!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
+<!ENTITY iz.options.showviewmenu.label "Látható a 'Nézet' menünél a 'Képek mérete' menü.">
+<!ENTITY iz.options.defaultscroll.label "Egérgörgővel való nagyítás">
+<!ENTITY iz.options.singlezoom.label "Képek egyedi átméretezése">
+<!ENTITY iz.options.globalzoom.label "Képek globális átméretezése">
+<!ENTITY iz.options.context.label "Helyzetérzékeny menü">
+<!ENTITY iz.options.contextdisplay.label "Kép helyzetérzékeny menü">
+<!ENTITY iz.options.tabs.contextmenu.label "Helyzetérzékeny menü">
+<!ENTITY iz.options.tabs.main.label "Általános beállítások">
+<!ENTITY iz.options.reversescroll.label "Visszafelé görgetés">
+<!ENTITY iz.options.autocenter.label "A kép automatikus középre igazítás az ablakhoz méretezéskor.">
+<!ENTITY iz.options.mouseaccess.label1 "Az egérfunkciók elérése, ha a">
+<!ENTITY iz.options.mouseaccess.label2 "egérgomb nyomva van.">
+<!ENTITY iz.options.imagefit.label "Kép ablakhoz méretezése">
+<!ENTITY iz.options.imagereset.label "Eredeti méret">
+<!ENTITY iz.options.none.label "Tiltva">
+<!ENTITY iz.options.lmb.label "Bal">
+<!ENTITY iz.options.mmb.label "Középső">
+<!ENTITY iz.options.rmb.label "Jobb">
+<!ENTITY iz.options.usemouse.label "Képek átméretezése egérrel">
+<!ENTITY iz.options.contextdescription.label "Ellenőrizze, hogy melyik menüelemeket akarja megjeleníteni!">
+<!ENTITY iz.options.menudummy.view.label "Kép megjelenítése">
+<!ENTITY iz.options.menudummy.view.accesskey "g">
+<!ENTITY iz.options.menudummy.contents.label "Kép másolása">
+<!ENTITY iz.options.menudummy.contents.accesskey "á">
+<!ENTITY iz.options.menudummy.image.label "Kép címének másolása">
+<!ENTITY iz.options.menudummy.image.accesskey "c">
+<!ENTITY iz.options.menudummy.save.label "Kép mentése más néven...">
+<!ENTITY iz.options.menudummy.save.accesskey "p">
+<!ENTITY iz.menu.global.decrease.label "Kicsinyítés">
+<!ENTITY iz.menu.global.decrease.accesskey "K">
+<!ENTITY iz.menu.global.increase.label "Nagyítás">
+<!ENTITY iz.menu.global.increase.accesskey "N">
+<!ENTITY iz.menu.global.custom.accesskey "E">
+<!ENTITY iz.menu.global.textscale.label "Méretezés a szöveggel együtt">
+<!ENTITY iz.menu.global.textscale.accesskey "s">
+<!ENTITY iz.menu.context.zoomimage.label "Kép átméretezése">
+<!ENTITY iz.menu.context.zoomimage.accesskey "á">
+<!ENTITY iz.menu.context.increase.label "+ Kép nagyítása">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Eredeti méret">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Kép kicsinyítése">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Egyedi nagyítás">
+<!ENTITY iz.menu.context.customdim.label "Egyedi dimenzió">
+<!ENTITY iz.menu.context.imagefit.label "Ablakhoz méretezés">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "e">

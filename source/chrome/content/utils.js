@@ -1,6 +1,6 @@
 
 function isFirefox() {
-	return (navigator.userAgent.search(/Firefox/gi) != -1);
+	return ((navigator.userAgent.search(/Firefox/gi) != -1) || (navigator.userAgent.search(/Netscape/gi) != -1) || (navigator.userAgent.search(/Flock/gi) != -1));
 }
 
 function isThunderbird() {

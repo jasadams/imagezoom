@@ -212,7 +212,7 @@ function onMouseUp(e){
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
 			e.preventDefault();
-			e.stopPropagation();
+			//e.stopPropagation();
 		}
 		cancelScrollZoom();
 	}
@@ -222,7 +222,7 @@ function onClick(e){
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
 			e.preventDefault();
-			e.stopPropagation();
+			//e.stopPropagation();
 		} else {
             // contextmenu on mousedown
      		if (contextDisabled) {
@@ -241,7 +241,7 @@ function onClick(e){
 			// Middle mouse button pressed while right button down, reset image
 			case nsIPrefBranchObj.getIntPref("imageresetbutton"):
 				e.preventDefault();
-				e.stopPropagation();
+				//e.stopPropagation();
 				haveZoomed = true;
 				var oizImage = new izImage(e.originalTarget);
 				oizImage.setZoom(100);
@@ -250,7 +250,7 @@ function onClick(e){
 			// Left mouse button pressed while right button down, fit image to screen
 			case nsIPrefBranchObj.getIntPref("imagefitbutton"):
 				e.preventDefault();
-				e.stopPropagation();
+				//e.stopPropagation();
 				haveZoomed = true;
 				var oizImage = new izImage(e.originalTarget);
 				oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
@@ -321,7 +321,7 @@ function ScrollImage(e){
 		if (imageToScroll != null)
 		{
 			e.preventDefault();
-			e.stopPropagation();
+			//e.stopPropagation();
 			haveZoomed = true;
 			var oizImage = new izImage(imageToScroll);
 

@@ -1,53 +1,109 @@
-//$Id: install.js,v 1.10 2004/06/16 22:47:23 jaap Exp $
+// XpiInstaller
+// By Pike (Heavily inspired by code from Henrik Gemal and Stephen Clavering)
 
-const APP_DISPLAY_NAME = "Image Zoom";
-const APP_NAME = "imagezoom";
-const APP_PACKAGE = "imagezoom";
-const APP_VERSION = "0.2.2";
+var XpiInstaller = {
 
-const APP_JAR_FILE = APP_NAME+".jar";
-initInstall(APP_NAME, APP_PACKAGE, APP_VERSION);
+	// --- Editable items begin ---
+	extFullName: 'Image Zoom', // The name displayed to the user (don't include the version)
+	extShortName: 'imagezoom', // The leafname of the JAR file (without the .jar part)
+	extVersion: '0.2.3',
+	extAuthor: 'Jason Adams',
+	extLocaleNames: ["en-US","sl-SI","hu-HU","fr-FR","de-DE","zh-TW","ja-JP","cs-CZ"],
+	extSkinNames: ['classic'], // e.g. ['classic', 'modern']
+	extPostInstallMessage: null, // Set to null for no post-install message
+	// --- Editable items end ---
 
-var prefDir = getFolder("Program", "defaults/pref");
-var err = addFile(APP_NAME, 'defaults/preferences/imagezoom-defaults.js', prefDir, null);
+	profileInstall: true,
+	silentInstall: true,
 
-if (err == SUCCESS) {
-	var chromef = getFolder("Profile", "chrome");
-	err = addFile(APP_PACKAGE, APP_VERSION, 'chrome/'+APP_JAR_FILE, chromef, null);
+	install: function()	{
+		var jarName = this.extShortName + '.jar';
+		var profileDir = Install.getFolder('Profile', 'chrome');
+		var prefDir = Install.getFolder('Program', 'defaults/pref');
+		
+		// Parse HTTP arguments
+		this.parseArguments();
 
-	if(err == SUCCESS) {
-		var jar = getFolder(chromef, APP_JAR_FILE);
-		registerChrome(CONTENT | PROFILE_CHROME, jar, 'content/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/en-US/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/fr-FR/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/ja-JP/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/sl-SI/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/zh-TW/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/cs-CZ/');
-		registerChrome(LOCALE | PROFILE_CHROME, jar, 'locale/de-DE/');
-		registerChrome(SKIN | PROFILE_CHROME, jar, 'skin/classic/imagezoom/');
-
-		err = performInstall();
-		if(err == SUCCESS || err == 999) {
-			alert(APP_NAME + " " + APP_VERSION + " has been succesfully installed.\n"
-				+"Please restart your browser before continuing.");
-		} else {
-			alert("Install failed. Error code:" + err);
-			cancelInstall(err);
+		// Init install
+		var dispName = this.extFullName + ' ' + this.extVersion;
+		var regName = '/' + this.extAuthor + '/' + this.extShortName;
+		
+		
+		// Check if extension is already installed in profile
+		if (File.exists(Install.getFolder(profileDir, jarName))) {
+			Install.uninstall(regName);
+			if (!this.silentInstall) {
+				Install.alert('Updating existing Profile install of ' + this.extFullName + ' to version ' + this.extVersion + '.');
+			}
+			this.profileInstall = true;
+		} else if (!this.silentInstall) {
+			// Ask user for install location, profile or browser dir?
+			this.profileInstall = Install.confirm('Install ' + this.extFullName + ' ' + this.extVersion + ' to your Profile directory (OK) or your Browser directory (Cancel)?');
 		}
 
-	} else {
-		alert("Failed to create " +APP_JAR_FILE +"\n"
-			+"You probably don't have appropriate permissions \n"
-			+"(write access to mozilla/chrome directory). \n"
-			+"_____________________________\nError code:" + err);
-		cancelInstall(err);
-	}
-} else {
-	alert("Failed to create imagezoom-defaults.js\n"
-		+"You probably don't have appropriate permissions \n"
-		+"(write access to mozilla/defaults/pref directory). \n"
-		+"_____________________________\nError code:" + err);
-	cancelInstall(err);
-}
 
+		Install.initInstall(dispName, regName, this.extVersion);
+
+		// Find directory to install into
+		var installPath;
+		if (this.profileInstall) installPath = profileDir;
+		else installPath = Install.getFolder('chrome');
+
+		// Add JAR file
+		Install.addFile(null, 'chrome/' + jarName, installPath, null);
+		
+		// Add Prefs File
+		Install.addFile(this.extShortName, 'defaults/preferences/imagezoom-defaults.js', prefDir, null);
+
+		// Register chrome
+		var jarPath = Install.getFolder(installPath, jarName);
+		var installType = this.profileInstall ? Install.PROFILE_CHROME : Install.DELAYED_CHROME;
+
+		// Register content
+		Install.registerChrome(Install.CONTENT | installType, jarPath, 'content/');
+
+		// Register skins
+		for (var skin in this.extSkinNames) {
+			var regPath = 'skin/' + this.extSkinNames[skin] + '/' + this.extShortName + '/';
+			Install.registerChrome(Install.SKIN | installType, jarPath, regPath);
+		}
+		
+		// Register locales
+		for (var locale in this.extLocaleNames) {
+			var regPath = 'locale/' + this.extLocaleNames[locale] + '/';
+			Install.registerChrome(Install.LOCALE | installType, jarPath, regPath);
+		}
+		
+		// Perform install
+		var err = Install.performInstall();
+
+		if (err == Install.SUCCESS || err == Install.REBOOT_NEEDED) {
+			if (!this.silentInstall && this.extPostInstallMessage) {
+				Install.alert(this.extPostInstallMessage);
+			}
+		} else {
+			this.handleError(err);
+			return;
+		}
+	},
+
+	parseArguments: function() {
+		// Can't use string handling in install, so use if statement instead
+		var args = Install.arguments;
+
+		if (args == 'p=0') {
+			this.profileInstall = false;
+			this.silentInstall = true;
+		} else if (args == 'p=1') {
+			this.profileInstall = true;
+			this.silentInstall = true;
+		}
+	},
+
+	handleError: function(err) {
+		Install.alert('Error: Could not install ' + this.extFullName + ' ' + this.extVersion + ' (Error code: ' + err + ')\nPlease visit http://imagezoom.yellowgorilla.net/faq/ for help with this issue.');
+		Install.cancelInstall(err);
+	}
+};
+
+XpiInstaller.install();
