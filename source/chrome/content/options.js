@@ -20,14 +20,11 @@
 
  * ***** END LICENSE BLOCK ***** */
 var gData;
-var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom");
 
 function init(){
     var prefWindow = parent.hPrefWindow;
 
     gData = prefWindow.wsm.dataManager.pageData["chrome://imagezoom/content/optionsmoz.xul"];
-
-	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
 
     if ("imagezoomData" in gData)
         return;
@@ -47,18 +44,20 @@ function init(){
     imagezoomData[10] = imagezoomPrefs.getBoolPref("smFitWindow");
     imagezoomData[11] = imagezoomPrefs.getBoolPref("smZoomPcts");
 
-	imagezoomData[12] = imagezoomPrefs.getIntPref("zoomvalue");
-	imagezoomData[13] = imagezoomPrefs.getBoolPref("autocenter");
+    imagezoomData[12] = imagezoomPrefs.getBoolPref("usescroll");
+    imagezoomData[13] = imagezoomPrefs.getIntPref("scrollvalue");
+
+    imagezoomData[14] = imagezoomPrefs.getIntPref("zoomvalue");
+    imagezoomData[15] = imagezoomPrefs.getBoolPref("autocenter");
 
     // Initialise dictionarysearchData here
     gData.imagezoomData = imagezoomData;
 
+	imagezoom_toggleScrollEnabled();
 }
 
 function imagezoom_saveOptions()
 {
-	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
-
     imagezoomPrefs.setBoolPref("mmZoomIO", document.getElementById("imagezoommmZoomIO").checked);
     imagezoomPrefs.setBoolPref("mmReset", document.getElementById("imagezoommmReset").checked);
     imagezoomPrefs.setBoolPref("mmCustomZoom", document.getElementById("imagezoommmCustomZoom").checked);
@@ -73,20 +72,22 @@ function imagezoom_saveOptions()
     imagezoomPrefs.setBoolPref("smFitWindow", document.getElementById("imagezoomsmFitWindow").checked);
     imagezoomPrefs.setBoolPref("smZoomPcts", document.getElementById("imagezoomsmZoomPcts").checked);
 
-	imagezoomPrefs.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
-	imagezoomPrefs.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
+    imagezoomPrefs.setBoolPref("usescroll", document.getElementById("imagezoomusescroll").checked);
+    imagezoomPrefs.setIntPref("scrollvalue", document.getElementById("imagezoomscrollvalue").value);
 
+    imagezoomPrefs.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
+    imagezoomPrefs.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
 }
 
 function Startup()
 {
-	init();
+    init();
 }
 
 //Initialize options
 function imagezoom_initializeOptions()
 {
-	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
+
 
     document.getElementById("imagezoommmZoomIO").checked = imagezoomPrefs.getBoolPref("mmZoomIO");
     document.getElementById("imagezoommmReset").checked = imagezoomPrefs.getBoolPref("mmReset");
@@ -102,10 +103,24 @@ function imagezoom_initializeOptions()
     document.getElementById("imagezoomsmFitWindow").checked = imagezoomPrefs.getBoolPref("smFitWindow");
     document.getElementById("imagezoomsmZoomPcts").checked = imagezoomPrefs.getBoolPref("smZoomPcts");
 
-	var zoom = imagezoomPrefs.getIntPref("zoomvalue");
-	var zoomValueBox = document.getElementById("imagezoomzoomvalue")
-	zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
+	document.getElementById("imagezoomusescroll").checked = imagezoomPrefs.getBoolPref("usescroll");
 
-	document.getElementById("imagezoomautocenter").checked = imagezoomPrefs.getBoolPref("autocenter");
+    var scroll = imagezoomPrefs.getIntPref("scrollvalue");
+    var scrollValueBox = document.getElementById("imagezoomscrollvalue");
+    scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute( "value", scroll )[0];
+	imagezoom_toggleScrollEnabled();
+
+    var zoom = imagezoomPrefs.getIntPref("zoomvalue");
+    var zoomValueBox = document.getElementById("imagezoomzoomvalue");
+    zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
+
+    document.getElementById("imagezoomautocenter").checked = imagezoomPrefs.getBoolPref("autocenter");
 }
 
+function imagezoom_toggleScrollEnabled()
+{
+	var scrollDisabled = !document.getElementById("imagezoomusescroll").checked;
+	document.getElementById("imagezoomscrollvalue").disabled = scrollDisabled;
+	document.getElementById("imagezoomscrollvaluelabelbefore").disabled = scrollDisabled;
+	document.getElementById("imagezoomscrollvaluelabelafter").disabled = scrollDisabled;
+}

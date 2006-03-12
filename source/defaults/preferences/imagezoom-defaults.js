@@ -1,0 +1,17 @@
+pref("imagezoom.autocenter", true);
+pref("imagezoom.mmCustomDim", false);
+pref("imagezoom.mmCustomZoom", false);
+pref("imagezoom.mmFitWindow", false);
+pref("imagezoom.mmReset", false);
+pref("imagezoom.mmZoomIO", false);
+pref("imagezoom.mmZoomPcts", false);
+pref("imagezoom.usescroll", false);
+pref("imagezoom.scrollvalue", 5);
+pref("imagezoom.smCustomDim", true);
+pref("imagezoom.smCustomZoom", true);
+pref("imagezoom.smFitWindow", true);
+pref("imagezoom.smReset", true);
+pref("imagezoom.smZoomIO", true);
+pref("imagezoom.smZoomPcts", true);
+pref("imagezoom.zoomvalue", 200);
+pref("imagezoom.version", "0.0.0");

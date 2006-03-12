@@ -1,11 +1,10 @@
-<?xml version="1.0"?>
 <RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
   
     <em:id>{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}</em:id>
     <em:name>Image Zoom</em:name>
-    <em:version>0.1.6</em:version>
+    <em:version>0.1.7</em:version>
     <em:description>Adds zoom functionality for images</em:description>
     <em:creator>Jason Adams</em:creator>
     <em:homepageURL>http://www.yellowgorilla.net/imagezoom/</em:homepageURL>
@@ -23,7 +22,7 @@
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>0.7</em:minVersion>
-        <em:maxVersion>0.7.2</em:maxVersion>
+        <em:maxVersion>0.9</em:maxVersion>
       </Description>
     </em:targetApplication>
     
@@ -31,7 +30,7 @@
      <Description>
        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
        <em:minVersion>0.8</em:minVersion>
-       <em:maxVersion>0.9.2</em:maxVersion>
+       <em:maxVersion>1.0</em:maxVersion>
      </Description>
     </em:targetApplication>    
     
@@ -39,7 +38,7 @@
      <Description>
        <em:id>{86c18b42-e466-45a9-ae7a-9b95ba6f5640}</em:id>
        <em:minVersion>1.4</em:minVersion>
-       <em:maxVersion>1.7</em:maxVersion>
+       <em:maxVersion>1.8</em:maxVersion>
      </Description>
     </em:targetApplication>    
     

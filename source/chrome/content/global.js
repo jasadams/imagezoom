@@ -20,13 +20,57 @@
 
  * ***** END LICENSE BLOCK ***** */
 
+var version = "0.1.7";
 var gDefaultZoomFactor = 200;
+var gDefaultScrollFactor = 5;
 var gAllMenuItems = "context-zoom-zin,context-zoom-zout,context-zoom-zreset,context-zoom-zcustom,context-zoom-dcustom,context-zoom-fit,zoomsub-zin,zoomsub-zout,zoomsub-s1,zoomsub-zreset,zoomsub-zcustom,zoomsub-dcustom,zoomsub-s2,zoomsub-fit,zoomsub-s3,zoomsub-z400,zoomsub-z200,zoomsub-z150,zoomsub-z125,zoomsub-s4,zoomsub-z100,zoomsub-s5,zoomsub-z75,zoomsub-z50,zoomsub-z25,zoomsub-z10,context-zoomsub";
 var gDefaultDisplayString = "zoomsub-zin,zoomsub-zout,zoomsub-s1,zoomsub-zreset,zoomsub-zcustom,zoomsub-dcustom,zoomsub-s2,zoomsub-fit,zoomsub-s3,zoomsub-z400,zoomsub-z200,zoomsub-z150,zoomsub-z125,zoomsub-s4,zoomsub-z100,zoomsub-s5,zoomsub-z75,zoomsub-z50,zoomsub-z25,zoomsub-z10,context-zoomsub";
 
+var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
+
+var haveZoomed = false;
+var imageScroll;
+
 window.addEventListener("load", initImageZoom, false);
+window.addEventListener("mousedown",onMouseDown,false);
+window.addEventListener("mouseup",onMouseUp,false);
+window.addEventListener("click",onClick,false);
+
+function onClick(e){
+	if (e.which == 3){
+		if (haveZoomed){
+			e.preventDefault();
+		}
+	}
+}
+
+function onMouseDown(e){
+	if (e.which == 3){
+		haveZoomed = false;
+		if (imagezoomPrefs.getBoolPref("usescroll") && (e.target.tagName == "IMG")) {
+			imageScroll = e.target;
+			window.addEventListener("DOMMouseScroll",ScrollImage,false);
+		}
+	}
+}
+
+function onMouseUp(e){
+	if (e.which == 3){
+		if (haveZoomed){
+			e.preventDefault();
+		}
+		window.removeEventListener("DOMMouseScroll",ScrollImage,false);
+		imageScroll = null;
+	}
+}
 
 function initImageZoom() {
+	var oldVersion = imagezoomPrefs.getCharPref("version");
+	if (oldVersion < version) {
+		imagezoomPrefs.setCharPref("version", version);
+		window._content.location.href = "chrome://imagezoom/content/install.html?old=" + oldVersion + "&new=" + version;
+	}
+
     if (document.getElementById("contentAreaContextMenu")){
         document.getElementById("contentAreaContextMenu").addEventListener("popupshowing", imageZoomMenu, false);
     }
@@ -34,42 +78,26 @@ function initImageZoom() {
         document.getElementById("messagePaneContext").addEventListener("popupshowing", imageZoomMenu, false);
     }
 
-    initPrefs();
 }
 
-function initPrefs(){
-	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
+function ScrollImage(e){
+	if (imageScroll){
+		e.preventDefault();
+		haveZoomed = true;
+		var oImage = initImage(imageScroll);
+		pZoomImageAbs(oImage, (oImage.zoomFactor + (e.detail * pGetScrollFactor()))/100);
+		zoomStatus(oImage);
+	}
+}
 
-	if (!imagezoomPrefs.prefHasUserValue("mmZoomIO"))
-		imagezoomPrefs.setBoolPref("mmZoomIO", false);
-	if (!imagezoomPrefs.prefHasUserValue("mmReset"))
-		imagezoomPrefs.setBoolPref("mmReset", false);
-	if (!imagezoomPrefs.prefHasUserValue("mmCustomZoom"))
-		imagezoomPrefs.setBoolPref("mmCustomZoom", false);
-	if (!imagezoomPrefs.prefHasUserValue("mmCustomDim"))
-		imagezoomPrefs.setBoolPref("mmCustomDim", false);
-	if (!imagezoomPrefs.prefHasUserValue("mmFitWindow"))
-		imagezoomPrefs.setBoolPref("mmFitWindow", false);
-	if (!imagezoomPrefs.prefHasUserValue("mmZoomPcts"))
-		imagezoomPrefs.setBoolPref("mmZoomPcts", false);
+function imageMouseoverHandler(e)
+{
+	imageMouseOver = e.originalTarget;
+}
 
-	if (!imagezoomPrefs.prefHasUserValue("smZoomIO"))
-		imagezoomPrefs.setBoolPref("smZoomIO", true);
-	if (!imagezoomPrefs.prefHasUserValue("smReset"))
-		imagezoomPrefs.setBoolPref("smReset", true);
-	if (!imagezoomPrefs.prefHasUserValue("smCustomZoom"))
-		imagezoomPrefs.setBoolPref("smCustomZoom", true);
-	if (!imagezoomPrefs.prefHasUserValue("smCustomDim"))
-		imagezoomPrefs.setBoolPref("smCustomDim", true);
-	if (!imagezoomPrefs.prefHasUserValue("smFitWindow"))
-		imagezoomPrefs.setBoolPref("smFitWindow", true);
-	if (!imagezoomPrefs.prefHasUserValue("smZoomPcts"))
-		imagezoomPrefs.setBoolPref("smZoomPcts", true);
-
-	if (!imagezoomPrefs.prefHasUserValue("zoomvalue"))
-		imagezoomPrefs.setIntPref("zoomvalue", 200);
-	if (!imagezoomPrefs.prefHasUserValue("autocenter"))
-		imagezoomPrefs.setBoolPref("autocenter", true);
+function imageMouseoutHandler(e)
+{
+	imageMouseOver = null;
 }
 
 function imageZoomMenu() {
@@ -127,8 +155,7 @@ function pGetZoomFactor()
 {
 	try
 	{
-		var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("");
-		var zoomValue = imagezoomPrefs.getIntPref("imagezoom.zoomvalue");
+		var zoomValue = imagezoomPrefs.getIntPref("zoomvalue");
 	}
 	catch(e)
 	{
@@ -137,22 +164,37 @@ function pGetZoomFactor()
 	return zoomValue;
 }
 
+function pGetScrollFactor()
+{
+	try
+	{
+		var scrollValue = imagezoomPrefs.getIntPref("scrollvalue");
+	}
+	catch(e)
+	{
+		var scrollValue = gDefaultScrollFactor;
+	}
+	return scrollValue;
+}
+
 function pZoomImageAbs(oImage, zFactor)
 {
-	if (oImage.originalWidth){
-		oImage.widthUnit = oImage.originalWidthUnit;
-  		oImage.style.width = parseInt((oImage.originalWidth * zFactor) + 0.5) + oImage.widthUnit;
-	} else {
-		oImage.style.width = "";
-	}
-	if (oImage.originalHeight){
-		oImage.heightUnit = oImage.originalHeightUnit;
-  		oImage.style.height = parseInt((oImage.originalHeight * zFactor) + 0.5) + oImage.heightUnit;
-	} else {
-		oImage.style.height = "";
-	}
+	if (zFactor > 0) {
+		if (oImage.originalWidth){
+			oImage.widthUnit = oImage.originalWidthUnit;
+			oImage.style.width = parseInt((oImage.originalWidth * zFactor) + 0.5) + oImage.widthUnit;
+		} else {
+			oImage.style.width = "";
+		}
+		if (oImage.originalHeight){
+			oImage.heightUnit = oImage.originalHeightUnit;
+			oImage.style.height = parseInt((oImage.originalHeight * zFactor) + 0.5) + oImage.heightUnit;
+		} else {
+			oImage.style.height = "";
+		}
 
-	oImage.zoomFactor = parseInt((zFactor * 100)+0.5);
+		oImage.zoomFactor = parseInt((zFactor * 100)+0.5);
+	}
 }
 
 function pSetDim(oImage, iWidth, iHeight, bMaintainProportion)
@@ -221,7 +263,6 @@ function pIsNumeric(sText)
 
 function imagezoom_getDisplayString()
 {
-  	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
 	var displayString = "";
 
   	if (imagezoomPrefs.getBoolPref("mmZoomIO"))

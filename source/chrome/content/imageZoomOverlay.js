@@ -23,6 +23,12 @@
 function retrieveImage()
 {
 	var oImage = document.popupNode;
+	return initImage(oImage);
+
+}
+
+function initImage(oImage)
+{
 	if (!(oImage.originalPxWidth))
 	{
 		if (!oImage.style.width && !oImage.style.height){
@@ -78,7 +84,6 @@ function izShowCustomDim()
 function izImageFit(){
 
 	var padValue = 17;
-	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
 	var oImage = retrieveImage();
 
 	if (oImage.ownerDocument.compatMode == "BackCompat"){

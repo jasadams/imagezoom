@@ -39,7 +39,7 @@
     var _elementIDs = ["imagezoommmZoomIO", "imagezoommmReset", "imagezoommmCustomZoom", "imagezoommmCustomDim", 
     			"imagezoommmFitWindow", "imagezoommmZoomPcts", "imagezoomsmZoomIO", "imagezoomsmReset", 
     			"imagezoomsmCustomZoom", "imagezoomsmCustomDim", "imagezoomsmFitWindow", "imagezoomsmZoomPcts", 
-    			"imagezoomzoomvalue", "imagezoomautocenter"];
+    			"imagezoomusescroll", "imagezoomscrollvalue", "imagezoomzoomvalue", "imagezoomautocenter"];
 ]]>
 </script>
 
@@ -77,24 +77,67 @@
             <checkbox id="imagezoomsmZoomPcts" label="&pref.iz.ZoomPcts.label;" prefstring="imagezoom.smZoomPcts"/>  
           </vbox>
           </hbox>
-        </groupbox>              
+        </groupbox>         
+        <groupbox align="start">
+        <caption label="&pref.iz.mousewheel.label;"/>  
+        <grid flex="1">
+          <columns>
+          	<column/>
+          </columns>
+          <rows>
+          	<row>
+          		<checkbox id="imagezoomusescroll" label="&pref.iz.usescroll.label;" prefstring="imagezoom.usescroll" oncommand="imagezoom_toggleScrollEnabled()"/>  
+          	</row>
+          	<row align="center">
+          	<box align="center" flex="1">
+            		<label id="imagezoomscrollvaluelabelbefore" style="width: 130px" value="&pref.iz.defaultscroll.label;" control="imagezoomscrollvalue"/>
+            		<menulist id="imagezoomscrollvalue" prefstring="imagezoom.scrollvalue">
+            			<menupopup>
+  	        			<menuitem label="100" value="100"/>  	    
+    					<menuitem label="75" value="75"/>  	    
+    					<menuitem label="50" value="50"/>  	    
+    					<menuitem label="25" value="25"/>
+    					<menuitem label="10" value="10"/>    		
+    					<menuitem label="7" value="7"/>    		    					
+    					<menuitem label="5" value="5"/>    		
+    					<menuitem label="4" value="4"/>    		
+    					<menuitem label="3" value="3"/>    		    					
+    					<menuitem label="2" value="2"/>    		
+    					<menuitem label="1" value="1"/>
+  	      			</menupopup>
+	    		</menulist> 
+	    		<label id="imagezoomscrollvaluelabelafter" value="%"/>  
+          	</box>
+          	</row>          
+          </rows>
+        </grid>
+      </groupbox>
         <groupbox align="start">
         <caption label="&pref.iz.advanced.label;"/>  
-          <hbox align="center">
-            <label value="&pref.iz.defaultzoom.label;"/>
-            <menulist id="imagezoomzoomvalue" prefstring="imagezoom.zoomvalue">
-  	      <menupopup>
-    		<menuitem label="400" value="400"/>  	    
-    		<menuitem label="300" value="300"/>  	    
-    		<menuitem label="200" value="200"/>
-    		<menuitem label="175" value="175"/>    		
-    		<menuitem label="150" value="150"/>    		
-    		<menuitem label="125" value="125"/>    		
-    		<menuitem label="110" value="110"/>
-  	      </menupopup>
-	    </menulist> 
-	    <label value="%"/>  
-          </hbox>
+        <grid flex="1">
+          <columns>
+          	<column/>
+          	<column/>
+          	<column/>
+          </columns>
+          <rows>
+          	<row align="center">
+          		<label value="&pref.iz.defaultzoom.label;" control="imagezoomzoomvalue"/>
+			<menulist id="imagezoomzoomvalue" prefstring="imagezoom.zoomvalue">
+  	      			<menupopup>
+    					<menuitem label="400" value="400"/>  	    
+    					<menuitem label="300" value="300"/>  	    
+    					<menuitem label="200" value="200"/>
+    					<menuitem label="175" value="175"/>    		
+    					<menuitem label="150" value="150"/>    		
+    					<menuitem label="125" value="125"/>    		
+    					<menuitem label="110" value="110"/>
+  	      			</menupopup>
+	    		</menulist> 
+	    		<label value="%"/>  
+          	</row>
+          </rows>
+        </grid>              
           <checkbox id="imagezoomautocenter" label="&pref.iz.autocenter.label;" prefstring="imagezoom.autocenter"/>  
         </groupbox>
     </vbox>

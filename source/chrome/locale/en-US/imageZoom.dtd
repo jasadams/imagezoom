@@ -11,6 +11,7 @@
 <!ENTITY zoomimagefit:label "Image Fit">
 <!ENTITY pref.iz.window.label "Image Zoom Preferences">
 <!ENTITY pref.iz.defaultzoom.label "Zoom In/Out Factor">
+<!ENTITY pref.iz.defaultscroll.label "Mouse Wheel Increments">
 <!ENTITY pref.iz.header.label "Image Zoom">
 <!ENTITY pref.iz.advanced.label "Advanced Options">
 <!ENTITY pref.iz.showzoominout.label "Enable Zoom In/Out Options">
@@ -30,3 +31,5 @@
 <!ENTITY pref.iz.customdim.title "Custom Dimension">
 <!ENTITY pref.iz.customdimaspect.label "Maintain Aspect Ratio">
 <!ENTITY pref.iz.autocenter.label "Auto Center Images when using Image Fit">
+<!ENTITY pref.iz.usescroll.label "Use RMB+Wheel to scroll in/out">
+<!ENTITY pref.iz.mousewheel.label "Mouse Options">
