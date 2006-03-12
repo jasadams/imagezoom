@@ -33,6 +33,7 @@
   </stringbundleset>
 
   <commandset id="viewZoomCommands">
+    <command id="cmd_imageZoomToggleAutoFit"  oncommand="ZoomImageManager.prototype.getInstance().toggleAutoFit();"/>  
     <command id="cmd_imageZoomReduce"  oncommand="ZoomImageManager.prototype.getInstance().decrease();"/>
     <command id="cmd_imageZoomEnlarge" oncommand="ZoomImageManager.prototype.getInstance().increase();"/>
     <command id="cmd_imageZoomReset" oncommand="ZoomImageManager.prototype.getInstance().reset();"/>
@@ -49,6 +50,14 @@
 	<menupopup id="menu_View_Popup">
 		<menu id="menu_ImageZoomMain" insertafter="menu_textZoom" hidden="true">
 		  <menupopup id="menu_imageZoomPopup" onpopupshowing="updateImageZoomMenu();">
+		  	<menuitem id="zoommain-autofit"
+		  		hidden="true"
+		  		type="checkbox"
+		  		label="AutoFit Images"
+		  		accesskey="A"
+		  		command="cmd_imageZoomToggleAutoFit"
+			/>
+			<menuseparator id="zoommain-autofit-separator" hidden="true"/>		  
 			<menuitem id="zoommain-decrease"
 				key="key_imageZoomReduce"
 				label="&iz.menu.global.decrease.label;"

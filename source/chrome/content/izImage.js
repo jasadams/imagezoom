@@ -61,6 +61,7 @@ function izImage(oImage) {
 
 			pImage.zoomFactor = 100;
 			pImage.pageFactor = 100;
+			pImage.autoFitBefore = 0;
 		}
 
 		enabled = true;
@@ -73,12 +74,27 @@ function izImage(oImage) {
 	izImage.prototype.setDimension = setDimension;
 	izImage.prototype.zoom = zoom;
 	izImage.prototype.fit = fit;
+	izImage.prototype.activateAutoFit = activateAutoFit;
+	izImage.prototype.disactivateAutoFit = disactivateAutoFit;
 	izImage.prototype.zoomFactor = zoomFactor;
 	izImage.prototype.pageFactor = pageFactor;
+	izImage.prototype.getStyleWidth = getStyleWidth;
+	izImage.prototype.getStyleHeight = getStyleHeight;
 
 	// Returns the pixel width of the image
 	function getWidth(){
 		return pImage.width;
+	}
+	
+	
+	function getStyleWidth()
+	{
+		return pImage.style.width;
+	}
+
+	function getStyleHeight()
+	{
+		return pImage.style.height;
 	}
 
 	// Returns the pixel height of the image
@@ -91,6 +107,7 @@ function izImage(oImage) {
 		// factors less than zero are invalid
 		if ((factor > 0) && (enabled)) {
 			pImage.zoomFactor = factor;
+			pImage.autoFitBefore = 0;
 			pZoomAbs();
 		}
 	}
@@ -117,7 +134,7 @@ function izImage(oImage) {
 		if (enabled) {
 
 			pImage.zoomFactor = pImage.zoomFactor * factor
-
+			pImage.autoFitBefore = 0;
 			// Zoom the width style if it exists
 			if (pImage.style.width) {
 				var origWidth = getDimInt(pImage.style.width);
@@ -133,18 +150,28 @@ function izImage(oImage) {
 		}
 	}
 
+	function activateAutoFit() 
+	{
+		pImage.autoFitBefore = this.zoomFactor();
+		this.fit();
+	}
+	
+	function disactivateAutoFit() 
+	{
+		if (pImage.autoFitBefore != 0)
+		{
+			this.setZoom(pImage.autoFitBefore);
+		}
+	}
+	
 	function fit(autoScroll){
 		if (enabled) {
-			var padValue = 17;
+
+			var bScreen = new browserScreen(pImage);
 
 			// First calculate the size of the client area of the browser depending on mode
-			if (pImage.ownerDocument.compatMode == "BackCompat"){
-				var screenHeight = pImage.ownerDocument.body.clientHeight - padValue;
-				var screenWidth = pImage.ownerDocument.body.clientWidth - padValue;
-			} else {
-				var screenHeight = pImage.ownerDocument.documentElement.clientHeight - padValue;
-				var screenWidth = pImage.ownerDocument.documentElement.clientWidth - padValue;
-			}
+			var screenHeight = bScreen.getHeight();
+			var screenWidth = bScreen.getWidth();
 
 			// work out the screen ratio and the image ratio
 			var screenDim = screenWidth/screenHeight;
@@ -158,13 +185,8 @@ function izImage(oImage) {
 			}
 
 			// In case scrollbars have been introduced, do the image fit again
-			if (pImage.ownerDocument.compatMode == "BackCompat"){
-				var screenHeight = pImage.ownerDocument.body.clientHeight - padValue;
-				var screenWidth = pImage.ownerDocument.body.clientWidth - padValue;
-			} else {
-				var screenHeight = pImage.ownerDocument.documentElement.clientHeight - padValue;
-				var screenWidth = pImage.ownerDocument.documentElement.clientWidth - padValue;
-			}
+			var screenHeight = bScreen.getHeight();
+			var screenWidth = bScreen.getWidth();
 
 			if (screenDim < imageDim) {
 				setDimension(screenWidth, parseInt(screenWidth/imageDim+0.5));
@@ -189,9 +211,9 @@ function izImage(oImage) {
 
 				// Now scroll the browser
 				if (screenDim < imageDim) {
-					pImage.ownerDocument.defaultView.scroll(iLeft-(padValue/2),iTop-((screenHeight-getDimInt(pImage.style.height))/2)-(padValue/2));
+					pImage.ownerDocument.defaultView.scroll(iLeft-(bScreen.getPad()),iTop-((screenHeight-getDimInt(pImage.style.height))/2)-(bScreen.getPad()));
 				} else {
-					pImage.ownerDocument.defaultView.scroll(iLeft-((screenWidth-getDimInt(pImage.style.width))/2)-(padValue/2),iTop-(padValue/2));
+					pImage.ownerDocument.defaultView.scroll(iLeft-((screenWidth-getDimInt(pImage.style.width))/2)-(bScreen.getPad()),iTop-(bScreen.getPad()));
 				}
 			}
 		}
@@ -252,6 +274,43 @@ function izImage(oImage) {
 		}
 		return returnChar;
 	}
+}
+
+function browserScreen(pImage) 
+{
+	var padValue = 17;
+	
+	browserScreen.prototype.getWidth = getWidth;
+	browserScreen.prototype.getHeight = getHeight;
+	browserScreen.prototype.getPad = getPad;
+	
+	function getWidth()
+	{
+		if (pImage.ownerDocument.compatMode == "BackCompat"){
+			var screenWidth = pImage.ownerDocument.body.clientWidth - padValue;
+		} else {
+			var screenWidth = pImage.ownerDocument.documentElement.clientWidth - padValue;
+		}		
+		
+		return screenWidth;
+	}
+	
+	function getHeight()
+	{
+		if (pImage.ownerDocument.compatMode == "BackCompat"){
+			var screenHeight = pImage.ownerDocument.body.clientHeight - padValue;
+		} else {
+			var screenHeight = pImage.ownerDocument.documentElement.clientHeight - padValue;
+		}		
+		
+		return screenHeight;
+	}	
+	
+	function getPad()
+	{
+		return padValue/2;
+	}
+		
 }
 
 

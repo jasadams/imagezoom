@@ -22,3 +22,5 @@ pref("imagezoom.reversescrollzoom", false);
 pref("imagezoom.showViewMenu", true);
 pref("imagezoom.defaultGlobalZoom", "100");
 pref("imagezoom.scrollZoomMode", 0);
+pref("imagezoom.autofitlargeimage", false);
+pref("imagezoom.showAutoFitInMenu", false);

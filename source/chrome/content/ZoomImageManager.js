@@ -9,6 +9,12 @@ function ZoomImageManager(objBrowser) {
 		this.scale2Text = false;
 		this.currentZoom = parseInt(nsIPrefBranchObj.getCharPref("defaultGlobalZoom"));
 	}
+		
+	if (nsIPrefBranchObj.getBoolPref("autofitlargeimage")){
+		this.autoFitImage = true;
+	} else {
+		this.autoFitImage = false;
+	}	
 
 }
 
@@ -23,14 +29,25 @@ ZoomImageManager.prototype = {
 
 		if (!selectedBrowser.ZoomImageManager) {
 			selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
-			selectedBrowser.ZoomImageManager.currentZoom = 100;
-			selectedBrowser.ZoomImageManager.registered = false;
+			if (selectedBrowser.ZoomImageManager.currentZoom != 100)
+			{
+				selectedBrowser.ZoomImageManager.registerListener();
+			} 
+			else 
+			{
+				selectedBrowser.ZoomImageManager.registered = false;
+			}
 		}
 		if (selectedBrowser.ZoomImageManager.scale2Text){
 			selectedBrowser.ZoomImageManager.currentZoom = ZoomManager.prototype.getInstance().textZoom;
 			selectedBrowser.ZoomImageManager.registerListener();
 		}
 
+		if (selectedBrowser.ZoomImageManager.autoFitImage)
+		{
+			selectedBrowser.ZoomImageManager.registerListener();
+		}
+		
 		return selectedBrowser.ZoomImageManager;
 	},
 
@@ -57,11 +74,26 @@ ZoomImageManager.prototype = {
 			if(this.currentZoom != ZoomManager.prototype.getInstance().textZoom) {
 				this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
 				this.registerListener();
-				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument);
+				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
 			}
 		}
 	},
 
+	toggleAutoFit : function()
+	{
+		this.autoFit = !this.autoFit;
+	},
+	
+	get autoFit() {
+		return nsIPrefBranchObj.getBoolPref("autofitlargeimage");
+	},
+
+	set autoFit(blnValue) {
+		nsIPrefBranchObj.setBoolPref("autofitlargeimage", blnValue);
+		this.registerListener();
+		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, false);
+	},
+	
 	get imageZoom() {
 	    var currentZoom;
 	    try {
@@ -82,16 +114,16 @@ ZoomImageManager.prototype = {
 	set imageZoom(aZoom) {
 		this.scale2Text = false;
 		this.currentZoom = aZoom;
-		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument);
+		alert((this.currentZoom == 100));
+		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
 		this.registerListener();
 	},
 
-
 	registerListener : function() {
-		if ((this.currentZoom == 100) && (this.registered)) {
+		if ((this.currentZoom == 100) && (!this.autoFit) && (this.registered)) {
 			unregisterImageZoomListener();
 			this.registered = false;
-		} else if ((this.currentZoom != 100) && (!this.registered)) {
+		} else if (((this.currentZoom != 100) || (this.autoFit)) && (!this.registered)) {
 			registerImageZoomListener();
 			this.registered = true;
 		}
@@ -102,7 +134,7 @@ ZoomImageManager.prototype = {
 		if (!this.scaling){
 			this.scaling = true;
 			try {
-				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument);
+				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, false);
 			} catch(e) {
 
 			}
@@ -231,7 +263,8 @@ ZoomImageManager.prototype = {
 		return aZoom;
 	},
 
-	scaleFrames : function(currentZoom, doc){
+	scaleFrames : function(currentZoom, doc, force){
+
 
 		var itemFrames = doc.getElementsByTagName("frame");
 		var itemiFrames = doc.getElementsByTagName("iframe");
@@ -240,25 +273,47 @@ ZoomImageManager.prototype = {
 		if (itemFrames.length > 0)
 			for (var f = 0 ; f < itemFrames.length ; f++) {
 				frame = itemFrames[f].contentDocument;
-				this.scaleFrames(currentZoom, frame); // recursion for frames
+				this.scaleFrames(currentZoom, frame, force); // recursion for frames
 			}
 
 		if (itemiFrames.length > 0)
 			for (var g = 0 ; g < itemiFrames.length ; g++) {
 				iframe = itemiFrames[g].contentDocument;
-				this.scaleFrames(currentZoom, iframe); // recursion for iframes
+				this.scaleFrames(currentZoom, iframe, force); // recursion for iframes
 			}
 
-		for (var i=0; i<doc.images.length; i++) {
-			var oizImage = new izImage(doc.images[i]);
-			if (oizImage.pageFactor() != currentZoom)
-				oizImage.setZoomPage(currentZoom);
+		if (doc.images.length > 0)
+		{
+			var bScreen = new browserScreen(doc.images[0]);
+			var bWidth = bScreen.getWidth();
+			var bHeight = bScreen.getHeight();
+
+			var oizImage = null;
+
+			for (var i=0; i<doc.images.length; i++) {
+				oizImage = new izImage(doc.images[i]);
+
+				if ((this.currentZoom != 100) || (force))
+				{
+					oizImage.setZoomPage(currentZoom);
+				}
+
+				oizImage.disactivateAutoFit();
+
+
+				if ((this.autoFit == true) && ((doc.images[i].width > bWidth) || (doc.images[i].height > bHeight))) 
+				{
+					oizImage.activateAutoFit();
+				} 
+			}
 		}
-	}
+
+	}	
 }
 
 /***** init and helper functions for viewZoomOverlay.xul *****/
 window.addEventListener("load", registerImageZoomManager, false);
+
 
 function registerImageZoomManager()
 {
@@ -315,6 +370,16 @@ function updateImageZoomMenu()
 
 	var currentZoom = zoom.imageZoom;
 
+	
+
+	var menuAutoFitItemSeparator = document.getElementById("zoommain-autofit-separator");
+	menuAutoFitItemSeparator.hidden = !nsIPrefBranchObj.getBoolPref("showAutoFitInMenu");
+
+	var menuAutoFitItem = document.getElementById("zoommain-autofit");
+	menuAutoFitItem.hidden = !nsIPrefBranchObj.getBoolPref("showAutoFitInMenu");	
+	var imageZoomAuto = document.getElementById("zoommain-autofit");
+	imageZoomAuto.setAttribute("checked", zoom.autoFit);
+	
 	var imageZoomOther = document.getElementById("zoommain-custom");
 	var label = zoom.bundle.getString("labelOther");
 	imageZoomOther.setAttribute("label", label.replace(/%zoom%/, zoom.factorOther));
@@ -351,16 +416,18 @@ function registerImageZoomListener(){
 		window.getBrowser().addProgressListener(imageZoomListener , Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
 
 	}
+	window.addEventListener("resize", browserResize, false);
 }
 
 function unregisterImageZoomListener(){
 	if (window.document.getElementById("messagepane")) {
 		var messageContent = window.document.getElementById("messagepane");
 		if (messageContent)
-   			messageContent.removeEventListener("load", test, true);
+			messageContent.removeEventListener("load", MessageLoad, true);
 	} else {
 		window.getBrowser().removeProgressListener(imageZoomListener);
 	}
+	window.removeEventListener("resize", browserResize, false);
 }
 
 var imageZoomListener =
@@ -390,8 +457,7 @@ var imageZoomListener =
 
 	onProgressChange : function (aWebProgress, aRequest, aCurSelfProgress, aMaxSelfProgress, aCurTotalProgress, aMaxTotalProgress)
 	{
-		if (ZoomImageManager.prototype.getInstance().imageZoom != 100)
-			ZoomImageManager.prototype.getInstance().pageLoad();
+		ZoomImageManager.prototype.getInstance().pageLoad();
 		return 0;
 	},
 
@@ -399,6 +465,10 @@ var imageZoomListener =
 	onStatusChange: function() {return 0;},
 	onSecurityChange: function() {return 0;},
 	onLinkIconAvailable: function() {return 0;}
+}
+
+function browserResize() {
+	ZoomImageManager.prototype.getInstance().pageLoad();
 }
 
 

@@ -32,6 +32,7 @@ var currentImage;
 var currentURL;
 var izContext;
 var contextDisabled = false;
+var imagezoomBundle;
 
 var mousedown = false;
 
@@ -84,6 +85,8 @@ function initImageZoom() {
 	prevCmd = cmdZoomReset.getAttribute("oncommand");
 	cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageLoad();");
 	
+	imagezoomBundle = document.getElementById("bundle_ImageZoom");
+	
 }
 
 function gPanelContainer()
@@ -112,8 +115,17 @@ function cancelScrollZoom() {
 }
 
 function reportStatus(oizImage){
+	var statusTextFld = "";
 	//write the zoom factor to the status bar
-	window.top.status = "Image Zoom " + oizImage.zoomFactor() + "%";
+	if (isThunderbird())
+	{
+		statusTextFld = document.getElementById("statusText");
+	}
+	else
+	{
+		statusTextFld = document.getElementById("statusbar-display");
+	}
+    	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
 }
 
 function izShowCustomZoom()
@@ -212,7 +224,6 @@ function onMouseUp(e){
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
 			e.preventDefault();
-			//e.stopPropagation();
 		}
 		cancelScrollZoom();
 	}
@@ -222,7 +233,7 @@ function onClick(e){
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
 			e.preventDefault();
-			//e.stopPropagation();
+			e.stopPropagation();
 		} else {
             // contextmenu on mousedown
      		if (contextDisabled) {
@@ -241,7 +252,7 @@ function onClick(e){
 			// Middle mouse button pressed while right button down, reset image
 			case nsIPrefBranchObj.getIntPref("imageresetbutton"):
 				e.preventDefault();
-				//e.stopPropagation();
+				e.stopPropagation();
 				haveZoomed = true;
 				var oizImage = new izImage(e.originalTarget);
 				oizImage.setZoom(100);
@@ -250,7 +261,7 @@ function onClick(e){
 			// Left mouse button pressed while right button down, fit image to screen
 			case nsIPrefBranchObj.getIntPref("imagefitbutton"):
 				e.preventDefault();
-				//e.stopPropagation();
+				e.stopPropagation();
 				haveZoomed = true;
 				var oizImage = new izImage(e.originalTarget);
 				oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
@@ -321,7 +332,7 @@ function ScrollImage(e){
 		if (imageToScroll != null)
 		{
 			e.preventDefault();
-			//e.stopPropagation();
+			e.stopPropagation();
 			haveZoomed = true;
 			var oizImage = new izImage(imageToScroll);
 
