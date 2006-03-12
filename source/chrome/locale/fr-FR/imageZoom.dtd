@@ -75,4 +75,4 @@
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "Z">
+<!ENTITY iz.command.textscale.commandkey "\">
