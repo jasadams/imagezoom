@@ -77,21 +77,40 @@ function izShowCustomDim()
 
 function izImageFit(){
 
+	var padValue = 17;
 	var imagezoomPrefs = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService).getBranch("imagezoom.");
 	var oImage = retrieveImage();
 
-	var screenHeight = oImage.ownerDocument.defaultView.innerHeight-29;
-	var screenWidth = oImage.ownerDocument.defaultView.innerWidth-29;
-	//var screenWidth = window._content.innerWidth-29;
-	//var screenHeight = window._content.innerHeight-29;
-	var screenDim = screenWidth/screenHeight;
+	if (oImage.ownerDocument.compatMode == "BackCompat"){
+		var screenHeight = oImage.ownerDocument.body.clientHeight - padValue;
+		var screenWidth = oImage.ownerDocument.body.clientWidth - padValue;
+	} else {
+		var screenHeight = oImage.ownerDocument.documentElement.clientHeight - padValue;
+		var screenWidth = oImage.ownerDocument.documentElement.clientWidth - padValue;
+	}
 
+	var screenDim = screenWidth/screenHeight;
 	var imageDim = oImage.width/oImage.height;
 
+
 	if (screenDim < imageDim) {
-		pSetDim(oImage, screenWidth, screenWidth/imageDim, true);
+		pSetDim(oImage, screenWidth, parseInt(screenWidth/imageDim+0.5), true);
 	} else {
-		pSetDim(oImage, screenHeight*imageDim, screenHeight, true);
+		pSetDim(oImage, parseInt(screenHeight*imageDim+0.5), screenHeight, true);
+	}
+
+	if (oImage.ownerDocument.compatMode == "BackCompat"){
+		var screenHeight = oImage.ownerDocument.body.clientHeight - padValue;
+		var screenWidth = oImage.ownerDocument.body.clientWidth - padValue;
+	} else {
+		var screenHeight = oImage.ownerDocument.documentElement.clientHeight - padValue;
+		var screenWidth = oImage.ownerDocument.documentElement.clientWidth - padValue;
+	}
+
+	if (screenDim < imageDim) {
+		pSetDim(oImage, screenWidth, parseInt(screenWidth/imageDim+0.5), true);
+	} else {
+		pSetDim(oImage, parseInt(screenHeight*imageDim+0.5), screenHeight, true);
 	}
 
 	if (imagezoomPrefs.getBoolPref("autocenter")){
@@ -105,12 +124,11 @@ function izImageFit(){
 		}
 
 		if (screenDim < imageDim) {
-			oImage.ownerDocument.defaultView.scroll(iLeft-5,iTop-((screenHeight-getDimInt(oImage.style.height))/2)-5);
+			oImage.ownerDocument.defaultView.scroll(iLeft-(padValue/2),iTop-((screenHeight-getDimInt(oImage.style.height))/2)-(padValue/2));
 		} else {
-			oImage.ownerDocument.defaultView.scroll(iLeft-((screenWidth-getDimInt(oImage.style.width))/2)-5,iTop-5);
+			oImage.ownerDocument.defaultView.scroll(iLeft-((screenWidth-getDimInt(oImage.style.width))/2)-(padValue/2),iTop-(padValue/2));
 		}
 	}
-
 	zoomStatus(oImage);
 }
 
