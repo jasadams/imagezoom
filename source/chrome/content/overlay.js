@@ -47,6 +47,7 @@ function initImageZoom() {
 		try {
 			// try to save the prefs because we don't want to reset the home page if prefs can't be saved
 			nsIPrefServiceObj.savePrefFile(null);
+			nsIPrefServiceObj.readUserPrefs(null);
 			if (nsIPrefBranchObj.getCharPref("version") == version)
 				window.openDialog("chrome://imagezoom/content/install.xul", "", "chrome,centerscreen", oldVersion);
 
@@ -84,11 +85,9 @@ function initImageZoom() {
 	prevCmd = cmdZoomReset.getAttribute("oncommand");
 	cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageLoad();");
 	
-	window.addEventListener("load",registerImageZoomListener(),false);
-	window.addEventListener("unload",unregisterImageZoomListener(),false);
+	//window.addEventListener("load",registerImageZoomListener(),false);
+	//window.addEventListener("unload",unregisterImageZoomListener(),false);
 	
-
-
 }
 
 function reportStatus(oizImage){
@@ -325,64 +324,4 @@ function getXULBrowser(DOMWindow) {
 
 function MessageLoad(e){
 	ZoomImageManager.prototype.getInstance(window.document.getElementById("messagepane")).pageLoad();
-}
-
-function registerImageZoomListener(){
-	if (window.document.getElementById("messagepane")) {
-		var messageContent = window.document.getElementById("messagepane");
-		if (messageContent)
-   			messageContent.addEventListener("load", MessageLoad, true);
-	} else {
-
-		window.getBrowser().addProgressListener(imageZoomListener , Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
-
-	}
-}
-
-function unregisterImageZoomListener(){
-	if (window.document.getElementById("messagepane")) {
-		var messageContent = window.document.getElementById("messagepane");
-		if (messageContent)
-   			messageContent.removeEventListener("load", test, true);
-	} else {
-		window.getBrowser().removeProgressListener(imageZoomListener);
-	}
-}
-
-var imageZoomListener =
-{
-	QueryInterface: function(aIID)
-	{
-		if (aIID.equals(Components.interfaces.nsIWebProgressListener) ||
-			aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
-			aIID.equals(Components.interfaces.nsISupports))
-				return this;
-		throw Components.results.NS_NOINTERFACE;
-	},
-
-	onStateChange: function(aProgress, aRequest, aFlag, aStatus)
-	{
-		ZoomImageManager.prototype.getInstance().pageLoad();
-		return 0;
-	},
-
-	onLocationChange: function(aProgress, aRequest, aURI)
-	{
-		// This fires when the location bar changes i.e load event is confirmed
-		// or when the user switches tabs
-		ZoomImageManager.prototype.getInstance().pageLoad();
-		return 0;
-	},
-
-	onProgressChange : function (aWebProgress, aRequest, aCurSelfProgress, aMaxSelfProgress, aCurTotalProgress, aMaxTotalProgress)
-	{
-		if (ZoomImageManager.prototype.getInstance().imageZoom != 100)
-			ZoomImageManager.prototype.getInstance().pageLoad();
-		return 0;
-	},
-
-	// For definitions of the remaining functions see XulPlanet.com
-	onStatusChange: function() {return 0;},
-	onSecurityChange: function() {return 0;},
-	onLinkIconAvailable: function() {return 0;}
 }

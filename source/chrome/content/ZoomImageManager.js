@@ -21,11 +21,14 @@ ZoomImageManager.prototype = {
 			var selectedBrowser = gBrowser.selectedBrowser;
 		}
 
-		if (!selectedBrowser.ZoomImageManager)
+		if (!selectedBrowser.ZoomImageManager) {
 			selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
-
+			selectedBrowser.ZoomImageManager.currentZoom = 100;
+			selectedBrowser.ZoomImageManager.registered = false;
+		}
 		if (selectedBrowser.ZoomImageManager.scale2Text){
 			selectedBrowser.ZoomImageManager.currentZoom = ZoomManager.prototype.getInstance().textZoom;
+			selectedBrowser.ZoomImageManager.registerListener();
 		}
 
 		return selectedBrowser.ZoomImageManager;
@@ -38,6 +41,7 @@ ZoomImageManager.prototype = {
 
 	zoomFactorsString : "", // cache
 	zoomFactors : null,
+	registered : false,
 
 	factorOther : 300,
 	factorAnchor : 300,
@@ -50,8 +54,11 @@ ZoomImageManager.prototype = {
 	set textScale(blnValue) {
 		this.scale2Text = blnValue;
 		if (this.scale2Text){
-			this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
-			this.scaleFrames(this.currentZoom, this.parentNode.contentDocument);
+			if(this.currentZoom != ZoomManager.prototype.getInstance().textZoom) {
+				this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
+				this.registerListener();
+				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument);
+			}
 		}
 	},
 
@@ -76,8 +83,21 @@ ZoomImageManager.prototype = {
 		this.scale2Text = false;
 		this.currentZoom = aZoom;
 		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument);
+		this.registerListener();
 	},
 
+
+	registerListener : function() {
+		if ((this.currentZoom == 100) && (this.registered)) {
+			unregisterImageZoomListener();
+			this.registered = false;
+		} else if ((this.currentZoom != 100) && (!this.registered)) {
+			registerImageZoomListener();
+			this.registered = true;
+		}
+
+	},
+	
 	pageLoad : function() {
 		if (!this.scaling){
 			this.scaling = true;
@@ -319,6 +339,68 @@ function updateImageZoomMenu()
 		item = item.nextSibling;
 	}
 }
+
+
+function registerImageZoomListener(){
+	if (window.document.getElementById("messagepane")) {
+		var messageContent = window.document.getElementById("messagepane");
+		if (messageContent)
+   			messageContent.addEventListener("load", MessageLoad, true);
+	} else {
+
+		window.getBrowser().addProgressListener(imageZoomListener , Components.interfaces.nsIWebProgress.NOTIFY_STATE_DOCUMENT);
+
+	}
+}
+
+function unregisterImageZoomListener(){
+	if (window.document.getElementById("messagepane")) {
+		var messageContent = window.document.getElementById("messagepane");
+		if (messageContent)
+   			messageContent.removeEventListener("load", test, true);
+	} else {
+		window.getBrowser().removeProgressListener(imageZoomListener);
+	}
+}
+
+var imageZoomListener =
+{
+	QueryInterface: function(aIID)
+	{
+		if (aIID.equals(Components.interfaces.nsIWebProgressListener) ||
+			aIID.equals(Components.interfaces.nsISupportsWeakReference) ||
+			aIID.equals(Components.interfaces.nsISupports))
+				return this;
+		throw Components.results.NS_NOINTERFACE;
+	},
+
+	onStateChange: function(aProgress, aRequest, aFlag, aStatus)
+	{
+		ZoomImageManager.prototype.getInstance().pageLoad();
+		return 0;
+	},
+
+	onLocationChange: function(aProgress, aRequest, aURI)
+	{
+		// This fires when the location bar changes i.e load event is confirmed
+		// or when the user switches tabs
+		ZoomImageManager.prototype.getInstance().pageLoad();
+		return 0;
+	},
+
+	onProgressChange : function (aWebProgress, aRequest, aCurSelfProgress, aMaxSelfProgress, aCurTotalProgress, aMaxTotalProgress)
+	{
+		if (ZoomImageManager.prototype.getInstance().imageZoom != 100)
+			ZoomImageManager.prototype.getInstance().pageLoad();
+		return 0;
+	},
+
+	// For definitions of the remaining functions see XulPlanet.com
+	onStatusChange: function() {return 0;},
+	onSecurityChange: function() {return 0;},
+	onLinkIconAvailable: function() {return 0;}
+}
+
 
 
 
