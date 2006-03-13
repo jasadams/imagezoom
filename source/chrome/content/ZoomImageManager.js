@@ -35,7 +35,7 @@ ZoomImageManager.prototype = {
 			} 
 			else 
 			{
-				selectedBrowser.ZoomImageManager.registered = false;
+				//selectedBrowser.ZoomImageManager.registered = false;
 			}
 		}
 		if (selectedBrowser.ZoomImageManager.scale2Text){
@@ -127,6 +127,18 @@ ZoomImageManager.prototype = {
 			this.registered = true;
 		}
 
+	},
+
+	pageChange : function() {
+		if (!this.scaling){
+			this.scaling = true;
+			try {
+				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
+			} catch(e) {
+
+			}
+			this.scaling = false;
+		}
 	},
 	
 	pageLoad : function() {
