@@ -114,7 +114,6 @@ ZoomImageManager.prototype = {
 	set imageZoom(aZoom) {
 		this.scale2Text = false;
 		this.currentZoom = aZoom;
-		alert((this.currentZoom == 100));
 		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
 		this.registerListener();
 	},
