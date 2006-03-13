@@ -414,6 +414,8 @@ function getXULBrowser(DOMWindow) {
 		if (gBrowser.browsers.item(i).contentWindow == DOMWindow)
 			return gBrowser.browsers.item(i);
 	}
+	
+	return null;
 }
 
 function MessageLoad(e){
