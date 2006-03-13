@@ -73,17 +73,17 @@ function initImageZoom() {
 	// Add Image Zooming to text reduce command
 	var cmdZoomReduce = document.getElementById("cmd_textZoomReduce");
 	var prevCmd = cmdZoomReduce.getAttribute("oncommand");
-	cmdZoomReduce.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageLoad();");
+	cmdZoomReduce.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
 
 	// Add Image Zooming to text enlarge command
 	var cmdZoomEnlarge = document.getElementById("cmd_textZoomEnlarge");
 	prevCmd = cmdZoomEnlarge.getAttribute("oncommand");
-	cmdZoomEnlarge.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageLoad();");
+	cmdZoomEnlarge.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
 
 	// Add Image Zooming to text reset command
 	var cmdZoomReset = document.getElementById("cmd_textZoomReset");
 	prevCmd = cmdZoomReset.getAttribute("oncommand");
-	cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageLoad();");
+	cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
 	
 	imagezoomBundle = document.getElementById("bundle_ImageZoom");
 	
