@@ -1,1 +1,2 @@
 Added tr-TR locale
+Fixed conflict with Answers extension
