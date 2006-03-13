@@ -68,7 +68,7 @@ function initImageZoom() {
     }
 
     // Add events for the mouse functions
-	gPanelContainer().addEventListener("mousedown",onMouseDown,true);
+	gPanelContainer().addEventListener("mousedown",izOnMouseDown,true);
 
 	// Add Image Zooming to text reduce command
 	var cmdZoomReduce = document.getElementById("cmd_textZoomReduce");
@@ -95,7 +95,7 @@ function gPanelContainer()
 	return window;
 }
 
-function onMouseOut(e) {
+function izOnMouseOut(e) {
 		if ((e.originalTarget.tagName.toUpperCase() == "HTML") || (e.originalTarget.tagName == "xul:browser")){
 			cancelScrollZoom();
 		}
@@ -109,8 +109,8 @@ function cancelScrollZoom() {
 		currentImage = null;
 
 	gPanelContainer().removeEventListener("DOMMouseScroll",ScrollImage,true);
-	gPanelContainer().removeEventListener("mouseup",onMouseUp,true);
-	gPanelContainer().removeEventListener("mouseout", onMouseOut, true);
+	gPanelContainer().removeEventListener("mouseup",izOnMouseUp,true);
+	gPanelContainer().removeEventListener("mouseout", izOnMouseOut, true);
 	mousedown = false;
 }
 
@@ -192,7 +192,8 @@ function disableContextMenu(e) {
 	removeEventListener("popupshowing", disableContextMenu, true)
 }
 
-function onMouseDown(e){
+function izOnMouseDown(e){
+
 	// prepare for the mouse functions on a right click when user option is true
 	if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")))
 	{
@@ -210,16 +211,16 @@ function onMouseDown(e){
 			}
 			haveZoomed = false;
 			gPanelContainer().addEventListener("DOMMouseScroll",ScrollImage,true);
-			gPanelContainer().addEventListener("mouseup",onMouseUp,true);
-			gPanelContainer().addEventListener("click",onClick,true);
-			gPanelContainer().addEventListener("mouseout", onMouseOut, true);
+			gPanelContainer().addEventListener("mouseup",izOnMouseUp,true);
+			gPanelContainer().addEventListener("click",izOnMouseClick,true);
+			gPanelContainer().addEventListener("mouseout", izOnMouseOut, true);
 			currentURL = window._content.document.location;
 			mousedown = true;
 		}
 	}
 }
 
-function onMouseUp(e){
+function izOnMouseUp(e){
 	// Right mouse button release, remove listeners
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
@@ -229,7 +230,7 @@ function onMouseUp(e){
 	}
 }
 
-function onClick(e){
+function izOnMouseClick(e){
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
 			e.preventDefault();
@@ -242,7 +243,7 @@ function onClick(e){
 			}
   		}
 		cancelScrollZoom();  		
-		gPanelContainer().removeEventListener("click",onClick,true);
+		gPanelContainer().removeEventListener("click",izOnMouseClick,true);
 	}
 
 	if (mousedown){
@@ -269,7 +270,7 @@ function onClick(e){
 				break;
 			}
 		} else {
-			gPanelContainer().removeEventListener("click",onClick,true);
+			gPanelContainer().removeEventListener("click",izOnMouseClick,true);
 		}
 	}
 }
