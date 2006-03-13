@@ -1,2 +1,3 @@
 Added tr-TR locale
 Fixed conflict with Answers extension
+Fixed bug with "Zoom with Text". When resetting text size to 100% images did not get set to 100%
