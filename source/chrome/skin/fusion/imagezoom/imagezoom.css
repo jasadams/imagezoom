@@ -1,0 +1,142 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+<!-- ***** BEGIN LICENSE BLOCK *****
+       
+    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
+     
+    This file is part of Image Zoom.
+
+    Image Zoom is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Image Zoom is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Image Zoom; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+***** END LICENSE BLOCK ***** -->
+
+#imagezoom-options-dialog
+{
+    height: 20em;
+    width: 40em;
+}
+
+#imagezoom-customdim-dialog
+{
+    height: 20em;
+    width: 40em;
+}
+
+#imagezoom-customzoom-dialog
+{
+    height: 20em;
+    width: 40em;
+}
+
+#mainmenu {
+  	border: 2px solid;
+  	-moz-border-top-colors: ThreeDLightShadow ThreeDHighlight;
+  	-moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  	-moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  	-moz-border-left-colors: ThreeDLightShadow ThreeDHighlight;
+  	padding: 1px;
+  	min-width: 1px;
+  	background-color: Menu;
+	-moz-box-orient: vertical;
+}
+
+#submenu {
+  	border: 2px solid;
+  	-moz-border-top-colors: ThreeDLightShadow ThreeDHighlight;
+  	-moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
+  	-moz-border-bottom-colors: ThreeDDarkShadow ThreeDShadow;
+  	-moz-border-left-colors: ThreeDLightShadow ThreeDHighlight;
+  	padding: 1px;
+  	min-width: 1px;
+  	background-color: Menu;
+	-moz-box-orient: vertical;
+	margin-top: 2px;
+	margin-left: -2px;
+}
+
+checkbox {
+  -moz-box-align: center;
+  color: MenuText;
+  padding-right: 25px;
+  font: menu;
+  margin: 0px;
+}
+
+.dummy {
+	margin-left:4px;
+	margin-right:2px;
+}
+
+.right-arrow {
+  margin-top: 6px;
+  margin-right: 6px;
+  height: 7px;
+  width: 4px;
+  float:right;
+  -moz-image-region: auto;
+}
+
+.url {
+  color: #0000FF;
+  text-decoration: underline !important;
+  cursor: pointer;
+  -moz-user-focus: normal;
+}
+
+.help {
+  text-align: right;
+ }
+
+.main-title {
+  font-size: x-large;
+  cursor: pointer;
+  color: grey;
+  font-weight: bold;
+  -moz-user-focus: normal;  
+}
+
+.sub-title {
+  font-weight: bold;
+}
+
+.version {
+  font-size: small;
+  font-weight: bold;
+  color: grey;
+}
+
+.author {
+
+}
+
+.about-box {
+  background-color: white;
+  padding: 13px;
+  padding-top: 5px;
+}
+
+.install-box {
+  background-color: white;
+  padding: 13px;
+  padding-top: 5px;
+  font-family: verdana, sans, arial, helvetica, sans-serif;
+}
+
+.install-description {
+
+}
+
+#install-notice {
+  font-size: small;
+}

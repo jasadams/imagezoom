@@ -16,6 +16,7 @@
       <Description about="urn:mozilla:extension:file:imagezoom.jar">
         <em:package>content/</em:package>
         <em:skin>skin/classic/imagezoom/</em:skin>
+        <em:skin>skin/fusion/imagezoom/</em:skin>
         <em:locale>locale/en-US/</em:locale>
         <em:locale>locale/fr-FR/</em:locale>
         <em:locale>locale/ja-JP/</em:locale>
