@@ -1,4 +1,0 @@
-Added tr-TR locale
-Fixed conflict with Answers extension
-Fixed bug with "Zoom with Text". When resetting text size to 100% images did not get set to 100%
-Updated to be compatible with Netscape version 8.1
