@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.2.3">
+<!ENTITY iz.product.version "0.2.5">
 <!ENTITY iz.about.version.label "Versione">
 <!ENTITY iz.about.createdby.label "Creata da">
 <!ENTITY iz.about.help.label "Aiuto">
@@ -13,20 +13,20 @@
 <!ENTITY iz.install.options.label "Opzioni">
 <!ENTITY iz.install.close.label "Chiudi">
 <!ENTITY iz.install.continue.label "Continua >>">
-<!ENTITY iz.install.desc.line1 "Visita il sito web di Image Zoom per conoscere le ultime informazioni e">
+<!ENTITY iz.install.desc.line1 "Visitare il sito web di Image Zoom per conoscere le ultime informazioni e">
 <!ENTITY iz.install.desc.line2 "per avere una panoramica sulle sue caratteristiche.">
-<!ENTITY iz.install.desc.line3 "Premi 'Continua' per andare ora al sito web di Image Zoom">
-<!ENTITY iz.customzoom.label "Inserisci il fattore di zoom">
+<!ENTITY iz.install.desc.line3 "Premere 'Continua' per andare ora al sito web di Image Zoom">
+<!ENTITY iz.customzoom.label "Inserire il fattore di zoom">
 <!ENTITY iz.customzoom.title "Personalizza zoom">
 <!ENTITY iz.customdim.width.label "Larghezza:">
 <!ENTITY iz.customdim.height.label "Altezza:">
 <!ENTITY iz.customdim.title "Personalizza le dimensioni">
 <!ENTITY iz.customdim.aspect.label "Mantieni le proporzioni">
-<!ENTITY iz.options.label "Impostazioni di Image Zoom">
+<!ENTITY iz.options.label "- Impostazioni">
 <!ENTITY iz.options.help.label "Aiuto">
 <!ENTITY iz.options.defaultzoom.label "Fattore di ingrandimento o riduzione">
 <!ENTITY iz.options.defaultglobalzoom.label "Zoom globale predefinito">
-<!ENTITY iz.options.showviewmenu.label "Mostra Image Zoom nel menu &#39;Visualizza&#39;">
+<!ENTITY iz.options.showviewmenu.label "Mostra Image Zoom nel menu 'Visualizza'">
 <!ENTITY iz.options.defaultscroll.label "Incremento rotellina del mouse">
 <!ENTITY iz.options.singlezoom.label "Opzione zoom singola immagine">
 <!ENTITY iz.options.globalzoom.label "Opzioni zoom globale">
@@ -35,9 +35,9 @@
 <!ENTITY iz.options.tabs.contextmenu.label "Oggetti del menu contestuale">
 <!ENTITY iz.options.tabs.main.label "Generale">
 <!ENTITY iz.options.reversescroll.label "Inverti scorrimento">
-<!ENTITY iz.options.autocenter.label "Centra automaticamente l'immagine quando si adattano le dimensioni ">
+<!ENTITY iz.options.autocenter.label "Centra automaticamente l'immagine quando si adattano le dimensioni">
 <!ENTITY iz.options.mouseaccess.label1 "Accedi alle funzioni tenendo premuto il pulsante">
-<!ENTITY iz.options.mouseaccess.label2 " del mouse.">
+<!ENTITY iz.options.mouseaccess.label2 "del mouse.">
 <!ENTITY iz.options.imagefit.label "Per adattare le dimensioni dell'immagine usa il pulsante">
 <!ENTITY iz.options.imagereset.label "Per ripristinare le dimensioni dell'immagine usa il pulsante">
 <!ENTITY iz.options.none.label "Disattiva">
