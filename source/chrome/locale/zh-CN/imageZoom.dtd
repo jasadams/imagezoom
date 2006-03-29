@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "版本">
+<!ENTITY iz.about.createdby.label "创建者">
+<!ENTITY iz.about.help.label "帮助">
+<!ENTITY iz.about.help.description "帮助您设置和使用 Image Zoom">
+<!ENTITY iz.about.forums.label "论坛">
+<!ENTITY iz.about.forums.description "支持，建议，除错">
+<!ENTITY iz.about.walkthrough.label "漫游">
+<!ENTITY iz.about.walkthrough.description "Image Zoom 主要特征综述">
+<!ENTITY iz.about.close.label "关闭">
+<!ENTITY iz.install.installed "Image Zoom 已安装">
+<!ENTITY iz.install.options.label "选项">
+<!ENTITY iz.install.close.label "关闭">
+<!ENTITY iz.install.continue.label "继续 >>">
+<!ENTITY iz.install.desc.line1 "访问 Image Zoom 网站获取更多最新消息和">
+<!ENTITY iz.install.desc.line2 "Image Zoom 的主要特征综述。">
+<!ENTITY iz.install.desc.line3 "按下 [继续 >>] 马上前往 Image Zoom 网站">
+<!ENTITY iz.customzoom.label "输入缩放系数">
+<!ENTITY iz.customzoom.title "自定义缩放">
+<!ENTITY iz.customdim.width.label "宽度：">
+<!ENTITY iz.customdim.height.label "高度：">
+<!ENTITY iz.customdim.title "自定义尺寸">
+<!ENTITY iz.customdim.aspect.label "保持外观比例">
+<!ENTITY iz.options.label "属性">
+<!ENTITY iz.options.help.label "帮助页面">
+<!ENTITY iz.options.defaultzoom.label "缩放系数">
+<!ENTITY iz.options.defaultglobalzoom.label "默认全局缩放">
+<!ENTITY iz.options.showviewmenu.label "在 [查看] 菜单中显示 [图片缩放]">
+<!ENTITY iz.options.defaultscroll.label "滚轮缩放增量">
+<!ENTITY iz.options.singlezoom.label "单一缩放选项">
+<!ENTITY iz.options.globalzoom.label "全局缩放选项">
+<!ENTITY iz.options.context.label "右健菜单">
+<!ENTITY iz.options.contextdisplay.label "右健菜单显示选项">
+<!ENTITY iz.options.tabs.contextmenu.label "右健菜单项">
+<!ENTITY iz.options.tabs.main.label "常规">
+<!ENTITY iz.options.reversescroll.label "反转滚动方向">
+<!ENTITY iz.options.autocenter.label "使用适度缩放功能时居中图片">
+<!ENTITY iz.options.mouseaccess.label1 "完成以下相应功能，请在按住鼠标">
+<!ENTITY iz.options.mouseaccess.label2 "不放的情况下再按下">
+<!ENTITY iz.options.imagefit.label "适度缩放按键">
+<!ENTITY iz.options.imagereset.label "重置图片按键">
+<!ENTITY iz.options.none.label "禁用">
+<!ENTITY iz.options.lmb.label "左键">
+<!ENTITY iz.options.mmb.label "中键">
+<!ENTITY iz.options.rmb.label "右键">
+<!ENTITY iz.options.usemouse.label "启用鼠标功能">
+<!ENTITY iz.options.contextdescription.label "选择您想显示在图片右健菜单上的项目">
+<!ENTITY iz.options.menudummy.view.label "查看图片 (i)">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "复制图片 (y)">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "复制图片地址 (o)">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "另存图片为 (v)">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "缩小 (S)">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "放大 (L)">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "连同文字一同缩放 (T)">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "缩放图片 (Z)">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "放大 (+)">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "重置 (=)">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "缩小 (-)">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "自定义缩放">
+<!ENTITY iz.menu.context.customdim.label "自定义尺寸">
+<!ENTITY iz.menu.context.imagefit.label "适度缩放">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">
