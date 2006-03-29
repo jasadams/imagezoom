@@ -36,7 +36,7 @@
 <!ENTITY iz.options.tabs.main.label "일반">
 <!ENTITY iz.options.reversescroll.label "스크롤 반전">
 <!ENTITY iz.options.autocenter.label "창 크기에 맞추기를 사용했을 때 정중앙에 이미지 놓기">
-<!ENTITY iz.options.mouseaccess.label1 "마우스의 ">
+<!ENTITY iz.options.mouseaccess.label1 "마우스의">
 <!ENTITY iz.options.mouseaccess.label2 "버튼을 누르고 있을 때 아래의 기능을 사용.">
 <!ENTITY iz.options.imagefit.label "창크기에 맞추기">
 <!ENTITY iz.options.imagereset.label "원래 크기로 되돌리기">
@@ -75,4 +75,4 @@
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "Z">
+<!ENTITY iz.command.textscale.commandkey "\">
