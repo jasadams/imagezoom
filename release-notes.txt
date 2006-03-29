@@ -1,0 +1,2 @@
+added zh-CN locale
+added localised extension descriptions where possible
