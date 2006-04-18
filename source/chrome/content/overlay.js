@@ -199,6 +199,7 @@ function izOnMouseDown(e){
 
 	if (
 	     (e.originalTarget.tagName == "IMG") &&
+	     (mousedown) &&
 	     (
 	       (e.which == nsIPrefBranchObj.getIntPref("imageresetbutton")) || 
 	       (e.which == nsIPrefBranchObj.getIntPref("imagefitbutton")) ||
