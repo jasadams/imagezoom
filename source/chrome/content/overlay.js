@@ -87,6 +87,9 @@ function initImageZoom() {
 	
 	imagezoomBundle = document.getElementById("bundle_ImageZoom");
 	
+	contextSubMenuLabel = document.getElementById("context-zoomsub").getAttribute("label") + " (%zoom% %)";
+		
+	
 }
 
 function gPanelContainer()
@@ -194,6 +197,19 @@ function disableContextMenu(e) {
 
 function izOnMouseDown(e){
 
+	if (
+	     (e.originalTarget.tagName == "IMG") &&
+	     (
+	       (e.which == nsIPrefBranchObj.getIntPref("imageresetbutton")) || 
+	       (e.which == nsIPrefBranchObj.getIntPref("imagefitbutton")) ||
+	       (e.which == nsIPrefBranchObj.getIntPref("triggerbutton"))
+	     )
+	   )
+	{
+		e.preventDefault();
+		e.stopPropagation();
+	}
+	
 	// prepare for the mouse functions on a right click when user option is true
 	if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")))
 	{
@@ -399,7 +415,12 @@ function imageZoomMenu(e) {
 
 	// Show the Zoom Image container if there are subitems visible, else hide
 	if (subPopUp.getElementsByAttribute("hidden", false).length > 0)
-		document.getElementById("context-zoomsub").hidden = false;
+	{
+		var oizImage = new izImage(document.popupNode);
+		var izMenuItem = document.getElementById("context-zoomsub")
+		izMenuItem.setAttribute("label", contextSubMenuLabel.replace(/%zoom%/, oizImage.zoomFactor()));
+		izMenuItem.hidden = false;
+	}
 	else
 		document.getElementById("context-zoomsub").hidden = true;
 }
