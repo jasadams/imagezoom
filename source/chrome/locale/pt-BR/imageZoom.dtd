@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Versão">
+<!ENTITY iz.about.createdby.label "Criado por">
+<!ENTITY iz.about.help.label "Ajuda">
+<!ENTITY iz.about.help.description "Ajuda para configurar e usar o Image Zoom">
+<!ENTITY iz.about.forums.label "Fóruns">
+<!ENTITY iz.about.forums.description "Suporte, Sugestões, Bugs">
+<!ENTITY iz.about.walkthrough.label "Passo-a-Passo">
+<!ENTITY iz.about.walkthrough.description "Visão Geral das funcionalidades do Image Zoom">
+<!ENTITY iz.about.close.label "Fechar">
+<!ENTITY iz.install.installed "Image Zoom instalado">
+<!ENTITY iz.install.options.label "Opções">
+<!ENTITY iz.install.close.label "Fechar">
+<!ENTITY iz.install.continue.label "Continuar &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Visite o site do Image Zoom para obter as últimas informações e">
+<!ENTITY iz.install.desc.line2 "uma visão geral de todas as funcionalidades do Image Zoom.">
+<!ENTITY iz.install.desc.line3 "Aperte 'Continuar' para ir para o site do Image Zoom agora">
+<!ENTITY iz.customzoom.label "Entre com o fator de Zoom">
+<!ENTITY iz.customzoom.title "Zoom personalizado">
+<!ENTITY iz.customdim.width.label "Largura:">
+<!ENTITY iz.customdim.height.label "Altura:">
+<!ENTITY iz.customdim.title "Dimensões personalizadas">
+<!ENTITY iz.customdim.aspect.label "Manter Proporções">
+<!ENTITY iz.options.label "Preferências">
+<!ENTITY iz.options.help.label "Página de Ajuda">
+<!ENTITY iz.options.defaultzoom.label "Fator de Zoom In/Out">
+<!ENTITY iz.options.defaultglobalzoom.label "Zoom Global Padrão">
+<!ENTITY iz.options.showviewmenu.label "Exibe Image Zoom no Menu Exibir">
+<!ENTITY iz.options.defaultscroll.label "Incremento da rolagem do Zoom">
+<!ENTITY iz.options.singlezoom.label "Opções de Zoom individual">
+<!ENTITY iz.options.globalzoom.label "Opções de Zoom Global">
+<!ENTITY iz.options.context.label "Menu de Contexto">
+<!ENTITY iz.options.contextdisplay.label "Opções de Exibição do Menu de Contexo">
+<!ENTITY iz.options.tabs.contextmenu.label "Itens do Menu de Contexo">
+<!ENTITY iz.options.tabs.main.label "Geral">
+<!ENTITY iz.options.reversescroll.label "Rolagem Reversa">
+<!ENTITY iz.options.autocenter.label "Auto Centralizar quando usar o Ajuste de Imagem na Tela">
+<!ENTITY iz.options.mouseaccess.label1 "Acessar funções segurando o botão">
+<!ENTITY iz.options.mouseaccess.label2 "do mouse.">
+<!ENTITY iz.options.imagefit.label "Botão para Ajustar Imagem na Tela">
+<!ENTITY iz.options.imagereset.label "Botão para Tamanho Original da Imagem">
+<!ENTITY iz.options.none.label "Desativado">
+<!ENTITY iz.options.lmb.label "Esquerdo">
+<!ENTITY iz.options.mmb.label "do Meio">
+<!ENTITY iz.options.rmb.label "Direito">
+<!ENTITY iz.options.usemouse.label "Usar Funções do Mouse">
+<!ENTITY iz.options.contextdescription.label "Marque os itens que você deseja exibir no Menu de Contexto">
+<!ENTITY iz.options.menudummy.view.label "Visualizar Imagem">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Copiar Imagem">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "Copiar enderço da Imagem">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Salvar Imagem Como">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "Menor">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "Maior">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "Zoom com texto">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "Zoom Image">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ Zoom In">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Tamanho Original">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Zoom Out">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
+<!ENTITY iz.menu.context.customdim.label "Dimensões personalizadas">
+<!ENTITY iz.menu.context.imagefit.label "Ajustar Imagem">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

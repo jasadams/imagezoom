@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2.5">
+<!ENTITY iz.about.version.label "Версия">
+<!ENTITY iz.about.createdby.label "Автор ">
+<!ENTITY iz.about.help.label "Справка">
+<!ENTITY iz.about.help.description "Справка о настройке и использовании Image Zoom">
+<!ENTITY iz.about.forums.label "Форумы">
+<!ENTITY iz.about.forums.description "Поддержка, Предложения, Ошибки">
+<!ENTITY iz.about.walkthrough.label "Введение">
+<!ENTITY iz.about.walkthrough.description "Краткий обзор возможностей Image Zoom">
+<!ENTITY iz.about.close.label "Закрыть">
+<!ENTITY iz.install.installed "Image Zoom установлен">
+<!ENTITY iz.install.options.label "Настройки">
+<!ENTITY iz.install.close.label "Закрыть">
+<!ENTITY iz.install.continue.label "Далее &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Посетите web сайт Image Zoom для получения последней информации и">
+<!ENTITY iz.install.desc.line2 "краткого обзора всех возможностей Image Zoom.">
+<!ENTITY iz.install.desc.line3 "Нажмите 'Далее' для перехода на сайт Image Zoom">
+<!ENTITY iz.customzoom.label "Введите Коэффицент увеличения">
+<!ENTITY iz.customzoom.title "Специальное увеличение">
+<!ENTITY iz.customdim.width.label "Ширина:">
+<!ENTITY iz.customdim.height.label "Высота:">
+<!ENTITY iz.customdim.title "Специальнай размер">
+<!ENTITY iz.customdim.aspect.label "Сохранить отношение размеров">
+<!ENTITY iz.options.label "Настройки">
+<!ENTITY iz.options.help.label "Страничка Справки">
+<!ENTITY iz.options.defaultzoom.label "Коэффицент увеличения">
+<!ENTITY iz.options.defaultglobalzoom.label "Общее изменение размера по умолчанию">
+<!ENTITY iz.options.showviewmenu.label "Показывать Image Zoom в меню Вид">
+<!ENTITY iz.options.defaultscroll.label "Увеличение на один поворот колеса">
+<!ENTITY iz.options.singlezoom.label "Индивидуальные опции увеличения">
+<!ENTITY iz.options.globalzoom.label "Опции Общего изменения размеров">
+<!ENTITY iz.options.context.label "Контекстное меню">
+<!ENTITY iz.options.contextdisplay.label "Отображение Контекстного меню">
+<!ENTITY iz.options.tabs.contextmenu.label "Пункты контекстного меню">
+<!ENTITY iz.options.tabs.main.label "Основные">
+<!ENTITY iz.options.reversescroll.label "Реверс колеса мыши">
+<!ENTITY iz.options.autocenter.label "Автоцетрирование изображения при Растяжении во весь экран">
+<!ENTITY iz.options.mouseaccess.label1 "Доступ к функциям задерживая">
+<!ENTITY iz.options.mouseaccess.label2 "кнопку мыши.">
+<!ENTITY iz.options.imagefit.label "Кнопка растяжения Во весь экран">
+<!ENTITY iz.options.imagereset.label "Кнопка сброса">
+<!ENTITY iz.options.none.label "Отключено">
+<!ENTITY iz.options.lmb.label "Левая">
+<!ENTITY iz.options.mmb.label "Средняя">
+<!ENTITY iz.options.rmb.label "Правая">
+<!ENTITY iz.options.usemouse.label "Использование функций мыши">
+<!ENTITY iz.options.contextdescription.label "Выберите элементы, которые вы хотите увидеть в контекстном меню">
+<!ENTITY iz.options.menudummy.view.label "Показать изображение">
+<!ENTITY iz.options.menudummy.view.accesskey "П">
+<!ENTITY iz.options.menudummy.contents.label "Копировать изображение">
+<!ENTITY iz.options.menudummy.contents.accesskey "и">
+<!ENTITY iz.options.menudummy.image.label "Копировать ссылку на изображение">
+<!ENTITY iz.options.menudummy.image.accesskey "и">
+<!ENTITY iz.options.menudummy.save.label "Сохранить изображение как...">
+<!ENTITY iz.options.menudummy.save.accesskey "х">
+<!ENTITY iz.menu.global.decrease.label "Всё Меньше">
+<!ENTITY iz.menu.global.decrease.accesskey "М">
+<!ENTITY iz.menu.global.increase.label "Всё Больше">
+<!ENTITY iz.menu.global.increase.accesskey "Б">
+<!ENTITY iz.menu.global.custom.accesskey "Д">
+<!ENTITY iz.menu.global.textscale.label "Увеличивать с Текстом">
+<!ENTITY iz.menu.global.textscale.accesskey "Т">
+<!ENTITY iz.menu.context.zoomimage.label "Изменить размер">
+<!ENTITY iz.menu.context.zoomimage.accesskey "м">
+<!ENTITY iz.menu.context.increase.label "+ Увеличить">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Исходный размер">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Уменьшить">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Особое изменение">
+<!ENTITY iz.menu.context.customdim.label "Особые размеры">
+<!ENTITY iz.menu.context.imagefit.label "Во весь экран">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">
