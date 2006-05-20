@@ -17,5 +17,6 @@ locale imagezoom tr-TR jar:chrome/imagezoom.jar!/locale/tr-TR/
 locale imagezoom zh-CN jar:chrome/imagezoom.jar!/locale/zh-CN/
 locale imagezoom pt-BR jar:chrome/imagezoom.jar!/locale/pt-BR/
 locale imagezoom ru-RU jar:chrome/imagezoom.jar!/locale/ru-RU/
+locale imagezoom mk-MK jar:chrome/imagezoom.jar!/locale/mk-MK/
 skin imagezoom classic jar:chrome/imagezoom.jar!/skin/classic/imagezoom/
 skin imagezoom fusion jar:chrome/imagezoom.jar!/skin/fusion/imagezoom/
