@@ -2,6 +2,8 @@ added zh-CN locale
 added pt-BR locale
 added ru-RU locale
 added mk-MK locale
+added nl-NL locale
+added he-IL locale
 added localised extension descriptions where possible
 added fixed conflict with autoscroll. Image zoom will now override autoscroll only when applicable
 added show zoom value in context menu of currently zoomed image.

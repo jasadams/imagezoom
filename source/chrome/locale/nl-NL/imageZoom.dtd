@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "ImageZoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Versie">
+<!ENTITY iz.about.createdby.label "Gemaakt door">
+<!ENTITY iz.about.help.label "Help">
+<!ENTITY iz.about.help.description "Help - Configureren en gebruiken van ImageZoom">
+<!ENTITY iz.about.forums.label "Forums">
+<!ENTITY iz.about.forums.description "Ondersteuning, suggesties, fouten">
+<!ENTITY iz.about.walkthrough.label "Analyse">
+<!ENTITY iz.about.walkthrough.description "Kort overzicht van ImageZoom mogelijkheden">
+<!ENTITY iz.about.close.label "Sluiten">
+<!ENTITY iz.install.installed "ImageZoom geïnstalleerd">
+<!ENTITY iz.install.options.label "Opties">
+<!ENTITY iz.install.close.label "Sluiten">
+<!ENTITY iz.install.continue.label "Doorgaan &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Bezoek de ImageZoom website voor de laatste informatie en">
+<!ENTITY iz.install.desc.line2 "een kort overzicht van alle ImageZoom mogelijkheden.">
+<!ENTITY iz.install.desc.line3 "Druk op &apos;Doorgaan&apos; om nu naar de ImageZoom website te gaan.">
+<!ENTITY iz.customzoom.label "Voer zoomfactor in">
+<!ENTITY iz.customzoom.title "Aangepaste zoom">
+<!ENTITY iz.customdim.width.label "Breedte:">
+<!ENTITY iz.customdim.height.label "Hoogte:">
+<!ENTITY iz.customdim.title "Aangepaste afmeting">
+<!ENTITY iz.customdim.aspect.label "Aspect-verhouding behouden">
+<!ENTITY iz.options.label "Voorkeuren">
+<!ENTITY iz.options.help.label "Help pagina">
+<!ENTITY iz.options.defaultzoom.label "Zoom in/uit factor">
+<!ENTITY iz.options.defaultglobalzoom.label "Standaard algemene zoom">
+<!ENTITY iz.options.showviewmenu.label "ImageZoom in menu Beeld weergeven">
+<!ENTITY iz.options.defaultscroll.label "Scroll zoom toename">
+<!ENTITY iz.options.singlezoom.label "Individuele zoom opties">
+<!ENTITY iz.options.globalzoom.label "Algemene zoom opties">
+<!ENTITY iz.options.context.label "Context-menu">
+<!ENTITY iz.options.contextdisplay.label "Context-menu opties weergeven">
+<!ENTITY iz.options.tabs.contextmenu.label "Context-menu onderdelen">
+<!ENTITY iz.options.tabs.main.label "Algemeen">
+<!ENTITY iz.options.reversescroll.label "Scroll-richting omkeren">
+<!ENTITY iz.options.autocenter.label "Afbeeldingen automatisch centreren bij gebruik van ImageFit">
+<!ENTITY iz.options.mouseaccess.label1 "Toegang tot de functies door het vasthouden van de">
+<!ENTITY iz.options.mouseaccess.label2 "muisknop.">
+<!ENTITY iz.options.imagefit.label "ImageFit-knop:">
+<!ENTITY iz.options.imagereset.label "Afbeelding resetknop:">
+<!ENTITY iz.options.none.label "Uitgeschakeld">
+<!ENTITY iz.options.lmb.label "linker">
+<!ENTITY iz.options.mmb.label "middelste">
+<!ENTITY iz.options.rmb.label "rechter">
+<!ENTITY iz.options.usemouse.label "Muisfuncties gebruiken">
+<!ENTITY iz.options.contextdescription.label "Geef de onderdelen aan die weergegeven moeten worden in het Afbeeldingen context-menu">
+<!ENTITY iz.options.menudummy.view.label "Afbeelding bekijken">
+<!ENTITY iz.options.menudummy.view.accesskey "b">
+<!ENTITY iz.options.menudummy.contents.label "Afbeelding kopiëren">
+<!ENTITY iz.options.menudummy.contents.accesskey "k">
+<!ENTITY iz.options.menudummy.image.label "Afbeeldinglokatie kopiëren">
+<!ENTITY iz.options.menudummy.image.accesskey "l">
+<!ENTITY iz.options.menudummy.save.label "Afbeelding opslaan als">
+<!ENTITY iz.options.menudummy.save.accesskey "o">
+<!ENTITY iz.menu.global.decrease.label "Kleiner">
+<!ENTITY iz.menu.global.decrease.accesskey "K">
+<!ENTITY iz.menu.global.increase.label "Groter">
+<!ENTITY iz.menu.global.increase.accesskey "G">
+<!ENTITY iz.menu.global.custom.accesskey "A">
+<!ENTITY iz.menu.global.textscale.label "Met tekst zoomen">
+<!ENTITY iz.menu.global.textscale.accesskey "t">
+<!ENTITY iz.menu.context.zoomimage.label "Afbeelding zoomen">
+<!ENTITY iz.menu.context.zoomimage.accesskey "A">
+<!ENTITY iz.menu.context.increase.label "+ Inzoomen">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Zoom resetten">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Uitzoomen">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Aangepaste zoom">
+<!ENTITY iz.menu.context.customdim.label "Aangepaste afmetingen">
+<!ENTITY iz.menu.context.imagefit.label "ImageFit">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

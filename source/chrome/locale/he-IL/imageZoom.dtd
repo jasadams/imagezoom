@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "גירסא">
+<!ENTITY iz.about.createdby.label "נוצר על ידי">
+<!ENTITY iz.about.help.label "עזרה">
+<!ENTITY iz.about.help.description "עזרה בתיכנות ובשימוש ב Image Zoom">
+<!ENTITY iz.about.forums.label "פורומים">
+<!ENTITY iz.about.forums.description "תמיכה, הצעות, באגים">
+<!ENTITY iz.about.walkthrough.label "עזרה במהלך">
+<!ENTITY iz.about.walkthrough.description "תיאור קצר של מאפייני Image Zoom">
+<!ENTITY iz.about.close.label "סגור">
+<!ENTITY iz.install.installed "Image Zoom מותקן">
+<!ENTITY iz.install.options.label "אפשרויות">
+<!ENTITY iz.install.close.label "סגור">
+<!ENTITY iz.install.continue.label "המשך &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "בקר באתר של Image Zoom כדי להשיג את כל המידע העדכני ו">
+<!ENTITY iz.install.desc.line2 "תיאור קצר של מאפייני Image Zoom">
+<!ENTITY iz.install.desc.line3 "לחץ &quot;המשך&quot; כדי ללכת לאתר של Image Zoom עכשיו">
+<!ENTITY iz.customzoom.label "הכנס אחוזי התמונה הרצויה">
+<!ENTITY iz.customzoom.title "התאמת אחוזי הזום">
+<!ENTITY iz.customdim.width.label "רוחב:">
+<!ENTITY iz.customdim.height.label "גובה:">
+<!ENTITY iz.customdim.title "התאמת מימדי התמונה">
+<!ENTITY iz.customdim.aspect.label "שמור על הפרופורציה">
+<!ENTITY iz.options.label "אפשרויות">
+<!ENTITY iz.options.help.label "עמוד העזרה">
+<!ENTITY iz.options.defaultzoom.label "זום פנימה/החוצה">
+<!ENTITY iz.options.defaultglobalzoom.label "זום גלובלי ברירת מחדל">
+<!ENTITY iz.options.showviewmenu.label "הראה Image Zoom בתפריט המראה">
+<!ENTITY iz.options.defaultscroll.label "גלול בתוספת הזום">
+<!ENTITY iz.options.singlezoom.label "אפשרויות זום בלעדיות">
+<!ENTITY iz.options.globalzoom.label "אפשרויות זום גלובליות">
+<!ENTITY iz.options.context.label "תפריט העכבר">
+<!ENTITY iz.options.contextdisplay.label "תפריט העכבר אפשרויות מראה">
+<!ENTITY iz.options.tabs.contextmenu.label "פריטי תפריט העכבר">
+<!ENTITY iz.options.tabs.main.label "כללי">
+<!ENTITY iz.options.reversescroll.label "גלילה הפוכה">
+<!ENTITY iz.options.autocenter.label "מקם תמונות במרכז אוטומטית כאשר משתמשים בהתאמת תמונה למסך">
+<!ENTITY iz.options.mouseaccess.label1 "כנס לאפשרויות בלחיצת">
+<!ENTITY iz.options.mouseaccess.label2 "כפתור העכבר.">
+<!ENTITY iz.options.imagefit.label "כפתור התאמת התמונה למסך">
+<!ENTITY iz.options.imagereset.label "כפתור החזרת התמונה למצב המקורי">
+<!ENTITY iz.options.none.label "מבוטל">
+<!ENTITY iz.options.lmb.label "שמאל">
+<!ENTITY iz.options.mmb.label "אמצע">
+<!ENTITY iz.options.rmb.label "ימין">
+<!ENTITY iz.options.usemouse.label "השתמש באפשרויות העכבר">
+<!ENTITY iz.options.contextdescription.label "סמן את הפריטים שאתה רוצה שיהיו מוצגות בתפריט העכבר לתמונות">
+<!ENTITY iz.options.menudummy.view.label "הצג תמונה">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "העתק תמונה">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "העתק מיקום התמונה">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "שמור תמונה כ..">
+<!ENTITY iz.options.menudummy.save.accesskey "o">
+<!ENTITY iz.menu.global.decrease.label "קטן יותר">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "גדול יותר">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "זום עם טקסט">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.context.zoomimage.label "הגדל/הקטן תמונה">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ זום פנימה">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= החזרת זום למצב המקורי">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- זום החוצה">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "זום מותאם">
+<!ENTITY iz.menu.context.customdim.label "מימדים מותאמים">
+<!ENTITY iz.menu.context.imagefit.label "התאמת התמונה למסך">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">
