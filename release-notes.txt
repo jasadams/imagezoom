@@ -1,0 +1,2 @@
+added uk-UA locale
+modified hu-HU locale

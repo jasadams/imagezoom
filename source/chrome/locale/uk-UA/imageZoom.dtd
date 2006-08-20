@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2.5">
+<!ENTITY iz.about.version.label "Версія">
+<!ENTITY iz.about.createdby.label "Автор">
+<!ENTITY iz.about.help.label "Довідка">
+<!ENTITY iz.about.help.description "Довідка про налаштування і використання Image Zoom">
+<!ENTITY iz.about.forums.label "Форуми">
+<!ENTITY iz.about.forums.description "Підтримка, Пропозиції, Помилки">
+<!ENTITY iz.about.walkthrough.label "Введення">
+<!ENTITY iz.about.walkthrough.description "Короткий огляд можливостей Image Zoom">
+<!ENTITY iz.about.close.label "Закрити">
+<!ENTITY iz.install.installed "Image Zoom встановлений">
+<!ENTITY iz.install.options.label "Налаштування">
+<!ENTITY iz.install.close.label "Закрити">
+<!ENTITY iz.install.continue.label "Продовжити &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Відвідаєте web-сайт Image Zoom для отримання останньої інформації і">
+<!ENTITY iz.install.desc.line2 "короткого огляду всіх можливостей Image Zoom.">
+<!ENTITY iz.install.desc.line3 "Натисніть &apos;Продовжити&apos; для переходу на сайт Image Zoom">
+<!ENTITY iz.customzoom.label "Введіть Коеффіцент збільшення">
+<!ENTITY iz.customzoom.title "Спеціальне збільшення">
+<!ENTITY iz.customdim.width.label "Ширина:">
+<!ENTITY iz.customdim.height.label "Висота:">
+<!ENTITY iz.customdim.title "Специальнай розмір">
+<!ENTITY iz.customdim.aspect.label "Зберегти відношення розмірів">
+<!ENTITY iz.options.label "Налаштування">
+<!ENTITY iz.options.help.label "Сторінка Довідки">
+<!ENTITY iz.options.defaultzoom.label "Коефіцєнт збільшення">
+<!ENTITY iz.options.defaultglobalzoom.label "Загальна зміна розміру За умовчанням">
+<!ENTITY iz.options.showviewmenu.label "Показувати Image Zoom в меню Вид">
+<!ENTITY iz.options.defaultscroll.label "Збільшення на один оберт колеса">
+<!ENTITY iz.options.singlezoom.label "Індивідуальні опції збільшення">
+<!ENTITY iz.options.globalzoom.label "Опції Загальної зміни розмірів">
+<!ENTITY iz.options.context.label "Контекстне меню">
+<!ENTITY iz.options.contextdisplay.label "Відображення Контекстного меню">
+<!ENTITY iz.options.tabs.contextmenu.label "Пункти контекстного меню">
+<!ENTITY iz.options.tabs.main.label "Основні">
+<!ENTITY iz.options.reversescroll.label "Реверс колеса миші">
+<!ENTITY iz.options.autocenter.label "Автоцетрування зображення при Розтягуванні на весь екран">
+<!ENTITY iz.options.mouseaccess.label1 "Доступ до функцій, затримуючи">
+<!ENTITY iz.options.mouseaccess.label2 "кнопку миші.">
+<!ENTITY iz.options.imagefit.label "Кнопка розтягування На весь екран">
+<!ENTITY iz.options.imagereset.label "Кнопка скидання">
+<!ENTITY iz.options.none.label "Відключено">
+<!ENTITY iz.options.lmb.label "Ліва">
+<!ENTITY iz.options.mmb.label "Середня">
+<!ENTITY iz.options.rmb.label "Права">
+<!ENTITY iz.options.usemouse.label "Використання функцій миші">
+<!ENTITY iz.options.contextdescription.label "Виберіть елементи, які ви хочете побачити в контекстному меню">
+<!ENTITY iz.options.menudummy.view.label "Показати зображення">
+<!ENTITY iz.options.menudummy.view.accesskey "о">
+<!ENTITY iz.options.menudummy.contents.label "Копіювати зображення">
+<!ENTITY iz.options.menudummy.contents.accesskey "ж">
+<!ENTITY iz.options.menudummy.image.label "Копіювати посилання на зображення">
+<!ENTITY iz.options.menudummy.image.accesskey "с">
+<!ENTITY iz.options.menudummy.save.label "Зберегти зображення як...">
+<!ENTITY iz.options.menudummy.save.accesskey "е">
+<!ENTITY iz.menu.global.decrease.label "Всі менше">
+<!ENTITY iz.menu.global.decrease.accesskey "м">
+<!ENTITY iz.menu.global.increase.label "Всі більше">
+<!ENTITY iz.menu.global.increase.accesskey "б">
+<!ENTITY iz.menu.global.custom.accesskey "о">
+<!ENTITY iz.menu.global.textscale.label "Збільшувати з Текстом">
+<!ENTITY iz.menu.global.textscale.accesskey "л">
+<!ENTITY iz.menu.context.zoomimage.label "Змінити розмір">
+<!ENTITY iz.menu.context.zoomimage.accesskey "з">
+<!ENTITY iz.menu.context.increase.label "+ Збільшити">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Початковий розмір">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Зменшити">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Особлива зміна">
+<!ENTITY iz.menu.context.customdim.label "Особливі розміри">
+<!ENTITY iz.menu.context.imagefit.label "На весь екран">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

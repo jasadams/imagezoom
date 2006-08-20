@@ -60,7 +60,7 @@
     	<text value="Willy Young" class="author"/>
     	<text value="Norah" class="author"/>
     	<text value="Markus Fassbender" class="author"/>
-    	<text value="Tibor Balogh" class="author"/>
+    	<text value="Balogh Tibor (balti)" class="author"/>
     	<text value="Urko" class="author"/>
     	<text value="Hunmin Kim" class="author"/>
     	<text value="Yamila Gurovich" class="author"/>
@@ -69,6 +69,7 @@
     	<text value="rickcart" class="author"/>
     	<text value="Alf" class="author"/>
     	<text value="Golanlan" class="author"/>    	
+    	<text value="MozUA" class="author"/>       	
     </vbox>
     </hbox>
     
