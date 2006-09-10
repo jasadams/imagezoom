@@ -108,8 +108,6 @@ function imagezoom_saveOptions()
 
     nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
 
-    nsIPrefBranchObj.setCharPref("defaultGlobalZoom", document.getElementById("imagezoomzoomvalueglobal").value);
-
     nsIPrefBranchObj.setBoolPref("showViewMenu", document.getElementById("imagezoomshowviewmenu").checked);
 }
 
@@ -152,10 +150,6 @@ function imagezoom_initializeOptions()
 
     var zoom = nsIPrefBranchObj.getIntPref("zoomvalue");
     var zoomValueBox = document.getElementById("imagezoomzoomvalue");
-    zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
-
-    var zoom = nsIPrefBranchObj.getCharPref("defaultGlobalZoom");
-    var zoomValueBox = document.getElementById("imagezoomzoomvalueglobal");
     zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
 
     document.getElementById("imagezoomshowviewmenu").checked = nsIPrefBranchObj.getBoolPref("showViewMenu");

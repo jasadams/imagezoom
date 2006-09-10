@@ -159,30 +159,6 @@
       </groupbox>
         <groupbox align="start">
         <caption label="&iz.options.globalzoom.label;"/>
-        <grid flex="1">
-          <columns>
-          	<column/>
-          	<column/>
-          	<column/>
-          </columns>
-          <rows>
-          	<row align="center">
-          		<label style="width: 130px" value="&iz.options.defaultglobalzoom.label;" control="imagezoomzoomvalueglobal"/>
-			<menulist id="imagezoomzoomvalueglobal" prefstring="imagezoom.defaultGlobalZoom">
-  	      			<menupopup>
-    					<menuitem label="50%" value="50"/>
-    					<menuitem label="75%" value="75"/>
-    					<menuitem label="90%" value="90"/>
-    					<menuitem label="100%" value="100"/>
-    					<menuitem label="120%" value="120"/>
-    					<menuitem label="150%" value="150"/>
-    					<menuitem label="200%" value="200"/>
-    					<menuitem label="&iz.menu.global.textscale.label;" value="text"/>
-  	      			</menupopup>
-	    		</menulist>
-          	</row>
-          </rows>
-        </grid>
         <checkbox id="imagezoomshowviewmenu" label="&iz.options.showviewmenu.label;" prefstring="imagezoom.showViewMenu"/>
       </groupbox>
     </vbox>

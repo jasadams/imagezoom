@@ -71,6 +71,7 @@ ZoomImageManager.prototype = {
 	set textScale(blnValue) {
 		this.scale2Text = blnValue;
 		if (this.scale2Text){
+			nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "text");
 			if(this.currentZoom != ZoomManager.prototype.getInstance().textZoom) {
 				this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
 				this.registerListener();
@@ -114,6 +115,7 @@ ZoomImageManager.prototype = {
 	set imageZoom(aZoom) {
 		this.scale2Text = false;
 		this.currentZoom = aZoom;
+		nsIPrefBranchObj.setCharPref("defaultGlobalZoom", this.currentZoom);
 		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
 		this.registerListener();
 	},
