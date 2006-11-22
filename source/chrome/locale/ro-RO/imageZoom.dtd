@@ -1,0 +1,78 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Versiune">
+<!ENTITY iz.about.createdby.label "Autor">
+<!ENTITY iz.about.help.label "Ghid">
+<!ENTITY iz.about.help.description "Ghid de configurare şi folosire a Image Zoom">
+<!ENTITY iz.about.forums.label "Forumuri">
+<!ENTITY iz.about.forums.description "Ajutor, sugestii, disfuncţii">
+<!ENTITY iz.about.walkthrough.label "Prezentare">
+<!ENTITY iz.about.walkthrough.description "Scurtă prezentare a funcţiilor Image Zoom">
+<!ENTITY iz.about.close.label "Închidere">
+<!ENTITY iz.install.installed "Image Zoom a fost instalat">
+<!ENTITY iz.install.options.label "Opţiuni">
+<!ENTITY iz.install.close.label "Închidere">
+<!ENTITY iz.install.continue.label "Continare &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Intră pe situl Image Zoom pentru ultimele ştiri şi">
+<!ENTITY iz.install.desc.line2 "pentru o scurtă prezentare a tuturor funcţiilor Image Zoom.">
+<!ENTITY iz.install.desc.line3 "Apasă &apos;Continuare&apos; pentru a intra acum pe situl Image Zoom">
+<!ENTITY iz.customzoom.label "Alege factorul de scalare">
+<!ENTITY iz.customzoom.title "Scalare la alegere">
+<!ENTITY iz.customdim.width.label "Lăţime:">
+<!ENTITY iz.customdim.height.label "Înălţime:">
+<!ENTITY iz.customdim.title "Dimensiuni la alegere">
+<!ENTITY iz.customdim.aspect.label "Menţinere raport dimensiuni">
+<!ENTITY iz.options.label "Preferinţe">
+<!ENTITY iz.options.help.label "Ghid">
+<!ENTITY iz.options.defaultzoom.label "Factor scalare">
+<!ENTITY iz.options.defaultglobalzoom.label "Scalare globală implicită">
+<!ENTITY iz.options.showviewmenu.label "Include Image Zoom în meniul Vizualizare">
+<!ENTITY iz.options.defaultscroll.label "Mărire cu rotiţa">
+<!ENTITY iz.options.singlezoom.label "Opţiuni scalare individuală">
+<!ENTITY iz.options.globalzoom.label "Opţiuni scalare globală">
+<!ENTITY iz.options.context.label "Meniu contextual">
+<!ENTITY iz.options.contextdisplay.label "Opţiuni meniu contextual">
+<!ENTITY iz.options.tabs.contextmenu.label "Elemente meniu contextual">
+<!ENTITY iz.options.tabs.main.label "Generalităţi">
+<!ENTITY iz.options.reversescroll.label "Scalare invers">
+<!ENTITY iz.options.autocenter.label "Centrează automat imaginile la potrivirea lor">
+<!ENTITY iz.options.mouseaccess.label1 "Accesează funcţiile ţinând apăsat butonul">
+<!ENTITY iz.options.mouseaccess.label2 "al mausului.">
+<!ENTITY iz.options.imagefit.label "Buton potrivire imagine">
+<!ENTITY iz.options.imagereset.label "Buton refacere imagine">
+<!ENTITY iz.options.none.label "niciunul">
+<!ENTITY iz.options.lmb.label "stâng">
+<!ENTITY iz.options.mmb.label "mijlociu">
+<!ENTITY iz.options.rmb.label "drept">
+<!ENTITY iz.options.usemouse.label "Foloseşte funcţiile mausului">
+<!ENTITY iz.options.contextdescription.label "Bifează elementele care să apară meniul contextual al imaginii">
+<!ENTITY iz.options.menudummy.view.label "Expunere imagine">
+<!ENTITY iz.options.menudummy.view.accesskey "E">
+<!ENTITY iz.options.menudummy.contents.label "Copiere imagine">
+<!ENTITY iz.options.menudummy.contents.accesskey "C">
+<!ENTITY iz.options.menudummy.image.label "Copiere url imagine">
+<!ENTITY iz.options.menudummy.image.accesskey "u">
+<!ENTITY iz.options.menudummy.save.label "Salvare imagine ca">
+<!ENTITY iz.options.menudummy.save.accesskey "S">
+<!ENTITY iz.menu.global.decrease.label "Mai mică">
+<!ENTITY iz.menu.global.decrease.accesskey "c">
+<!ENTITY iz.menu.global.increase.label "Mai mare">
+<!ENTITY iz.menu.global.increase.accesskey "M">
+<!ENTITY iz.menu.global.custom.accesskey "l">
+<!ENTITY iz.menu.global.textscale.label "Scalare cu text">
+<!ENTITY iz.menu.global.textscale.accesskey "t">
+<!ENTITY iz.menu.context.zoomimage.label "Scalare imagine">
+<!ENTITY iz.menu.context.zoomimage.accesskey "a">
+<!ENTITY iz.menu.context.increase.label "+ Mărire">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Refacere">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Micşorare">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Scalare la alegere">
+<!ENTITY iz.menu.context.customdim.label "Dimensiuni la alegere">
+<!ENTITY iz.menu.context.imagefit.label "Potrivire imagine">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

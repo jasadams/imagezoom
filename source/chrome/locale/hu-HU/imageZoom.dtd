@@ -26,7 +26,7 @@
 <!ENTITY iz.options.help.label "Image Zoom honlapja">
 <!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
 <!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
-<!ENTITY iz.options.showviewmenu.label "Látható a 'Nézet' menünél a 'Képek mérete' menü.">
+<!ENTITY iz.options.showviewmenu.label "Látható a &apos;Nézet&apos; menünél a &apos;Képek mérete&apos; menü.">
 <!ENTITY iz.options.defaultscroll.label "Egérgörgővel való nagyítás">
 <!ENTITY iz.options.singlezoom.label "Képek egyedi átméretezése">
 <!ENTITY iz.options.globalzoom.label "Képek globális átméretezése">

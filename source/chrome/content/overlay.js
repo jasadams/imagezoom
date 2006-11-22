@@ -99,7 +99,7 @@ function gPanelContainer()
 }
 
 function izOnMouseOut(e) {
-		if ((e.originalTarget.tagName.toUpperCase() == "HTML") || (e.originalTarget.tagName == "xul:browser")){
+		if ((e.originalTarget.tagName.toLowerCase() == "html") || (e.originalTarget.tagName.toLowerCase() == "xul:browser")){
 			cancelScrollZoom();
 		}
 }
@@ -186,7 +186,7 @@ function izSetZoom(zFactor)
 }
 
 function disableContextMenu(e) {
-	if (document.popupNode.tagName == "IMG") {
+	if (document.popupNode.tagName.toLowerCase() == "img") {
 		linuxImage = document.popupNode;
 		izContext = e.originalTarget;
 		e.preventDefault();
@@ -197,8 +197,10 @@ function disableContextMenu(e) {
 
 function izOnMouseDown(e){
 
+	var targetName  = e.originalTarget.tagName.toLowerCase();
+	
 	if (
-	     (e.originalTarget.tagName == "IMG") &&
+	     (targetName == "img") &&
 	     (mousedown) &&
 	     (
 	       (e.which == nsIPrefBranchObj.getIntPref("imageresetbutton")) || 
@@ -212,10 +214,13 @@ function izOnMouseDown(e){
 	}
 	
 	// prepare for the mouse functions on a right click when user option is true
-	if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")))
+	if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && 
+	    (nsIPrefBranchObj.getBoolPref("usescroll")) &&
+	    // Prevent zooming from being initiated when an embedded object is clicked apon
+	    !(targetName == "embed" || targetName == "object"))
 	{
 				
-		if ((e.originalTarget.tagName == "IMG") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2))
+		if ((targetName == "img") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2))
 		{
 			if (nsIPrefBranchObj.getIntPref("scrollZoomMode") == 2) 
 			{
@@ -248,6 +253,9 @@ function izOnMouseUp(e){
 }
 
 function izOnMouseClick(e){
+
+	var targetName  = e.originalTarget.tagName.toLowerCase();
+	
 	if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")){
 		if (haveZoomed){
 			e.preventDefault();
@@ -265,7 +273,7 @@ function izOnMouseClick(e){
 
 	if (mousedown){
 		// Invoke varios mouse function when mouse is over an image only
-		if (e.originalTarget.tagName == "IMG") {
+		if (targetName == "img") {
 			switch(e.which){
 			// Middle mouse button pressed while right button down, reset image
 			case nsIPrefBranchObj.getIntPref("imageresetbutton"):
@@ -300,11 +308,11 @@ function ScrollImage(e){
 		
 		// Mixed Mode (default)
 		case 0:
-			if ((e.target.tagName == "IMG") || (linuxImage != null) || (currentImage != null))
+			if ((e.target.tagName.toLowerCase() == "img") || (linuxImage != null) || (currentImage != null))
 			{
 				if (linuxImage != null) {
 					currentImage = linuxImage;
-				} else if (e.target.tagName == "IMG") {
+				} else if (e.target.tagName.toLowerCase() == "img") {
 					currentImage = e.target;
 				}
 			} 
@@ -317,11 +325,11 @@ function ScrollImage(e){
 		
 		// Only Scroll when mouse over image mode
 		case 1:
-			if ((e.target.tagName == "IMG") || (linuxImage != null))
+			if ((e.target.tagName.toLowerCase() == "img") || (linuxImage != null))
 			{
 				if (linuxImage != null) {
 					imageToScroll = linuxImage;
-				} else if (e.target.tagName == "IMG") {
+				} else if (e.target.tagName.toLowerCase() == "img") {
 					imageToScroll = e.target;
 				}				
 			}

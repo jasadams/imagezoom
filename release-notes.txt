@@ -1,3 +1,7 @@
 added uk-UA locale
+added ro-RO locale
 modified hu-HU locale
+modified it-IT locale
+modified ja-JP locale
 modified how globalZoom settings are stored. The default value is no longer set in the options screen but the value you select from the menu is stored for future sessions
+fix incompatibility bug with the flash embedded object

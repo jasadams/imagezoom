@@ -11,12 +11,11 @@
 <!ENTITY iz.about.close.label "閉じる">
 <!ENTITY iz.install.installed "Image Zoom をインストールしました。">
 <!ENTITY iz.install.options.label "オプション">
-<!ENTITY iz.options.help.label "Help Page">
 <!ENTITY iz.install.close.label "閉じる">
 <!ENTITY iz.install.continue.label "続ける &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "あなたが Imaze Zoom を最大限に活用するのを助けるために">
 <!ENTITY iz.install.desc.line2 "Imaze Zoom のホームページにはこの拡張機能のチュートリアル(英語)が用意されています。">
-<!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は '続ける' をクリックしてください。">
+<!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は &apos;続ける&apos; をクリックしてください。">
 <!ENTITY iz.customzoom.label "画像の拡大/縮小率(&#37;)を入力">
 <!ENTITY iz.customzoom.title "画像の拡大/縮小">
 <!ENTITY iz.customdim.width.label "横幅:">
@@ -24,6 +23,7 @@
 <!ENTITY iz.customdim.title "画像のサイズを入力">
 <!ENTITY iz.customdim.aspect.label "縦横比の保持">
 <!ENTITY iz.options.label "設定">
+<!ENTITY iz.options.help.label "ヘルプを表示">
 <!ENTITY iz.options.defaultzoom.label "1回に行う 拡大/縮小 の量">
 <!ENTITY iz.options.defaultglobalzoom.label "ページの拡大率 (初期値)">
 <!ENTITY iz.options.showviewmenu.label "Image Zoom を [表示] メニューに表示">
@@ -37,7 +37,7 @@
 <!ENTITY iz.options.reversescroll.label "スクロールの反転">
 <!ENTITY iz.options.autocenter.label "ウィンドウに合わせて表示するさいに自動的に中央に寄せる">
 <!ENTITY iz.options.mouseaccess.label1 "マウスの">
-<!ENTITY iz.options.mouseaccess.label2 " ボタンを押しっぱなしにしている時に下記の機能を実行する。">
+<!ENTITY iz.options.mouseaccess.label2 "ボタンを押しっぱなしにしている時に下記の機能を実行する。">
 <!ENTITY iz.options.imagefit.label "画像をウィンドウに合わせる">
 <!ENTITY iz.options.imagereset.label "画像を元の大きさに戻す">
 <!ENTITY iz.options.none.label "使用しない">

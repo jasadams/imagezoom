@@ -17,13 +17,3 @@
 
 	<!-- additional information for ja-JPM locale -->
 	<RDF:Description about="urn:mozilla:locale:ja-JP" chrome:name="ja-JPM">
-		<chrome:packages>
-			<RDF:Seq about="urn:mozilla:locale:ja-JPM:packages">
-				<RDF:li resource="urn:mozilla:locale:ja-JPM:imagezoom"/>
-			</RDF:Seq>
-		</chrome:packages>
-	</RDF:Description>
-
-</RDF:RDF>
-
-
