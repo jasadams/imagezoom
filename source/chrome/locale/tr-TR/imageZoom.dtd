@@ -3,19 +3,19 @@
 <!ENTITY iz.about.version.label "Versiyon">
 <!ENTITY iz.about.createdby.label "Hazırlayan">
 <!ENTITY iz.about.help.label "Yardım">
-<!ENTITY iz.about.help.description "Image Zoom'un ayarları ve kullanımı hakkında yardım">
+<!ENTITY iz.about.help.description "Image Zoom&apos;un ayarları ve kullanımı hakkında yardım">
 <!ENTITY iz.about.forums.label "Forumlar">
 <!ENTITY iz.about.forums.description "Destek, Öneriler, Hatalar">
 <!ENTITY iz.about.walkthrough.label "İlk adımlar">
-<!ENTITY iz.about.walkthrough.description "Image Zoom'un temel özellikleri hakkında bilgi">
+<!ENTITY iz.about.walkthrough.description "Image Zoom&apos;un temel özellikleri hakkında bilgi">
 <!ENTITY iz.about.close.label "Kapat">
 <!ENTITY iz.install.installed "Image Zoom Kuruldu">
 <!ENTITY iz.install.options.label "Seçenekler">
 <!ENTITY iz.install.close.label "Kapat">
-<!ENTITY iz.install.continue.label "Devam >>">
+<!ENTITY iz.install.continue.label "Devam &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Image Zoom web sitesini ziyaret edin, son bilgileri alın ve">
-<!ENTITY iz.install.desc.line2 "Image Zoom'un kullanımı ve özellikleri hakkında bilgi edinin.">
-<!ENTITY iz.install.desc.line3 "Image Zoom web sitesine gitmek için şimdi Devam'a tıklayın">
+<!ENTITY iz.install.desc.line2 "Image Zoom&apos;un kullanımı ve özellikleri hakkında bilgi edinin.">
+<!ENTITY iz.install.desc.line3 "Image Zoom web sitesine gitmek için şimdi Devam&apos;a tıklayın">
 <!ENTITY iz.customzoom.label "Boyutlandırma Oranını Girin">
 <!ENTITY iz.customzoom.title "Özel Boyutlandırma">
 <!ENTITY iz.customdim.width.label "Genişlik:">
@@ -26,8 +26,12 @@
 <!ENTITY iz.options.help.label "Yardım Sayfası">
 <!ENTITY iz.options.defaultzoom.label "Büyütme/Küçültme Oranı">
 <!ENTITY iz.options.defaultglobalzoom.label "Genel Boyutlandırma Oranı">
-<!ENTITY iz.options.showviewmenu.label "Görünüm Menüsü'nde Resim Boyutu'nu göster">
+<!ENTITY iz.options.showviewmenu.label "Görünüm Menüsü&apos;nde Resim Boyutu&apos;nu göster">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Tekerlek Boyutlandırma Artışı">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Tek Tek Boyutlandırma Seçenekleri">
 <!ENTITY iz.options.globalzoom.label "Genel Boyutlandırma Seçenekleri">
 <!ENTITY iz.options.context.label "Açılır Menü">
@@ -45,7 +49,7 @@
 <!ENTITY iz.options.mmb.label "Orta">
 <!ENTITY iz.options.rmb.label "Sağ">
 <!ENTITY iz.options.usemouse.label "Fare Fonksiyonlarını Kullan">
-<!ENTITY iz.options.contextdescription.label "Resim Açılır Menüsü'nde gösterilmesini istediğiniz öğeleri işaretleyin">
+<!ENTITY iz.options.contextdescription.label "Resim Açılır Menüsü&apos;nde gösterilmesini istediğiniz öğeleri işaretleyin">
 <!ENTITY iz.options.menudummy.view.label "Resmi göster">
 <!ENTITY iz.options.menudummy.view.accesskey "r">
 <!ENTITY iz.options.menudummy.contents.label "Resmi kopyala">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "D">
 <!ENTITY iz.menu.global.textscale.label "Metin boyutuyla">
 <!ENTITY iz.menu.global.textscale.accesskey "M">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Resim Boyutu">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Y">
 <!ENTITY iz.menu.context.increase.label "+ Büyüt">

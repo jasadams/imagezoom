@@ -234,7 +234,6 @@ function izImage(oImage) {
 		} else {
 			pImage.style.width = "";
 		}
-
 		// only set the height style if it was originally set
 		if (pImage.originalHeight){
 			pImage.style.height = (pImage.originalHeight * ((pImage.pageFactor/100)*(pImage.zoomFactor/100))) + pImage.originalHeightUnit;

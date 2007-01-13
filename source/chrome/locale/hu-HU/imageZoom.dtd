@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
 <!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
 <!ENTITY iz.options.showviewmenu.label "Látható a &apos;Nézet&apos; menünél a &apos;Képek mérete&apos; menü.">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Egérgörgővel való nagyítás">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Képek egyedi átméretezése">
 <!ENTITY iz.options.globalzoom.label "Képek globális átméretezése">
 <!ENTITY iz.options.context.label "Helyzetérzékeny menü">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "E">
 <!ENTITY iz.menu.global.textscale.label "Méretezés a szöveggel együtt">
 <!ENTITY iz.menu.global.textscale.accesskey "s">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Kép átméretezése">
 <!ENTITY iz.menu.context.zoomimage.accesskey "á">
 <!ENTITY iz.menu.context.increase.label "+ Kép nagyítása">

@@ -3,7 +3,7 @@
 <!ENTITY iz.about.version.label "Version">
 <!ENTITY iz.about.createdby.label "Création par">
 <!ENTITY iz.about.help.label "Aide">
-<!ENTITY iz.about.help.description "Aide pour la configuration et l'utilisation de Image Zoom">
+<!ENTITY iz.about.help.description "Aide pour la configuration et l&apos;utilisation de Image Zoom">
 <!ENTITY iz.about.forums.label "Forums">
 <!ENTITY iz.about.forums.description "Support, Suggestions, Bugs">
 <!ENTITY iz.about.walkthrough.label "Parcourir">
@@ -12,10 +12,10 @@
 <!ENTITY iz.install.installed "Image Zoom Installé">
 <!ENTITY iz.install.options.label "Options">
 <!ENTITY iz.install.close.label "Fermer">
-<!ENTITY iz.install.continue.label "Continuer >>">
+<!ENTITY iz.install.continue.label "Continuer &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Visiter le site Web de Image Zoom pour obtenir les dernières infos et">
 <!ENTITY iz.install.desc.line2 "un bref aperçu des dernières fonctionnalités de Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Choisir 'Continuer' pour visiter le site de Image Zoom">
+<!ENTITY iz.install.desc.line3 "Choisir &apos;Continuer&apos; pour visiter le site de Image Zoom">
 <!ENTITY iz.customzoom.label "Configurer le zoom">
 <!ENTITY iz.customzoom.title "Zoom personnalisé">
 <!ENTITY iz.customdim.width.label "Largeur:">
@@ -26,31 +26,35 @@
 <!ENTITY iz.options.help.label "Help Page">
 <!ENTITY iz.options.defaultzoom.label "Facteur de zoom">
 <!ENTITY iz.options.defaultglobalzoom.label "Zoom global par défaut">
-<!ENTITY iz.options.showviewmenu.label "Voir le zoom de l'image dans le menu Vue">
+<!ENTITY iz.options.showviewmenu.label "Voir le zoom de l&apos;image dans le menu Vue">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Incrémenter le défilement du zoom">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Options de zoom individuelles">
 <!ENTITY iz.options.globalzoom.label "Options de zoom globales">
 <!ENTITY iz.options.context.label "Menu contextuel">
-<!ENTITY iz.options.contextdisplay.label "Options d'affichage du menu contextuel">
+<!ENTITY iz.options.contextdisplay.label "Options d&apos;affichage du menu contextuel">
 <!ENTITY iz.options.tabs.contextmenu.label "Eléments du menu contextuel">
 <!ENTITY iz.options.tabs.main.label "Général">
 <!ENTITY iz.options.reversescroll.label "Défilement inversé">
-<!ENTITY iz.options.autocenter.label "Centrer automatiquement les images lors de l'adaptation de la taille de l'image">
+<!ENTITY iz.options.autocenter.label "Centrer automatiquement les images lors de l&apos;adaptation de la taille de l&apos;image">
 <!ENTITY iz.options.mouseaccess.label1 "Accéder aux fonctions en maintenant">
 <!ENTITY iz.options.mouseaccess.label2 " le bouton de souris enfoncé.">
-<!ENTITY iz.options.imagefit.label "Adaptation de la taille de l'image">
+<!ENTITY iz.options.imagefit.label "Adaptation de la taille de l&apos;image">
 <!ENTITY iz.options.imagereset.label "Remise à zéro">
 <!ENTITY iz.options.none.label "Inactif">
 <!ENTITY iz.options.lmb.label "Gauche">
 <!ENTITY iz.options.mmb.label "Centre">
 <!ENTITY iz.options.rmb.label "Droit">
 <!ENTITY iz.options.usemouse.label "Utiliser les fonctions de la souris">
-<!ENTITY iz.options.contextdescription.label "Choisir les éléments qui doivent apparaître dans le menu contextuel de l'image">
-<!ENTITY iz.options.menudummy.view.label "Voir l'image">
+<!ENTITY iz.options.contextdescription.label "Choisir les éléments qui doivent apparaître dans le menu contextuel de l&apos;image">
+<!ENTITY iz.options.menudummy.view.label "Voir l&apos;image">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
-<!ENTITY iz.options.menudummy.contents.label "Copier l'image">
+<!ENTITY iz.options.menudummy.contents.label "Copier l&apos;image">
 <!ENTITY iz.options.menudummy.contents.accesskey "y">
-<!ENTITY iz.options.menudummy.image.label "Copier l'emplacement de l'image">
+<!ENTITY iz.options.menudummy.image.label "Copier l&apos;emplacement de l&apos;image">
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Sauver en tant que">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
@@ -61,7 +65,9 @@
 <!ENTITY iz.menu.global.custom.accesskey "O">
 <!ENTITY iz.menu.global.textscale.label "Zoomer avec le texte">
 <!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.context.zoomimage.label "Zoomer sur l'image">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.menu.context.zoomimage.label "Zoomer sur l&apos;image">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Zoomer">
 <!ENTITY iz.menu.context.increase.accesskey "+">

@@ -12,10 +12,10 @@
 <!ENTITY iz.install.installed "Image Zoom je nameščen">
 <!ENTITY iz.install.options.label "Možnosti">
 <!ENTITY iz.install.close.label "Zapri">
-<!ENTITY iz.install.continue.label "Nadaljuj >>">
+<!ENTITY iz.install.continue.label "Nadaljuj &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Obiščite Image Zoomovo spletno stran za najnovejše informacije in">
 <!ENTITY iz.install.desc.line2 "kratek pregled značilnosti Image Zooma.">
-<!ENTITY iz.install.desc.line3 "Pritisnite 'Nadaljuj', da se bo odprla Image Zoomova spletno stran">
+<!ENTITY iz.install.desc.line3 "Pritisnite &apos;Nadaljuj&apos;, da se bo odprla Image Zoomova spletno stran">
 <!ENTITY iz.customzoom.label "Vnesite odstotek povečave">
 <!ENTITY iz.customzoom.title "Odstotek povečave">
 <!ENTITY iz.customdim.width.label "Širina:">
@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Stopnja povečave/pomanjšave">
 <!ENTITY iz.options.defaultglobalzoom.label "Privzeta povečava">
 <!ENTITY iz.options.showviewmenu.label "Prikaz menija Image Zoom v meniju Pogled">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Korak povečave z vrtenjem koleščka">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Možnosti posamezne povečave">
 <!ENTITY iz.options.globalzoom.label "Splošne možnosti povečave">
 <!ENTITY iz.options.context.label "Meni bližnjic">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "O">
 <!ENTITY iz.menu.global.textscale.label "Povečava z besedilom">
 <!ENTITY iz.menu.global.textscale.accesskey "B">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Povečava">
 <!ENTITY iz.menu.context.zoomimage.accesskey "E">
 <!ENTITY iz.menu.context.increase.label "Povečaj (+)">

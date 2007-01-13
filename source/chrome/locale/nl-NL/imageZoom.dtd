@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Zoom in/uit factor">
 <!ENTITY iz.options.defaultglobalzoom.label "Standaard algemene zoom">
 <!ENTITY iz.options.showviewmenu.label "ImageZoom in menu Beeld weergeven">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Scroll zoom toename">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Individuele zoom opties">
 <!ENTITY iz.options.globalzoom.label "Algemene zoom opties">
 <!ENTITY iz.options.context.label "Context-menu">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "A">
 <!ENTITY iz.menu.global.textscale.label "Met tekst zoomen">
 <!ENTITY iz.menu.global.textscale.accesskey "t">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Afbeelding zoomen">
 <!ENTITY iz.menu.context.zoomimage.accesskey "A">
 <!ENTITY iz.menu.context.increase.label "+ Inzoomen">

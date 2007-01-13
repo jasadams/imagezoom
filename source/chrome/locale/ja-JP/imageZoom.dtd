@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "1回に行う 拡大/縮小 の量">
 <!ENTITY iz.options.defaultglobalzoom.label "ページの拡大率 (初期値)">
 <!ENTITY iz.options.showviewmenu.label "Image Zoom を [表示] メニューに表示">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "ホイールの1目盛りで 拡大/縮小 する量">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "画像の拡大 オプション">
 <!ENTITY iz.options.globalzoom.label "ページの拡大 オプション (ブラウザの再起動後に適用)">
 <!ENTITY iz.options.context.label "コンテキストメニュー">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "O">
 <!ENTITY iz.menu.global.textscale.label "文字の大きさに合わせる">
 <!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "画像の大きさ">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ 拡大">

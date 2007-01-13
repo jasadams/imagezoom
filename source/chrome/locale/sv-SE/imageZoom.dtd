@@ -1,0 +1,84 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Version">
+<!ENTITY iz.about.createdby.label "Skapad av">
+<!ENTITY iz.about.help.label "Hjälp">
+<!ENTITY iz.about.help.description "Hjälp för konfigurering och användning av Image Zoom">
+<!ENTITY iz.about.forums.label "Forum">
+<!ENTITY iz.about.forums.description "Support, Förbättringsförslag, Programfel">
+<!ENTITY iz.about.walkthrough.label "Guide">
+<!ENTITY iz.about.walkthrough.description "Kortfattad översikt över funktioner i Image Zoom">
+<!ENTITY iz.about.close.label "Stäng">
+<!ENTITY iz.install.installed "Image Zoom installerat">
+<!ENTITY iz.install.options.label "Alternativ">
+<!ENTITY iz.install.close.label "Stäng">
+<!ENTITY iz.install.continue.label "Förtsätt &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Besök hemsidan för Image Zoom för att få tillgång till den senaste informationen och">
+<!ENTITY iz.install.desc.line2 "för en kortfattad sammanfattning av alla funktioner i Image Zoom.">
+<!ENTITY iz.install.desc.line3 "Klicka &apos;Fortsätt&apos; för att gå till hemsidan nu">
+<!ENTITY iz.customzoom.label "Ange zoomfaktor">
+<!ENTITY iz.customzoom.title "Valfri zoom">
+<!ENTITY iz.customdim.width.label "Bredd:">
+<!ENTITY iz.customdim.height.label "Höjd:">
+<!ENTITY iz.customdim.title "Egen storlek">
+<!ENTITY iz.customdim.aspect.label "Behåll bredd/höjdförhållande">
+<!ENTITY iz.options.label "Inställningar">
+<!ENTITY iz.options.help.label "Hjälpsida">
+<!ENTITY iz.options.defaultzoom.label "Zooma in/ut-faktor">
+<!ENTITY iz.options.defaultglobalzoom.label "Standard global zoom">
+<!ENTITY iz.options.showviewmenu.label "Visa Image Zoom i &apos;Visa&apos;-menyn">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.defaultscroll.label "Rulla zoomförändringar">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.singlezoom.label "Individuella zoomalternativ">
+<!ENTITY iz.options.globalzoom.label "Globala zoomalternativ">
+<!ENTITY iz.options.context.label "Meny vid högerklick">
+<!ENTITY iz.options.contextdisplay.label "Visningsalternativ högerklicksmeny">
+<!ENTITY iz.options.tabs.contextmenu.label "Komponenter i högerklicksmeny">
+<!ENTITY iz.options.tabs.main.label "Allmänt">
+<!ENTITY iz.options.reversescroll.label "Omvänd rullning">
+<!ENTITY iz.options.autocenter.label "Centrera bilder automatisk när Bildanpassning används">
+<!ENTITY iz.options.mouseaccess.label1 "Använd funktioner genom att hålla nere den">
+<!ENTITY iz.options.mouseaccess.label2 "musknappen.">
+<!ENTITY iz.options.imagefit.label "Knapp för Bildanpassning">
+<!ENTITY iz.options.imagereset.label "Knapp för bildåterställning">
+<!ENTITY iz.options.none.label "Avaktivera">
+<!ENTITY iz.options.lmb.label "Vänster">
+<!ENTITY iz.options.mmb.label "Mitten">
+<!ENTITY iz.options.rmb.label "Höger">
+<!ENTITY iz.options.usemouse.label "Använd musfunktioner">
+<!ENTITY iz.options.contextdescription.label "Kryssa i rutorna för de objekt som ska visas i menyn för högerklick på en bild">
+<!ENTITY iz.options.menudummy.view.label "Visa bild">
+<!ENTITY iz.options.menudummy.view.accesskey "s">
+<!ENTITY iz.options.menudummy.contents.label "Kopiera bild">
+<!ENTITY iz.options.menudummy.contents.accesskey "o">
+<!ENTITY iz.options.menudummy.image.label "Kopiera sökväg för bild">
+<!ENTITY iz.options.menudummy.image.accesskey "ö">
+<!ENTITY iz.options.menudummy.save.label "Spara bild som">
+<!ENTITY iz.options.menudummy.save.accesskey "m">
+<!ENTITY iz.menu.global.decrease.label "Mindre">
+<!ENTITY iz.menu.global.decrease.accesskey "i">
+<!ENTITY iz.menu.global.increase.label "Större">
+<!ENTITY iz.menu.global.increase.accesskey "t">
+<!ENTITY iz.menu.global.custom.accesskey "e">
+<!ENTITY iz.menu.global.textscale.label "Zooma med text">
+<!ENTITY iz.menu.global.textscale.accesskey "x">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.menu.context.zoomimage.label "Zooma bild">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ Zooma in">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Nollställ zoom">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Zooma ut">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Egen zoom">
+<!ENTITY iz.menu.context.customdim.label "Egen storlek">
+<!ENTITY iz.menu.context.imagefit.label "Bildanpassning">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

@@ -52,8 +52,8 @@
 		  	<menuitem id="zoommain-autofit"
 		  		hidden="true"
 		  		type="checkbox"
-		  		label="AutoFit Images"
-		  		accesskey="A"
+		  		label="&iz.menu.global.autofit.label;"
+		  		accesskey="&iz.menu.global.autofit.accesskey;"
 		  		command="cmd_imageZoomToggleAutoFit"
 			/>
 			<menuseparator id="zoommain-autofit-separator" hidden="true"/>

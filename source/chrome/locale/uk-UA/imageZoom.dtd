@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Коефіцєнт збільшення">
 <!ENTITY iz.options.defaultglobalzoom.label "Загальна зміна розміру За умовчанням">
 <!ENTITY iz.options.showviewmenu.label "Показувати Image Zoom в меню Вид">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Збільшення на один оберт колеса">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Індивідуальні опції збільшення">
 <!ENTITY iz.options.globalzoom.label "Опції Загальної зміни розмірів">
 <!ENTITY iz.options.context.label "Контекстне меню">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "о">
 <!ENTITY iz.menu.global.textscale.label "Збільшувати з Текстом">
 <!ENTITY iz.menu.global.textscale.accesskey "л">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Змінити розмір">
 <!ENTITY iz.menu.context.zoomimage.accesskey "з">
 <!ENTITY iz.menu.context.increase.label "+ Збільшити">

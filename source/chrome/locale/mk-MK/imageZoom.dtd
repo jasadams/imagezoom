@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Степен на зголемување/намалување">
 <!ENTITY iz.options.defaultglobalzoom.label "Стандардно општо зголемување">
 <!ENTITY iz.options.showviewmenu.label "Додади „Големина на слики“ во менито „Поглед“">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Степен на зголемување на тркалото на глувчето">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Засебни подесувања за зголемување">
 <!ENTITY iz.options.globalzoom.label "Општи подесувања за зголемување">
 <!ENTITY iz.options.context.label "Контекстно мени">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "Д">
 <!ENTITY iz.menu.global.textscale.label "Зголеми заедно со текстот">
 <!ENTITY iz.menu.global.textscale.accesskey "г">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Големина на сликата">
 <!ENTITY iz.menu.context.zoomimage.accesskey "г">
 <!ENTITY iz.menu.context.increase.label "Зголеми (+)">

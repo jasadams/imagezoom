@@ -98,7 +98,8 @@ function imagezoom_saveOptions()
 	}
     nsIPrefBranchObj.setBoolPref("usescroll", document.getElementById("imagezoomusemouseoptions").checked);
     nsIPrefBranchObj.setIntPref("scrollvalue", document.getElementById("imagezoomscrollvalue").value);
-
+    nsIPrefBranchObj.setIntPref("scrollmode", document.getElementById("imagezoomscrollmode").value);
+    
     nsIPrefBranchObj.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
     nsIPrefBranchObj.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
 
@@ -109,6 +110,7 @@ function imagezoom_saveOptions()
     nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
 
     nsIPrefBranchObj.setBoolPref("showViewMenu", document.getElementById("imagezoomshowviewmenu").checked);
+    nsIPrefBranchObj.setBoolPref("showAutoFitInMenu", document.getElementById("imagezoomshowautofit").checked);    
 }
 
 function validateOptions(){
@@ -136,6 +138,10 @@ function imagezoom_initializeOptions()
     var scrollValueBox = document.getElementById("imagezoomscrollvalue");
     scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute( "value", scroll )[0];
 
+    var scroll = nsIPrefBranchObj.getIntPref("scrollmode");
+    var scrollValueBox = document.getElementById("imagezoomscrollmode");
+    scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute( "value", scroll )[0];
+
     var scroll = nsIPrefBranchObj.getIntPref("triggerbutton");
     var scrollValueBox = document.getElementById("imagezoommouseaccess");
     scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute( "value", scroll )[0];
@@ -153,6 +159,7 @@ function imagezoom_initializeOptions()
     zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
 
     document.getElementById("imagezoomshowviewmenu").checked = nsIPrefBranchObj.getBoolPref("showViewMenu");
+    document.getElementById("imagezoomshowautofit").checked = nsIPrefBranchObj.getBoolPref("showAutoFitInMenu");
     document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
     document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
 

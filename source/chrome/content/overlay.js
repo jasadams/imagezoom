@@ -128,6 +128,7 @@ function reportStatus(oizImage){
 	{
 		statusTextFld = document.getElementById("statusbar-display");
 	}
+	
     	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
 }
 
@@ -362,13 +363,26 @@ function ScrollImage(e){
 			haveZoomed = true;
 			var oizImage = new izImage(imageToScroll);
 
-			if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) ||
-				((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom")))
-				var zoomFactor = 1/(1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100));
-			else
-				var zoomFactor = 1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100);
+			if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) 
+			{
+				if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) ||
+					((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom")))
+					var zoomFactor = 1/(1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100));
+				else
+					var zoomFactor = 1+(nsIPrefBranchObj.getIntPref("scrollvalue")/100);
 
-			oizImage.zoom(zoomFactor);
+				oizImage.zoom(zoomFactor);
+			}
+			else
+			{
+				if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) ||
+					((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom")))
+					var zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
+				else
+					var zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
+
+				oizImage.setZoom(zoomFactor);
+			}
 			reportStatus(oizImage);
 		}		
 	} else {

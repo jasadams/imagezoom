@@ -12,10 +12,10 @@
 <!ENTITY iz.install.installed "Image Zoom nainstalováno.">
 <!ENTITY iz.install.options.label "Možnosti">
 <!ENTITY iz.install.close.label "Zavřít">
-<!ENTITY iz.install.continue.label "Pokračovat >>">
+<!ENTITY iz.install.continue.label "Pokračovat &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Navštivte domovskou stránku Image Zoom - získáte">
 <!ENTITY iz.install.desc.line2 "čerstvé informace a přehled všech funkcí tohoto rozšíření.">
-<!ENTITY iz.install.desc.line3 "Klepnutím na tlačítko 'Pokračovat' přejdete na domovskou stránku">
+<!ENTITY iz.install.desc.line3 "Klepnutím na tlačítko &apos;Pokračovat&apos; přejdete na domovskou stránku">
 <!ENTITY iz.customzoom.label "Zadejte měřítko">
 <!ENTITY iz.customzoom.title "Vlastní měřítko">
 <!ENTITY iz.customdim.width.label "Délka:">
@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Měřítko">
 <!ENTITY iz.options.defaultglobalzoom.label "Standartní obecné měřítko">
 <!ENTITY iz.options.showviewmenu.label "Zobrazovat Image Zoom v nabídce Zobrazit">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Přírůstek při posouvání">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Osobní nastavení měřítka">
 <!ENTITY iz.options.globalzoom.label "Obecné nastavení měřítka">
 <!ENTITY iz.options.context.label "Místní nabídka">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "J">
 <!ENTITY iz.menu.global.textscale.label "Měnit podle textu">
 <!ENTITY iz.menu.global.textscale.accesskey "n">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Měřítko obrázku">
 <!ENTITY iz.menu.context.zoomimage.accesskey "M">
 <!ENTITY iz.menu.context.increase.label "+ Přiblížit">

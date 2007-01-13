@@ -38,8 +38,8 @@
 <script type="application/x-javascript">
 <![CDATA[
     var _elementIDs = [	"imagezoomusemouseoptions", "imagezoommouseaccess", "imagezoomimagefitbutton",
-    					"imagezoomimageresetbutton", "imagezoomscrollvalue", "imagezoomreversescroll",
-    					"imagezoomzoomvalue", "imagezoomautocenter", "imagezoomzoomvalueglobal", "imagezoomshowviewmenu"];
+    					"imagezoomimageresetbutton", "imagezoomscrollvalue", "imagezoomscrollmode", "imagezoomreversescroll",
+    					"imagezoomzoomvalue", "imagezoomautocenter", "imagezoomzoomvalueglobal", "imagezoomshowviewmenu", "imagezoomshowautofit"];
 ]]>
 </script>
 
@@ -118,6 +118,15 @@
 							<checkbox id="imagezoomreversescroll" label="&iz.options.reversescroll.label;" prefstring="imagezoom.reversescrollzoom"/>
 						</hbox>
 		          		</row>
+		          		<row align="center" flex="1">
+		          			<label id="imagezoomscrollmodelabelbefore" value="&iz.options.scrollmode.label;" control="imagezoomscrollmode"/>
+						<menulist id="imagezoomscrollmode" prefstring="imagezoom.scrollmode">
+							<menupopup>
+		          					<menuitem label="&iz.options.scrollrelative.label;" value="0"/>
+		          					<menuitem label="&iz.options.scrollabsolute.label;" value="1"/>
+							</menupopup>
+						</menulist>
+		          		</row>			          		
 		          	</rows>
 	          	</grid>
 	          </hbox>
@@ -155,6 +164,7 @@
         <groupbox align="start">
         <caption label="&iz.options.globalzoom.label;"/>
         <checkbox id="imagezoomshowviewmenu" label="&iz.options.showviewmenu.label;" prefstring="imagezoom.showViewMenu"/>
+        <checkbox id="imagezoomshowautofit" label="&iz.options.showautofit.label;" prefstring="imagezoom.showAutoFitInMenu"/>
       </groupbox>
     </vbox>
 </page>

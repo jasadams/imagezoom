@@ -12,10 +12,10 @@
 <!ENTITY iz.install.installed "Image Zoom이 설치되었습니다.">
 <!ENTITY iz.install.options.label "설정">
 <!ENTITY iz.install.close.label "닫기">
-<!ENTITY iz.install.continue.label "계속 >>">
+<!ENTITY iz.install.continue.label "계속 &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Image Zoom의 기능에 대한 간단한 개요와 최신의 정보를">
 <!ENTITY iz.install.desc.line2 "얻기 위해 Image Zoom 웹사이트를 방문해보세요.">
-<!ENTITY iz.install.desc.line3 "'계속'을 누르면 Image Zoom 웹사이트에 지금 접속합니다.">
+<!ENTITY iz.install.desc.line3 "&apos;계속&apos;을 누르면 Image Zoom 웹사이트에 지금 접속합니다.">
 <!ENTITY iz.customzoom.label "이미지의 배율">
 <!ENTITY iz.customzoom.title "배율 설정">
 <!ENTITY iz.customdim.width.label "너비:">
@@ -27,7 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "확대/축소 비율">
 <!ENTITY iz.options.defaultglobalzoom.label "페이지 확대율">
 <!ENTITY iz.options.showviewmenu.label "Image Zoom을 보기 메뉴에 표시">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "한번 스크롤할 때 확대/축소할 양">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "이미지 확대 설정">
 <!ENTITY iz.options.globalzoom.label "페이지 확대 설정">
 <!ENTITY iz.options.context.label "문맥 메뉴">
@@ -61,6 +65,8 @@
 <!ENTITY iz.menu.global.custom.accesskey "O">
 <!ENTITY iz.menu.global.textscale.label "글자 크기에 맞춤">
 <!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "이미지 확대">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ 확대">
