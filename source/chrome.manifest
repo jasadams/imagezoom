@@ -24,5 +24,9 @@ locale imagezoom uk-UA jar:chrome/imagezoom.jar!/locale/uk-UA/
 locale imagezoom ro-RO jar:chrome/imagezoom.jar!/locale/ro-RO/
 locale imagezoom be-BY jar:chrome/imagezoom.jar!/locale/be-BY/
 locale imagezoom sv-SE jar:chrome/imagezoom.jar!/locale/sv-SE/
+locale imagezoom fi-FI jar:chrome/imagezoom.jar!/locale/fi-FI/
+locale imagezoom hr-HR jar:chrome/imagezoom.jar!/locale/hr-HR/
+locale imagezoom pl-PL jar:chrome/imagezoom.jar!/locale/pl-PL/
+locale imagezoom sk-SK jar:chrome/imagezoom.jar!/locale/sk-SK/
 skin imagezoom classic jar:chrome/imagezoom.jar!/skin/classic/imagezoom/
 skin imagezoom fusion jar:chrome/imagezoom.jar!/skin/fusion/imagezoom/

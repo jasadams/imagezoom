@@ -1,0 +1,84 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Verzija">
+<!ENTITY iz.about.createdby.label "Stvoren od:">
+<!ENTITY iz.about.help.label "Pomoć">
+<!ENTITY iz.about.help.description "Pomoć pri podešavanju i korištenju Image Zoom-a">
+<!ENTITY iz.about.forums.label "Forumi">
+<!ENTITY iz.about.forums.description "Podrška, Savjeti, Pogreške u programu">
+<!ENTITY iz.about.walkthrough.label "Walkthrough">
+<!ENTITY iz.about.walkthrough.description "Kratak pregled mogućnosti Image Zoom-a">
+<!ENTITY iz.about.close.label "Zatvori">
+<!ENTITY iz.install.installed "Image Zoom instaliran">
+<!ENTITY iz.install.options.label "Opcije">
+<!ENTITY iz.install.close.label "Zatvori">
+<!ENTITY iz.install.continue.label "Nastavi &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Posjeti web stranice Image Zoom-a i pronađi novosti te">
+<!ENTITY iz.install.desc.line2 "kratak pregled mogućnosti Image Zoom-a">
+<!ENTITY iz.install.desc.line3 "Press &apos;Continue&apos; to go to the Image Zoom Website now">
+<!ENTITY iz.customzoom.label "Upiši postotak uvećanja">
+<!ENTITY iz.customzoom.title "Custom Zoom">
+<!ENTITY iz.customdim.width.label "Širina:">
+<!ENTITY iz.customdim.height.label "Visina:">
+<!ENTITY iz.customdim.title "Custom Dimension">
+<!ENTITY iz.customdim.aspect.label "Maintain Aspect Ratio">
+<!ENTITY iz.options.label "Preferences">
+<!ENTITY iz.options.help.label "Help Page">
+<!ENTITY iz.options.defaultzoom.label "Zoom In/Out Factor">
+<!ENTITY iz.options.defaultglobalzoom.label "Default Global Zoom">
+<!ENTITY iz.options.showviewmenu.label "Show Image Zoom in View Menu">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.defaultscroll.label "Scroll Zoom Increments">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.singlezoom.label "Individual Zoom Options">
+<!ENTITY iz.options.globalzoom.label "Global Zoom Options">
+<!ENTITY iz.options.context.label "Context Menu">
+<!ENTITY iz.options.contextdisplay.label "Context Menu Display Options">
+<!ENTITY iz.options.tabs.contextmenu.label "Context Menu Items">
+<!ENTITY iz.options.tabs.main.label "General">
+<!ENTITY iz.options.reversescroll.label "Reverse Scroll">
+<!ENTITY iz.options.autocenter.label "Auto Center Images when using Image Fit">
+<!ENTITY iz.options.mouseaccess.label1 "Access functions by holding down the ">
+<!ENTITY iz.options.mouseaccess.label2 " mouse button.">
+<!ENTITY iz.options.imagefit.label "Image Fit Button">
+<!ENTITY iz.options.imagereset.label "Image Reset Button">
+<!ENTITY iz.options.none.label "Isključen">
+<!ENTITY iz.options.lmb.label "Lijevo">
+<!ENTITY iz.options.mmb.label "Sredina">
+<!ENTITY iz.options.rmb.label "Desno">
+<!ENTITY iz.options.usemouse.label "Koristi funkcije miša">
+<!ENTITY iz.options.contextdescription.label "Check the items that you want to be displayed in the Image Context Menu">
+<!ENTITY iz.options.menudummy.view.label "Pogledaj sliku">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Kopiraj sliku">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "Kopiraj lokaciju slike">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Spremi sliku kao">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "Manje">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "Veće">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "Zoom with Text">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.menu.context.zoomimage.label "Zoom Image">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ Povećaj">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Zoom Reset">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Smanji">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Custom Zoom">
+<!ENTITY iz.menu.context.customdim.label "Custom Dimensions">
+<!ENTITY iz.menu.context.imagefit.label "Image Fit">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

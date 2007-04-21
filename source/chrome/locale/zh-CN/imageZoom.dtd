@@ -29,9 +29,9 @@
 <!ENTITY iz.options.showviewmenu.label "在 [查看] 菜单中显示 [图片缩放]">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "滚轮缩放增量">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "滚轮模式">
+<!ENTITY iz.options.scrollrelative.label "相对滚动">
+<!ENTITY iz.options.scrollabsolute.label "绝对滚动">
 <!ENTITY iz.options.singlezoom.label "单一缩放选项">
 <!ENTITY iz.options.globalzoom.label "全局缩放选项">
 <!ENTITY iz.options.context.label "右健菜单">

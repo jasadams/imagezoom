@@ -12,7 +12,7 @@
 <!ENTITY iz.install.installed "Image Zoom installerat">
 <!ENTITY iz.install.options.label "Alternativ">
 <!ENTITY iz.install.close.label "Stäng">
-<!ENTITY iz.install.continue.label "Förtsätt &gt;&gt;">
+<!ENTITY iz.install.continue.label "Fortsätt &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Besök hemsidan för Image Zoom för att få tillgång till den senaste informationen och">
 <!ENTITY iz.install.desc.line2 "för en kortfattad sammanfattning av alla funktioner i Image Zoom.">
 <!ENTITY iz.install.desc.line3 "Klicka &apos;Fortsätt&apos; för att gå till hemsidan nu">
@@ -29,9 +29,9 @@
 <!ENTITY iz.options.showviewmenu.label "Visa Image Zoom i &apos;Visa&apos;-menyn">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Rulla zoomförändringar">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Rullmetod">
+<!ENTITY iz.options.scrollrelative.label "Relativ">
+<!ENTITY iz.options.scrollabsolute.label "Absolut">
 <!ENTITY iz.options.singlezoom.label "Individuella zoomalternativ">
 <!ENTITY iz.options.globalzoom.label "Globala zoomalternativ">
 <!ENTITY iz.options.context.label "Meny vid högerklick">

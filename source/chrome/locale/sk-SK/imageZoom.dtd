@@ -1,0 +1,84 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.about.version.label "Verzia">
+<!ENTITY iz.about.createdby.label "Vytvoril">
+<!ENTITY iz.about.help.label "Pomoc">
+<!ENTITY iz.about.help.description "Pomoc pri konfigurácii a používaní Image Zoom.">
+<!ENTITY iz.about.forums.label "Diskusné fóra">
+<!ENTITY iz.about.forums.description "Podpora, námety, nahlasovanie chýb.">
+<!ENTITY iz.about.walkthrough.label "Prehliadka">
+<!ENTITY iz.about.walkthrough.description "Celkový prehľad funkcií Image Zoom.">
+<!ENTITY iz.about.close.label "Zavrieť">
+<!ENTITY iz.install.installed "Image Zoom je nainštalovaný.">
+<!ENTITY iz.install.options.label "Možnosti">
+<!ENTITY iz.install.close.label "Zavrieť">
+<!ENTITY iz.install.continue.label "Pokračovať &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Navštívte domovskú stránku Image Zoom - získate">
+<!ENTITY iz.install.desc.line2 "čerstvé informácie a prehľad všetkých funkcií tohto rozšírenia.">
+<!ENTITY iz.install.desc.line3 "Kliknutím na tlačidlo &apos;Pokračovať&apos; prejdete na domovskú stránku">
+<!ENTITY iz.customzoom.label "Zadajte pomer">
+<!ENTITY iz.customzoom.title "Vlastný pomer strán">
+<!ENTITY iz.customdim.width.label "Šírka:">
+<!ENTITY iz.customdim.height.label "Výška:">
+<!ENTITY iz.customdim.title "Vlastný rozmer">
+<!ENTITY iz.customdim.aspect.label "Zachovať pomer strán">
+<!ENTITY iz.options.label "Možnosti">
+<!ENTITY iz.options.help.label "Pomoc">
+<!ENTITY iz.options.defaultzoom.label "Pomer strán">
+<!ENTITY iz.options.defaultglobalzoom.label "Štandardný pomer strán">
+<!ENTITY iz.options.showviewmenu.label "Zobrazovať Image Zoom v ponuke Zobraziť">
+<!ENTITY iz.options.showautofit.label "Zobraziť &apos;Automaticky prispôsobiť&apos; v hlavnej ponuke">
+<!ENTITY iz.options.defaultscroll.label "Prírastok pri zmene veľkosti">
+<!ENTITY iz.options.scrollmode.label "Režim rolovania">
+<!ENTITY iz.options.scrollrelative.label "Relatívne">
+<!ENTITY iz.options.scrollabsolute.label "Absolútne">
+<!ENTITY iz.options.singlezoom.label "Osobné nastavenie rozmerov">
+<!ENTITY iz.options.globalzoom.label "Všeobecné nastavenie rozmerov">
+<!ENTITY iz.options.context.label "Položky kontextovej ponuky">
+<!ENTITY iz.options.contextdisplay.label "Nastavenia položiek kontextovej ponuky">
+<!ENTITY iz.options.tabs.contextmenu.label "Kontextová ponuka">
+<!ENTITY iz.options.tabs.main.label "Hlavné">
+<!ENTITY iz.options.reversescroll.label "Obrátiť zväčšovanie/zmenšovanie">
+<!ENTITY iz.options.autocenter.label "Vycentrovať obrázky pri prispôsobení obrazovke">
+<!ENTITY iz.options.mouseaccess.label1 "Prístup ku gestám držaním">
+<!ENTITY iz.options.mouseaccess.label2 "tlačidla myši.">
+<!ENTITY iz.options.imagefit.label "Prispôsobiť obrázok stlačením tlačidla:">
+<!ENTITY iz.options.imagereset.label "Obnoviť obrázok stlačením tlačidla :">
+<!ENTITY iz.options.none.label "zakázané">
+<!ENTITY iz.options.lmb.label "ľavého">
+<!ENTITY iz.options.mmb.label "stredného">
+<!ENTITY iz.options.rmb.label "pravého">
+<!ENTITY iz.options.usemouse.label "Používať gestá myši">
+<!ENTITY iz.options.contextdescription.label "Zvoľte položky, ktoré chcete zobrazovať v kontextovej ponuke">
+<!ENTITY iz.options.menudummy.view.label "Zobraziť obrázok">
+<!ENTITY iz.options.menudummy.view.accesskey "Z">
+<!ENTITY iz.options.menudummy.contents.label "Kopírovať obrázok">
+<!ENTITY iz.options.menudummy.contents.accesskey "K">
+<!ENTITY iz.options.menudummy.image.label "Kopírovať adresu obrázka">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Uložit...">
+<!ENTITY iz.options.menudummy.save.accesskey "U">
+<!ENTITY iz.menu.global.decrease.label "Menší">
+<!ENTITY iz.menu.global.decrease.accesskey "M">
+<!ENTITY iz.menu.global.increase.label "Väčší">
+<!ENTITY iz.menu.global.increase.accesskey "V">
+<!ENTITY iz.menu.global.custom.accesskey "J">
+<!ENTITY iz.menu.global.textscale.label "Meniť s textom">
+<!ENTITY iz.menu.global.textscale.accesskey "n">
+<!ENTITY iz.menu.global.autofit.label "Automaticky prispôsobiť">
+<!ENTITY iz.menu.global.autofit.accesskey "M">
+<!ENTITY iz.menu.context.zoomimage.label "Zväčšiť obrázok">
+<!ENTITY iz.menu.context.zoomimage.accesskey "v">
+<!ENTITY iz.menu.context.increase.label "+ Zväčšiť">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Pôvodné">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Zmenšiť">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Vlastný pomer strán">
+<!ENTITY iz.menu.context.customdim.label "Vlastné rozmery strán">
+<!ENTITY iz.menu.context.imagefit.label "Prispôsobiť oknu">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "O">

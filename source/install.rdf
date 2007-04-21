@@ -39,7 +39,11 @@
 	<em:locale>locale/uk-UA/</em:locale>   	
 	<em:locale>locale/ro-RO/</em:locale>   
 	<em:locale>locale/be-BY/</em:locale>   	
-	<em:locale>locale/sv-SE/</em:locale>   	
+	<em:locale>locale/sv-SE/</em:locale> 
+	<em:locale>locale/fi-FI/</em:locale> 
+	<em:locale>locale/hr-HR/</em:locale> 
+	<em:locale>locale/pl-PL/</em:locale> 
+	<em:locale>locale/sk-SK/</em:locale> 
       </Description>
     </em:file>
 

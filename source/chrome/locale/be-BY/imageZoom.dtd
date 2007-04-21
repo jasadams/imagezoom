@@ -29,9 +29,9 @@
 <!ENTITY iz.options.showviewmenu.label "Паказваць Image Zoom у меню Выгляд">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Павелічэнне на адзін паварот кола">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollmode.label "Рэжым скролінга">
 <!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollabsolute.label "Абсалютна">
 <!ENTITY iz.options.singlezoom.label "Індывідуальныя опцыі павелічэння">
 <!ENTITY iz.options.globalzoom.label "Опцыі Агульнай змены памераў">
 <!ENTITY iz.options.context.label "Кантэкстнае меню">

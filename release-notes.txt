@@ -2,6 +2,10 @@ added uk-UA locale
 added ro-RO locale
 added sv-SE locale
 added be-BY locale
+added fi-FI locale
+added hr-HR locale
+added pl-PL locale
+added sk-SK locale
 modified hu-HU locale
 modified it-IT locale
 modified ja-JP locale

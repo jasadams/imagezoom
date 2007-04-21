@@ -16,22 +16,22 @@
 <!ENTITY iz.install.desc.line1 "Image Zoom web sitesini ziyaret edin, son bilgileri alın ve">
 <!ENTITY iz.install.desc.line2 "Image Zoom&apos;un kullanımı ve özellikleri hakkında bilgi edinin.">
 <!ENTITY iz.install.desc.line3 "Image Zoom web sitesine gitmek için şimdi Devam&apos;a tıklayın">
-<!ENTITY iz.customzoom.label "Boyutlandırma Oranını Girin">
+<!ENTITY iz.customzoom.label "Boyutlandırma oranını girin">
 <!ENTITY iz.customzoom.title "Özel Boyutlandırma">
 <!ENTITY iz.customdim.width.label "Genişlik:">
 <!ENTITY iz.customdim.height.label "Yükseklik:">
 <!ENTITY iz.customdim.title "Özel Ölçüler">
-<!ENTITY iz.customdim.aspect.label "Ölçüleme Oranını Koru">
+<!ENTITY iz.customdim.aspect.label "Ölçüleme oranını koru">
 <!ENTITY iz.options.label "Tercihleri">
 <!ENTITY iz.options.help.label "Yardım Sayfası">
 <!ENTITY iz.options.defaultzoom.label "Büyütme/Küçültme Oranı">
 <!ENTITY iz.options.defaultglobalzoom.label "Genel Boyutlandırma Oranı">
 <!ENTITY iz.options.showviewmenu.label "Görünüm Menüsü&apos;nde Resim Boyutu&apos;nu göster">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.showautofit.label "Genel Menüde Otomatik Boyutlandırmayı Göster">
 <!ENTITY iz.options.defaultscroll.label "Tekerlek Boyutlandırma Artışı">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Tekerlek Modu">
+<!ENTITY iz.options.scrollrelative.label "Göreli">
+<!ENTITY iz.options.scrollabsolute.label "Mutlak">
 <!ENTITY iz.options.singlezoom.label "Tek Tek Boyutlandırma Seçenekleri">
 <!ENTITY iz.options.globalzoom.label "Genel Boyutlandırma Seçenekleri">
 <!ENTITY iz.options.context.label "Açılır Menü">
@@ -65,7 +65,7 @@
 <!ENTITY iz.menu.global.custom.accesskey "D">
 <!ENTITY iz.menu.global.textscale.label "Metin boyutuyla">
 <!ENTITY iz.menu.global.textscale.accesskey "M">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.label "Otomatik boyutlandır">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Resim Boyutu">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Y">

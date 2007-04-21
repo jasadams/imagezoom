@@ -1,7 +1,7 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.2.5">
+<!ENTITY iz.product.version "0.2.7.2007">
 <!ENTITY iz.about.version.label "Версия">
-<!ENTITY iz.about.createdby.label "Автор ">
+<!ENTITY iz.about.createdby.label "Автор">
 <!ENTITY iz.about.help.label "Справка">
 <!ENTITY iz.about.help.description "Справка о настройке и использовании Image Zoom">
 <!ENTITY iz.about.forums.label "Форумы">
@@ -13,25 +13,25 @@
 <!ENTITY iz.install.options.label "Настройки">
 <!ENTITY iz.install.close.label "Закрыть">
 <!ENTITY iz.install.continue.label "Далее &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Посетите web сайт Image Zoom для получения последней информации и">
+<!ENTITY iz.install.desc.line1 "Посетите web-сайт Image Zoom для получения последней информации и">
 <!ENTITY iz.install.desc.line2 "краткого обзора всех возможностей Image Zoom.">
 <!ENTITY iz.install.desc.line3 "Нажмите &apos;Далее&apos; для перехода на сайт Image Zoom">
-<!ENTITY iz.customzoom.label "Введите Коэффицент увеличения">
+<!ENTITY iz.customzoom.label "Введите Коэффициент увеличения">
 <!ENTITY iz.customzoom.title "Специальное увеличение">
 <!ENTITY iz.customdim.width.label "Ширина:">
 <!ENTITY iz.customdim.height.label "Высота:">
-<!ENTITY iz.customdim.title "Специальнай размер">
+<!ENTITY iz.customdim.title "Специальный размер">
 <!ENTITY iz.customdim.aspect.label "Сохранить отношение размеров">
 <!ENTITY iz.options.label "Настройки">
-<!ENTITY iz.options.help.label "Страничка Справки">
-<!ENTITY iz.options.defaultzoom.label "Коэффицент увеличения">
+<!ENTITY iz.options.help.label "Страница Справки">
+<!ENTITY iz.options.defaultzoom.label "Коэффициент увеличения">
 <!ENTITY iz.options.defaultglobalzoom.label "Общее изменение размера по умолчанию">
 <!ENTITY iz.options.showviewmenu.label "Показывать Image Zoom в меню Вид">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.showautofit.label "Показывать Автомасштабирование в меню Вид &gt; Image Zoom">
 <!ENTITY iz.options.defaultscroll.label "Увеличение на один поворот колеса">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Режим скроллинга">
+<!ENTITY iz.options.scrollrelative.label "Относительный">
+<!ENTITY iz.options.scrollabsolute.label "Абсолютный">
 <!ENTITY iz.options.singlezoom.label "Индивидуальные опции увеличения">
 <!ENTITY iz.options.globalzoom.label "Опции Общего изменения размеров">
 <!ENTITY iz.options.context.label "Контекстное меню">
@@ -39,9 +39,9 @@
 <!ENTITY iz.options.tabs.contextmenu.label "Пункты контекстного меню">
 <!ENTITY iz.options.tabs.main.label "Основные">
 <!ENTITY iz.options.reversescroll.label "Реверс колеса мыши">
-<!ENTITY iz.options.autocenter.label "Автоцетрирование изображения при Растяжении во весь экран">
-<!ENTITY iz.options.mouseaccess.label1 "Доступ к функциям задерживая">
-<!ENTITY iz.options.mouseaccess.label2 "кнопку мыши.">
+<!ENTITY iz.options.autocenter.label "Автоцентрирование изображения при Растяжении во весь экран">
+<!ENTITY iz.options.mouseaccess.label1 "Доступ к функциям, задерживая эту кнопку мыши:">
+<!ENTITY iz.options.mouseaccess.label2 " ">
 <!ENTITY iz.options.imagefit.label "Кнопка растяжения Во весь экран">
 <!ENTITY iz.options.imagereset.label "Кнопка сброса">
 <!ENTITY iz.options.none.label "Отключено">
@@ -65,7 +65,7 @@
 <!ENTITY iz.menu.global.custom.accesskey "Д">
 <!ENTITY iz.menu.global.textscale.label "Увеличивать с Текстом">
 <!ENTITY iz.menu.global.textscale.accesskey "Т">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.label "Автомасштабирование">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Изменить размер">
 <!ENTITY iz.menu.context.zoomimage.accesskey "м">

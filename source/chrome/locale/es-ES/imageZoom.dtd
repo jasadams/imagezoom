@@ -27,11 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Factor de zoom +/-">
 <!ENTITY iz.options.defaultglobalzoom.label "Zoom general predeterminado">
 <!ENTITY iz.options.showviewmenu.label "Mostrar Image Zoom en menú Ver">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
-<!ENTITY iz.options.defaultscroll.label "Incremento de zoom cada paso de rueda">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.showautofit.label "Mostrar Autoajustar en menú">
+<!ENTITY iz.options.defaultscroll.label "Incremento de zoom con desplazamiento de rueda">
+<!ENTITY iz.options.scrollmode.label "Configuración del desplazamiento">
+<!ENTITY iz.options.scrollrelative.label "Relativo">
+<!ENTITY iz.options.scrollabsolute.label "Absoluto">
 <!ENTITY iz.options.singlezoom.label "Opciones de zoom individual">
 <!ENTITY iz.options.globalzoom.label "Opciones de zoom general">
 <!ENTITY iz.options.context.label "Menú contextual">
@@ -40,8 +40,8 @@
 <!ENTITY iz.options.tabs.main.label "General">
 <!ENTITY iz.options.reversescroll.label "Invertir sentido rueda">
 <!ENTITY iz.options.autocenter.label "Autocentrar las imágenes al usar Ajustar imagen">
-<!ENTITY iz.options.mouseaccess.label1 "Acceso a funciones pulsando botón ">
-<!ENTITY iz.options.mouseaccess.label2 " del ratón.">
+<!ENTITY iz.options.mouseaccess.label1 "Acceso a funciones pulsando botón">
+<!ENTITY iz.options.mouseaccess.label2 "del ratón.">
 <!ENTITY iz.options.imagefit.label "Botón ajustar imagen">
 <!ENTITY iz.options.imagereset.label "Botón restaurar imagen">
 <!ENTITY iz.options.none.label "desactivado">
@@ -65,10 +65,10 @@
 <!ENTITY iz.menu.global.custom.accesskey "O">
 <!ENTITY iz.menu.global.textscale.label "Zoom con texto">
 <!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.label "Autoajustar imágenes">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom de imagen">
-<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.zoomimage.accesskey "i">
 <!ENTITY iz.menu.context.increase.label "+  para zoom +">
 <!ENTITY iz.menu.context.increase.accesskey "+">
 <!ENTITY iz.menu.context.reset.label "=  para anular zoom">

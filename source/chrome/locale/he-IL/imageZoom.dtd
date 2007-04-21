@@ -29,9 +29,9 @@
 <!ENTITY iz.options.showviewmenu.label "הראה Image Zoom בתפריט המראה">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "גלול בתוספת הזום">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "מצב גלילה">
+<!ENTITY iz.options.scrollrelative.label "קשור">
+<!ENTITY iz.options.scrollabsolute.label "קבוע">
 <!ENTITY iz.options.singlezoom.label "אפשרויות זום בלעדיות">
 <!ENTITY iz.options.globalzoom.label "אפשרויות זום גלובליות">
 <!ENTITY iz.options.context.label "תפריט העכבר">

@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "Continua &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Visitare il sito web di Image Zoom per conoscere le ultime informazioni e">
 <!ENTITY iz.install.desc.line2 "per avere una panoramica sulle sue caratteristiche.">
-<!ENTITY iz.install.desc.line3 "Premere &apos;Continua&apos; per andare ora al sito web di Image Zoom">
+<!ENTITY iz.install.desc.line3 "Premere &apos;Continua&apos; per visitare ora al sito web di Image Zoom">
 <!ENTITY iz.customzoom.label "Inserire il fattore di zoom">
 <!ENTITY iz.customzoom.title "Personalizza zoom">
 <!ENTITY iz.customdim.width.label "Larghezza:">
@@ -27,11 +27,11 @@
 <!ENTITY iz.options.defaultzoom.label "Fattore di ingrandimento o riduzione">
 <!ENTITY iz.options.defaultglobalzoom.label "Zoom globale predefinito">
 <!ENTITY iz.options.showviewmenu.label "Mostra Image Zoom nel menu &apos;Visualizza&apos;">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.showautofit.label "Mostra Adatta automaticamente nel menu globale">
 <!ENTITY iz.options.defaultscroll.label "Incremento rotellina del mouse">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Modalità di scorrimento">
+<!ENTITY iz.options.scrollrelative.label "Relativa">
+<!ENTITY iz.options.scrollabsolute.label "Assoluta">
 <!ENTITY iz.options.singlezoom.label "Opzione zoom singola immagine">
 <!ENTITY iz.options.globalzoom.label "Opzioni zoom globale">
 <!ENTITY iz.options.context.label "Menu contestuale">
@@ -49,7 +49,7 @@
 <!ENTITY iz.options.mmb.label "Centrale">
 <!ENTITY iz.options.rmb.label "Destro">
 <!ENTITY iz.options.usemouse.label "Usa le funzioni del mouse">
-<!ENTITY iz.options.contextdescription.label "Seleziona ciò che vuoi mostrare nel menu contestuale">
+<!ENTITY iz.options.contextdescription.label "Selezionare le voci da inserire nel menu contestuale">
 <!ENTITY iz.options.menudummy.view.label "Visualizza immagine">
 <!ENTITY iz.options.menudummy.view.accesskey "z">
 <!ENTITY iz.options.menudummy.contents.label "Copia immagine">
@@ -65,7 +65,7 @@
 <!ENTITY iz.menu.global.custom.accesskey "t">
 <!ENTITY iz.menu.global.textscale.label "Zoom testo">
 <!ENTITY iz.menu.global.textscale.accesskey "s">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.label "Adatta immagini">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom immagine">
 <!ENTITY iz.menu.context.zoomimage.accesskey "i">
