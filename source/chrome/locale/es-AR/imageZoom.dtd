@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "derecho">
 <!ENTITY iz.options.usemouse.label "Utilizar funciones del mouse">
 <!ENTITY iz.options.contextdescription.label "Items a mostrar en el menú contextual de imágenes">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Ver imagen">
 <!ENTITY iz.options.menudummy.view.accesskey "v">
 <!ENTITY iz.options.menudummy.contents.label "Copiar imagen">

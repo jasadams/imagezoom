@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Direito">
 <!ENTITY iz.options.usemouse.label "Usar Funções do Mouse">
 <!ENTITY iz.options.contextdescription.label "Marque os itens que você deseja exibir no Menu de Contexto">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Visualizar Imagem">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "Copiar Imagem">

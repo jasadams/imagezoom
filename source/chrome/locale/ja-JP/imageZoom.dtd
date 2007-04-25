@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "右">
 <!ENTITY iz.options.usemouse.label "マウスジェスチャーを使用する">
 <!ENTITY iz.options.contextdescription.label "コンテキストメニューに表示する項目の選択">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "画像の表示">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "画像のコピー">

@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Desno">
 <!ENTITY iz.options.usemouse.label "Koristi funkcije miša">
 <!ENTITY iz.options.contextdescription.label "Check the items that you want to be displayed in the Image Context Menu">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Pogledaj sliku">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "Kopiraj sliku">

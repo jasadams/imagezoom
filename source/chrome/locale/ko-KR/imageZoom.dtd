@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "오른쪽">
 <!ENTITY iz.options.usemouse.label "마우스 동작 사용">
 <!ENTITY iz.options.contextdescription.label "그림 문맥 메뉴에 표시할 항목을 선택">
+<!ENTITY iz.options.togglefitreset.label "그림을 창크기에 맞추기/안맞추기">
 <!ENTITY iz.options.menudummy.view.label "그림 보기">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "그림 복사">

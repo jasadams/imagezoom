@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Sağ">
 <!ENTITY iz.options.usemouse.label "Fare Fonksiyonlarını Kullan">
 <!ENTITY iz.options.contextdescription.label "Resim Açılır Menüsü&apos;nde gösterilmesini istediğiniz öğeleri işaretleyin">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Resmi göster">
 <!ENTITY iz.options.menudummy.view.accesskey "r">
 <!ENTITY iz.options.menudummy.contents.label "Resmi kopyala">

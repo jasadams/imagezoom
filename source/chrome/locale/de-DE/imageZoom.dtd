@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Rechts">
 <!ENTITY iz.options.usemouse.label "Mausfunktionen verwenden">
 <!ENTITY iz.options.contextdescription.label "Auswählen der Einträge, die im Grafik-Kontextmenü angezeigt werden sollen">
+<!ENTITY iz.options.togglefitreset.label "Anpassung an Fenstergröße umschalten/zurücksetzen">
 <!ENTITY iz.options.menudummy.view.label "Grafik anzeigen">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "Grafik kopieren">

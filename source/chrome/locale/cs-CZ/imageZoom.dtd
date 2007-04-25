@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "pravého">
 <!ENTITY iz.options.usemouse.label "Používat gesta myší">
 <!ENTITY iz.options.contextdescription.label "Zvolte položky, které chcete zobrazovat v místní nabídce">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Zobrazit obrázek">
 <!ENTITY iz.options.menudummy.view.accesskey "Z">
 <!ENTITY iz.options.menudummy.contents.label "Kopírovat obrázek">

@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Oikea">
 <!ENTITY iz.options.usemouse.label "Käytä hiiritoimintoja">
 <!ENTITY iz.options.contextdescription.label "Valitse kohteet, joiden haluat näkyvän kuvan pikavalikossa">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Näytä kuva">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "Kopioi kuva">

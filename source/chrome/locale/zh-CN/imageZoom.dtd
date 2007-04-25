@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "右键">
 <!ENTITY iz.options.usemouse.label "启用鼠标功能">
 <!ENTITY iz.options.contextdescription.label "选择您想显示在图片右健菜单上的项目">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "查看图片 (i)">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "复制图片 (y)">

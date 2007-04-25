@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Höger">
 <!ENTITY iz.options.usemouse.label "Använd musfunktioner">
 <!ENTITY iz.options.contextdescription.label "Kryssa i rutorna för de objekt som ska visas i menyn för högerklick på en bild">
+<!ENTITY iz.options.togglefitreset.label "Slå på/av bildanpassning/återställning">
 <!ENTITY iz.options.menudummy.view.label "Visa bild">
 <!ENTITY iz.options.menudummy.view.accesskey "s">
 <!ENTITY iz.options.menudummy.contents.label "Kopiera bild">

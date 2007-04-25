@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.2.7.2007">
+<!ENTITY iz.product.version "0.3">
 <!ENTITY iz.about.version.label "Версия">
 <!ENTITY iz.about.createdby.label "Автор">
 <!ENTITY iz.about.help.label "Справка">
@@ -41,7 +41,7 @@
 <!ENTITY iz.options.reversescroll.label "Реверс колеса мыши">
 <!ENTITY iz.options.autocenter.label "Автоцентрирование изображения при Растяжении во весь экран">
 <!ENTITY iz.options.mouseaccess.label1 "Доступ к функциям, задерживая эту кнопку мыши:">
-<!ENTITY iz.options.mouseaccess.label2 " ">
+<!ENTITY iz.options.mouseaccess.label2 " mouse button.">
 <!ENTITY iz.options.imagefit.label "Кнопка растяжения Во весь экран">
 <!ENTITY iz.options.imagereset.label "Кнопка сброса">
 <!ENTITY iz.options.none.label "Отключено">
@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Правая">
 <!ENTITY iz.options.usemouse.label "Использование функций мыши">
 <!ENTITY iz.options.contextdescription.label "Выберите элементы, которые вы хотите увидеть в контекстном меню">
+<!ENTITY iz.options.togglefitreset.label "Перключить Изменение размера изображений/Сброс">
 <!ENTITY iz.options.menudummy.view.label "Показать изображение">
 <!ENTITY iz.options.menudummy.view.accesskey "П">
 <!ENTITY iz.options.menudummy.contents.label "Копировать изображение">

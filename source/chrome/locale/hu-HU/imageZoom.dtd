@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Jobb">
 <!ENTITY iz.options.usemouse.label "Képek átméretezése egérrel">
 <!ENTITY iz.options.contextdescription.label "Ellenőrizze, hogy melyik menüelemeket akarja megjeleníteni!">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Kép megjelenítése">
 <!ENTITY iz.options.menudummy.view.accesskey "g">
 <!ENTITY iz.options.menudummy.contents.label "Kép másolása">

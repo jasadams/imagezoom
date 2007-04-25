@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Правая">
 <!ENTITY iz.options.usemouse.label "Выкарыстанне функцыяў мышы">
 <!ENTITY iz.options.contextdescription.label "Вылучыце элементы, якія вы жадаеце ўбачыць у кантэкстным меню">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Паказаць малюнак">
 <!ENTITY iz.options.menudummy.view.accesskey "П">
 <!ENTITY iz.options.menudummy.contents.label "Капіяваць малюнак">

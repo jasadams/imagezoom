@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Prawo">
 <!ENTITY iz.options.usemouse.label "Użyj funkcji myszki">
 <!ENTITY iz.options.contextdescription.label "Konfiguracja menu kontekstowego">
+<!ENTITY iz.options.togglefitreset.label "Dopasowany/standardowy rozmiar obrazka">
 <!ENTITY iz.options.menudummy.view.label "Oglądaj obrazek">
 <!ENTITY iz.options.menudummy.view.accesskey "o">
 <!ENTITY iz.options.menudummy.contents.label "Kopiuj obrazek">

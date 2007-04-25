@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Права">
 <!ENTITY iz.options.usemouse.label "Використання функцій миші">
 <!ENTITY iz.options.contextdescription.label "Виберіть елементи, які ви хочете побачити в контекстному меню">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Показати зображення">
 <!ENTITY iz.options.menudummy.view.accesskey "о">
 <!ENTITY iz.options.menudummy.contents.label "Копіювати зображення">

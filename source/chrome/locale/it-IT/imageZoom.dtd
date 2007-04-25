@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Destro">
 <!ENTITY iz.options.usemouse.label "Usa le funzioni del mouse">
 <!ENTITY iz.options.contextdescription.label "Selezionare le voci da inserire nel menu contestuale">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Visualizza immagine">
 <!ENTITY iz.options.menudummy.view.accesskey "z">
 <!ENTITY iz.options.menudummy.contents.label "Copia immagine">

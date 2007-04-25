@@ -1,0 +1,85 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.about.version.label "верзија">
+<!ENTITY iz.about.createdby.label "Направио">
+<!ENTITY iz.about.help.label "Помоћ">
+<!ENTITY iz.about.help.description "Помоћ око подешавања и коришћења проширења Image Zoom">
+<!ENTITY iz.about.forums.label "Форуми">
+<!ENTITY iz.about.forums.description "Подршка, сугестије, багови">
+<!ENTITY iz.about.walkthrough.label "Презентација">
+<!ENTITY iz.about.walkthrough.description "Кратак преглед могућности проширења Image Zoom">
+<!ENTITY iz.about.close.label "Затвори">
+<!ENTITY iz.install.installed "Image Zoom је инсталиран">
+<!ENTITY iz.install.options.label "Подешавања">
+<!ENTITY iz.install.close.label "Затвори">
+<!ENTITY iz.install.continue.label "Настави &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Да би сте добили најновије информације и видели кратак">
+<!ENTITY iz.install.desc.line2 "преглед могућности Image Zoom-а, посетите веб страну.">
+<!ENTITY iz.install.desc.line3 "Кликните на &apos;Настави&apos; да одмах посетите Image Zoom веб страну">
+<!ENTITY iz.customzoom.label "Унесите Фактор увећања">
+<!ENTITY iz.customzoom.title "Корисничко увећање">
+<!ENTITY iz.customdim.width.label "Ширина:">
+<!ENTITY iz.customdim.height.label "Висина:">
+<!ENTITY iz.customdim.title "Корисничке димензије">
+<!ENTITY iz.customdim.aspect.label "Задржи пропорцију димензија слике">
+<!ENTITY iz.options.label "Подешавања">
+<!ENTITY iz.options.help.label "Страница помоћи">
+<!ENTITY iz.options.defaultzoom.label "Фактор увећања/умањења">
+<!ENTITY iz.options.defaultglobalzoom.label "Подразумевано опште увећање">
+<!ENTITY iz.options.showviewmenu.label "Прикажи Image Zoom у менију Преглед">
+<!ENTITY iz.options.showautofit.label "Прикажи Аутосмести у менију општих опција увећања">
+<!ENTITY iz.options.defaultscroll.label "Кораци увећања помоћу скроловања">
+<!ENTITY iz.options.scrollmode.label "Начин скроловања">
+<!ENTITY iz.options.scrollrelative.label "Релативно">
+<!ENTITY iz.options.scrollabsolute.label "Апсолутно">
+<!ENTITY iz.options.singlezoom.label "Опције за појединачно увећање">
+<!ENTITY iz.options.globalzoom.label "Опште опције увећања">
+<!ENTITY iz.options.context.label "Контекстни мени">
+<!ENTITY iz.options.contextdisplay.label "Опције за приказ контекстног менија">
+<!ENTITY iz.options.tabs.contextmenu.label "Ставке контекстног менија">
+<!ENTITY iz.options.tabs.main.label "Опште">
+<!ENTITY iz.options.reversescroll.label "Обрнуто скроловање">
+<!ENTITY iz.options.autocenter.label "Аутоматски центрирај слике када се користи Смести слику">
+<!ENTITY iz.options.mouseaccess.label1 "Приступи функцијама када се притисне">
+<!ENTITY iz.options.mouseaccess.label2 "тастер миша.">
+<!ENTITY iz.options.imagefit.label "Смести слику тастер">
+<!ENTITY iz.options.imagereset.label "Ресетуј слику тастер">
+<!ENTITY iz.options.none.label "Онемогућено">
+<!ENTITY iz.options.lmb.label "леви">
+<!ENTITY iz.options.mmb.label "средњи">
+<!ENTITY iz.options.rmb.label "десни">
+<!ENTITY iz.options.usemouse.label "Користи функције миша">
+<!ENTITY iz.options.contextdescription.label "Штиклирајте ставке које желите да се прикажу у контекстном менију">
+<!ENTITY iz.options.togglefitreset.label "Преклопник Смести слику/Ресетуј">
+<!ENTITY iz.options.menudummy.view.label "Погледај слику">
+<!ENTITY iz.options.menudummy.view.accesskey "П">
+<!ENTITY iz.options.menudummy.contents.label "Копирај слику">
+<!ENTITY iz.options.menudummy.contents.accesskey "К">
+<!ENTITY iz.options.menudummy.image.label "Копирај локацију слике">
+<!ENTITY iz.options.menudummy.image.accesskey "л">
+<!ENTITY iz.options.menudummy.save.label "Сачувај слику као">
+<!ENTITY iz.options.menudummy.save.accesskey "С">
+<!ENTITY iz.menu.global.decrease.label "Умањи">
+<!ENTITY iz.menu.global.decrease.accesskey "У">
+<!ENTITY iz.menu.global.increase.label "Увећај">
+<!ENTITY iz.menu.global.increase.accesskey "У">
+<!ENTITY iz.menu.global.custom.accesskey "О">
+<!ENTITY iz.menu.global.textscale.label "Увећај заједно са текстом">
+<!ENTITY iz.menu.global.textscale.accesskey "т">
+<!ENTITY iz.menu.global.autofit.label "Аутосмести слике">
+<!ENTITY iz.menu.global.autofit.accesskey "А">
+<!ENTITY iz.menu.context.zoomimage.label "Увећање слике">
+<!ENTITY iz.menu.context.zoomimage.accesskey "с">
+<!ENTITY iz.menu.context.increase.label "+ Увећај">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Ресетуј увећање">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Умањи">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Корисничко увећање">
+<!ENTITY iz.menu.context.customdim.label "Корисничке димензије">
+<!ENTITY iz.menu.context.imagefit.label "Смести слику">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

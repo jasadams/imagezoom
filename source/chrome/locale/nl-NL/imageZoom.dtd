@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "ImageZoom">
-<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.product.version "0.3">
 <!ENTITY iz.about.version.label "Versie">
 <!ENTITY iz.about.createdby.label "Gemaakt door">
 <!ENTITY iz.about.help.label "Help">
@@ -50,11 +50,12 @@
 <!ENTITY iz.options.rmb.label "rechter">
 <!ENTITY iz.options.usemouse.label "Muisfuncties gebruiken">
 <!ENTITY iz.options.contextdescription.label "Geef de onderdelen aan die weergegeven moeten worden in het Afbeeldingen context-menu">
+<!ENTITY iz.options.togglefitreset.label "ImageFit in-/uitschakelen / Herstellen">
 <!ENTITY iz.options.menudummy.view.label "Afbeelding bekijken">
 <!ENTITY iz.options.menudummy.view.accesskey "b">
 <!ENTITY iz.options.menudummy.contents.label "Afbeelding kopiëren">
 <!ENTITY iz.options.menudummy.contents.accesskey "k">
-<!ENTITY iz.options.menudummy.image.label "Afbeeldinglokatie kopiëren">
+<!ENTITY iz.options.menudummy.image.label "Afbeeldingslocatie kopiëren">
 <!ENTITY iz.options.menudummy.image.accesskey "l">
 <!ENTITY iz.options.menudummy.save.label "Afbeelding opslaan als">
 <!ENTITY iz.options.menudummy.save.accesskey "o">

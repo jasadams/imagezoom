@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "десно">
 <!ENTITY iz.options.usemouse.label "Употребувај ги дејствата на глувчето">
 <!ENTITY iz.options.contextdescription.label "Проверете ги деловите што ќе се појавуваат во контекстното мени.">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Отвори ја сликата">
 <!ENTITY iz.options.menudummy.view.accesskey "с">
 <!ENTITY iz.options.menudummy.contents.label "Копирај ја сликата">

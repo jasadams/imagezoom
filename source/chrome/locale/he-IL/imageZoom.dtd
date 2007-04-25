@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "ימין">
 <!ENTITY iz.options.usemouse.label "השתמש באפשרויות העכבר">
 <!ENTITY iz.options.contextdescription.label "סמן את הפריטים שאתה רוצה שיהיו מוצגות בתפריט העכבר לתמונות">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "הצג תמונה">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "העתק תמונה">

@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "右">
 <!ENTITY iz.options.usemouse.label "使用滑鼠">
 <!ENTITY iz.options.contextdescription.label "請勾選您要顯示在快顯功能表中的選單項目。">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "檢視圖片">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "複製圖片">

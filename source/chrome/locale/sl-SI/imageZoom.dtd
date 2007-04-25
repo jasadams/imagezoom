@@ -50,6 +50,7 @@
 <!ENTITY iz.options.rmb.label "Desni">
 <!ENTITY iz.options.usemouse.label "Opravila z miško">
 <!ENTITY iz.options.contextdescription.label "Označi možnosti, ki naj bodo prikazane v meniji bližnjic">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Prikaži sliko">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "Kopiraj sliko">
