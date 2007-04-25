@@ -76,14 +76,20 @@
 	          		<rows>
 	            			<row align="center" flex="1">
 	          				<label id="imagezoomimagefitbuttonlable" value="&iz.options.imagefit.label;" control="imagezoomimagefitbutton"/>
-	            				<menulist id="imagezoomimagefitbutton" prefstring="imagezoom.imagefitbutton">
-	          					<menupopup>
-	          						<menuitem label="&iz.options.none.label;" value="0"/>
-	          						<menuitem label="&iz.options.lmb.label;" value="1"/>
-	          						<menuitem label="&iz.options.mmb.label;" value="2"/>
-	          						<menuitem label="&iz.options.rmb.label;" value="3"/>
-	          					</menupopup>
-		    				</menulist>
+		          			<hbox align="center">	          				
+							<menulist id="imagezoomimagefitbutton" prefstring="imagezoom.imagefitbutton">
+								<menupopup>
+									<menuitem label="&iz.options.none.label;" value="0"/>
+									<menuitem label="&iz.options.lmb.label;" value="1"/>
+									<menuitem label="&iz.options.mmb.label;" value="2"/>
+									<menuitem label="&iz.options.rmb.label;" value="3"/>
+								</menupopup>
+							</menulist>
+						</hbox>
+						<hbox align="center" flex="1">
+							<spacer style="min-width: 15px" flex="1" />
+							<checkbox id="imagezoomtogglefitreset" label="&iz.options.togglefitreset.label;" prefstring="imagezoom.toggleFitReset"/>
+						</hbox>						
 		    				<spacer flex="1" />
 					</row>
 					<row align="center" flex="1">

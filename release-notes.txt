@@ -1,1 +1,2 @@
 fixed double menu bug
+added toggle Image Fit/Reset function

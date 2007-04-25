@@ -283,7 +283,14 @@ function izOnMouseClick(e){
 				e.stopPropagation();
 				haveZoomed = true;
 				var oizImage = new izImage(e.originalTarget);
-				oizImage.setZoom(100);
+				if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100)
+				{
+					oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));	
+				} 
+				else 
+				{
+					oizImage.setZoom(100);
+				}
 				reportStatus(oizImage);
 				break;
 			// Left mouse button pressed while right button down, fit image to screen
@@ -292,7 +299,14 @@ function izOnMouseClick(e){
 				e.stopPropagation();
 				haveZoomed = true;
 				var oizImage = new izImage(e.originalTarget);
-				oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
+				if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.isFitted())
+				{
+					oizImage.setZoom(100);
+				}
+				else 	
+				{
+					oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
+				} 				
 				reportStatus(oizImage);
 				break;
 			}

@@ -25,4 +25,5 @@ pref("imagezoom.defaultGlobalZoom", "100");
 pref("imagezoom.scrollZoomMode", 0);
 pref("imagezoom.autofitlargeimage", false);
 pref("imagezoom.showAutoFitInMenu", true);
+pref("imagezoom.toggleFitReset", false);
 pref("extensions.{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}.description", "chrome://imagezoom/locale/imageZoom.properties");

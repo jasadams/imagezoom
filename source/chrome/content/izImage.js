@@ -80,6 +80,7 @@ function izImage(oImage) {
 	izImage.prototype.pageFactor = pageFactor;
 	izImage.prototype.getStyleWidth = getStyleWidth;
 	izImage.prototype.getStyleHeight = getStyleHeight;
+	izImage.prototype.isFitted = isFitted;
 
 	// Returns the pixel width of the image
 	function getWidth(){
@@ -161,6 +162,35 @@ function izImage(oImage) {
 		if (pImage.autoFitBefore != 0)
 		{
 			this.setZoom(pImage.autoFitBefore);
+		}
+	}
+
+	function isFitted()
+	{
+		var bScreen = new browserScreen(pImage);
+
+		// First calculate the size of the client area of the browser depending on mode
+		var screenHeight = bScreen.getHeight();
+		var screenWidth = bScreen.getWidth();
+
+		// work out the screen ratio and the image ratio
+		var screenDim = screenWidth/screenHeight;
+		var imageDim = pImage.width/pImage.height;
+		
+		if (screenDim < imageDim) {
+			imageDiff = Math.abs(screenWidth - pImage.width);
+		} else {
+			imageDiff = Math.abs(screenHeight - pImage.height);
+		}		
+		// First calculate the size of the client area of the browser depending on mode
+		
+		if (imageDiff < 50)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
 		}
 	}
 	

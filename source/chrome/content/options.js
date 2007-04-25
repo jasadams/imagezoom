@@ -75,7 +75,7 @@ function init(){
 		// do nothing
 	}
 
-    try {
+    	try {
 		for (var i=0;i<MenuItems.length;i++) {
 			MenuOptions.setOption(OptionItems[i], nsIPrefBranchObj.getBoolPref(OptionItems[i]));
 		}
@@ -106,6 +106,7 @@ function imagezoom_saveOptions()
     nsIPrefBranchObj.setIntPref("triggerbutton", document.getElementById("imagezoommouseaccess").value);
     nsIPrefBranchObj.setIntPref("imagefitbutton", document.getElementById("imagezoomimagefitbutton").value);
     nsIPrefBranchObj.setIntPref("imageresetbutton", document.getElementById("imagezoomimageresetbutton").value);
+    nsIPrefBranchObj.setBoolPref("toggleFitReset", document.getElementById("imagezoomtogglefitreset").checked);
 
     nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
 
@@ -153,7 +154,7 @@ function imagezoom_initializeOptions()
     var scroll = nsIPrefBranchObj.getIntPref("imageresetbutton");
     var scrollValueBox = document.getElementById("imagezoomimageresetbutton");
     scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute( "value", scroll )[0];
-
+  
     var zoom = nsIPrefBranchObj.getIntPref("zoomvalue");
     var zoomValueBox = document.getElementById("imagezoomzoomvalue");
     zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
@@ -162,6 +163,7 @@ function imagezoom_initializeOptions()
     document.getElementById("imagezoomshowautofit").checked = nsIPrefBranchObj.getBoolPref("showAutoFitInMenu");
     document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
     document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
+    document.getElementById("imagezoomtogglefitreset").checked = nsIPrefBranchObj.getBoolPref("toggleFitReset");
 
 	for (var i=0;i<MenuItems.length;i++) {
 		MenuOptions.setOption(OptionItems[i], nsIPrefBranchObj.getBoolPref(OptionItems[i]));
