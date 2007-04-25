@@ -263,7 +263,7 @@ function izOnMouseClick(e){
 			e.stopPropagation();
 		} else {
             // contextmenu on mousedown
-     			if (contextDisabled) {
+     			if (contextDisabled && e.originalTarget.tagName.toLowerCase() == "img") {
 				document.popupNode = e.originalTarget;
 				izContext.showPopup(izContext.ownerDocument.documentElement, e.clientX, e.clientY, "context", "bottomleft", "topleft");
 				contextDisabled = false;
