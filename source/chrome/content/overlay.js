@@ -266,6 +266,7 @@ function izOnMouseClick(e){
      		if (contextDisabled) {
 				document.popupNode = e.originalTarget;
 				izContext.showPopup(izContext.ownerDocument.documentElement, e.clientX, e.clientY, "context", "bottomleft", "topleft");
+				contextDisabled = false;
 			}
   		}
 		cancelScrollZoom();  		
