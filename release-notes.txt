@@ -1,2 +1,3 @@
 fixed double menu bug
 added toggle Image Fit/Reset function
+added sr-YU locale

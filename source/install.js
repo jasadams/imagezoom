@@ -8,7 +8,7 @@ var XpiInstaller = {
 	extShortName: 'imagezoom', // The leafname of the JAR file (without the .jar part)
 	extVersion: '0.3.0.20070426',
 	extAuthor: 'Jason Adams',
-	extLocaleNames: ["en-US","sl-SI","hu-HU","fr-FR","de-DE","zh-TW","ja-JP","cs-CZ","ko-KR","es-ES","es-AR","it-IT","tr-TR", "zh-CN", "pt-BR", "ru-RU", "mk-MK", "nl-NL", "he-IL", "uk-UA", "ro-RO", "be-BY", "sv-SE", "fi-FI", "hr-HR", "pl-PL", "sk-SK"],
+	extLocaleNames: ["en-US","sl-SI","hu-HU","fr-FR","de-DE","zh-TW","ja-JP","cs-CZ","ko-KR","es-ES","es-AR","it-IT","tr-TR", "zh-CN", "pt-BR", "ru-RU", "mk-MK", "nl-NL", "he-IL", "uk-UA", "ro-RO", "be-BY", "sv-SE", "fi-FI", "hr-HR", "pl-PL", "sk-SK", "sr-YU"],
 	extSkinNames: ['classic'], // e.g. ['classic', 'modern']
 	extPostInstallMessage: null, // Set to null for no post-install message
 	// --- Editable items end ---
