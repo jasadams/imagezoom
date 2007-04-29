@@ -1,13 +1,13 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.product.version "0.3">
 <!ENTITY iz.about.version.label "verzió">
 <!ENTITY iz.about.createdby.label "Készítő:">
 <!ENTITY iz.about.help.label "Súgó">
 <!ENTITY iz.about.help.description "Segítség az Image Zoom beállításához és használatához.">
 <!ENTITY iz.about.forums.label "Fórum">
-<!ENTITY iz.about.forums.description "Támogatás, tanácsok, hibák.">
+<!ENTITY iz.about.forums.description "Támogatások, tanácsok, hibák.">
 <!ENTITY iz.about.walkthrough.label "Jellemzők">
-<!ENTITY iz.about.walkthrough.description "Az Image Zoom tulajdonságainak rövid leírása.">
+<!ENTITY iz.about.walkthrough.description "Az Image Zoom kiterjesztés tulajdonságainak leírása.">
 <!ENTITY iz.about.close.label "Bezár">
 <!ENTITY iz.install.installed "Image Zoom telepítve">
 <!ENTITY iz.install.options.label "Beállítások">
@@ -26,8 +26,8 @@
 <!ENTITY iz.options.help.label "Image Zoom honlapja">
 <!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
 <!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
-<!ENTITY iz.options.showviewmenu.label "Látható a &apos;Nézet&apos; menünél a &apos;Képek mérete&apos; menü.">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.showviewmenu.label "A „Nézet” menünél látható a „Képek mérete” menüpont.">
+<!ENTITY iz.options.showautofit.label "A „Nézet” menünél látható az „Automatikus ablakhoz igazítás” menüpont.">
 <!ENTITY iz.options.defaultscroll.label "Egérgörgővel való nagyítás">
 <!ENTITY iz.options.scrollmode.label "Görgetési mód">
 <!ENTITY iz.options.scrollrelative.label "Relatív">
@@ -50,7 +50,6 @@
 <!ENTITY iz.options.rmb.label "Jobb">
 <!ENTITY iz.options.usemouse.label "Képek átméretezése egérrel">
 <!ENTITY iz.options.contextdescription.label "Ellenőrizze, hogy melyik menüelemeket akarja megjeleníteni!">
-<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
 <!ENTITY iz.options.menudummy.view.label "Kép megjelenítése">
 <!ENTITY iz.options.menudummy.view.accesskey "g">
 <!ENTITY iz.options.menudummy.contents.label "Kép másolása">
@@ -66,7 +65,7 @@
 <!ENTITY iz.menu.global.custom.accesskey "E">
 <!ENTITY iz.menu.global.textscale.label "Méretezés a szöveggel együtt">
 <!ENTITY iz.menu.global.textscale.accesskey "s">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.label "Automatikus ablakhoz igazítás">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.menu.context.zoomimage.label "Kép átméretezése">
 <!ENTITY iz.menu.context.zoomimage.accesskey "á">
