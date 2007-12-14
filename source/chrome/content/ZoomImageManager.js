@@ -50,6 +50,34 @@ ZoomImageManager.prototype = {
 		
 		return selectedBrowser.ZoomImageManager;
 	},
+	
+	resetAllTabs : function() {
+	
+		nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "100");
+		try {
+			var selectedBrowser = window.getMessageBrowser();
+			if (!selectedBrowser.ZoomImageManager) {
+				selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
+			}
+
+			selectedBrowser.ZoomImageManager.scale2Text = false;
+			selectedBrowser.ZoomImageManager.currentZoom = 100;
+			selectedBrowser.ZoomImageManager.scaleFrames(selectedBrowser.ZoomImageManager.currentZoom, selectedBrowser.ZoomImageManager.parentNode.contentDocument, true);
+			selectedBrowser.ZoomImageManager.registerListener();			
+		} catch(e) {
+			for (var i=0; i<gBrowser.browsers.length; i++){
+				var selectedBrowser = gBrowser.browsers[i];
+				if (!selectedBrowser.ZoomImageManager) {
+					selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
+				}
+			
+				selectedBrowser.ZoomImageManager.scale2Text = false;
+				selectedBrowser.ZoomImageManager.currentZoom = 100;
+				selectedBrowser.ZoomImageManager.scaleFrames(selectedBrowser.ZoomImageManager.currentZoom, selectedBrowser.ZoomImageManager.parentNode.contentDocument, true);
+				selectedBrowser.ZoomImageManager.registerListener();
+			}
+		}
+	},
 
 	MIN : 1,
 	MAX : 2000,

@@ -133,6 +133,17 @@ checkbox {
   font-family: verdana, sans, arial, helvetica, sans-serif;
 }
 
+.warning-box {
+  background-color: white;
+  padding: 13px;
+  padding-top: 5px;
+  font-family: verdana, sans, arial, helvetica, sans-serif;
+}
+
+.warning-question {
+  font-weight: bold;
+}
+
 .install-description {
 
 }

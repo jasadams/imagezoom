@@ -176,6 +176,7 @@
         <caption label="&iz.options.globalzoom.label;"/>
         <checkbox id="imagezoomshowviewmenu" label="&iz.options.showviewmenu.label;" prefstring="imagezoom.showViewMenu"/>
         <checkbox id="imagezoomshowautofit" label="&iz.options.showautofit.label;" prefstring="imagezoom.showAutoFitInMenu"/>
+        <checkbox id="imagezoomglobalzoomwarning" label="&iz.options.warnifnotdefaultglobalzoom.label;" prefstring="imagezoom.imagezoom.globalZoomWarning"/>
       </groupbox>
     </vbox>
    </tabpanel>

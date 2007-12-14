@@ -112,6 +112,7 @@ function imagezoom_saveOptions()
 
     nsIPrefBranchObj.setBoolPref("showViewMenu", document.getElementById("imagezoomshowviewmenu").checked);
     nsIPrefBranchObj.setBoolPref("showAutoFitInMenu", document.getElementById("imagezoomshowautofit").checked);    
+    nsIPrefBranchObj.setBoolPref("globalZoomWarning", document.getElementById("imagezoomglobalzoomwarning").checked);    
 }
 
 function validateOptions(){
@@ -164,6 +165,7 @@ function imagezoom_initializeOptions()
     document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
     document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
     document.getElementById("imagezoomtogglefitreset").checked = nsIPrefBranchObj.getBoolPref("toggleFitReset");
+    document.getElementById("imagezoomglobalzoomwarning").checked = nsIPrefBranchObj.getBoolPref("globalZoomWarning");
 
 	for (var i=0;i<MenuItems.length;i++) {
 		MenuOptions.setOption(OptionItems[i], nsIPrefBranchObj.getBoolPref(OptionItems[i]));

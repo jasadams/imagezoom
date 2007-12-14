@@ -50,3 +50,81 @@ function initInstall() {
 	var continueURL = "http://imagezoom.yellowgorilla.net/install/install.html?old=" + oldversion + "&new=" + bundle.getString("version");
 	document.getElementById("continue").setAttribute("oncommand", "openURL(\"" + continueURL + "\"); window.close();");
 }
+
+function getAppName() {
+	if (isMozilla())
+		return "";
+	var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"]
+                                	.getService(Components.interfaces.nsIExtensionManager);
+	var imageZoomExtension = gExtensionManager.getItemForID(izAppID);
+	return imageZoomExtension.name.toString();
+}
+
+function getAppVersion() {
+	if (isMozilla())
+		return "";
+	var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"]
+                                	.getService(Components.interfaces.nsIExtensionManager);
+	var imageZoomExtension = gExtensionManager.getItemForID(izAppID);
+	return imageZoomExtension.version.toString();
+}
+
+function getVersionLevel(versionNumber, level)
+{
+	var beginDot = 0;
+	var endDot = -1;
+	for (var i=0; (i<level) && (endDot < versionNumber.length); i++)
+	{
+		if (versionNumber.indexOf('.', endDot+1) >= 0)
+		{
+			beginDot = endDot + 1;
+			endDot = versionNumber.indexOf('.', endDot+1);
+		}
+		else
+		{
+			beginDot = endDot + 1;
+			endDot = versionNumber.length;
+		}
+	}
+
+	return (versionNumber.substring(beginDot, endDot))*1;
+}
+
+function newerVersion(oldVersion, newVersion) 
+{
+	var maxToCheck = 2;
+	for (var i=0; i<maxToCheck; i++)
+	{
+		if (getVersionLevel(oldVersion, i+1) < getVersionLevel(newVersion, i+1))
+			return true;
+		if (getVersionLevel(oldVersion, i+1) > getVersionLevel(newVersion, i+1))
+			return false;			
+	}
+	
+	return false;
+}
+
+
+function initAbout() 
+{
+	var extName = getAppName();
+	var extVersion = getAppVersion();
+	document.title = extName + " " + extVersion;
+	var versionlabel = document.getElementById("versionlabel");
+	versionlabel.setAttribute("value", versionlabel.getAttribute("value") + " " + extVersion);
+	versionlabel.value = versionlabel.value + " " + extVersion;
+}
+
+
+function setDefaultGlobalZoom()
+{
+	ImageZoomManager.prototype.resetAllTabs();
+}
+
+function disableGlobalZoomWarning(izCheck)
+{
+	// Preference Service objects
+	var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
+	var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+	nsIPrefBranchObj.setBoolPref("globalZoomWarning", !izCheck.checked)
+}

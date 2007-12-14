@@ -21,7 +21,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 // Image Zoom Version
-var version = "0.2";
+var version = "0.3";
 
 // Preference Service objects
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -51,7 +51,9 @@ function initImageZoom() {
 			nsIPrefServiceObj.savePrefFile(null);
 			nsIPrefServiceObj.readUserPrefs(null);
 			if (nsIPrefBranchObj.getCharPref("version") == version)
+			{
 				window.openDialog("chrome://imagezoom/content/install.xul", "", "chrome,centerscreen", oldVersion);
+			}
 
 		} catch(e) {
 			//alert(e);
@@ -88,7 +90,14 @@ function initImageZoom() {
 	imagezoomBundle = document.getElementById("bundle_ImageZoom");
 	
 	contextSubMenuLabel = document.getElementById("context-zoomsub").getAttribute("label") + " (%zoom% %)";
-		
+
+ 
+        // popup warning if the global zoom value is not set to default
+        
+        if ((nsIPrefBranchObj.getCharPref("defaultGlobalZoom") != "100") && (nsIPrefBranchObj.getBoolPref("globalZoomWarning") == true))
+        {
+        	var dialog = window.openDialog("chrome://imagezoom/content/globalZoomWarning.xul", "", "chrome,centerscreen,dependent");
+        }		
 	
 }
 
@@ -480,3 +489,8 @@ function getXULBrowser(DOMWindow) {
 function MessageLoad(e){
 	ZoomImageManager.prototype.getInstance(window.document.getElementById("messagepane")).pageLoad();
 }
+
+function setGlobalDefault(){
+	ZoomImageManager.prototype.resetAllTabs();
+}
+
