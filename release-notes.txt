@@ -1,3 +1,4 @@
 fixed double menu bug
 added toggle Image Fit/Reset function
 added sr-YU locale
+added a warning if the global zoom value is not set to the default 100% (as it may cause slowness)
