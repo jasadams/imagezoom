@@ -25,15 +25,16 @@
 <!ENTITY iz.options.label "설정">
 <!ENTITY iz.options.help.label "도움말 페이지">
 <!ENTITY iz.options.defaultzoom.label "확대/축소 비율">
-<!ENTITY iz.options.defaultglobalzoom.label "페이지 확대율">
+<!ENTITY iz.options.defaultglobalzoom.label "기본 일반 확대율">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "일반 확대율이 기본값이 아닐 때 경고하기">
 <!ENTITY iz.options.showviewmenu.label "Image Zoom을 보기 메뉴에 보이기">
-<!ENTITY iz.options.showautofit.label "자동맞춤을 글로벌 메뉴에 보이기">
+<!ENTITY iz.options.showautofit.label "자동맞춤을 일반 메뉴에 보이기">
 <!ENTITY iz.options.defaultscroll.label "한번 스크롤할 때 확대/축소할 양">
 <!ENTITY iz.options.scrollmode.label "스크롤 방식">
 <!ENTITY iz.options.scrollrelative.label "상대 스크롤">
 <!ENTITY iz.options.scrollabsolute.label "절대 스크롤">
 <!ENTITY iz.options.singlezoom.label "그림 확대 설정">
-<!ENTITY iz.options.globalzoom.label "페이지 확대 설정">
+<!ENTITY iz.options.globalzoom.label "일반 확대 설정">
 <!ENTITY iz.options.context.label "문맥 메뉴">
 <!ENTITY iz.options.contextdisplay.label "문맥 메뉴에서 보여줄 항목">
 <!ENTITY iz.options.tabs.contextmenu.label "문맥 메뉴 항목">
@@ -68,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "T">
 <!ENTITY iz.menu.global.autofit.label "그림 자동맞춤">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "그림 확대 경고">
+<!ENTITY iz.globalZoomWarning.no.label "아니오">
+<!ENTITY iz.globalZoomWarning.yes.label "예">
+<!ENTITY iz.globalZoomWarning.WarningText1 "&apos;그림 확대&apos;의 일반 확대율이 100&#37;로 설정되어 있지 않습니다.">
+<!ENTITY iz.globalZoomWarning.WarningText2 "이것은 몇몇 웹사이트의 모양이 깨지거나 브라우저를 느려지게 할 수 있습니다.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "정말, 일반 확대율을 기본값으로 되돌리시겠습니까?">
+<!ENTITY iz.globalZoomWarning.disable.label "이 메시지를 더 이상 보이지 않기">
 <!ENTITY iz.menu.context.zoomimage.label "그림 확대">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ 확대">

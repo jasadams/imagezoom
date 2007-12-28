@@ -26,12 +26,13 @@
 <!ENTITY iz.options.help.label "Помош (на англиски)">
 <!ENTITY iz.options.defaultzoom.label "Степен на зголемување/намалување">
 <!ENTITY iz.options.defaultglobalzoom.label "Стандардно општо зголемување">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Предупреди доколку вредноста за општото зголемување не е основната">
 <!ENTITY iz.options.showviewmenu.label "Додади „Големина на слики“ во менито „Поглед“">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.showautofit.label "Додади „Автоматска големина“ во општото мени">
 <!ENTITY iz.options.defaultscroll.label "Степен на зголемување на тркалото на глувчето">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Начин за тркалање">
+<!ENTITY iz.options.scrollrelative.label "релативен">
+<!ENTITY iz.options.scrollabsolute.label "апсолутен">
 <!ENTITY iz.options.singlezoom.label "Засебни подесувања за зголемување">
 <!ENTITY iz.options.globalzoom.label "Општи подесувања за зголемување">
 <!ENTITY iz.options.context.label "Контекстно мени">
@@ -40,7 +41,7 @@
 <!ENTITY iz.options.tabs.main.label "Општо">
 <!ENTITY iz.options.reversescroll.label "Обратно вртење (напред)">
 <!ENTITY iz.options.autocenter.label "Центрирај ја сликата при прилагодување">
-<!ENTITY iz.options.mouseaccess.label1 "Пристапи им на дејствата држејќи го ">
+<!ENTITY iz.options.mouseaccess.label1 "Пристапи им на дејствата држејќи го">
 <!ENTITY iz.options.mouseaccess.label2 "-то копче на глувчето.">
 <!ENTITY iz.options.imagefit.label "Копче за прилагодување на сликата">
 <!ENTITY iz.options.imagereset.label "Копче за враќање во основната состојба">
@@ -50,7 +51,7 @@
 <!ENTITY iz.options.rmb.label "десно">
 <!ENTITY iz.options.usemouse.label "Употребувај ги дејствата на глувчето">
 <!ENTITY iz.options.contextdescription.label "Проверете ги деловите што ќе се појавуваат во контекстното мени.">
-<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
+<!ENTITY iz.options.togglefitreset.label "Смени „Вклопена слика“/„Врати почетни вредности“">
 <!ENTITY iz.options.menudummy.view.label "Отвори ја сликата">
 <!ENTITY iz.options.menudummy.view.accesskey "с">
 <!ENTITY iz.options.menudummy.contents.label "Копирај ја сликата">
@@ -66,8 +67,15 @@
 <!ENTITY iz.menu.global.custom.accesskey "Д">
 <!ENTITY iz.menu.global.textscale.label "Зголеми заедно со текстот">
 <!ENTITY iz.menu.global.textscale.accesskey "г">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.label "Автоматска големина">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Предупредување">
+<!ENTITY iz.globalZoomWarning.no.label "Не">
+<!ENTITY iz.globalZoomWarning.yes.label "Да">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Општото зголемување ја нема основната вредност од 100&#37;. Ова може да е причина">
+<!ENTITY iz.globalZoomWarning.WarningText2 "некои веб страни да се прикажуваат погрешно и да се забави прелистувачот">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Дали сакате да ја вратите основната вредност за општото зголемување?">
+<!ENTITY iz.globalZoomWarning.disable.label "Не ја прикажувај оваа порака">
 <!ENTITY iz.menu.context.zoomimage.label "Големина на сликата">
 <!ENTITY iz.menu.context.zoomimage.accesskey "г">
 <!ENTITY iz.menu.context.increase.label "Зголеми (+)">

@@ -26,6 +26,7 @@
 <!ENTITY iz.options.help.label "Hilfe (engl.)">
 <!ENTITY iz.options.defaultzoom.label "Zoom-Faktor beim Vergrößern/Verkleinern:">
 <!ENTITY iz.options.defaultglobalzoom.label "Globaler Standard-Zoom:">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warnen, falls Globaler Zoom nicht auf Standard-Werte gesetzt ist">
 <!ENTITY iz.options.showviewmenu.label "Eintrag &quot;Grafik-Zoom&quot; im Menü &quot;Ansicht&quot; anzeigen">
 <!ENTITY iz.options.showautofit.label "Eintrag zum automatischen Anpassen an Fenstergröße im Menü &quot;Ansicht &gt; Grafik-Zoom&quot; anzeigen">
 <!ENTITY iz.options.defaultscroll.label "Zoom-Rate beim Scrollen des Mausrads:">
@@ -41,7 +42,7 @@
 <!ENTITY iz.options.reversescroll.label "Umgekehrtes Scrollen">
 <!ENTITY iz.options.autocenter.label "Grafik beim Anpassen an die Fenstergröße automatisch zentrieren">
 <!ENTITY iz.options.mouseaccess.label1 "Aktivierung der Funktionen durch Halten folgender Maustaste:">
-<!ENTITY iz.options.mouseaccess.label2 " ">
+<!ENTITY iz.options.mouseaccess.label2 " mouse button.">
 <!ENTITY iz.options.imagefit.label "Taste zur Anpassung an Fenstergröße:">
 <!ENTITY iz.options.imagereset.label "Taste zum Zurücksetzen auf Originalgröße:">
 <!ENTITY iz.options.none.label "Deaktiviert">
@@ -68,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "T">
 <!ENTITY iz.menu.global.autofit.label "Automatisch an Fenstergröße anpassen">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Image Zoom - Warnung">
+<!ENTITY iz.globalZoomWarning.no.label "Nein">
+<!ENTITY iz.globalZoomWarning.yes.label "Ja">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Ihre globaler Zoom für &quot;Image Zoom&quot; ist nicht auf den Standard-Wert von 100&#37; gesetzt. Dies">
+<!ENTITY iz.globalZoomWarning.WarningText2 "kann dazu führen, dass einige Websites falsch gerendert werden und ihren Browser verlangsamt.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Möchten Sie den globalen Zoom auf den Standard-Wert zurücksetzen?">
+<!ENTITY iz.globalZoomWarning.disable.label "Diese Meldung nicht mehr anzeigen.">
 <!ENTITY iz.menu.context.zoomimage.label "Grafik zoomen">
 <!ENTITY iz.menu.context.zoomimage.accesskey "o">
 <!ENTITY iz.menu.context.increase.label "+  Grafik vergrößern">

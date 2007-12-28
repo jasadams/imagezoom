@@ -26,6 +26,7 @@
 <!ENTITY iz.options.help.label "Image Zoom honlapja">
 <!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
 <!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Figyelmeztetés, ha az általános nagyítás értéke eltér az alapértelmezéstől.">
 <!ENTITY iz.options.showviewmenu.label "A „Nézet” menünél látható a „Képek mérete” menüpont.">
 <!ENTITY iz.options.showautofit.label "A „Nézet” menünél látható az „Automatikus ablakhoz igazítás” menüpont.">
 <!ENTITY iz.options.defaultscroll.label "Egérgörgővel való nagyítás">
@@ -50,6 +51,7 @@
 <!ENTITY iz.options.rmb.label "Jobb">
 <!ENTITY iz.options.usemouse.label "Képek átméretezése egérrel">
 <!ENTITY iz.options.contextdescription.label "Ellenőrizze, hogy melyik menüelemeket akarja megjeleníteni!">
+<!ENTITY iz.options.togglefitreset.label "Ablakhoz méretezés kapcsoló">
 <!ENTITY iz.options.menudummy.view.label "Kép megjelenítése">
 <!ENTITY iz.options.menudummy.view.accesskey "g">
 <!ENTITY iz.options.menudummy.contents.label "Kép másolása">
@@ -67,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "s">
 <!ENTITY iz.menu.global.autofit.label "Automatikus ablakhoz igazítás">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Image Zoom figyelmeztetés">
+<!ENTITY iz.globalZoomWarning.no.label "Nem">
+<!ENTITY iz.globalZoomWarning.yes.label "Igen">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Az &quot;Image Zoom&quot; általános beállítása nem az alapértelmezett 100&#37;-ra van beállítva.">
+<!ENTITY iz.globalZoomWarning.WarningText2 "Ez problémát okozhat néhány weboldal megjelenítése során és lelassíthatja a böngészőt is.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Vissza kívánja állítani az nagyítást az alapértelmezett értékre?">
+<!ENTITY iz.globalZoomWarning.disable.label "Többé ne jelenjen meg ez az üzenet">
 <!ENTITY iz.menu.context.zoomimage.label "Kép átméretezése">
 <!ENTITY iz.menu.context.zoomimage.accesskey "á">
 <!ENTITY iz.menu.context.increase.label "+ Kép nagyítása">

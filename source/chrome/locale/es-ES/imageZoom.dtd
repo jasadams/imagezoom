@@ -26,6 +26,7 @@
 <!ENTITY iz.options.help.label "Página de ayuda">
 <!ENTITY iz.options.defaultzoom.label "Factor de zoom +/-">
 <!ENTITY iz.options.defaultglobalzoom.label "Zoom general predeterminado">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Avisar si el zoom general no está configurado a su valor predeterminado">
 <!ENTITY iz.options.showviewmenu.label "Mostrar Image Zoom en menú Ver">
 <!ENTITY iz.options.showautofit.label "Mostrar Autoajustar en menú">
 <!ENTITY iz.options.defaultscroll.label "Incremento de zoom con desplazamiento de rueda">
@@ -68,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "T">
 <!ENTITY iz.menu.global.autofit.label "Autoajustar imágenes">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Aviso de Image Zoom">
+<!ENTITY iz.globalZoomWarning.no.label "No">
+<!ENTITY iz.globalZoomWarning.yes.label "Sí">
+<!ENTITY iz.globalZoomWarning.WarningText1 "La predisposición de zoom general de Image Zoom no tiene el valor predeterminado del 100 &#37;.">
+<!ENTITY iz.globalZoomWarning.WarningText2 "Esto puede provocar que algunas páginas se visualicen incorrectamente y ralentizar su navegación.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "¿Quiere restaurar el zoom general a su valor predeterminado?">
+<!ENTITY iz.globalZoomWarning.disable.label "Desactivar este mensaje">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom de imagen">
 <!ENTITY iz.menu.context.zoomimage.accesskey "i">
 <!ENTITY iz.menu.context.increase.label "+  para zoom +">

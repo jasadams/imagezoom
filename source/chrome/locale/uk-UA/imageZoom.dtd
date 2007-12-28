@@ -26,6 +26,7 @@
 <!ENTITY iz.options.help.label "Сторінка Довідки">
 <!ENTITY iz.options.defaultzoom.label "Коефіцєнт збільшення">
 <!ENTITY iz.options.defaultglobalzoom.label "Загальна зміна розміру За умовчанням">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
 <!ENTITY iz.options.showviewmenu.label "Показувати Image Zoom в меню Вид">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Збільшення на один оберт колеса">
@@ -68,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "л">
 <!ENTITY iz.menu.global.autofit.label "Autofit Images">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
+<!ENTITY iz.globalZoomWarning.no.label "No">
+<!ENTITY iz.globalZoomWarning.yes.label "Yes">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&#37;. This can">
+<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
+<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
 <!ENTITY iz.menu.context.zoomimage.label "Змінити розмір">
 <!ENTITY iz.menu.context.zoomimage.accesskey "з">
 <!ENTITY iz.menu.context.increase.label "+ Збільшити">

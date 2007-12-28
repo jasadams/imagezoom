@@ -26,6 +26,7 @@
 <!ENTITY iz.options.help.label "Help pagina">
 <!ENTITY iz.options.defaultzoom.label "Zoom in/uit factor">
 <!ENTITY iz.options.defaultglobalzoom.label "Standaard algemene zoom">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Waarschuwen indien Algemene zoom niet als standaard waarde is ingesteld">
 <!ENTITY iz.options.showviewmenu.label "ImageZoom in menu Beeld weergeven">
 <!ENTITY iz.options.showautofit.label "AutoFit in menu Beeld &gt; ImageZoom weergeven">
 <!ENTITY iz.options.defaultscroll.label "Scroll zoom toename">
@@ -68,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "t">
 <!ENTITY iz.menu.global.autofit.label "AutoFit afbeeldingen">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Image Zoom waarschuwing">
+<!ENTITY iz.globalZoomWarning.no.label "Nee">
+<!ENTITY iz.globalZoomWarning.yes.label "Ja">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom algemene zoom instelling is niet ingesteld op de standaard waarde van 100&#37;. Dit kan">
+<!ENTITY iz.globalZoomWarning.WarningText2 "het onjuist opbouwen van sommige websites tot gevolg hebben en de browser vertragen.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Algemene zoom herstellen naar de standaard waarde?">
+<!ENTITY iz.globalZoomWarning.disable.label "Deze melding uitschakelen">
 <!ENTITY iz.menu.context.zoomimage.label "Afbeelding zoomen">
 <!ENTITY iz.menu.context.zoomimage.accesskey "A">
 <!ENTITY iz.menu.context.increase.label "+ Inzoomen">

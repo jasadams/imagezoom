@@ -26,6 +26,7 @@
 <!ENTITY iz.options.help.label "Pomoc">
 <!ENTITY iz.options.defaultzoom.label "Pomer strán">
 <!ENTITY iz.options.defaultglobalzoom.label "Štandardný pomer strán">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Varovať, ak nie je štandardný pomer strán nastavený na východziu hodnotu">
 <!ENTITY iz.options.showviewmenu.label "Zobrazovať Image Zoom v ponuke Zobraziť">
 <!ENTITY iz.options.showautofit.label "Zobraziť &apos;Automaticky prispôsobiť&apos; v hlavnej ponuke">
 <!ENTITY iz.options.defaultscroll.label "Prírastok pri zmene veľkosti">
@@ -33,7 +34,7 @@
 <!ENTITY iz.options.scrollrelative.label "Relatívne">
 <!ENTITY iz.options.scrollabsolute.label "Absolútne">
 <!ENTITY iz.options.singlezoom.label "Osobné nastavenie rozmerov">
-<!ENTITY iz.options.globalzoom.label "Všeobecné nastavenie rozmerov">
+<!ENTITY iz.options.globalzoom.label "Štandardné nastavenie rozmerov">
 <!ENTITY iz.options.context.label "Položky kontextovej ponuky">
 <!ENTITY iz.options.contextdisplay.label "Nastavenia položiek kontextovej ponuky">
 <!ENTITY iz.options.tabs.contextmenu.label "Kontextová ponuka">
@@ -68,6 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "n">
 <!ENTITY iz.menu.global.autofit.label "Automaticky prispôsobiť">
 <!ENTITY iz.menu.global.autofit.accesskey "M">
+<!ENTITY iz.globalZoomWarning.title "Image Zoom Upozornenie">
+<!ENTITY iz.globalZoomWarning.no.label "Nie">
+<!ENTITY iz.globalZoomWarning.yes.label "Áno">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Vaše nastavenie pre štandardný pomer strán nie je nastavené na východziu hodnotu 100&#37;.">
+<!ENTITY iz.globalZoomWarning.WarningText2 "Môže to spoôsobiť zlé zobrazenie niektorých stránok a spomaliť váš prehliadač.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Chcete nastaviť štandardný pomer strán na východziu hodnotu?">
+<!ENTITY iz.globalZoomWarning.disable.label "Zakázať zobrazovanie tejto správy">
 <!ENTITY iz.menu.context.zoomimage.label "Zväčšiť obrázok">
 <!ENTITY iz.menu.context.zoomimage.accesskey "v">
 <!ENTITY iz.menu.context.increase.label "+ Zväčšiť">
