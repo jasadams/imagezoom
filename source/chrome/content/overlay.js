@@ -33,6 +33,7 @@ var currentURL;
 var izContext;
 var contextDisabled = false;
 var imagezoomBundle;
+var contextSubMenuLabel;
 
 var mousedown = false;
 
@@ -74,27 +75,40 @@ function initImageZoom() {
 
 	// Add Image Zooming to text reduce command
 	var cmdZoomReduce = document.getElementById("cmd_textZoomReduce");
-	var prevCmd = cmdZoomReduce.getAttribute("oncommand");
-	cmdZoomReduce.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
+	// Firefox 3 introduced full zoom so text zoom does not exist anymore. Don't do anything for Firefox 3
+	if (cmdZoomReduce)
+	{
+	
+		var prevCmd = cmdZoomReduce.getAttribute("oncommand");
+		cmdZoomReduce.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
 
-	// Add Image Zooming to text enlarge command
-	var cmdZoomEnlarge = document.getElementById("cmd_textZoomEnlarge");
-	prevCmd = cmdZoomEnlarge.getAttribute("oncommand");
-	cmdZoomEnlarge.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
+		// Add Image Zooming to text enlarge command
+		var cmdZoomEnlarge = document.getElementById("cmd_textZoomEnlarge");
+		prevCmd = cmdZoomEnlarge.getAttribute("oncommand");
+		cmdZoomEnlarge.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
 
-	// Add Image Zooming to text reset command
-	var cmdZoomReset = document.getElementById("cmd_textZoomReset");
-	prevCmd = cmdZoomReset.getAttribute("oncommand");
-	cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
+		// Add Image Zooming to text reset command
+		var cmdZoomReset = document.getElementById("cmd_textZoomReset");
+		prevCmd = cmdZoomReset.getAttribute("oncommand");
+		cmdZoomReset.setAttribute("oncommand", prevCmd + " ZoomImageManager.prototype.getInstance().pageChange();");
+
+	}
+	else
+	{
+		// Hide the "Zoom with Text" menu item for Firefox 3+
+		document.getElementById("zoommain-scaleText").setAttribute("hidden", true);
+		document.getElementById("zoommain-s3").setAttribute("hidden", true);
+	}
 	
 	imagezoomBundle = document.getElementById("bundle_ImageZoom");
 	
 	contextSubMenuLabel = document.getElementById("context-zoomsub").getAttribute("label") + " (%zoom% %)";
+	
 
  
         // popup warning if the global zoom value is not set to default
         
-        if ((nsIPrefBranchObj.getCharPref("defaultGlobalZoom") != "100") && (nsIPrefBranchObj.getBoolPref("globalZoomWarning") == true))
+        if (((nsIPrefBranchObj.getCharPref("defaultGlobalZoom") != "100") || nsIPrefBranchObj.getCharPref("autofitlargeimage")) && (nsIPrefBranchObj.getBoolPref("globalZoomWarning") == true))
         {
         	var dialog = window.openDialog("chrome://imagezoom/content/globalZoomWarning.xul", "", "chrome,centerscreen,dependent");
         }		
@@ -466,7 +480,7 @@ function imageZoomMenu(e) {
 		var oizImage = new izImage(document.popupNode);
 		var izMenuItem = document.getElementById("context-zoomsub")
 		izMenuItem.setAttribute("label", contextSubMenuLabel.replace(/%zoom%/, oizImage.zoomFactor()));
-		izMenuItem.hidden = false;
+		izMenuItem.setAttribute("hidden" ,false);
 	}
 	else
 		document.getElementById("context-zoomsub").hidden = true;

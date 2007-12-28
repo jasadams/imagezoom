@@ -3,8 +3,17 @@ function ZoomImageManager(objBrowser) {
 	this.parentNode = objBrowser;
 	this.bundle = document.getElementById("bundle_ImageZoom");
 	if (nsIPrefBranchObj.getCharPref("defaultGlobalZoom") == "text"){
-		this.scale2Text = true;
-		this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
+		if (ZoomManager.prototype)
+		{
+			this.scale2Text = true;
+			this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
+		}
+		else
+		{
+			nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "100");
+			this.scale2Text = false;
+			this.currentZoom = 100;
+		}
 	} else {
 		this.scale2Text = false;
 		this.currentZoom = parseInt(nsIPrefBranchObj.getCharPref("defaultGlobalZoom"));
@@ -323,32 +332,34 @@ ZoomImageManager.prototype = {
 				this.scaleFrames(currentZoom, iframe, force); // recursion for iframes
 			}
 
-		if (doc.images.length > 0)
+		if (doc.images)
 		{
-			var bScreen = new browserScreen(doc.images[0]);
-			var bWidth = bScreen.getWidth();
-			var bHeight = bScreen.getHeight();
+			if (doc.images.length > 0)
+			{
+				var bScreen = new browserScreen(doc.images[0]);
+				var bWidth = bScreen.getWidth();
+				var bHeight = bScreen.getHeight();
 
-			var oizImage = null;
+				var oizImage = null;
 
-			for (var i=0; i<doc.images.length; i++) {
-				oizImage = new izImage(doc.images[i]);
+				for (var i=0; i<doc.images.length; i++) {
+					oizImage = new izImage(doc.images[i]);
 
-				if ((this.currentZoom != 100) || (force))
-				{
-					oizImage.setZoomPage(currentZoom);
+					if ((this.currentZoom != 100) || (force))
+					{
+						oizImage.setZoomPage(currentZoom);
+					}
+
+					oizImage.disactivateAutoFit();
+
+
+					if ((this.autoFit == true) && ((doc.images[i].width > bWidth) || (doc.images[i].height > bHeight))) 
+					{
+						oizImage.activateAutoFit();
+					} 
 				}
-
-				oizImage.disactivateAutoFit();
-
-
-				if ((this.autoFit == true) && ((doc.images[i].width > bWidth) || (doc.images[i].height > bHeight))) 
-				{
-					oizImage.activateAutoFit();
-				} 
 			}
 		}
-
 	}	
 }
 
