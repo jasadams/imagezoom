@@ -85,7 +85,7 @@ ZoomImageManager.prototype = {
 					selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
 				}
 			
-				selectedBrowser.ZoomImageManager.currentZoom = zoomValue;
+				selectedBrowser.ZoomImageManager.imageZoom = zoomValue;
 			}
 		}
 	},
