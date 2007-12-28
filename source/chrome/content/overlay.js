@@ -65,7 +65,7 @@ function initImageZoom() {
         document.getElementById("contentAreaContextMenu").addEventListener("popupshowing", imageZoomMenu, false);
     }
     // For Thunderbird
-    else if (document.getElementById("messagePaneContext")){
+    if (document.getElementById("messagePaneContext")){
         document.getElementById("messagePaneContext").addEventListener("popupshowing", imageZoomMenu, false);
     }
 
@@ -129,7 +129,7 @@ function cancelScrollZoom() {
 function reportStatus(oizImage){
 	var statusTextFld = "";
 	//write the zoom factor to the status bar
-	if (isThunderbird())
+	if (document.documentElement.getAttribute("windowtype") == "mail:3pane")
 	{
 		statusTextFld = document.getElementById("statusText");
 	}
