@@ -173,10 +173,13 @@
         <checkbox id="imagezoomautocenter" label="&iz.options.autocenter.label;" prefstring="imagezoom.autocenter"/>
       </groupbox>
         <groupbox align="start">
-        <caption label="&iz.options.globalzoom.label;"/>
-        <checkbox id="imagezoomshowviewmenu" label="&iz.options.showviewmenu.label;" prefstring="imagezoom.showViewMenu"/>
-        <checkbox id="imagezoomshowautofit" label="&iz.options.showautofit.label;" prefstring="imagezoom.showAutoFitInMenu"/>
-        <checkbox id="imagezoomglobalzoomwarning" label="&iz.options.warnifnotdefaultglobalzoom.label;" prefstring="imagezoom.imagezoom.globalZoomWarning"/>
+        <caption>
+	       	<checkbox id="imagezoomshowviewmenu" label="&iz.options.globalzoom.label;" prefstring="imagezoom.showViewMenu" oncommand="setDisableAllChildren(document.getElementById('globalOptions'), !this.checked);"/>
+        </caption>
+        <vbox id="globalOptions">
+        	<checkbox id="imagezoomshowautofit" label="&iz.options.showautofit.label;" prefstring="imagezoom.showAutoFitInMenu"/>
+        	<checkbox id="imagezoomglobalzoomwarning" label="&iz.options.warnifnotdefaultglobalzoom.label;" prefstring="imagezoom.imagezoom.globalZoomWarning"/>
+        </vbox>
       </groupbox>
     </vbox>
    </tabpanel>

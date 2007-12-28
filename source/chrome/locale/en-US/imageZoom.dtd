@@ -34,7 +34,7 @@
 <!ENTITY iz.options.scrollrelative.label "Relative">
 <!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Individual Zoom Options">
-<!ENTITY iz.options.globalzoom.label "Global Zoom Options">
+<!ENTITY iz.options.globalzoom.label "Enable Global Zoom Functions">
 <!ENTITY iz.options.context.label "Context Menu">
 <!ENTITY iz.options.contextdisplay.label "Context Menu Display Options">
 <!ENTITY iz.options.tabs.contextmenu.label "Context Menu Items">

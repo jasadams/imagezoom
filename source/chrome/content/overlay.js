@@ -505,6 +505,7 @@ function MessageLoad(e){
 }
 
 function setGlobalDefault(){
-	ZoomImageManager.prototype.resetAllTabs();
+	nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "100");
+	ZoomImageManager.prototype.resetAllTabs(nsIPrefBranchObj.getCharPref("defaultGlobalZoom"));
 }
 

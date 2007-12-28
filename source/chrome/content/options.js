@@ -71,6 +71,7 @@ function init(){
 
 	try {
 		setDisableAllChildren(document.getElementById('mouseoptions'), !document.getElementById("imagezoomusemouseoptions").checked);
+		setDisableAllChildren(document.getElementById('globalOptions'), !document.getElementById("imagezoomshowviewmenu").checked);
 	} catch(e) {
 		// do nothing
 	}
@@ -134,8 +135,9 @@ function Startup()
 function imagezoom_initializeOptions()
 {
 
-	document.getElementById("imagezoomusemouseoptions").checked = nsIPrefBranchObj.getBoolPref("usescroll");
-
+    document.getElementById("imagezoomusemouseoptions").checked = nsIPrefBranchObj.getBoolPref("usescroll");
+    document.getElementById("imagezoomshowviewmenu").checked = nsIPrefBranchObj.getBoolPref("showViewMenu");
+    
     var scroll = nsIPrefBranchObj.getIntPref("scrollvalue");
     var scrollValueBox = document.getElementById("imagezoomscrollvalue");
     scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute( "value", scroll )[0];
@@ -160,7 +162,6 @@ function imagezoom_initializeOptions()
     var zoomValueBox = document.getElementById("imagezoomzoomvalue");
     zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
 
-    document.getElementById("imagezoomshowviewmenu").checked = nsIPrefBranchObj.getBoolPref("showViewMenu");
     document.getElementById("imagezoomshowautofit").checked = nsIPrefBranchObj.getBoolPref("showAutoFitInMenu");
     document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
     document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
@@ -172,6 +173,7 @@ function imagezoom_initializeOptions()
 	}
 
 	setDisableAllChildren(document.getElementById('mouseoptions'), !document.getElementById("imagezoomusemouseoptions").checked);
+	setDisableAllChildren(document.getElementById('globalOptions'), !document.getElementById("imagezoomshowviewmenu").checked);
 
     setImageZoomMenu();
 }

@@ -2,28 +2,37 @@
 function ZoomImageManager(objBrowser) {
 	this.parentNode = objBrowser;
 	this.bundle = document.getElementById("bundle_ImageZoom");
-	if (nsIPrefBranchObj.getCharPref("defaultGlobalZoom") == "text"){
-		if (ZoomManager.prototype)
-		{
-			this.scale2Text = true;
-			this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
-		}
-		else
-		{
-			nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "100");
+	if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+	{
+		if (nsIPrefBranchObj.getCharPref("defaultGlobalZoom") == "text"){
+			if (ZoomManager.prototype)
+			{
+				this.scale2Text = true;
+				this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
+			}
+			else
+			{
+				nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "100");
+				this.scale2Text = false;
+				this.currentZoom = 100;
+			}
+		} else {
 			this.scale2Text = false;
-			this.currentZoom = 100;
+			this.currentZoom = parseInt(nsIPrefBranchObj.getCharPref("defaultGlobalZoom"));
 		}
-	} else {
-		this.scale2Text = false;
-		this.currentZoom = parseInt(nsIPrefBranchObj.getCharPref("defaultGlobalZoom"));
+
+		if (nsIPrefBranchObj.getBoolPref("autofitlargeimage")){
+			this.autoFitImage = true;
+		} else {
+			this.autoFitImage = false;
+		}	
 	}
-		
-	if (nsIPrefBranchObj.getBoolPref("autofitlargeimage")){
-		this.autoFitImage = true;
-	} else {
+	else
+	{
+		this.scale2Text = false;
+		this.currentZoom = 100;
 		this.autoFitImage = false;
-	}	
+	}
 
 }
 
@@ -60,19 +69,15 @@ ZoomImageManager.prototype = {
 		return selectedBrowser.ZoomImageManager;
 	},
 	
-	resetAllTabs : function() {
+	zoomAllTabs : function(zoomValue) {
 	
-		nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "100");
 		try {
 			var selectedBrowser = window.getMessageBrowser();
 			if (!selectedBrowser.ZoomImageManager) {
 				selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
 			}
 
-			selectedBrowser.ZoomImageManager.scale2Text = false;
-			selectedBrowser.ZoomImageManager.currentZoom = 100;
-			selectedBrowser.ZoomImageManager.scaleFrames(selectedBrowser.ZoomImageManager.currentZoom, selectedBrowser.ZoomImageManager.parentNode.contentDocument, true);
-			selectedBrowser.ZoomImageManager.registerListener();			
+			selectedBrowser.ZoomImageManager.imageZoom = zoomValue;
 		} catch(e) {
 			for (var i=0; i<gBrowser.browsers.length; i++){
 				var selectedBrowser = gBrowser.browsers[i];
@@ -80,10 +85,7 @@ ZoomImageManager.prototype = {
 					selectedBrowser.ZoomImageManager = new ZoomImageManager(selectedBrowser);
 				}
 			
-				selectedBrowser.ZoomImageManager.scale2Text = false;
-				selectedBrowser.ZoomImageManager.currentZoom = 100;
-				selectedBrowser.ZoomImageManager.scaleFrames(selectedBrowser.ZoomImageManager.currentZoom, selectedBrowser.ZoomImageManager.parentNode.contentDocument, true);
-				selectedBrowser.ZoomImageManager.registerListener();
+				selectedBrowser.ZoomImageManager.currentZoom = zoomValue;
 			}
 		}
 	},
@@ -106,20 +108,26 @@ ZoomImageManager.prototype = {
 	},
 
 	set textScale(blnValue) {
-		this.scale2Text = blnValue;
-		if (this.scale2Text){
-			nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "text");
-			if(this.currentZoom != ZoomManager.prototype.getInstance().textZoom) {
-				this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
-				this.registerListener();
-				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{
+			this.scale2Text = blnValue;
+			if (this.scale2Text){
+				nsIPrefBranchObj.setCharPref("defaultGlobalZoom", "text");
+				if(this.currentZoom != ZoomManager.prototype.getInstance().textZoom) {
+					this.currentZoom = ZoomManager.prototype.getInstance().textZoom;
+					this.registerListener();
+					this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
+				}
 			}
 		}
 	},
 
 	toggleAutoFit : function()
 	{
-		this.autoFit = !this.autoFit;
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{
+			this.autoFit = !this.autoFit;
+		}
 	},
 	
 	get autoFit() {
@@ -127,9 +135,12 @@ ZoomImageManager.prototype = {
 	},
 
 	set autoFit(blnValue) {
-		nsIPrefBranchObj.setBoolPref("autofitlargeimage", blnValue);
-		this.registerListener();
-		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, false);
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{
+			nsIPrefBranchObj.setBoolPref("autofitlargeimage", blnValue);
+			this.registerListener();
+			this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, false);
+		}
 	},
 	
 	get imageZoom() {
@@ -150,58 +161,79 @@ ZoomImageManager.prototype = {
 	},
 
 	set imageZoom(aZoom) {
-		this.scale2Text = false;
-		this.currentZoom = aZoom;
-		nsIPrefBranchObj.setCharPref("defaultGlobalZoom", this.currentZoom);
-		this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
-		this.registerListener();
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{
+			this.scale2Text = false;
+			this.currentZoom = aZoom;
+			nsIPrefBranchObj.setCharPref("defaultGlobalZoom", this.currentZoom);
+			this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
+			this.registerListener();
+		}
 	},
 
 	registerListener : function() {
-		if ((this.currentZoom == 100) && (!this.autoFit) && (this.registered)) {
-			unregisterImageZoomListener();
-			this.registered = false;
-		} else if (((this.currentZoom != 100) || (this.autoFit)) && (!this.registered)) {
-			registerImageZoomListener();
-			this.registered = true;
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{
+			if ((this.currentZoom == 100) && (!this.autoFit) && (this.registered)) {
+				unregisterImageZoomListener();
+				this.registered = false;
+			} else if (((this.currentZoom != 100) || (this.autoFit)) && (!this.registered)) {
+				registerImageZoomListener();
+				this.registered = true;
+			}
 		}
 
 	},
 
 	pageChange : function() {
-		if (!this.scaling){
-			this.scaling = true;
-			try {
-				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
-			} catch(e) {
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{
+			if (!this.scaling){
+				this.scaling = true;
+				try {
+					this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, (this.currentZoom == 100));
+				} catch(e) {
 
+				}
+				this.scaling = false;
 			}
-			this.scaling = false;
 		}
 	},
 	
 	pageLoad : function() {
-		if (!this.scaling){
-			this.scaling = true;
-			try {
-				this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, false);
-			} catch(e) {
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{		
+			if (!this.scaling){
+				this.scaling = true;
+				try {
+					this.scaleFrames(this.currentZoom, this.parentNode.contentDocument, false);
+				} catch(e) {
 
+				}
+				this.scaling = false;
 			}
-			this.scaling = false;
 		}
 	},
 
 	increase : function() {
-		this.jump(1);
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{	
+			this.jump(1);
+		}
 	},
 
 	decrease : function() {
-		this.jump(-1);
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{		
+			this.jump(-1);
+		}
 	},
 
 	reset : function() {
-		this.imageZoom = 100;
+		if (nsIPrefBranchObj.getBoolPref("showViewMenu"))
+		{		
+			this.imageZoom = 100;
+		}
 	},
 
 	getZoomFactors : function() {
