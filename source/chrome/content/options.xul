@@ -178,7 +178,7 @@
         </caption>
         <vbox id="globalOptions">
         	<checkbox id="imagezoomshowautofit" label="&iz.options.showautofit.label;" prefstring="imagezoom.showAutoFitInMenu"/>
-        	<checkbox id="imagezoomglobalzoomwarning" label="&iz.options.warnifnotdefaultglobalzoom.label;" prefstring="imagezoom.imagezoom.globalZoomWarning"/>
+        	<checkbox id="imagezoomglobalzoomwarning" label="&iz.options.warnifnotdefaultglobalzoom.label;" prefstring="imagezoom.globalZoomWarning"/>
         </vbox>
       </groupbox>
     </vbox>

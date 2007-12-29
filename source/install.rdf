@@ -4,7 +4,7 @@
   
     <em:id>{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}</em:id>
     <em:name>Image Zoom</em:name>
-    <em:version>0.3.0.20071227</em:version>
+    <em:version>0.3.0.20071228</em:version>
     <em:description>Adds zoom functionality for images</em:description>
     <em:creator>Jason Adams</em:creator>
     <em:homepageURL>http://imagezoom.yellowgorilla.net/</em:homepageURL>
@@ -44,7 +44,6 @@
 	<em:locale>locale/hr-HR/</em:locale> 
 	<em:locale>locale/pl-PL/</em:locale> 
 	<em:locale>locale/sk-SK/</em:locale> 
-	<em:locale>locale/sr-YU/</em:locale> 
       </Description>
     </em:file>
 
