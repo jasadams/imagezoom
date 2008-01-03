@@ -6,7 +6,7 @@ var XpiInstaller = {
 	// --- Editable items begin ---
 	extFullName: 'Image Zoom', // The name displayed to the user (don't include the version)
 	extShortName: 'imagezoom', // The leafname of the JAR file (without the .jar part)
-	extVersion: '0.3.0.20071228',
+	extVersion: '0.3.0.20080103',
 	extAuthor: 'Jason Adams',
 	extLocaleNames: ["en-US","sl-SI","hu-HU","fr-FR","de-DE","zh-TW","ja-JP","cs-CZ","ko-KR","es-ES","es-AR","it-IT","tr-TR", "zh-CN", "pt-BR", "ru-RU", "mk-MK", "nl-NL", "he-IL", "uk-UA", "ro-RO", "be-BY", "sv-SE", "fi-FI", "hr-HR", "pl-PL", "sk-SK"],
 	extSkinNames: ['classic'], // e.g. ['classic', 'modern']
