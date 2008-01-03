@@ -1,5 +1,5 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
-<!-- ***** BEGIN LICENSE BLOCK *****
+/* ***** BEGIN LICENSE BLOCK *****
        
     Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
      
@@ -19,7 +19,7 @@
     along with Image Zoom; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-***** END LICENSE BLOCK ***** -->
+***** END LICENSE BLOCK ***** */
 
 #imagezoom-options-dialog
 {
