@@ -286,16 +286,20 @@ function izOnMouseClick(e){
 			e.stopPropagation();
 		} else {
             // contextmenu on mousedown
-     			if (contextDisabled && e.originalTarget.tagName.toLowerCase() == "img") {
+     			if (contextDisabled) {
 				document.popupNode = e.originalTarget;
-				izContext.showPopup(izContext.ownerDocument.documentElement, e.clientX, e.clientY, "context", "bottomleft", "topleft");
-				contextDisabled = false;
+				try {
+					izContext.showPopup(izContext.ownerDocument.documentElement, e.clientX, e.clientY, "context", "bottomleft", "topleft");
+				}
+				catch(e) { }
 			}
   		}
-		cancelScrollZoom();  		
+		cancelScrollZoom();  	
 		gPanelContainer().removeEventListener("click",izOnMouseClick,true);
 	}
-
+	
+	contextDisabled = false;
+	
 	if (mousedown){
 		// Invoke varios mouse function when mouse is over an image only
 		if (targetName == "img") {
@@ -337,6 +341,7 @@ function izOnMouseClick(e){
 			gPanelContainer().removeEventListener("click",izOnMouseClick,true);
 		}
 	}
+
 }
 
 function ScrollImage(e){
