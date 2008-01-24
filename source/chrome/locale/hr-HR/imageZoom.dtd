@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.2">
+<!ENTITY iz.product.version "0.3">
 <!ENTITY iz.about.version.label "Verzija">
 <!ENTITY iz.about.createdby.label "Stvoren od:">
 <!ENTITY iz.about.help.label "Pomoć">
@@ -17,7 +17,7 @@
 <!ENTITY iz.install.desc.line2 "kratak pregled mogućnosti Image Zoom-a">
 <!ENTITY iz.install.desc.line3 "Press &apos;Continue&apos; to go to the Image Zoom Website now">
 <!ENTITY iz.customzoom.label "Upiši postotak uvećanja">
-<!ENTITY iz.customzoom.title "Custom Zoom">
+<!ENTITY iz.customzoom.title "Definiraj Zoom">
 <!ENTITY iz.customdim.width.label "Širina:">
 <!ENTITY iz.customdim.height.label "Visina:">
 <!ENTITY iz.customdim.title "Custom Dimension">
@@ -41,8 +41,8 @@
 <!ENTITY iz.options.tabs.main.label "General">
 <!ENTITY iz.options.reversescroll.label "Reverse Scroll">
 <!ENTITY iz.options.autocenter.label "Auto Center Images when using Image Fit">
-<!ENTITY iz.options.mouseaccess.label1 "Access functions by holding down the ">
-<!ENTITY iz.options.mouseaccess.label2 " mouse button.">
+<!ENTITY iz.options.mouseaccess.label1 "Access functions by holding down the">
+<!ENTITY iz.options.mouseaccess.label2 "mouse button.">
 <!ENTITY iz.options.imagefit.label "Image Fit Button">
 <!ENTITY iz.options.imagereset.label "Image Reset Button">
 <!ENTITY iz.options.none.label "Isključen">
@@ -70,8 +70,8 @@
 <!ENTITY iz.menu.global.autofit.label "Autofit Images">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
+<!ENTITY iz.globalZoomWarning.no.label "Ne">
+<!ENTITY iz.globalZoomWarning.yes.label "Da">
 <!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&#37;. This can">
 <!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">

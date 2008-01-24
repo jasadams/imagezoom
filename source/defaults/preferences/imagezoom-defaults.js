@@ -20,7 +20,7 @@ pref("imagezoom.zoomvalue", 200);
 pref("imagezoom.version", "0.0.0");
 pref("imagezoom.reversescrollzoom", false);
 pref("imagezoom.scrollmode", 0);
-pref("imagezoom.showViewMenu", true);
+pref("imagezoom.showViewMenu", false);
 pref("imagezoom.defaultGlobalZoom", "100");
 pref("imagezoom.scrollZoomMode", 0);
 pref("imagezoom.autofitlargeimage", false);

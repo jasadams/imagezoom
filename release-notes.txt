@@ -3,3 +3,4 @@ added toggle Image Fit/Reset function
 added a warning if the global zoom value is not set to the default 100% (as it may cause slowness)
 update to be Firefox 3.0 compatible
 minor updates to global zoom behaviour
+global zoom is now disabled by default
