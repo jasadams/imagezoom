@@ -21,7 +21,7 @@ function ZoomImageManager(objBrowser) {
 			this.currentZoom = parseInt(nsIPrefBranchObj.getCharPref("defaultGlobalZoom"));
 		}
 
-		if (nsIPrefBranchObj.getBoolPref("autofitlargeimage")){
+		if (nsIPrefBranchObj.getBoolPref("autofitlargeimage") && nsIPrefBranchObj.getBoolPref("showAutoFitInMenu")){
 			this.autoFitImage = true;
 		} else {
 			this.autoFitImage = false;
@@ -131,7 +131,7 @@ ZoomImageManager.prototype = {
 	},
 	
 	get autoFit() {
-		return (nsIPrefBranchObj.getBoolPref("autofitlargeimage") && nsIPrefBranchObj.getBoolPref("showViewMenu"));
+		return (nsIPrefBranchObj.getBoolPref("autofitlargeimage") && nsIPrefBranchObj.getBoolPref("showViewMenu") && nsIPrefBranchObj.getBoolPref("showAutoFitInMenu"));
 	},
 
 	set autoFit(blnValue) {
