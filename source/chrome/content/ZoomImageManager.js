@@ -131,7 +131,7 @@ ZoomImageManager.prototype = {
 	},
 	
 	get autoFit() {
-		return nsIPrefBranchObj.getBoolPref("autofitlargeimage");
+		return (nsIPrefBranchObj.getBoolPref("autofitlargeimage") && nsIPrefBranchObj.getBoolPref("showViewMenu"));
 	},
 
 	set autoFit(blnValue) {

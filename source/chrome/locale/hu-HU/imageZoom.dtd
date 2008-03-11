@@ -22,7 +22,7 @@
 <!ENTITY iz.customdim.height.label "Magasság:">
 <!ENTITY iz.customdim.title "Egyedi dimenzió">
 <!ENTITY iz.customdim.aspect.label "Oldalarány megtartása">
-<!ENTITY iz.options.label "beállítások">
+<!ENTITY iz.options.label "Beállítások">
 <!ENTITY iz.options.help.label "Image Zoom honlapja">
 <!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
 <!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
@@ -85,7 +85,7 @@
 <!ENTITY iz.menu.context.decrease.label "- Kép kicsinyítése">
 <!ENTITY iz.menu.context.decrease.accesskey "-">
 <!ENTITY iz.menu.context.customzoom.label "Egyedi nagyítás">
-<!ENTITY iz.menu.context.customdim.label "Egyedi dimenzió">
+<!ENTITY iz.menu.context.customdim.label "Egyedi méret">
 <!ENTITY iz.menu.context.imagefit.label "Ablakhoz méretezés">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">

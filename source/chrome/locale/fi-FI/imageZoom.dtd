@@ -3,7 +3,7 @@
 <!ENTITY iz.about.version.label "versio">
 <!ENTITY iz.about.createdby.label "tehnyt:">
 <!ENTITY iz.about.help.label "Ohje">
-<!ENTITY iz.about.help.description "Ohjeita Image Zoomin käytöstä ja asetusten säädöistä">
+<!ENTITY iz.about.help.description "Ohjeita Image Zoomin käytöstä ja asetusten määrittämisestä">
 <!ENTITY iz.about.forums.label "Keskustelukanavat">
 <!ENTITY iz.about.forums.description "Tuki, ehdotukset, virheet">
 <!ENTITY iz.about.walkthrough.label "Läpikulku">
@@ -26,7 +26,7 @@
 <!ENTITY iz.options.help.label "Ohjesivu">
 <!ENTITY iz.options.defaultzoom.label "Lähennyksen/loitonnuksen tekijä">
 <!ENTITY iz.options.defaultglobalzoom.label "Yleinen oletussuurennus">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Varoita, jos yleinen suurennusasetus ei ole oletusarvo">
 <!ENTITY iz.options.showviewmenu.label "Näytä &apos;&apos;Suurenna kuvaa&apos;&apos; -valinta Näytä-valikossa">
 <!ENTITY iz.options.showautofit.label "Näytä &apos;&apos;Sovita kuvat automaattisesti&apos;&apos; yleisvalikossa">
 <!ENTITY iz.options.defaultscroll.label "Vierityssuurennuksen lisäys">
@@ -69,13 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "T">
 <!ENTITY iz.menu.global.autofit.label "Sovita kuvat automaattisesti">
 <!ENTITY iz.menu.global.autofit.accesskey "O">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
+<!ENTITY iz.globalZoomWarning.title "Kuvansuurennusvaroitus">
+<!ENTITY iz.globalZoomWarning.no.label "Ei">
+<!ENTITY iz.globalZoomWarning.yes.label "Kyllä">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Yleistä suurennusasetusta ei ole asetettu oletusarvoon (100&#37;). Tämä voi johtaa siihen,">
+<!ENTITY iz.globalZoomWarning.WarningText2 "että jotkin verkkosivut taittuvat virheellisesti, ja selain voi hidastua.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Haluatko asettaa yleisen suurennuksen oletusarvoilleen?">
+<!ENTITY iz.globalZoomWarning.disable.label "Poista tämä sanoma käytöstä">
 <!ENTITY iz.menu.context.zoomimage.label "Suurenna kuvaa">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Lähennä">

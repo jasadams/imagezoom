@@ -45,10 +45,10 @@
 <!ENTITY iz.options.mouseaccess.label2 "al mausului.">
 <!ENTITY iz.options.imagefit.label "Butonul pt. potrivirea imaginii:">
 <!ENTITY iz.options.imagereset.label "Butonul pt. refacerea imaginii:">
-<!ENTITY iz.options.none.label "niciunul">
-<!ENTITY iz.options.lmb.label "stâng">
-<!ENTITY iz.options.mmb.label "mijlociu">
-<!ENTITY iz.options.rmb.label "drept">
+<!ENTITY iz.options.none.label "Niciunul">
+<!ENTITY iz.options.lmb.label "Stâng">
+<!ENTITY iz.options.mmb.label "Mijlociu">
+<!ENTITY iz.options.rmb.label "Drept">
 <!ENTITY iz.options.usemouse.label "Folosiți funcțiile mausului">
 <!ENTITY iz.options.contextdescription.label "Bifați elementele care să apară în meniul contextual al imaginii">
 <!ENTITY iz.options.togglefitreset.label "Comută între Potrivire/Refacere">

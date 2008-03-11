@@ -14,24 +14,24 @@
 <!ENTITY iz.install.close.label "Zamknij">
 <!ENTITY iz.install.continue.label "Kontynuuj&gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Odwiedź stronę domową Image Zoom dla zapoznania się ze wszystkimi informacjami">
-<!ENTITY iz.install.desc.line2 "i możliwościami rozszerzenia">
+<!ENTITY iz.install.desc.line2 "i możliwościami rozszerzenia.">
 <!ENTITY iz.install.desc.line3 "Wciśnij &apos;Kontynuuj&apos;, by przejść do strony domowej Image Zoom">
 <!ENTITY iz.customzoom.label "Wpisz wartość powiększenia">
 <!ENTITY iz.customzoom.title "Własne powiększenie">
 <!ENTITY iz.customdim.width.label "Wysokość:">
 <!ENTITY iz.customdim.height.label "Szerokość:">
 <!ENTITY iz.customdim.title "Własne rozmiary">
-<!ENTITY iz.customdim.aspect.label "Utrzymuj proporcje">
+<!ENTITY iz.customdim.aspect.label "Zachowaj proporcje">
 <!ENTITY iz.options.label "- Ustawienia">
 <!ENTITY iz.options.help.label "Strona pomocy">
-<!ENTITY iz.options.defaultzoom.label "Oddal/przybliż">
+<!ENTITY iz.options.defaultzoom.label "Powiększ/pomniejsz">
 <!ENTITY iz.options.defaultglobalzoom.label "Domyślne przybliżenie">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Ostrzegaj, gdy domyślne powiększenie ma wartość inną niż 100&#37;">
 <!ENTITY iz.options.showviewmenu.label "Pokaż Image Zoom w menu &quot;Widok&quot;">
 <!ENTITY iz.options.showautofit.label "Pokaż &quot;Dopasuj rozmiar obrazka&quot; w menu">
 <!ENTITY iz.options.defaultscroll.label "Powiększaj przewijając o">
 <!ENTITY iz.options.scrollmode.label "Tryb przewijania">
-<!ENTITY iz.options.scrollrelative.label "Relatywne">
+<!ENTITY iz.options.scrollrelative.label "Względne">
 <!ENTITY iz.options.scrollabsolute.label "Absolutne">
 <!ENTITY iz.options.singlezoom.label "Osobiste opcje powiększania">
 <!ENTITY iz.options.globalzoom.label "Ogólne opcje powiększania">
@@ -69,13 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "T">
 <!ENTITY iz.menu.global.autofit.label "Dopasuj obrazki">
 <!ENTITY iz.menu.global.autofit.accesskey "d">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
+<!ENTITY iz.globalZoomWarning.title "Ostrzeżenie Image Zoom">
+<!ENTITY iz.globalZoomWarning.no.label "Nie">
+<!ENTITY iz.globalZoomWarning.yes.label "Tak">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Podstawowe powiększenie Image Zoom nie ma wartości 100&#37;. Może to">
+<!ENTITY iz.globalZoomWarning.WarningText2 "wywołać błędne wyświetlanie stron lub spowolnienie pracy przeglądarki.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Czy chcesz ustawić domyślne powiększenie na 100&#37; ?">
+<!ENTITY iz.globalZoomWarning.disable.label "Wyłącz tę informację">
 <!ENTITY iz.menu.context.zoomimage.label "Powiększanie obrazka">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Powiększ">

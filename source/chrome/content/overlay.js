@@ -108,7 +108,7 @@ function initImageZoom() {
  
         // popup warning if the global zoom value is not set to default
         
-        if (((nsIPrefBranchObj.getCharPref("defaultGlobalZoom") != "100") || nsIPrefBranchObj.getBoolPref("autofitlargeimage")) && (nsIPrefBranchObj.getBoolPref("globalZoomWarning") == true))
+        if (((nsIPrefBranchObj.getCharPref("defaultGlobalZoom") != "100") || nsIPrefBranchObj.getBoolPref("autofitlargeimage")) && (nsIPrefBranchObj.getBoolPref("globalZoomWarning") == true) && (nsIPrefBranchObj.getBoolPref("showViewMenu") == true))
         {
         	var dialog = window.openDialog("chrome://imagezoom/content/globalZoomWarning.xul", "", "chrome,centerscreen,dependent");
         }		

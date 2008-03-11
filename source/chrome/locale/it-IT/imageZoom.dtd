@@ -5,7 +5,7 @@
 <!ENTITY iz.about.help.label "Aiuto">
 <!ENTITY iz.about.help.description "Guida alla configurazione e all&apos;utilizzo di Image Zoom">
 <!ENTITY iz.about.forums.label "Forum">
-<!ENTITY iz.about.forums.description "Supporto, suggerimenti, bug">
+<!ENTITY iz.about.forums.description "Supporto, suggerimenti, segnalazioni bug">
 <!ENTITY iz.about.walkthrough.label "Guida">
 <!ENTITY iz.about.walkthrough.description "Panoramica sulle funzioni di Image Zoom">
 <!ENTITY iz.about.close.label "Chiudi">
@@ -26,15 +26,15 @@
 <!ENTITY iz.options.help.label "Aiuto">
 <!ENTITY iz.options.defaultzoom.label "Fattore di ingrandimento o riduzione">
 <!ENTITY iz.options.defaultglobalzoom.label "Zoom globale predefinito">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Mostra un avviso se lo zoom globale non è impostato al valore predefinito">
 <!ENTITY iz.options.showviewmenu.label "Mostra Image Zoom nel menu &apos;Visualizza&apos;">
-<!ENTITY iz.options.showautofit.label "Mostra Adatta automaticamente nel menu globale">
+<!ENTITY iz.options.showautofit.label "Mostra &apos;Adatta automaticamente&apos; nel menu globale">
 <!ENTITY iz.options.defaultscroll.label "Incremento rotellina del mouse">
 <!ENTITY iz.options.scrollmode.label "Modalità di scorrimento">
 <!ENTITY iz.options.scrollrelative.label "Relativa">
 <!ENTITY iz.options.scrollabsolute.label "Assoluta">
 <!ENTITY iz.options.singlezoom.label "Opzione zoom singola immagine">
-<!ENTITY iz.options.globalzoom.label "Opzioni zoom globale">
+<!ENTITY iz.options.globalzoom.label "Attiva le opzioni di zoom globale">
 <!ENTITY iz.options.context.label "Menu contestuale">
 <!ENTITY iz.options.contextdisplay.label "Opzioni di visualizzazione del menu contestuale">
 <!ENTITY iz.options.tabs.contextmenu.label "Oggetti del menu contestuale">
@@ -43,15 +43,15 @@
 <!ENTITY iz.options.autocenter.label "Centra automaticamente l&apos;immagine quando si adattano le dimensioni">
 <!ENTITY iz.options.mouseaccess.label1 "Accedi alle funzioni tenendo premuto il pulsante">
 <!ENTITY iz.options.mouseaccess.label2 "del mouse.">
-<!ENTITY iz.options.imagefit.label "Per adattare le dimensioni dell&apos;immagine usa il pulsante">
-<!ENTITY iz.options.imagereset.label "Per ripristinare le dimensioni dell&apos;immagine usa il pulsante">
+<!ENTITY iz.options.imagefit.label "Per adattare le dimensioni dell&apos;immagine utilizza il pulsante">
+<!ENTITY iz.options.imagereset.label "Per ripristinare le dimensioni dell&apos;immagine utilizza il pulsante">
 <!ENTITY iz.options.none.label "Disattiva">
 <!ENTITY iz.options.lmb.label "Sinistro">
 <!ENTITY iz.options.mmb.label "Centrale">
 <!ENTITY iz.options.rmb.label "Destro">
-<!ENTITY iz.options.usemouse.label "Usa le funzioni del mouse">
+<!ENTITY iz.options.usemouse.label "Utilizza le funzioni del mouse">
 <!ENTITY iz.options.contextdescription.label "Selezionare le voci da inserire nel menu contestuale">
-<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
+<!ENTITY iz.options.togglefitreset.label "Attiva/disattiva la funzione di ridimensionamento/ripristino dell&apos;immagine">
 <!ENTITY iz.options.menudummy.view.label "Visualizza immagine">
 <!ENTITY iz.options.menudummy.view.accesskey "z">
 <!ENTITY iz.options.menudummy.contents.label "Copia immagine">
@@ -69,12 +69,12 @@
 <!ENTITY iz.menu.global.textscale.accesskey "s">
 <!ENTITY iz.menu.global.autofit.label "Adatta immagini">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
+<!ENTITY iz.globalZoomWarning.title "Avviso di Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "No">
 <!ENTITY iz.globalZoomWarning.yes.label "Si">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
+<!ENTITY iz.globalZoomWarning.WarningText1 "L&apos;impostazione di zoom globale non sono è al suo valore predefinito del 100&#37;. Ciò potrebbe">
+<!ENTITY iz.globalZoomWarning.WarningText2 "inficiare la corretta visualizzazione di alcuni siti web e rallentare la velocità di caricamento.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Impostare lo zoom globale al valore predefinito?">
 <!ENTITY iz.globalZoomWarning.disable.label "Disattiva questo messaggio">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom immagine">
 <!ENTITY iz.menu.context.zoomimage.accesskey "i">

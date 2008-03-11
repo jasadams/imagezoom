@@ -5,7 +5,7 @@
 <!ENTITY iz.about.help.label "도움말">
 <!ENTITY iz.about.help.description "Image Zoom의 설정과 사용에 대한 도움말">
 <!ENTITY iz.about.forums.label "포럼">
-<!ENTITY iz.about.forums.description "지원,다음 버전에 대한 제안,버그 보고">
+<!ENTITY iz.about.forums.description "지원,제안하기,버그 보고">
 <!ENTITY iz.about.walkthrough.label "설명">
 <!ENTITY iz.about.walkthrough.description "Image Zoom의 기능에 대한 간단한 설명">
 <!ENTITY iz.about.close.label "닫기">
@@ -51,7 +51,7 @@
 <!ENTITY iz.options.rmb.label "오른쪽">
 <!ENTITY iz.options.usemouse.label "마우스 동작 사용">
 <!ENTITY iz.options.contextdescription.label "그림 문맥 메뉴에 표시할 항목을 선택">
-<!ENTITY iz.options.togglefitreset.label "그림을 창크기에 맞추기/안맞추기">
+<!ENTITY iz.options.togglefitreset.label "그림을 창 크기에 맞추기/안맞추기">
 <!ENTITY iz.options.menudummy.view.label "그림 보기">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "그림 복사">
@@ -67,7 +67,7 @@
 <!ENTITY iz.menu.global.custom.accesskey "O">
 <!ENTITY iz.menu.global.textscale.label "글자 크기에 맞춤">
 <!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "그림 자동맞춤">
+<!ENTITY iz.menu.global.autofit.label "그림 자동 맞춤">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
 <!ENTITY iz.globalZoomWarning.title "그림 확대 경고">
 <!ENTITY iz.globalZoomWarning.no.label "아니오">
