@@ -209,6 +209,13 @@ function izSetZoom(zFactor)
 	reportStatus(oizImage);
 }
 
+function izRotateRight()
+{
+	var oizImage = new izImage(document.popupNode);
+	oizImage.rotate(90);
+	//reportStatus(oizImage);
+}
+
 function disableContextMenu(e) {
 	if (document.popupNode.tagName.toLowerCase() == "img") {
 		linuxImage = document.popupNode;

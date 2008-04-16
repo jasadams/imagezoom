@@ -62,6 +62,7 @@ function izImage(oImage) {
 			pImage.zoomFactor = 100;
 			pImage.pageFactor = 100;
 			pImage.autoFitBefore = 0;
+			pImage.angle = 0;
 		}
 
 		enabled = true;
@@ -74,6 +75,7 @@ function izImage(oImage) {
 	izImage.prototype.setDimension = setDimension;
 	izImage.prototype.zoom = zoom;
 	izImage.prototype.fit = fit;
+	izImage.prototype.rotate = rotate;
 	izImage.prototype.activateAutoFit = activateAutoFit;
 	izImage.prototype.disactivateAutoFit = disactivateAutoFit;
 	izImage.prototype.zoomFactor = zoomFactor;
@@ -165,6 +167,57 @@ function izImage(oImage) {
 		}
 	}
 
+	function rotate(degrees)
+	{
+		if (degrees >= 0) 
+		{
+			var theta = (Math.PI * degrees) / 180;
+		} 
+		else 
+		{
+			var theta = (Math.PI * (360+degrees)) / 180;
+		}	
+		
+		var costheta = Math.cos(degrees);
+		var sintheta = Math.sin(degrees);		
+
+		var canvas = document.createElement('canvas');
+		
+		if (!p.oImage) {
+			canvas.oImage = new Image();
+			canvas.oImage.src = p.src;
+		} else {
+			canvas.oImage = p.oImage;
+		}
+
+		// Set the new width of the image
+		canvas.width = Math.abs(costheta*pImage.width) + Math.abs(sintheta*pImage.height);
+		canvas.style.width = canvas.width
+		
+		// Set the new height of the image
+		canvas.height = Math.abs(costheta*pImage.height) + Math.abs(sintheta*pImage.width);
+		canvas.style.height = canvas.height
+		
+		var context = canvas.getContext('2d');
+		context.save();
+		if (rotation <= Math.PI/2) {
+			context.translate(sintheta*pImage.height,0);
+		} else if (rotation <= Math.PI) {
+			context.translate(canvas.width,-costheta*pImage.height);
+		} else if (rotation <= 1.5*Math.PI) {
+			context.translate(-costheta*pImage.width,canvas.height);
+		} else {
+			context.translate(0,-sintheta*pImage.width);
+		}
+		context.rotate(degrees);
+		context.drawImage(pImage, 0, 0, pImage.width, pImage.height);
+		context.restore();
+
+		canvas.id = pImage.id;
+		canvas.angle = degrees;
+		pImage.parentNode.replaceChild(canvas, pImage);
+	}
+	
 	function isFitted()
 	{
 		var bScreen = new browserScreen(pImage);

@@ -140,6 +140,13 @@
 			hidden="true"
 		>
         	  <menupopup id="zoompopup">
+			<menuitem id="context-rotate-right"
+				label="Rotate Right"
+				accesskey=""
+				oncommand="izRotateRight();"
+				insertbefore="context-sep-copyimage"
+				hidden="false"
+			/>	        	  
 			<menuitem id="zoomsub-zin"
 				label="&iz.menu.context.increase.label;"
 				accesskey="&iz.menu.context.increase.accesskey;"
