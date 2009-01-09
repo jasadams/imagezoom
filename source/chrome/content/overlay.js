@@ -34,6 +34,7 @@ var izContext;
 var contextDisabled = false;
 var imagezoomBundle;
 var contextSubMenuLabel;
+var tmpIzImage;
 
 var mousedown = false;
 
@@ -152,7 +153,7 @@ function reportStatus(oizImage){
 		statusTextFld = document.getElementById("statusbar-display");
 	}
 	
-    	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
+    	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px | " + "Rotation" + ": " + oizImage.getAngle() + "\u00B0";
 }
 
 function izShowCustomZoom()
@@ -213,11 +214,41 @@ function izRotateRight()
 {
 	var oizImage = new izImage(document.popupNode);
 	oizImage.rotate(90);
-	//reportStatus(oizImage);
+	tmpIzImage = oizImage;
 }
 
+function izRotateLeft()
+{
+	var oizImage = new izImage(document.popupNode);
+	oizImage.rotate(-90);
+	tmpIzImage = oizImage;
+}
+
+function izRotate180()
+{
+	var oizImage = new izImage(document.popupNode);
+	oizImage.rotate(180);
+	tmpIzImage = oizImage;
+}
+
+
+function izRotateReset()
+{
+	var oizImage = new izImage(document.popupNode);
+	oizImage.rotate(0 - oizImage.getAngle());
+	tmpIzImage = oizImage;
+}
+
+function CallBackStatus()
+{
+	if (tmpIzImage)
+	{
+		reportStatus(tmpIzImage);
+		tmpIzImage = null;
+	}
+}
 function disableContextMenu(e) {
-	if (document.popupNode.tagName.toLowerCase() == "img") {
+	if (document.popupNode.tagName.toLowerCase() == "img" || document.popupNode.tagName.toLowerCase() == "canvas") {
 		linuxImage = document.popupNode;
 		izContext = e.originalTarget;
 		e.preventDefault();
@@ -229,9 +260,8 @@ function disableContextMenu(e) {
 function izOnMouseDown(e){
 
 	var targetName  = e.originalTarget.tagName.toLowerCase();
-	
 	if (
-	     (targetName == "img") &&
+	     (targetName == "img" || targetName == "canvas") &&
 	     (mousedown) &&
 	     (
 	       (e.which == nsIPrefBranchObj.getIntPref("imageresetbutton")) || 
@@ -251,7 +281,7 @@ function izOnMouseDown(e){
 	    !(targetName == "embed" || targetName == "object"))
 	{
 				
-		if ((targetName == "img") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2))
+		if ((targetName == "img" || targetName == "canvas") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2))
 		{
 			if (nsIPrefBranchObj.getIntPref("scrollZoomMode") == 2) 
 			{
@@ -309,7 +339,7 @@ function izOnMouseClick(e){
 	
 	if (mousedown){
 		// Invoke varios mouse function when mouse is over an image only
-		if (targetName == "img") {
+		if (targetName == "img" || targetName == "canvas") {
 			switch(e.which){
 			// Middle mouse button pressed while right button down, reset image
 			case nsIPrefBranchObj.getIntPref("imageresetbutton"):
@@ -359,11 +389,11 @@ function ScrollImage(e){
 		
 		// Mixed Mode (default)
 		case 0:
-			if ((e.target.tagName.toLowerCase() == "img") || (linuxImage != null) || (currentImage != null))
+			if ((e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") || (linuxImage != null) || (currentImage != null))
 			{
 				if (linuxImage != null) {
 					currentImage = linuxImage;
-				} else if (e.target.tagName.toLowerCase() == "img") {
+				} else if (e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") {
 					currentImage = e.target;
 				}
 			} 
@@ -376,11 +406,11 @@ function ScrollImage(e){
 		
 		// Only Scroll when mouse over image mode
 		case 1:
-			if ((e.target.tagName.toLowerCase() == "img") || (linuxImage != null))
+			if ((e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") || (linuxImage != null))
 			{
 				if (linuxImage != null) {
 					imageToScroll = linuxImage;
-				} else if (e.target.tagName.toLowerCase() == "img") {
+				} else if (e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") {
 					imageToScroll = e.target;
 				}				
 			}
@@ -470,12 +500,11 @@ function insertSeparator(list, position){
 
 function imageZoomMenu(e) {
 
-	var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
-	var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","smZoomIO","smZoomIO","smReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
-
+	var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","context-zoom-rotate-right","context-zoom-rotate-left","context-zoom-rotate-180","context-zoom-rotate-reset","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-rotate-right","zoomsub-rotate-left","zoomsub-rotate-180","zoomsub-rotate-reset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
+	var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","mmRotateRight","mmRotateLeft","mmRotate180","mmRotateReset","smZoomIO","smZoomIO","smReset","smRotateRight","smRotateLeft","smRotate180","smRotateReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
 	// Display the correct menu items depending on options and whether an image was clicked
 	for (var i=0;i<MenuItems.length;i++)
-		document.getElementById(MenuItems[i]).setAttribute("hidden", (!gContextMenu.onImage || !nsIPrefBranchObj.getBoolPref(OptionItems[i])));
+		document.getElementById(MenuItems[i]).setAttribute("hidden", ((!gContextMenu.onImage && !gContextMenu.onCanvas) || !nsIPrefBranchObj.getBoolPref(OptionItems[i])));
 
 	var subPopUp = document.getElementById("zoompopup");
 

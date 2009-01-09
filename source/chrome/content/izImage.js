@@ -34,6 +34,7 @@ function izImage(oImage) {
 		{
 			// Original Width of the image in pixels; Used for calculating zoom factor
 			pImage.originalPxWidth = pImage.width;
+			pImage.originalPxHeight = pImage.height;
 
 			if (!pImage.style.width && !pImage.style.height){
 				// No style set for image, need to remember original dimensions
@@ -69,6 +70,7 @@ function izImage(oImage) {
 	}
 
 	izImage.prototype.getWidth = getWidth;
+	izImage.prototype.getAngle = getAngle;
 	izImage.prototype.getHeight = getHeight;
 	izImage.prototype.setZoom = setZoom;
 	izImage.prototype.setZoomPage = setZoomPage;
@@ -103,6 +105,11 @@ function izImage(oImage) {
 	// Returns the pixel height of the image
 	function getHeight(){
 		return pImage.height;
+	}
+
+	// Returns the current rotatation angle of the image
+	function getAngle(){
+		return pImage.angle;
 	}
 
 	// Zoom to a factor of the original image size
@@ -169,6 +176,7 @@ function izImage(oImage) {
 
 	function rotate(degrees)
 	{
+        
 		if (degrees >= 0) 
 		{
 			var theta = (Math.PI * degrees) / 180;
@@ -177,45 +185,76 @@ function izImage(oImage) {
 		{
 			var theta = (Math.PI * (360+degrees)) / 180;
 		}	
+		var costheta = Math.cos(theta);
+		var sintheta = Math.sin(theta);			
 		
-		var costheta = Math.cos(degrees);
-		var sintheta = Math.sin(degrees);		
-
-		var canvas = document.createElement('canvas');
-		
-		if (!p.oImage) {
-			canvas.oImage = new Image();
-			canvas.oImage.src = p.src;
-		} else {
-			canvas.oImage = p.oImage;
-		}
+		var canvas = pImage.ownerDocument.createElement("canvas");
 
 		// Set the new width of the image
-		canvas.width = Math.abs(costheta*pImage.width) + Math.abs(sintheta*pImage.height);
-		canvas.style.width = canvas.width
-		
-		// Set the new height of the image
-		canvas.height = Math.abs(costheta*pImage.height) + Math.abs(sintheta*pImage.width);
-		canvas.style.height = canvas.height
-		
-		var context = canvas.getContext('2d');
-		context.save();
-		if (rotation <= Math.PI/2) {
-			context.translate(sintheta*pImage.height,0);
-		} else if (rotation <= Math.PI) {
-			context.translate(canvas.width,-costheta*pImage.height);
-		} else if (rotation <= 1.5*Math.PI) {
-			context.translate(-costheta*pImage.width,canvas.height);
-		} else {
-			context.translate(0,-sintheta*pImage.width);
-		}
-		context.rotate(degrees);
-		context.drawImage(pImage, 0, 0, pImage.width, pImage.height);
-		context.restore();
+		canvas.width = Math.abs(costheta*pImage.originalPxWidth) + Math.abs(sintheta*pImage.originalPxHeight);
 
-		canvas.id = pImage.id;
-		canvas.angle = degrees;
-		pImage.parentNode.replaceChild(canvas, pImage);
+		// Set the new height of the image
+		canvas.height = Math.abs(costheta*pImage.originalPxHeight) + Math.abs(sintheta*pImage.originalPxWidth);
+	
+		canvas.oImage = new Image();
+		
+		if (pImage.tagName.toLowerCase() == "canvas")
+                {
+                	canvas.oImage.src = pImage.toDataURL();	
+                }		
+                else		
+		{
+			canvas.oImage.src = pImage.src;	
+                }
+                
+                canvas.oImage.onload = function() {
+		
+		        var ctx = canvas.getContext("2d");		
+			ctx.save();
+
+			if (theta <= Math.PI/2) {
+			ctx.translate(sintheta*canvas.oImage.height,0);
+			} else if (theta <= Math.PI) {
+				ctx.translate(canvas.width,-costheta*canvas.oImage.height);
+			} else if (theta <= 1.5*Math.PI) {
+				ctx.translate(-costheta*canvas.oImage.width,canvas.height);
+			} else {
+				ctx.translate(0,-sintheta*canvas.oImage.width);
+			}
+                
+                        var tmpOriginalPxWidth    = Math.abs(costheta*pImage.originalPxWidth) + Math.abs(sintheta*pImage.originalPxHeight);
+                        var tmpOriginalPxHeight   = Math.abs(costheta*pImage.originalPxHeight) + Math.abs(sintheta*pImage.originalPxWidth);
+			pImage.originalPxWidth    = tmpOriginalPxWidth;   
+			pImage.originalPxHeight   = tmpOriginalPxHeight;
+			var tmpOriginalWidth      = Math.abs(costheta*pImage.originalWidth) + Math.abs(sintheta*pImage.originalHeight);
+			var tmpOriginalHeight     = Math.abs(costheta*pImage.originalHeight) + Math.abs(sintheta*pImage.originalWidth);
+			pImage.originalWidth      = tmpOriginalWidth
+			pImage.originalHeight     = tmpOriginalHeight
+			var tmpStypeWidth         = Math.abs(costheta*getDimInt(pImage.style.width)) + Math.abs(sintheta*getDimInt(pImage.style.height));
+			var tmpStyleHeight        = Math.abs(costheta*getDimInt(pImage.style.height)) + Math.abs(sintheta*getDimInt(pImage.style.width));
+			pImage.style.width        = tmpStypeWidth + pImage.originalWidthUnit
+			pImage.style.height       = tmpStyleHeight + pImage.originalHeightUnit
+			
+			if (degrees < 0)
+			{
+				pImage.angle              = (pImage.angle + 360 + (degrees % 360)) % 360
+			}
+			else
+			{
+				pImage.angle              = (pImage.angle + degrees) % 360
+			}
+
+		
+			ctx.rotate(theta);
+	        	ctx.clearRect(0, 0, canvas.oImage.width, canvas.oImage.height);
+			ctx.drawImage(canvas.oImage, 0, 0, canvas.oImage.width, canvas.oImage.height);
+			ctx.restore();
+
+                        pImage.src = canvas.toDataURL();
+                        
+                        CallBackStatus();
+		}
+		
 	}
 	
 	function isFitted()
@@ -394,5 +433,4 @@ function browserScreen(pImage)
 	}
 		
 }
-
 

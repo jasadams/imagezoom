@@ -134,6 +134,30 @@
 				oncommand="izImageFit();"
 				hidden="true"
 			/>
+			<menuitem id="context-zoom-rotate-right"
+				label="&iz.menu.context.imagerotateright.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izRotateRight();"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-rotate-left"
+				label="&iz.menu.context.imagerotateleft.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izRotateLeft();"
+				hidden="true"
+			/>	
+			<menuitem id="context-zoom-rotate-180"
+				label="&iz.menu.context.imagerotate180.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izRotateLeft();"
+				hidden="true"
+			/>
+			<menuitem id="context-zoom-rotate-reset"
+				label="&iz.menu.context.imagerotatereset.label;"
+				insertbefore="context-sep-copyimage"
+				oncommand="izRotateReset();"
+				hidden="true"
+			/>					
 		<menu id="context-zoomsub"
 			label="&iz.menu.context.zoomimage.label;"
 			accesskey="&iz.menu.context.zoomimage.accesskey;"
@@ -162,6 +186,33 @@
 			<menuseparator id="zoomsub-s1"
 				hidden="true"
 			/>
+			<menuitem id="zoomsub-rotate-right"
+				label="&iz.menu.context.imagerotateright.label;"
+				accesskey="&iz.menu.context.rotate.right.accesskey;"
+				oncommand="izRotateRight();"
+				hidden="true"
+			/>
+			<menuitem id="zoomsub-rotate-left"
+				label="&iz.menu.context.imagerotateleft.label;"
+				accesskey="&iz.menu.context.rotate.left.accesskey;"
+				oncommand="izRotateLeft();"
+				hidden="true"
+			/>	
+			<menuitem id="zoomsub-rotate-180"
+				label="&iz.menu.context.imagerotate180.label;"
+				accesskey="&iz.menu.context.rotate.180.accesskey;"
+				oncommand="izRotate180();"
+				hidden="true"
+			/>	
+			<menuitem id="zoomsub-rotate-reset"
+				label="&iz.menu.context.imagerotatereset.label;"
+				accesskey="&iz.menu.context.rotate.reset.accesskey;"
+				oncommand="izRotateReset();"
+				hidden="true"
+			/>				
+			<menuseparator id="zoomsub-s2"
+				hidden="true"
+			/>			
 			<menuitem id="zoomsub-zcustom"
 				label="&iz.menu.context.customzoom.label;"
 				oncommand="izShowCustomZoom();"
@@ -172,7 +223,7 @@
 				oncommand="izShowCustomDim();"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s2"
+			<menuseparator id="zoomsub-s3"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-fit"
@@ -180,7 +231,7 @@
 				oncommand="izImageFit();"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s3"
+			<menuseparator id="zoomsub-s4"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z400"
@@ -203,7 +254,7 @@
 				oncommand="izSetZoom(125);"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s4"
+			<menuseparator id="zoomsub-s5"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z100"
@@ -211,7 +262,7 @@
 				oncommand="izSetZoom(100);"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s5"
+			<menuseparator id="zoomsub-s6"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z75"
