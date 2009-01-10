@@ -1,0 +1,2 @@
+Added Image Rotate Functions
+Removed support for Flock, Netscape, Seamonkey, Mozilla
