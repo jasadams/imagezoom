@@ -50,7 +50,7 @@
     <tabpanels flex="1">
       <tabpanel orient="vertical" flex="1">
        <vbox flex="1">
-       <label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
+       <label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=' + getAppVersion());" />
         <groupbox align="start">
         <caption>
         	<checkbox id="imagezoomusemouseoptions" label="&iz.options.usemouse.label;" prefstring="imagezoom.usescroll" oncommand="setDisableAllChildren(document.getElementById('mouseoptions'), !this.checked);"/>

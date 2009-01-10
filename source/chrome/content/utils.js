@@ -48,7 +48,7 @@ function initInstall() {
 
 	label.setAttribute("value", bundle.getString(strNotice).replace(/%version%/, getAppVersion()));
 
-	var continueURL = "http://imagezoom.yellowgorilla.net/install/install.html?old=" + oldversion + "&new=" + getAppVersion();
+	var continueURL = "http://imagezoom.yellowgorilla.net/install/?old=" + oldversion + "&new=" + getAppVersion();
 	document.getElementById("continue").setAttribute("oncommand", "openURL(\"" + continueURL + "\"); window.close();");
 }
 

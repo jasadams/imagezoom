@@ -42,8 +42,8 @@
 
 <groupbox align="start" orient="horizontal" class="about-box">
   <vbox>
-    <text value="&iz.product.name;" class="main-title" onclick="openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=&iz.product.version;');"/>
-    <text value="&iz.about.version.label; &iz.product.version;" class="version"/>
+    <text value="&iz.product.name;" class="main-title" onclick="openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=' + getAppVersion());" />
+    <text id="versionlabel" value="&iz.about.version.label;" class="version"/>
 
     <hbox>
     <vbox>
@@ -74,15 +74,14 @@
     </hbox>
     
     <separator class="thin"/>
-    <text value="&iz.about.help.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=&iz.product.version;');"/>
+    <text value="&iz.about.help.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=' + getAppVersion());" />
     <text value="&iz.about.help.description;"/>
 
     <separator class="thin"/>
-    <text value="&iz.about.forums.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=&iz.product.version;');"/>
-    <text value="&iz.about.forums.description;"/>
+    <text value="&iz.about.forums.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=' + getAppVersion());" />
 
     <separator class="thin"/>
-	<text value="&iz.about.walkthrough.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=&iz.product.version;');"/>
+	<text value="&iz.about.walkthrough.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=' + getAppVersion());" />
     <text value="&iz.about.walkthrough.description;"/>
 
   </vbox>

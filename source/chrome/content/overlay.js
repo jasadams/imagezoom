@@ -20,9 +20,6 @@
 
  * ***** END LICENSE BLOCK ***** */
 
-// Image Zoom Version
-var version = getAppVersion();
-
 // Preference Service objects
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
@@ -44,6 +41,7 @@ window.addEventListener("load", initImageZoom, false);
 function initImageZoom() {
 
 	// Check the version to display initilisation page if appropriate
+	var version = getAppVersion();
 	var oldVersion = nsIPrefBranchObj.getCharPref("version");
 
 	if (newerVersion(oldVersion,version)) {
