@@ -153,7 +153,7 @@ function reportStatus(oizImage){
 		statusTextFld = document.getElementById("statusbar-display");
 	}
 	
-    	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px | " + "Rotation" + ": " + oizImage.getAngle() + "\u00B0";
+    	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0";
 }
 
 function izShowCustomZoom()
