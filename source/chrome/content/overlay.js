@@ -21,7 +21,7 @@
  * ***** END LICENSE BLOCK ***** */
 
 // Image Zoom Version
-var version = "0.3";
+var version = getAppVersion();
 
 // Preference Service objects
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -46,7 +46,7 @@ function initImageZoom() {
 	// Check the version to display initilisation page if appropriate
 	var oldVersion = nsIPrefBranchObj.getCharPref("version");
 
-	if (oldVersion < version) {
+	if (newerVersion(oldVersion,version)) {
 		nsIPrefBranchObj.setCharPref("version", version);
 		try {
 			// try to save the prefs because we don't want to reset the home page if prefs can't be saved
