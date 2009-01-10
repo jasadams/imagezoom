@@ -1,3 +1,4 @@
+var izAppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}";
 
 function isFirefox() {
 	return ((navigator.userAgent.search(/Firefox/gi) != -1) || (navigator.userAgent.search(/Netscape/gi) != -1) || (navigator.userAgent.search(/Flock/gi) != -1));
@@ -45,9 +46,9 @@ function initInstall() {
 	else
 		var strNotice = "iz.install.upgrade.notice"
 
-	label.setAttribute("value", bundle.getString(strNotice).replace(/%version%/, bundle.getString("version")));
+	label.setAttribute("value", bundle.getString(strNotice).replace(/%version%/, getAppVersion()));
 
-	var continueURL = "http://imagezoom.yellowgorilla.net/install/install.html?old=" + oldversion + "&new=" + bundle.getString("version");
+	var continueURL = "http://imagezoom.yellowgorilla.net/install/install.html?old=" + oldversion + "&new=" + getAppVersion();
 	document.getElementById("continue").setAttribute("oncommand", "openURL(\"" + continueURL + "\"); window.close();");
 }
 
