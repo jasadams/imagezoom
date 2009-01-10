@@ -500,8 +500,16 @@ function insertSeparator(list, position){
 
 function imageZoomMenu(e) {
 
-	var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","context-zoom-rotate-right","context-zoom-rotate-left","context-zoom-rotate-180","context-zoom-rotate-reset","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-rotate-right","zoomsub-rotate-left","zoomsub-rotate-180","zoomsub-rotate-reset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
-	var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","mmRotateRight","mmRotateLeft","mmRotate180","mmRotateReset","smZoomIO","smZoomIO","smReset","smRotateRight","smRotateLeft","smRotate180","smRotateReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
+	if (isThunderbird())
+	{
+		var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
+		var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","smZoomIO","smZoomIO","smReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
+	} 
+	else
+	{
+		var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","context-zoom-rotate-right","context-zoom-rotate-left","context-zoom-rotate-180","context-zoom-rotate-reset","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-rotate-right","zoomsub-rotate-left","zoomsub-rotate-180","zoomsub-rotate-reset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
+		var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","mmRotateRight","mmRotateLeft","mmRotate180","mmRotateReset","smZoomIO","smZoomIO","smReset","smRotateRight","smRotateLeft","smRotate180","smRotateReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
+	}
 	// Display the correct menu items depending on options and whether an image was clicked
 	for (var i=0;i<MenuItems.length;i++)
 		document.getElementById(MenuItems[i]).setAttribute("hidden", ((!gContextMenu.onImage && !gContextMenu.onCanvas) || !nsIPrefBranchObj.getBoolPref(OptionItems[i])));
