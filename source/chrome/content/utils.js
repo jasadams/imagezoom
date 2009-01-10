@@ -113,7 +113,6 @@ function initAbout()
 	document.title = extName + " " + extVersion;
 	var versionlabel = document.getElementById("versionlabel");
 	versionlabel.setAttribute("value", versionlabel.getAttribute("value") + " " + extVersion);
-	versionlabel.value = versionlabel.value + " " + extVersion;
 }
 
 
