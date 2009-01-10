@@ -1,2 +1,2 @@
-Added Image Rotate Functions
+Added Image Rotate Functions - Firefox only
 Removed support for Flock, Netscape, Seamonkey, Mozilla

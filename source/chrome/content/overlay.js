@@ -143,6 +143,7 @@ function cancelScrollZoom() {
 
 function reportStatus(oizImage){
 	var statusTextFld = "";
+	var tmpStatus = ""
 	//write the zoom factor to the status bar
 	if (document.documentElement.getAttribute("windowtype") == "mail:3pane")
 	{
@@ -153,7 +154,12 @@ function reportStatus(oizImage){
 		statusTextFld = document.getElementById("statusbar-display");
 	}
 	
-    	statusTextFld.label = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0";
+    	tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
+    	if (isFirefox())
+    	{
+    		tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0"
+    	}
+    	statusTextFld.label = tmpStatus;
 }
 
 function izShowCustomZoom()
