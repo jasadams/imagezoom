@@ -149,7 +149,7 @@
 			<menuitem id="context-zoom-rotate-180"
 				label="&iz.menu.context.imagerotate180.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izRotateLeft();"
+				oncommand="izRotate180();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-rotate-reset"
