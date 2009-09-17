@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "Continuar &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Visite la página web de Image Zoom para obtener información actualizada">
 <!ENTITY iz.install.desc.line2 "y un breve recorrido por todas las funcionalidades de Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Pulse &apos;Continuar&apos; para ir ahora a la página web de Image Zoom">
+<!ENTITY iz.install.desc.line3 "Pulse 'Continuar' para ir ahora a la página web de Image Zoom">
 <!ENTITY iz.customzoom.label "Introduzca factor de zoom">
 <!ENTITY iz.customzoom.title "Zoom personalizado">
 <!ENTITY iz.customdim.width.label "Ancho:">
@@ -77,7 +77,7 @@
 <!ENTITY iz.globalZoomWarning.WarningQuestion "¿Quiere restaurar el zoom general a su valor predeterminado?">
 <!ENTITY iz.globalZoomWarning.disable.label "Desactivar este mensaje">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom de imagen">
-<!ENTITY iz.menu.context.zoomimage.accesskey "i">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+  para zoom +">
 <!ENTITY iz.menu.context.increase.accesskey "+">
 <!ENTITY iz.menu.context.reset.label "=  para anular zoom">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
 <!ENTITY iz.menu.context.customdim.label "Dimensiones personalizadas">
 <!ENTITY iz.menu.context.imagefit.label "Ajustar imagen">
+<!ENTITY iz.menu.context.imagerotateright.label "Rotar a derecha">
+<!ENTITY iz.menu.context.rotate.right.accesskey "d">
+<!ENTITY iz.menu.context.imagerotateleft.label "Rotar a izquierda">
+<!ENTITY iz.menu.context.rotate.left.accesskey "i">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotar 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Deshacer rotación">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "h">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

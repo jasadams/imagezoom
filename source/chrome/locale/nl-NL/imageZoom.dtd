@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "ImageZoom">
-<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.product.version "0.4">
 <!ENTITY iz.about.version.label "Versie">
 <!ENTITY iz.about.createdby.label "Gemaakt door">
 <!ENTITY iz.about.help.label "Help">
@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "Doorgaan &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Bezoek de ImageZoom website voor de laatste informatie en">
 <!ENTITY iz.install.desc.line2 "een kort overzicht van alle ImageZoom mogelijkheden.">
-<!ENTITY iz.install.desc.line3 "Druk op &apos;Doorgaan&apos; om nu naar de ImageZoom website te gaan.">
+<!ENTITY iz.install.desc.line3 "Druk op 'Doorgaan' om nu naar de ImageZoom website te gaan.">
 <!ENTITY iz.customzoom.label "Voer zoomfactor in">
 <!ENTITY iz.customzoom.title "Aangepaste zoom">
 <!ENTITY iz.customdim.width.label "Breedte:">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "Aangepaste zoom">
 <!ENTITY iz.menu.context.customdim.label "Aangepaste afmetingen">
 <!ENTITY iz.menu.context.imagefit.label "ImageFit">
+<!ENTITY iz.menu.context.imagerotateright.label "Rechtsom roteren">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateleft.label "Linksom roteren">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "180° roteren">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Roteren herstellen">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "h">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

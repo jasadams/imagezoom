@@ -1,2 +1,3 @@
 Added Image Rotate Functions - Firefox only
 Removed support for Flock, Netscape, Seamonkey, Mozilla
+Added sq-AL, vi-VN locales

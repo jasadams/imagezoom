@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "Egyedi nagyítás">
 <!ENTITY iz.menu.context.customdim.label "Egyedi méret">
 <!ENTITY iz.menu.context.imagefit.label "Ablakhoz méretezés">
+<!ENTITY iz.menu.context.imagerotateright.label "Forgatás jobbra">
+<!ENTITY iz.menu.context.rotate.right.accesskey "j">
+<!ENTITY iz.menu.context.imagerotateleft.label "Forgatás balra">
+<!ENTITY iz.menu.context.rotate.left.accesskey "b">
+<!ENTITY iz.menu.context.imagerotate180.label "Fejjel lefelé">
+<!ENTITY iz.menu.context.rotate.180.accesskey "F">
+<!ENTITY iz.menu.context.imagerotatereset.label "Alapállapot">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "A">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

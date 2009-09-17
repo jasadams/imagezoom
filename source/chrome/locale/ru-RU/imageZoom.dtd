@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "Далее &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Посетите web-сайт Image Zoom для получения последней информации и">
 <!ENTITY iz.install.desc.line2 "краткого обзора всех возможностей Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Нажмите &apos;Далее&apos; для перехода на сайт Image Zoom">
+<!ENTITY iz.install.desc.line3 "Нажмите 'Далее' для перехода на сайт Image Zoom">
 <!ENTITY iz.customzoom.label "Введите Коэффициент увеличения">
 <!ENTITY iz.customzoom.title "Специальное увеличение">
 <!ENTITY iz.customdim.width.label "Ширина:">
@@ -42,7 +42,7 @@
 <!ENTITY iz.options.reversescroll.label "Реверс колеса мыши">
 <!ENTITY iz.options.autocenter.label "Автоцентрирование изображения при Растяжении во весь экран">
 <!ENTITY iz.options.mouseaccess.label1 "Доступ к функциям, задерживая эту кнопку мыши:">
-<!ENTITY iz.options.mouseaccess.label2 "mouse button.">
+<!ENTITY iz.options.mouseaccess.label2 "кнопка мыши.">
 <!ENTITY iz.options.imagefit.label "Кнопка растяжения Во весь экран">
 <!ENTITY iz.options.imagereset.label "Кнопка сброса">
 <!ENTITY iz.options.none.label "Отключено">
@@ -51,7 +51,7 @@
 <!ENTITY iz.options.rmb.label "Правая">
 <!ENTITY iz.options.usemouse.label "Использование функций мыши">
 <!ENTITY iz.options.contextdescription.label "Выберите элементы, которые вы хотите увидеть в контекстном меню">
-<!ENTITY iz.options.togglefitreset.label "Перключить Изменение размера изображений/Сброс">
+<!ENTITY iz.options.togglefitreset.label "Переключить Изменение размера изображений/Сброс">
 <!ENTITY iz.options.menudummy.view.label "Показать изображение">
 <!ENTITY iz.options.menudummy.view.accesskey "П">
 <!ENTITY iz.options.menudummy.contents.label "Копировать изображение">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "Особое изменение">
 <!ENTITY iz.menu.context.customdim.label "Особые размеры">
 <!ENTITY iz.menu.context.imagefit.label "Во весь экран">
+<!ENTITY iz.menu.context.imagerotateright.label "Повернуть вправо">
+<!ENTITY iz.menu.context.rotate.right.accesskey "п">
+<!ENTITY iz.menu.context.imagerotateleft.label "Повернуть влево">
+<!ENTITY iz.menu.context.rotate.left.accesskey "л">
+<!ENTITY iz.menu.context.imagerotate180.label "Повернуть на 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Отменить поворот">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "О">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

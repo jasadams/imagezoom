@@ -5,7 +5,7 @@
 <!ENTITY iz.about.help.label "도움말">
 <!ENTITY iz.about.help.description "Image Zoom의 설정과 사용에 대한 도움말">
 <!ENTITY iz.about.forums.label "포럼">
-<!ENTITY iz.about.forums.description "지원,제안하기,버그 보고">
+<!ENTITY iz.about.forums.description "지원, 제안하기, 버그 보고">
 <!ENTITY iz.about.walkthrough.label "설명">
 <!ENTITY iz.about.walkthrough.description "Image Zoom의 기능에 대한 간단한 설명">
 <!ENTITY iz.about.close.label "닫기">
@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "계속 &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Image Zoom의 기능에 대한 간단한 개요와 최신의 정보를">
 <!ENTITY iz.install.desc.line2 "얻으시려면 Image Zoom 웹사이트를 방문하십시오.">
-<!ENTITY iz.install.desc.line3 "&apos;계속&apos;을 누르면 Image Zoom 웹사이트에 지금 접속합니다.">
+<!ENTITY iz.install.desc.line3 "'계속'을 누르면 Image Zoom 웹사이트에 지금 접속합니다.">
 <!ENTITY iz.customzoom.label "그림의 배율">
 <!ENTITY iz.customzoom.title "배율 설정">
 <!ENTITY iz.customdim.width.label "너비:">
@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "그림 확대 경고">
 <!ENTITY iz.globalZoomWarning.no.label "아니오">
 <!ENTITY iz.globalZoomWarning.yes.label "예">
-<!ENTITY iz.globalZoomWarning.WarningText1 "&apos;그림 확대&apos;의 일반 확대율이 100&#37;로 설정되어 있지 않습니다.">
+<!ENTITY iz.globalZoomWarning.WarningText1 "'그림 확대'의 일반 확대율이 100&#37;로 설정되어 있지 않습니다.">
 <!ENTITY iz.globalZoomWarning.WarningText2 "이것은 몇몇 웹사이트의 모양이 깨지거나 브라우저를 느려지게 할 수 있습니다.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "정말, 일반 확대율을 기본값으로 되돌리시겠습니까?">
 <!ENTITY iz.globalZoomWarning.disable.label "이 메시지를 더 이상 보이지 않기">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "배율 바꾸기">
 <!ENTITY iz.menu.context.customdim.label "크기 바꾸기">
 <!ENTITY iz.menu.context.imagefit.label "창 크기에 맞추기">
+<!ENTITY iz.menu.context.imagerotateright.label "오른족으로 돌리기">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateleft.label "왼쪽으로 돌리기">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "180&amp;#xB0; 회전">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "회전 취소">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "S">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

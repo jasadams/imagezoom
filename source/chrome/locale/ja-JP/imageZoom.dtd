@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.product.version "0.4">
 <!ENTITY iz.about.version.label "バージョン">
 <!ENTITY iz.about.createdby.label "作成者">
 <!ENTITY iz.about.help.label "ヘルプ (英語)">
@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "続ける &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "あなたが Imaze Zoom を最大限に活用するのを助けるために">
 <!ENTITY iz.install.desc.line2 "Imaze Zoom のホームページにはこの拡張機能のチュートリアル(英語)が用意されています。">
-<!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は &apos;続ける&apos; をクリックしてください。">
+<!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は '続ける' をクリックしてください。">
 <!ENTITY iz.customzoom.label "画像の拡大/縮小率(&#37;)を入力">
 <!ENTITY iz.customzoom.title "画像の拡大/縮小">
 <!ENTITY iz.customdim.width.label "横幅:">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "数値を入力して拡大/縮小">
 <!ENTITY iz.menu.context.customdim.label "数値を入力してサイズの変更">
 <!ENTITY iz.menu.context.imagefit.label "ウィンドウに合わせる">
+<!ENTITY iz.menu.context.imagerotateright.label "右方向へ回転">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateleft.label "左方向へ回転">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "180° 回転">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "回転をリセット">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

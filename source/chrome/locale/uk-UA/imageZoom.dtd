@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "Продовжити &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Відвідаєте web-сайт Image Zoom для отримання останньої інформації і">
 <!ENTITY iz.install.desc.line2 "короткого огляду всіх можливостей Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Натисніть &apos;Продовжити&apos; для переходу на сайт Image Zoom">
+<!ENTITY iz.install.desc.line3 "Натисніть «Продовжити» для переходу на сайт Image Zoom">
 <!ENTITY iz.customzoom.label "Введіть Коеффіцент збільшення">
 <!ENTITY iz.customzoom.title "Спеціальне збільшення">
 <!ENTITY iz.customdim.width.label "Ширина:">
@@ -27,12 +27,12 @@
 <!ENTITY iz.options.defaultzoom.label "Коефіцєнт збільшення">
 <!ENTITY iz.options.defaultglobalzoom.label "Загальна зміна розміру За умовчанням">
 <!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
-<!ENTITY iz.options.showviewmenu.label "Показувати Image Zoom в меню Вид">
+<!ENTITY iz.options.showviewmenu.label "Показувати Image Zoom в меню Вигляд">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Збільшення на один оберт колеса">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Режим прокрутки">
+<!ENTITY iz.options.scrollrelative.label "Відносний">
+<!ENTITY iz.options.scrollabsolute.label "Абсолютний">
 <!ENTITY iz.options.singlezoom.label "Індивідуальні опції збільшення">
 <!ENTITY iz.options.globalzoom.label "Опції Загальної зміни розмірів">
 <!ENTITY iz.options.context.label "Контекстне меню">
@@ -69,13 +69,13 @@
 <!ENTITY iz.menu.global.textscale.accesskey "л">
 <!ENTITY iz.menu.global.autofit.label "Autofit Images">
 <!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
+<!ENTITY iz.globalZoomWarning.title "Попередження Image Zoom">
+<!ENTITY iz.globalZoomWarning.no.label "Ні">
+<!ENTITY iz.globalZoomWarning.yes.label "Так">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Ваші глобальні налаштування розміру зображень «Image Zoom» не встановлено на типове значення 100&#37;. Це може">
+<!ENTITY iz.globalZoomWarning.WarningText2 "спричините неправильне відображення певних веб-сайтів та уповільнити ваш браузер.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Чи хочете ви скинути глобальні налаштування масштабу на типове значення?">
+<!ENTITY iz.globalZoomWarning.disable.label "Прибрати це повідомлення">
 <!ENTITY iz.menu.context.zoomimage.label "Змінити розмір">
 <!ENTITY iz.menu.context.zoomimage.accesskey "з">
 <!ENTITY iz.menu.context.increase.label "+ Збільшити">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "Особлива зміна">
 <!ENTITY iz.menu.context.customdim.label "Особливі розміри">
 <!ENTITY iz.menu.context.imagefit.label "На весь екран">
+<!ENTITY iz.menu.context.imagerotateright.label "Повернути праворуч">
+<!ENTITY iz.menu.context.rotate.right.accesskey "п">
+<!ENTITY iz.menu.context.imagerotateleft.label "Повернути ліворуч">
+<!ENTITY iz.menu.context.rotate.left.accesskey "л">
+<!ENTITY iz.menu.context.imagerotate180.label "Обернути на 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Скинути обертання">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "С">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

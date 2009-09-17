@@ -3,7 +3,7 @@
 <RDF:RDF xmlns:RDF="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
 
-  <!-- Translation in Slovenian language, Leon Zobec, pozdravljeni@yahoo.com -->
+  <!-- Translation in Slovenian language, Leon Zobec, pozdravljeni@yahoo.com ter Martin Srebotnjak -->
 
     <RDF:Seq about="urn:mozilla:locale:root">
         <RDF:li resource="urn:mozilla:locale:sl-SI"/>

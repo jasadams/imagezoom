@@ -15,7 +15,7 @@
 <!ENTITY iz.install.continue.label "Fortsätt &gt;&gt;">
 <!ENTITY iz.install.desc.line1 "Besök hemsidan för Image Zoom för att få tillgång till den senaste informationen och">
 <!ENTITY iz.install.desc.line2 "för en kortfattad sammanfattning av alla funktioner i Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Klicka &apos;Fortsätt&apos; för att gå till hemsidan nu">
+<!ENTITY iz.install.desc.line3 "Klicka 'Fortsätt' för att gå till hemsidan nu">
 <!ENTITY iz.customzoom.label "Ange zoomfaktor">
 <!ENTITY iz.customzoom.title "Valfri zoom">
 <!ENTITY iz.customdim.width.label "Bredd:">
@@ -27,7 +27,7 @@
 <!ENTITY iz.options.defaultzoom.label "Zooma in/ut-faktor">
 <!ENTITY iz.options.defaultglobalzoom.label "Standard global zoom">
 <!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Varna om Global Zoom inte är satt till sitt standardvärde">
-<!ENTITY iz.options.showviewmenu.label "Visa Image Zoom i &apos;Visa&apos;-menyn">
+<!ENTITY iz.options.showviewmenu.label "Visa Image Zoom i 'Visa'-menyn">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Rulla zoomförändringar">
 <!ENTITY iz.options.scrollmode.label "Rullmetod">
@@ -87,6 +87,14 @@
 <!ENTITY iz.menu.context.customzoom.label "Egen zoom">
 <!ENTITY iz.menu.context.customdim.label "Egen storlek">
 <!ENTITY iz.menu.context.imagefit.label "Bildanpassning">
+<!ENTITY iz.menu.context.imagerotateright.label "Rotera höger">
+<!ENTITY iz.menu.context.rotate.right.accesskey "ö">
+<!ENTITY iz.menu.context.imagerotateleft.label "Rotera vänster">
+<!ENTITY iz.menu.context.rotate.left.accesskey "ä">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotera 180&amp;#xB0;">
+<!ENTITY iz.menu.context.rotate.180.accesskey "8">
+<!ENTITY iz.menu.context.imagerotatereset.label "Återställ rotering">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "Å">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

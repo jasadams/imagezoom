@@ -8,8 +8,8 @@
     </RDF:Seq>
 
     <RDF:Description about="urn:mozilla:locale:hu-HU"
-                     chrome:author="Balogh Tibor (balti)"
-                     chrome:displayName="Hungarian(HU)"
+                     chrome:author="Balogh Tibor (balti) & KAMI"
+                     chrome:displayName="Hungarian (HU)"
                      chrome:name="hu-HU">
 	    <chrome:packages>
 			<RDF:Seq about="urn:mozilla:locale:hu-HU:packages">
