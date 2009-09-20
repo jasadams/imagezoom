@@ -1,5 +1,5 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.product.version "0.4">
 <!ENTITY iz.about.version.label "Version">
 <!ENTITY iz.about.createdby.label "Created By">
 <!ENTITY iz.about.help.label "Help">
@@ -87,14 +87,15 @@
 <!ENTITY iz.menu.context.customzoom.label "Custom Zoom">
 <!ENTITY iz.menu.context.customdim.label "Custom Dimensions">
 <!ENTITY iz.menu.context.imagefit.label "Image Fit">
-<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
+<!ENTITY iz.menu.context.imagerotateright.label "Rotate Image Right">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
+<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Image Left">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&#176;">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate Image 180&#176;">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
-<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
+<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Image Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">
