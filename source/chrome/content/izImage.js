@@ -191,10 +191,10 @@ function izImage(oImage) {
 		var canvas = pImage.ownerDocument.createElement("canvas");
 
 		// Set the new width of the image
-		canvas.width = Math.abs(costheta*pImage.originalPxWidth) + Math.abs(sintheta*pImage.originalPxHeight);
+		canvas.width = Math.abs(costheta*pImage.naturalWidth) + Math.abs(sintheta*pImage.naturalHeight);
 
 		// Set the new height of the image
-		canvas.height = Math.abs(costheta*pImage.originalPxHeight) + Math.abs(sintheta*pImage.originalPxWidth);
+		canvas.height = Math.abs(costheta*pImage.naturalHeight) + Math.abs(sintheta*pImage.naturalWidth);
 	
 		canvas.oImage = new Image();
 		
@@ -213,13 +213,13 @@ function izImage(oImage) {
 			ctx.save();
 
 			if (theta <= Math.PI/2) {
-			ctx.translate(sintheta*canvas.oImage.height,0);
+			ctx.translate(sintheta*canvas.oImage.naturalHeight,0);
 			} else if (theta <= Math.PI) {
-				ctx.translate(canvas.width,-costheta*canvas.oImage.height);
+				ctx.translate(canvas.width,-costheta*canvas.oImage.naturalHeight);
 			} else if (theta <= 1.5*Math.PI) {
-				ctx.translate(-costheta*canvas.oImage.width,canvas.height);
+				ctx.translate(-costheta*canvas.oImage.naturalWidth,canvas.height);
 			} else {
-				ctx.translate(0,-sintheta*canvas.oImage.width);
+				ctx.translate(0,-sintheta*canvas.oImage.naturalWidth);
 			}
                 
                         var tmpOriginalPxWidth    = Math.abs(costheta*pImage.originalPxWidth) + Math.abs(sintheta*pImage.originalPxHeight);
@@ -246,8 +246,8 @@ function izImage(oImage) {
 
 		
 			ctx.rotate(theta);
-	        	ctx.clearRect(0, 0, canvas.oImage.width, canvas.oImage.height);
-			ctx.drawImage(canvas.oImage, 0, 0, canvas.oImage.width, canvas.oImage.height);
+	        	ctx.clearRect(0, 0, canvas.oImage.naturalWidth, canvas.oImage.naturalHeight);
+			ctx.drawImage(canvas.oImage, 0, 0, canvas.oImage.naturalWidth, canvas.oImage.naturalHeight);
 			ctx.restore();
 
                         pImage.src = canvas.toDataURL();
