@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom 警告">
 <!ENTITY iz.globalZoomWarning.no.label "否">
 <!ENTITY iz.globalZoomWarning.yes.label "是">
-<!ENTITY iz.globalZoomWarning.WarningText1 "你的 &quot;Image Zoom&quot; 全局縮放設定值未設定為默認的 100&#37;. 這可能">
+<!ENTITY iz.globalZoomWarning.WarningText1 "你的 &quot;Image Zoom&quot; 全局縮放設定值未設定為默認的 100&amp;#37;. 這可能">
 <!ENTITY iz.globalZoomWarning.WarningText2 "導致某些網頁展示不正確, 并且也可能托慢你的瀏覽器">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "你希望重置全局縮放設定為默認值嗎?">
 <!ENTITY iz.globalZoomWarning.disable.label "禁止這條消息">
@@ -91,10 +91,11 @@
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&amp;#xB0;">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

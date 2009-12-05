@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom figyelmeztetés">
 <!ENTITY iz.globalZoomWarning.no.label "Nem">
 <!ENTITY iz.globalZoomWarning.yes.label "Igen">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Az &quot;Image Zoom&quot; általános beállítása nem az alapértelmezett 100&#37;-ra van beállítva.">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Az &quot;Image Zoom&quot; általános beállítása nem az alapértelmezett 100&amp;#37;-ra van beállítva.">
 <!ENTITY iz.globalZoomWarning.WarningText2 "Ez problémát okozhat néhány weboldal megjelenítése során és lelassíthatja a böngészőt is.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Vissza kívánja állítani az nagyítást az alapértelmezett értékre?">
 <!ENTITY iz.globalZoomWarning.disable.label "Többé ne jelenjen meg ez az üzenet">
@@ -95,6 +95,7 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "F">
 <!ENTITY iz.menu.context.imagerotatereset.label "Alapállapot">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "A">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

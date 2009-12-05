@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Kuvansuurennusvaroitus">
 <!ENTITY iz.globalZoomWarning.no.label "Ei">
 <!ENTITY iz.globalZoomWarning.yes.label "Kyllä">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Yleistä suurennusasetusta ei ole asetettu oletusarvoon (100&#37;). Tämä voi johtaa siihen,">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Yleistä suurennusasetusta ei ole asetettu oletusarvoon (100&amp;#37;). Tämä voi johtaa siihen,">
 <!ENTITY iz.globalZoomWarning.WarningText2 "että jotkin verkkosivut taittuvat virheellisesti, ja selain voi hidastua.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Haluatko asettaa yleisen suurennuksen oletusarvoilleen?">
 <!ENTITY iz.globalZoomWarning.disable.label "Poista tämä sanoma käytöstä">
@@ -91,10 +91,11 @@
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&amp;#xB0;">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

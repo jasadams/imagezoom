@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom Uyarısı">
 <!ENTITY iz.globalZoomWarning.no.label "Hayır">
 <!ENTITY iz.globalZoomWarning.yes.label "Evet">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom toplu yakınlaştırma ayarı varsayılan değer olan &#37;100'e ayarlı değil. Bu durum,">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom toplu yakınlaştırma ayarı varsayılan değer olan &amp;#37;100'e ayarlı değil. Bu durum,">
 <!ENTITY iz.globalZoomWarning.WarningText2 "bazı sitelerin yanlış görüntülenmesine ve tarayıcınızın yavaşlamasına neden olabilir.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Toplu yakınlaştırmayı varsayılan değere sıfırlamak ister misiniz?">
 <!ENTITY iz.globalZoomWarning.disable.label "Bu uyarıyı gösterme">
@@ -95,6 +95,7 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "B">
 <!ENTITY iz.menu.context.imagerotatereset.label "Döndürmeyi sıfırla">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "D">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

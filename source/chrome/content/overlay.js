@@ -47,13 +47,8 @@ function initImageZoom() {
 	if (newerVersion(oldVersion,version)) {
 		nsIPrefBranchObj.setCharPref("version", version);
 		try {
-			// try to save the prefs because we don't want to reset the home page if prefs can't be saved
+			// try to save the prefs
 			nsIPrefServiceObj.savePrefFile(null);
-			nsIPrefServiceObj.readUserPrefs(null);
-			if (nsIPrefBranchObj.getCharPref("version") == version)
-			{
-				window.openDialog("chrome://imagezoom/content/install.xul", "", "chrome,centerscreen", oldVersion);
-			}
 
 		} catch(e) {
 			//alert(e);

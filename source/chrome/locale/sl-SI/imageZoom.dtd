@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Opozorilo povečave slike">
 <!ENTITY iz.globalZoomWarning.no.label "Ne">
 <!ENTITY iz.globalZoomWarning.yes.label "Da">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Vaša nastavitev splošne povečave v &quot;Image Zoom&quot; ni nastavljena na privzetih 100&#37;. To lahko">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Vaša nastavitev splošne povečave v &quot;Image Zoom&quot; ni nastavljena na privzetih 100&amp;#37;. To lahko">
 <!ENTITY iz.globalZoomWarning.WarningText2 "povzroči, da se nekatera spletna mesta ne upodobijo pravilno, lahko pa tudi upočasni vaš brskalnik.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Želite ponastaviti splošno povečavo na privzeto vrednost?">
 <!ENTITY iz.globalZoomWarning.disable.label "Onemogoči to sporočilo">
@@ -95,6 +95,7 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Ponastavi sukanje">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">
