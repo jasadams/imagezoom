@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "그림 확대 경고">
 <!ENTITY iz.globalZoomWarning.no.label "아니오">
 <!ENTITY iz.globalZoomWarning.yes.label "예">
-<!ENTITY iz.globalZoomWarning.WarningText1 "'그림 확대'의 일반 확대율이 100&#37;로 설정되어 있지 않습니다.">
+<!ENTITY iz.globalZoomWarning.WarningText1 "'그림 확대'의 일반 확대율이 100&amp;#37;로 설정되어 있지 않습니다.">
 <!ENTITY iz.globalZoomWarning.WarningText2 "이것은 몇몇 웹사이트의 모양이 깨지거나 브라우저를 느려지게 할 수 있습니다.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "정말, 일반 확대율을 기본값으로 되돌리시겠습니까?">
 <!ENTITY iz.globalZoomWarning.disable.label "이 메시지를 더 이상 보이지 않기">

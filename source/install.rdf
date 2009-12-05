@@ -17,35 +17,38 @@
         <em:package>content/</em:package>
         <em:skin>skin/classic/imagezoom/</em:skin>
         <em:skin>skin/fusion/imagezoom/</em:skin>
-        <em:locale>locale/en-US/</em:locale>
-        <em:locale>locale/fr-FR/</em:locale>
-        <em:locale>locale/ja-JP/</em:locale>
-        <em:locale>locale/sl-SI/</em:locale>
-        <em:locale>locale/zh-TW/</em:locale>
-        <em:locale>locale/de-DE/</em:locale>
-        <em:locale>locale/cs-CZ/</em:locale>
-        <em:locale>locale/hu-HU/</em:locale>
-        <em:locale>locale/ko-KR/</em:locale>
-        <em:locale>locale/es-ES/</em:locale>
-        <em:locale>locale/es-AR/</em:locale>         
-        <em:locale>locale/it-IT/</em:locale>                 
-        <em:locale>locale/tr-TR/</em:locale>                 
-        <em:locale>locale/zh-CN/</em:locale>                         
-        <em:locale>locale/pt-BR/</em:locale>                         
-        <em:locale>locale/ru-RU/</em:locale>                         
-        <em:locale>locale/mk-MK/</em:locale>     
-        <em:locale>locale/nl-NL/</em:locale>                         
-	<em:locale>locale/he-IL/</em:locale>     
-	<em:locale>locale/uk-UA/</em:locale>   	
-	<em:locale>locale/ro-RO/</em:locale>   
-	<em:locale>locale/be-BY/</em:locale>   	
-	<em:locale>locale/sv-SE/</em:locale> 
-	<em:locale>locale/fi-FI/</em:locale> 
-	<em:locale>locale/hr-HR/</em:locale> 
-	<em:locale>locale/pl-PL/</em:locale> 
-	<em:locale>locale/sk-SK/</em:locale> 
-	<em:locale>locale/sq-AL/</em:locale> 
-	<em:locale>locale/vi-VN/</em:locale>
+		<em:locale>locale/be-BY/</em:locale>
+		<em:locale>locale/ca-AD/</em:locale>
+		<em:locale>locale/cs-CZ/</em:locale>
+		<em:locale>locale/de-DE/</em:locale>
+		<em:locale>locale/en-US/</em:locale>
+		<em:locale>locale/es-AR/</em:locale>
+		<em:locale>locale/es-ES/</em:locale>
+		<em:locale>locale/fa-IR/</em:locale>
+		<em:locale>locale/fi-FI/</em:locale>
+		<em:locale>locale/fr-FR/</em:locale>
+		<em:locale>locale/ga-IE/</em:locale>
+		<em:locale>locale/he-IL/</em:locale>     
+		<em:locale>locale/hr-HR/</em:locale> 
+		<em:locale>locale/hu-HU/</em:locale>
+		<em:locale>locale/it-IT/</em:locale>                 
+		<em:locale>locale/ja-JP/</em:locale>
+		<em:locale>locale/ko-KR/</em:locale>         
+		<em:locale>locale/mk-MK/</em:locale>     
+		<em:locale>locale/nl-NL/</em:locale>                         
+		<em:locale>locale/pl-PL/</em:locale> 
+		<em:locale>locale/pt-BR/</em:locale>                         
+		<em:locale>locale/ro-RO/</em:locale>   
+		<em:locale>locale/ru-RU/</em:locale>                         
+		<em:locale>locale/sk-SK/</em:locale> 
+		<em:locale>locale/sl-SI/</em:locale>
+		<em:locale>locale/sq-AL/</em:locale> 
+		<em:locale>locale/sv-SE/</em:locale> 
+		<em:locale>locale/tr-TR/</em:locale>                 
+		<em:locale>locale/uk-UA/</em:locale>   	
+		<em:locale>locale/vi-VN/</em:locale>
+		<em:locale>locale/zh-CN/</em:locale>                         
+		<em:locale>locale/zh-TW/</em:locale>
       </Description>
     </em:file>
 

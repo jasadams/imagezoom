@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Предупреждение Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "Нет">
 <!ENTITY iz.globalZoomWarning.yes.label "Да">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Глобальная настройка изменения размера изображений не установлена в значение 100&#37;.">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Глобальная настройка изменения размера изображений не установлена в значение 100&amp;#37;.">
 <!ENTITY iz.globalZoomWarning.WarningText2 "Это может вызвать ошибки на некоторых сайтах и замедлить работу браузера.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Хотите ли вы установить эту настройку по умолчанию?">
 <!ENTITY iz.globalZoomWarning.disable.label "Скрыть это сообщение">

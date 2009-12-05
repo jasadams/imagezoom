@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom varning">
 <!ENTITY iz.globalZoomWarning.no.label "Nej">
 <!ENTITY iz.globalZoomWarning.yes.label "Ja">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Din &quot;Image Zoom&quot; globala zoominställning är inte satt till standardvärdet 100&#37;. Detta kan">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Din &quot;Image Zoom&quot; globala zoominställning är inte satt till standardvärdet 100&amp;#37;. Detta kan">
 <!ENTITY iz.globalZoomWarning.WarningText2 "orsaka att vissa webbplatser renderar på ett felaktigt sätt och göra din webbläsare långsam.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Vill du återställa den globala zoominställningen till sitt standardvärde?">
 <!ENTITY iz.globalZoomWarning.disable.label "Visa inte detta meddelande igen">

@@ -1,0 +1,43 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.4">
+<!ENTITY iz.about.version.label "Leagan">
+<!ENTITY iz.about.createdby.label "Cruthaithe Ag">
+<!ENTITY iz.about.help.label "Cabhair">
+<!ENTITY iz.about.forums.label "Cláir Plé">
+<!ENTITY iz.about.close.label "Dún">
+<!ENTITY iz.install.options.label "Roghanna">
+<!ENTITY iz.install.close.label "Dún">
+<!ENTITY iz.install.continue.label "Lean Ar Aghaidh &gt;&gt;">
+<!ENTITY iz.customdim.width.label "Leithead:">
+<!ENTITY iz.customdim.height.label "Airde:">
+<!ENTITY iz.options.label "Sainroghanna">
+<!ENTITY iz.options.help.label "Leathanach Cabhair">
+<!ENTITY iz.options.tabs.main.label "Coitianta">
+<!ENTITY iz.options.lmb.label "Clé">
+<!ENTITY iz.options.mmb.label "Lár">
+<!ENTITY iz.options.rmb.label "Deas">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "Níos Lú">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "Níos Mó">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.disable.label "Díchumasaigh an teachtaireacht seo">
+<!ENTITY iz.menu.context.zoomimage.label "Zoom Image">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

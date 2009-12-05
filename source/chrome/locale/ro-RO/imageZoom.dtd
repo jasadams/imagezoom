@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Atenționare Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "Nu">
 <!ENTITY iz.globalZoomWarning.yes.label "Da">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Valoarea scalării globale nu este cea implicită, de 100&#37;. S-ar putea ca">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Valoarea scalării globale nu este cea implicită, de 100&amp;#37;. S-ar putea ca">
 <!ENTITY iz.globalZoomWarning.WarningText2 "unele saituri să afişeze imaginea eronat, iar navigatorul să fie încetinit.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Doriți să aduc scalarea globală la valoarea implicită?">
 <!ENTITY iz.globalZoomWarning.disable.label "Nu mai afișa acest mesaj">
@@ -87,14 +87,6 @@
 <!ENTITY iz.menu.context.customzoom.label "Scalare la alegere">
 <!ENTITY iz.menu.context.customdim.label "Dimensiuni la alegere">
 <!ENTITY iz.menu.context.imagefit.label "Potrivește imaginea">
-<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
-<!ENTITY iz.menu.context.rotate.right.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
-<!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&amp;#xB0;">
-<!ENTITY iz.menu.context.rotate.180.accesskey "1">
-<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
-<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

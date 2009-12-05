@@ -72,7 +72,7 @@
 <!ENTITY iz.globalZoomWarning.title "Попередження Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "Ні">
 <!ENTITY iz.globalZoomWarning.yes.label "Так">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Ваші глобальні налаштування розміру зображень «Image Zoom» не встановлено на типове значення 100&#37;. Це може">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Ваші глобальні налаштування розміру зображень «Image Zoom» не встановлено на типове значення 100&amp;#37;. Це може">
 <!ENTITY iz.globalZoomWarning.WarningText2 "спричините неправильне відображення певних веб-сайтів та уповільнити ваш браузер.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Чи хочете ви скинути глобальні налаштування масштабу на типове значення?">
 <!ENTITY iz.globalZoomWarning.disable.label "Прибрати це повідомлення">
