@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "快顯功能表">
 <!ENTITY iz.options.contextdisplay.label "快顯功能表選項">
 <!ENTITY iz.options.tabs.contextmenu.label "快顯功能表項目">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "一般設定">
 <!ENTITY iz.options.reversescroll.label "滾輪方向上下交換">
 <!ENTITY iz.options.autocenter.label "最適縮放後自動置中">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom 警告">
 <!ENTITY iz.globalZoomWarning.no.label "否">
 <!ENTITY iz.globalZoomWarning.yes.label "是">
-<!ENTITY iz.globalZoomWarning.WarningText1 "你的 &quot;Image Zoom&quot; 全局縮放設定值未設定為默認的 100&#37;. 這可能">
+<!ENTITY iz.globalZoomWarning.WarningText1 "你的 &quot;Image Zoom&quot; 全局縮放設定值未設定為默認的 100&amp;#37;. 這可能">
 <!ENTITY iz.globalZoomWarning.WarningText2 "導致某些網頁展示不正確, 并且也可能托慢你的瀏覽器">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "你希望重置全局縮放設定為默認值嗎?">
 <!ENTITY iz.globalZoomWarning.disable.label "禁止這條消息">
@@ -87,11 +89,13 @@
 <!ENTITY iz.menu.context.customzoom.label "自定比例">
 <!ENTITY iz.menu.context.customdim.label "自定大小">
 <!ENTITY iz.menu.context.imagefit.label "最適縮放">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&amp;#xB0;">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">

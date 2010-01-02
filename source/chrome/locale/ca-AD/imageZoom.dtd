@@ -1,0 +1,105 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.4">
+<!ENTITY iz.about.version.label "Versió">
+<!ENTITY iz.about.createdby.label "Creat per:">
+<!ENTITY iz.about.help.label "Ajuda">
+<!ENTITY iz.about.help.description "Ajuda sobre la configuració i la utilització de l'Image Zoom">
+<!ENTITY iz.about.forums.label "Fòrums">
+<!ENTITY iz.about.forums.description "Assistència, suggeriments, informes d'errors">
+<!ENTITY iz.about.walkthrough.label "Guia">
+<!ENTITY iz.about.walkthrough.description "Visió general breu de les funcions de l'Image Zoom">
+<!ENTITY iz.about.close.label "Tanca">
+<!ENTITY iz.install.installed "S'ha instal·lat l'Image Zoom">
+<!ENTITY iz.install.options.label "Opcions">
+<!ENTITY iz.install.close.label "Tanca">
+<!ENTITY iz.install.continue.label "Continua &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Visiteu el lloc web de l'Image Zoom per veure'n la informació més recent,">
+<!ENTITY iz.install.desc.line2 "així com una visió general breu de les totes funcions.">
+<!ENTITY iz.install.desc.line3 "Feu clic a 'Continua' per visitar el lloc web de l'Image Zoom ara">
+<!ENTITY iz.customzoom.label "Factor d'ampliació/reducció">
+<!ENTITY iz.customzoom.title "Zoom personalitzat">
+<!ENTITY iz.customdim.width.label "Amplada:">
+<!ENTITY iz.customdim.height.label "Alçada:">
+<!ENTITY iz.customdim.title "Dimensions personalitzades">
+<!ENTITY iz.customdim.aspect.label "Conserva la relació d'aspecte">
+<!ENTITY iz.options.label "- Preferències">
+<!ENTITY iz.options.help.label "Pàgina d'ajuda">
+<!ENTITY iz.options.defaultzoom.label "Factor d'ampliació/reducció">
+<!ENTITY iz.options.defaultglobalzoom.label "Zoom global per defecte">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Avisa'm si el zoom global no és el mateix que el zoom global per defecte">
+<!ENTITY iz.options.showviewmenu.label "Mostra l'Image Zoom al menú Visualitza">
+<!ENTITY iz.options.showautofit.label "Mostra l'element Ajusta automàticament al menú global">
+<!ENTITY iz.options.defaultscroll.label "Increments del zoom quan s'utilitza la roda de desplaçament del ratolí">
+<!ENTITY iz.options.scrollmode.label "Mode de desplaçament">
+<!ENTITY iz.options.scrollrelative.label "Relatiu">
+<!ENTITY iz.options.scrollabsolute.label "Absolut">
+<!ENTITY iz.options.singlezoom.label "Opcions de zoom individual">
+<!ENTITY iz.options.globalzoom.label "Habilita les funcions de zoom global">
+<!ENTITY iz.options.context.label "Menú contextual">
+<!ENTITY iz.options.contextdisplay.label "Opcions de visualització del menú contextual">
+<!ENTITY iz.options.tabs.contextmenu.label "Elements del menú contextual">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.main.label "General">
+<!ENTITY iz.options.reversescroll.label "Inverteix el desplaçament">
+<!ENTITY iz.options.autocenter.label "Centra automàticament les imatges en utilitzar l'opció d'ajustar la imatge">
+<!ENTITY iz.options.mouseaccess.label1 "Per accedir a les funcions, cal mantenir premut el botó">
+<!ENTITY iz.options.mouseaccess.label2 "del ratolí.">
+<!ENTITY iz.options.imagefit.label "Botó per ajustar la imatge">
+<!ENTITY iz.options.imagereset.label "Botó per reiniciar la imatge">
+<!ENTITY iz.options.none.label "Inhabilitat">
+<!ENTITY iz.options.lmb.label "Esquerre">
+<!ENTITY iz.options.mmb.label "Mig">
+<!ENTITY iz.options.rmb.label "Dret">
+<!ENTITY iz.options.usemouse.label "Utilitza les funcions del ratolí">
+<!ENTITY iz.options.contextdescription.label "Comproveu els elements que voleu que es mostrin al menú contextual de les imatges">
+<!ENTITY iz.options.togglefitreset.label "Commuta entre les opcions d'ajustar/reiniciar la imatge">
+<!ENTITY iz.options.menudummy.view.label "Visualitza la imatge">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Copia la imatge">
+<!ENTITY iz.options.menudummy.contents.accesskey "m">
+<!ENTITY iz.options.menudummy.image.label "Copia la ubicació de la imatge">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Anomena i desa la imatge...">
+<!ENTITY iz.options.menudummy.save.accesskey "a">
+<!ENTITY iz.menu.global.decrease.label "Redueix">
+<!ENTITY iz.menu.global.decrease.accesskey "R">
+<!ENTITY iz.menu.global.increase.label "Amplia">
+<!ENTITY iz.menu.global.increase.accesskey "m">
+<!ENTITY iz.menu.global.custom.accesskey "U">
+<!ENTITY iz.menu.global.textscale.label "Amplia/redueix amb el text">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.global.autofit.label "Ajusta automàticament les imatges">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Avís de l'Image Zoom">
+<!ENTITY iz.globalZoomWarning.no.label "No">
+<!ENTITY iz.globalZoomWarning.yes.label "Sí">
+<!ENTITY iz.globalZoomWarning.WarningText1 "El paràmetre de zoom global de l'Image Zoom no coincideix amb el valor per defecte de 100 &#37;.">
+<!ENTITY iz.globalZoomWarning.WarningText2 "Això pot fer que alguns llocs web no es mostrin correctament i pot alentir el navegador.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Voleu reiniciar el zoom global al valor per defecte?">
+<!ENTITY iz.globalZoomWarning.disable.label "No tornis a mostrar aquest missatge">
+<!ENTITY iz.menu.context.zoomimage.label "Amplia/redueix la imatge">
+<!ENTITY iz.menu.context.zoomimage.accesskey "l">
+<!ENTITY iz.menu.context.increase.label "+ Amplia">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Reinicia el zoom">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Redueix">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Zoom personalitzat">
+<!ENTITY iz.menu.context.customdim.label "Dimensions personalitzades">
+<!ENTITY iz.menu.context.imagefit.label "Ajusta la imatge">
+<!ENTITY iz.menu.context.rotateimage.label "Gira la imatge">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateright.label "Gira a la dreta">
+<!ENTITY iz.menu.context.rotate.right.accesskey "d">
+<!ENTITY iz.menu.context.imagerotateleft.label "Gira a l'esquerra">
+<!ENTITY iz.menu.context.rotate.left.accesskey "e">
+<!ENTITY iz.menu.context.imagerotate180.label "Gira 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Reinicia el gir">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "R">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

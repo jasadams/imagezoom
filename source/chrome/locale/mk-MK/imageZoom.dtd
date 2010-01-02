@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Контекстно мени">
 <!ENTITY iz.options.contextdisplay.label "Подесувања за приказ на контекстното мени">
 <!ENTITY iz.options.tabs.contextmenu.label "Делови на контекстното мени">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Општо">
 <!ENTITY iz.options.reversescroll.label "Обратно вртење (напред)">
 <!ENTITY iz.options.autocenter.label "Центрирај ја сликата при прилагодување">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Предупредување">
 <!ENTITY iz.globalZoomWarning.no.label "Не">
 <!ENTITY iz.globalZoomWarning.yes.label "Да">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Општото зголемување ја нема основната вредност од 100&#37;. Ова може да е причина">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Општото зголемување ја нема основната вредност од 100&amp;#37;. Ова може да е причина">
 <!ENTITY iz.globalZoomWarning.WarningText2 "некои веб страни да се прикажуваат погрешно и да се забави прелистувачот">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Дали сакате да ја вратите основната вредност за општото зголемување?">
 <!ENTITY iz.globalZoomWarning.disable.label "Не ја прикажувај оваа порака">
@@ -87,11 +89,13 @@
 <!ENTITY iz.menu.context.customzoom.label "Степен на зголемување">
 <!ENTITY iz.menu.context.customdim.label "Димензии">
 <!ENTITY iz.menu.context.imagefit.label "Прилагоди ја сликата">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&amp;#xB0;">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">

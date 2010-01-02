@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Context-menu">
 <!ENTITY iz.options.contextdisplay.label "Context-menu opties weergeven">
 <!ENTITY iz.options.tabs.contextmenu.label "Context-menu onderdelen">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Algemeen">
 <!ENTITY iz.options.reversescroll.label "Scroll-richting omkeren">
 <!ENTITY iz.options.autocenter.label "Afbeeldingen automatisch centreren bij gebruik van ImageFit">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom waarschuwing">
 <!ENTITY iz.globalZoomWarning.no.label "Nee">
 <!ENTITY iz.globalZoomWarning.yes.label "Ja">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom algemene zoom instelling is niet ingesteld op de standaard waarde van 100&#37;. Dit kan">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom algemene zoom instelling is niet ingesteld op de standaard waarde van 100&amp;#37;. Dit kan">
 <!ENTITY iz.globalZoomWarning.WarningText2 "het onjuist opbouwen van sommige websites tot gevolg hebben en de browser vertragen.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Algemene zoom herstellen naar de standaard waarde?">
 <!ENTITY iz.globalZoomWarning.disable.label "Deze melding uitschakelen">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Aangepaste zoom">
 <!ENTITY iz.menu.context.customdim.label "Aangepaste afmetingen">
 <!ENTITY iz.menu.context.imagefit.label "ImageFit">
+<!ENTITY iz.menu.context.rotateimage.label "Afbeelding draaien">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rechtsom roteren">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Linksom roteren">

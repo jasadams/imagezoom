@@ -26,7 +26,7 @@
 <!ENTITY iz.options.help.label "Strona pomocy">
 <!ENTITY iz.options.defaultzoom.label "Powiększ/pomniejsz">
 <!ENTITY iz.options.defaultglobalzoom.label "Domyślne przybliżenie">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Ostrzegaj, gdy domyślne powiększenie ma wartość inną niż 100&#37;">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Ostrzegaj, gdy domyślne powiększenie ma wartość inną niż 100&amp;#37;">
 <!ENTITY iz.options.showviewmenu.label "Pokaż Image Zoom w menu &quot;Widok&quot;">
 <!ENTITY iz.options.showautofit.label "Pokaż &quot;Dopasuj rozmiar obrazka&quot; w menu">
 <!ENTITY iz.options.defaultscroll.label "Powiększaj przewijając o">
@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Menu kontekstowe">
 <!ENTITY iz.options.contextdisplay.label "Menu kontekstowe - opcje">
 <!ENTITY iz.options.tabs.contextmenu.label "Elementy menu kontekstowego">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Ogólne">
 <!ENTITY iz.options.reversescroll.label "Przewijaj odwrotnie">
 <!ENTITY iz.options.autocenter.label "Wyśrodkuj obrazy używając funkcji dopasowania wielkości">
@@ -72,9 +74,9 @@
 <!ENTITY iz.globalZoomWarning.title "Ostrzeżenie Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "Nie">
 <!ENTITY iz.globalZoomWarning.yes.label "Tak">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Podstawowe powiększenie Image Zoom nie ma wartości 100&#37;. Może to">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Podstawowe powiększenie Image Zoom nie ma wartości 100&amp;#37;. Może to">
 <!ENTITY iz.globalZoomWarning.WarningText2 "wywołać błędne wyświetlanie stron lub spowolnienie pracy przeglądarki.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Czy chcesz ustawić domyślne powiększenie na 100&#37; ?">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Czy chcesz ustawić domyślne powiększenie na 100&amp;#37; ?">
 <!ENTITY iz.globalZoomWarning.disable.label "Wyłącz tę informację">
 <!ENTITY iz.menu.context.zoomimage.label "Powiększanie obrazka">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
@@ -87,11 +89,13 @@
 <!ENTITY iz.menu.context.customzoom.label "Własne powiększenie">
 <!ENTITY iz.menu.context.customdim.label "Własne rozmiary">
 <!ENTITY iz.menu.context.imagefit.label "Dopasuj obrazek">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180&amp;#xB0;">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">

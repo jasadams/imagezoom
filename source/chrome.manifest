@@ -1,34 +1,40 @@
 overlay chrome://browser/content/browser.xul chrome://imagezoom/content/overlay_firefox.xul
-overlay chrome://messenger/content/mailWindowOverlay.xul chrome://imagezoom/content/overlay_thunderbird.xul
+overlay chrome://navigator/content/navigator.xul chrome://imagezoom/content/overlay_firefox.xul
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://imagezoom/content/overlay_thunderbird.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6} appversion<3.0
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://imagezoom/content/overlay_thunderbird_tb3.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6} appversion>=3.0
+overlay chrome://messenger/content/mailWindowOverlay.xul chrome://imagezoom/content/overlay_thunderbird_tb3.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
 content imagezoom jar:chrome/imagezoom.jar!/content/
-locale imagezoom en-US jar:chrome/imagezoom.jar!/locale/en-US/
-locale imagezoom fr-FR jar:chrome/imagezoom.jar!/locale/fr-FR/
-locale imagezoom sl-SI jar:chrome/imagezoom.jar!/locale/sl-SI/
-locale imagezoom zh-TW jar:chrome/imagezoom.jar!/locale/zh-TW/
-locale imagezoom ja-JP jar:chrome/imagezoom.jar!/locale/ja-JP/
-locale imagezoom de-DE jar:chrome/imagezoom.jar!/locale/de-DE/
+locale imagezoom be-BY jar:chrome/imagezoom.jar!/locale/be-BY/
+locale imagezoom ca-AD jar:chrome/imagezoom.jar!/locale/ca-AD/
 locale imagezoom cs-CZ jar:chrome/imagezoom.jar!/locale/cs-CZ/
-locale imagezoom hu-HU jar:chrome/imagezoom.jar!/locale/hu-HU/
-locale imagezoom ko-KR jar:chrome/imagezoom.jar!/locale/ko-KR/
-locale imagezoom es-ES jar:chrome/imagezoom.jar!/locale/es-ES/
+locale imagezoom de-DE jar:chrome/imagezoom.jar!/locale/de-DE/
+locale imagezoom en-US jar:chrome/imagezoom.jar!/locale/en-US/
 locale imagezoom es-AR jar:chrome/imagezoom.jar!/locale/es-AR/
+locale imagezoom es-ES jar:chrome/imagezoom.jar!/locale/es-ES/
+locale imagezoom fa-IR jar:chrome/imagezoom.jar!/locale/fa-IR/
+locale imagezoom fi-FI jar:chrome/imagezoom.jar!/locale/fi-FI/
+locale imagezoom fr jar:chrome/imagezoom.jar!/locale/fr/
+locale imagezoom ga-IE jar:chrome/imagezoom.jar!/locale/ga-IE/
+locale imagezoom he-IL jar:chrome/imagezoom.jar!/locale/he-IL/
+locale imagezoom hr-HR jar:chrome/imagezoom.jar!/locale/hr-HR/
+locale imagezoom hu-HU jar:chrome/imagezoom.jar!/locale/hu-HU/
 locale imagezoom it-IT jar:chrome/imagezoom.jar!/locale/it-IT/
-locale imagezoom tr-TR jar:chrome/imagezoom.jar!/locale/tr-TR/
-locale imagezoom zh-CN jar:chrome/imagezoom.jar!/locale/zh-CN/
-locale imagezoom pt-BR jar:chrome/imagezoom.jar!/locale/pt-BR/
-locale imagezoom ru-RU jar:chrome/imagezoom.jar!/locale/ru-RU/
+locale imagezoom ja-JP jar:chrome/imagezoom.jar!/locale/ja-JP/
+locale imagezoom ko-KR jar:chrome/imagezoom.jar!/locale/ko-KR/
 locale imagezoom mk-MK jar:chrome/imagezoom.jar!/locale/mk-MK/
 locale imagezoom nl-NL jar:chrome/imagezoom.jar!/locale/nl-NL/
-locale imagezoom he-IL jar:chrome/imagezoom.jar!/locale/he-IL/
-locale imagezoom uk-UA jar:chrome/imagezoom.jar!/locale/uk-UA/
-locale imagezoom ro-RO jar:chrome/imagezoom.jar!/locale/ro-RO/
-locale imagezoom be-BY jar:chrome/imagezoom.jar!/locale/be-BY/
-locale imagezoom sv-SE jar:chrome/imagezoom.jar!/locale/sv-SE/
-locale imagezoom fi-FI jar:chrome/imagezoom.jar!/locale/fi-FI/
-locale imagezoom hr-HR jar:chrome/imagezoom.jar!/locale/hr-HR/
 locale imagezoom pl-PL jar:chrome/imagezoom.jar!/locale/pl-PL/
+locale imagezoom pt-BR jar:chrome/imagezoom.jar!/locale/pt-BR/
+locale imagezoom ro-RO jar:chrome/imagezoom.jar!/locale/ro-RO/
+locale imagezoom ru-RU jar:chrome/imagezoom.jar!/locale/ru-RU/
 locale imagezoom sk-SK jar:chrome/imagezoom.jar!/locale/sk-SK/
-locale imagezoom vi-VN jar:chrome/imagezoom.jar!/locale/vi-VN/
+locale imagezoom sl-SI jar:chrome/imagezoom.jar!/locale/sl-SI/
 locale imagezoom sq-AL jar:chrome/imagezoom.jar!/locale/sq-AL/
+locale imagezoom sv-SE jar:chrome/imagezoom.jar!/locale/sv-SE/
+locale imagezoom tr-TR jar:chrome/imagezoom.jar!/locale/tr-TR/
+locale imagezoom uk-UA jar:chrome/imagezoom.jar!/locale/uk-UA/
+locale imagezoom vi-VN jar:chrome/imagezoom.jar!/locale/vi-VN/
+locale imagezoom zh-CN jar:chrome/imagezoom.jar!/locale/zh-CN/
+locale imagezoom zh-TW jar:chrome/imagezoom.jar!/locale/zh-TW/
 skin imagezoom classic jar:chrome/imagezoom.jar!/skin/classic/imagezoom/
 skin imagezoom fusion jar:chrome/imagezoom.jar!/skin/fusion/imagezoom/

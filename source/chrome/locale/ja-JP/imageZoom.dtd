@@ -16,7 +16,7 @@
 <!ENTITY iz.install.desc.line1 "あなたが Imaze Zoom を最大限に活用するのを助けるために">
 <!ENTITY iz.install.desc.line2 "Imaze Zoom のホームページにはこの拡張機能のチュートリアル(英語)が用意されています。">
 <!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は '続ける' をクリックしてください。">
-<!ENTITY iz.customzoom.label "画像の拡大/縮小率(&#37;)を入力">
+<!ENTITY iz.customzoom.label "画像の拡大/縮小率(&amp;#37;)を入力">
 <!ENTITY iz.customzoom.title "画像の拡大/縮小">
 <!ENTITY iz.customdim.width.label "横幅:">
 <!ENTITY iz.customdim.height.label "高さ:">
@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "コンテキストメニュー">
 <!ENTITY iz.options.contextdisplay.label "コンテキストメニュー 表示オプション">
 <!ENTITY iz.options.tabs.contextmenu.label "コンテキストメニューの項目">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "全般">
 <!ENTITY iz.options.reversescroll.label "スクロールの反転">
 <!ENTITY iz.options.autocenter.label "ウィンドウに合わせて表示するさいに自動的に中央に寄せる">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Image Zoom の警告表示">
 <!ENTITY iz.globalZoomWarning.no.label "いいえ">
 <!ENTITY iz.globalZoomWarning.yes.label "はい">
-<!ENTITY iz.globalZoomWarning.WarningText1 "&quot;Image Zoom&quot; のグローバルズームの設定は デフォルトの値(100&#37;)に設定されていません。">
+<!ENTITY iz.globalZoomWarning.WarningText1 "&quot;Image Zoom&quot; のグローバルズームの設定は デフォルトの値(100&amp;#37;)に設定されていません。">
 <!ENTITY iz.globalZoomWarning.WarningText2 "この状態で Web ページを表示すると、表示が崩れたりブラウザの速度を遅くする可能性があります。">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "グローバルズームを初期値にリセットしてもよろしいですか?">
 <!ENTITY iz.globalZoomWarning.disable.label "このメッセージを表示しない">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "数値を入力して拡大/縮小">
 <!ENTITY iz.menu.context.customdim.label "数値を入力してサイズの変更">
 <!ENTITY iz.menu.context.imagefit.label "ウィンドウに合わせる">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "右方向へ回転">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "左方向へ回転">

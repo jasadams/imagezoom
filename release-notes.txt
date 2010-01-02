@@ -1,3 +1,5 @@
-Added Image Rotate Functions - Firefox only
-Removed support for Flock, Netscape, Seamonkey, Mozilla
-Added sq-AL, vi-VN locales
+Removed Global Zoom Options - Now part of Firefox/Thunderbird natively
+Compatibility with Thunderbird 3.0 / Firefox 3.6
+Mac OSX minor bug fixes
+Added Seamonkey 2.0 Support
+Revised Image Rotation Menu Item Locations

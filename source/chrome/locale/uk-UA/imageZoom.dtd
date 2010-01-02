@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Контекстне меню">
 <!ENTITY iz.options.contextdisplay.label "Відображення Контекстного меню">
 <!ENTITY iz.options.tabs.contextmenu.label "Пункти контекстного меню">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Основні">
 <!ENTITY iz.options.reversescroll.label "Реверс колеса миші">
 <!ENTITY iz.options.autocenter.label "Автоцетрування зображення при Розтягуванні на весь екран">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Попередження Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "Ні">
 <!ENTITY iz.globalZoomWarning.yes.label "Так">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Ваші глобальні налаштування розміру зображень «Image Zoom» не встановлено на типове значення 100&#37;. Це може">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Ваші глобальні налаштування розміру зображень «Image Zoom» не встановлено на типове значення 100&amp;#37;. Це може">
 <!ENTITY iz.globalZoomWarning.WarningText2 "спричините неправильне відображення певних веб-сайтів та уповільнити ваш браузер.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Чи хочете ви скинути глобальні налаштування масштабу на типове значення?">
 <!ENTITY iz.globalZoomWarning.disable.label "Прибрати це повідомлення">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Особлива зміна">
 <!ENTITY iz.menu.context.customdim.label "Особливі розміри">
 <!ENTITY iz.menu.context.imagefit.label "На весь екран">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Повернути праворуч">
 <!ENTITY iz.menu.context.rotate.right.accesskey "п">
 <!ENTITY iz.menu.context.imagerotateleft.label "Повернути ліворуч">

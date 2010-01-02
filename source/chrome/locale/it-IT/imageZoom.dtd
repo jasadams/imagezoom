@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Menu contestuale">
 <!ENTITY iz.options.contextdisplay.label "Opzioni di visualizzazione del menu contestuale">
 <!ENTITY iz.options.tabs.contextmenu.label "Oggetti del menu contestuale">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Generale">
 <!ENTITY iz.options.reversescroll.label "Inverti scorrimento">
 <!ENTITY iz.options.autocenter.label "Centra automaticamente l'immagine quando si adattano le dimensioni">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Avviso di Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "No">
 <!ENTITY iz.globalZoomWarning.yes.label "Si">
-<!ENTITY iz.globalZoomWarning.WarningText1 "L'impostazione di zoom globale non sono è al suo valore predefinito del 100&#37;. Ciò potrebbe">
+<!ENTITY iz.globalZoomWarning.WarningText1 "L'impostazione di zoom globale non sono è al suo valore predefinito del 100&amp;#37;. Ciò potrebbe">
 <!ENTITY iz.globalZoomWarning.WarningText2 "inficiare la corretta visualizzazione di alcuni siti web e rallentare la velocità di caricamento.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Impostare lo zoom globale al valore predefinito?">
 <!ENTITY iz.globalZoomWarning.disable.label "Disattiva questo messaggio">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Personalizza zoom">
 <!ENTITY iz.menu.context.customdim.label "Dimensioni personalizzate">
 <!ENTITY iz.menu.context.imagefit.label "Adatta immagine">
+<!ENTITY iz.menu.context.rotateimage.label "Ruota immagine">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Ruota a destra">
 <!ENTITY iz.menu.context.rotate.right.accesskey "D">
 <!ENTITY iz.menu.context.imagerotateleft.label "Ruota a sinistra">

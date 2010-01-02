@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Menu de Contexto">
 <!ENTITY iz.options.contextdisplay.label "Opções de Exibição do Menu de Contexo">
 <!ENTITY iz.options.tabs.contextmenu.label "Itens do Menu de Contexo">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Geral">
 <!ENTITY iz.options.reversescroll.label "Rolagem Reversa">
 <!ENTITY iz.options.autocenter.label "Auto Centralizar quando usar o Ajuste de Imagem na Tela">
@@ -72,7 +74,7 @@
 <!ENTITY iz.globalZoomWarning.title "Aviso Image Zoom">
 <!ENTITY iz.globalZoomWarning.no.label "Não">
 <!ENTITY iz.globalZoomWarning.yes.label "Sim">
-<!ENTITY iz.globalZoomWarning.WarningText1 "O &quot;Image Zoom&quot; não esta com o valor padrão de 100&#37;. Isto pode">
+<!ENTITY iz.globalZoomWarning.WarningText1 "O &quot;Image Zoom&quot; não esta com o valor padrão de 100&amp;#37;. Isto pode">
 <!ENTITY iz.globalZoomWarning.WarningText2 "causar a incorreta vizualização de alguns sites e tornar lento o seu navegador.">
 <!ENTITY iz.globalZoomWarning.WarningQuestion "Gostaria de voltar para o valor padrão?">
 <!ENTITY iz.globalZoomWarning.disable.label "Desabilitar esta mensagem">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
 <!ENTITY iz.menu.context.customdim.label "Dimensões personalizadas">
 <!ENTITY iz.menu.context.imagefit.label "Ajustar Imagem">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotacionar à direita">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotacionar à esquerda">
