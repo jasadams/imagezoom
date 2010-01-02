@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- ***** BEGIN LICENSE BLOCK *****
 
-    Copyright (c) 2006  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
 
     This file is part of Image Zoom.
 
@@ -25,73 +25,12 @@
     	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     	
     <script type="application/x-javascript" src="chrome://imagezoom/content/izImage.js"/>
-    <script type="application/x-javascript" src="chrome://imagezoom/content/ZoomImageManager.js"/>
     <script type="application/x-javascript" src="chrome://imagezoom/content/overlay.js"/>
     <script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
 
   <stringbundleset id="stringbundleset">
     <stringbundle id="bundle_ImageZoom" src="chrome://imagezoom/locale/imageZoom.properties"/>
   </stringbundleset>
-
-  <commandset id="mainCommandSet">
-    <command id="cmd_imageZoomToggleAutoFit"  oncommand="ZoomImageManager.prototype.getInstance().toggleAutoFit();"/>
-    <command id="cmd_imageZoomReduce"  oncommand="ZoomImageManager.prototype.getInstance().decrease();"/>
-    <command id="cmd_imageZoomEnlarge" oncommand="ZoomImageManager.prototype.getInstance().increase();"/>
-    <command id="cmd_imageZoomReset" oncommand="ZoomImageManager.prototype.getInstance().reset();"/>
-    <command id="cmd_imageZoomTextScale" oncommand="ZoomImageManager.prototype.getInstance().textScale = true;"/>
-  </commandset>
-  <keyset id="mainKeyset">
-    <key id="key_imageZoomReduce"  key="&iz.command.reduce.commandkey;"   command="cmd_imageZoomReduce"  modifiers="accel"/>
-    <key id="key_imageZoomEnlarge" key="&iz.command.enlarge.commandkey;"  command="cmd_imageZoomEnlarge" modifiers="accel"/>
-    <key id="key_imageZoomReset"   key="&iz.command.reset.commandkey;"    command="cmd_imageZoomReset"   modifiers="accel"/>
-    <key id="key_imageZoomTextScale"   key="&iz.command.textscale.commandkey;"    command="cmd_imageZoomTextScale"   modifiers="accel"/>
-  </keyset>
-	<menupopup id="menu_viewPopup">
-		<menu id="menu_ImageZoomMain" position="9" hidden="true">
-		  <menupopup id="menu_imageZoomPopup" onpopupshowing="updateImageZoomMenu();">
-		  	<menuitem id="zoommain-autofit"
-		  		hidden="true"
-		  		type="checkbox"
-		  		label="&iz.menu.global.autofit.label;"
-		  		accesskey="&iz.menu.global.autofit.accesskey;"
-		  		command="cmd_imageZoomToggleAutoFit"
-			/>
-			<menuseparator id="zoommain-autofit-separator" hidden="true"/>
-			<menuitem id="zoommain-decrease"
-				key="key_imageZoomReduce"
-				label="&iz.menu.global.decrease.label;"
-				accesskey="&iz.menu.global.decrease.accesskey;"
-				command="cmd_imageZoomReduce"
-			/>
-			<menuitem id="zoommain-increase"
-				key="key_imageZoomEnlarge"
-				label="&iz.menu.global.increase.label;"
-				accesskey="&iz.menu.global.increase.accesskey;"
-				command="cmd_imageZoomEnlarge"
-			/>
-			<menuseparator/>
-			<menuseparator id="menu_imageZoomInsertBefore"
-			/>
-			<menuitem id="zoommain-custom"
-				type="radio"
-				accesskey="&iz.menu.global.custom.accesskey;"
-				oncommand="izShowCustomZoomPage();"
-				name="imageZoom"
-			/>
-			<menuseparator id="zoommain-s3"
-			/>
-			<menuitem id="zoommain-scaleText"
-				key="key_imageZoomTextScale"
-				label="&iz.menu.global.textscale.label;"
-				type="radio"
-				accesskey="&iz.menu.global.textscale.accesskey;"
-				command="cmd_imageZoomTextScale"
-				value="text"
-				name="imageZoom"
-			/>
-		  </menupopup>
-		</menu>
-	</menupopup>
 
 	<popup id="contentAreaContextMenu">
 			<menuitem id="context-zoom-zin"
@@ -184,34 +123,7 @@
 			/>
 			<menuseparator id="zoomsub-s1"
 				hidden="true"
-			/>
-			<menuitem id="zoomsub-rotate-right"
-				label="&iz.menu.context.imagerotateright.label;"
-				accesskey="&iz.menu.context.rotate.right.accesskey;"
-				oncommand="izRotateRight();"
-				hidden="true"
-			/>
-			<menuitem id="zoomsub-rotate-left"
-				label="&iz.menu.context.imagerotateleft.label;"
-				accesskey="&iz.menu.context.rotate.left.accesskey;"
-				oncommand="izRotateLeft();"
-				hidden="true"
-			/>	
-			<menuitem id="zoomsub-rotate-180"
-				label="&iz.menu.context.imagerotate180.label;"
-				accesskey="&iz.menu.context.rotate.180.accesskey;"
-				oncommand="izRotate180();"
-				hidden="true"
-			/>	
-			<menuitem id="zoomsub-rotate-reset"
-				label="&iz.menu.context.imagerotatereset.label;"
-				accesskey="&iz.menu.context.rotate.reset.accesskey;"
-				oncommand="izRotateReset();"
-				hidden="true"
-			/>				
-			<menuseparator id="zoomsub-s2"
-				hidden="true"
-			/>			
+			/>		
 			<menuitem id="zoomsub-zcustom"
 				label="&iz.menu.context.customzoom.label;"
 				oncommand="izShowCustomZoom();"
@@ -222,7 +134,7 @@
 				oncommand="izShowCustomDim();"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s3"
+			<menuseparator id="zoomsub-s2"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-fit"
@@ -230,7 +142,7 @@
 				oncommand="izImageFit();"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s4"
+			<menuseparator id="zoomsub-s3"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z400"
@@ -253,7 +165,7 @@
 				oncommand="izSetZoom(125);"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s5"
+			<menuseparator id="zoomsub-s4"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z100"
@@ -261,7 +173,7 @@
 				oncommand="izSetZoom(100);"
 				hidden="true"
 			/>
-			<menuseparator id="zoomsub-s6"
+			<menuseparator id="zoomsub-s5"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z75"
@@ -286,5 +198,38 @@
 			/>
         	  </menupopup>
         	</menu>
+			<menu id="context-rotatesub"
+				label="&iz.menu.context.rotateimage.label;"
+				accesskey="&iz.menu.context.rotateimage.accesskey;"
+				insertbefore="context-sep-copyimage"
+				hidden="true"
+			>
+	        	  <menupopup id="rotatepopup">
+				<menuitem id="rotatesub-rotate-right"
+					label="&iz.menu.context.imagerotateright.label;"
+					accesskey="&iz.menu.context.rotate.right.accesskey;"
+					oncommand="izRotateRight();"
+					hidden="true"
+				/>
+				<menuitem id="rotatesub-rotate-left"
+					label="&iz.menu.context.imagerotateleft.label;"
+					accesskey="&iz.menu.context.rotate.left.accesskey;"
+					oncommand="izRotateLeft();"
+					hidden="true"
+				/>	
+				<menuitem id="rotatesub-rotate-180"
+					label="&iz.menu.context.imagerotate180.label;"
+					accesskey="&iz.menu.context.rotate.180.accesskey;"
+					oncommand="izRotate180();"
+					hidden="true"
+				/>	
+				<menuitem id="rotatesub-rotate-reset"
+					label="&iz.menu.context.imagerotatereset.label;"
+					accesskey="&iz.menu.context.rotate.reset.accesskey;"
+					oncommand="izRotateReset();"
+					hidden="true"
+				/>
+	        	  </menupopup>
+	        	</menu>
 	</popup> 
 </overlay>

@@ -1,7 +1,7 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 /* ***** BEGIN LICENSE BLOCK *****
        
-    Copyright (c) 2004  Jason Adams <jason_nospam@yellowgorilla.net>
+    Copyright (c) 2004-2010  Jason Adams <imagezoom@yellowgorilla.net>
      
     This file is part of Image Zoom.
 
@@ -51,7 +51,7 @@
 	-moz-box-orient: vertical;
 }
 
-#submenu {
+#submenu, #subrotatemenu {
   	border: 2px solid;
   	-moz-border-top-colors: ThreeDLightShadow ThreeDHighlight;
   	-moz-border-right-colors: ThreeDDarkShadow ThreeDShadow;
@@ -76,6 +76,7 @@ checkbox {
 .dummy {
 	margin-left:4px;
 	margin-right:2px;
+	opacity:1;
 }
 
 .right-arrow {
@@ -151,3 +152,4 @@ checkbox {
 #install-notice {
   font-size: small;
 }
+

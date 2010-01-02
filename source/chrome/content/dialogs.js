@@ -1,6 +1,6 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
-    Copyright (c) 2006  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
 
     This file is part of Image Zoom.
 

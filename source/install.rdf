@@ -4,7 +4,7 @@
   
     <em:id>{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}</em:id>
     <em:name>Image Zoom</em:name>
-    <em:version>0.4</em:version>
+    <em:version>0.4.1</em:version>
     <em:description>Adds zoom functionality for images</em:description>
     <em:creator>Jason Adams</em:creator>
     <em:homepageURL>http://imagezoom.yellowgorilla.net/</em:homepageURL>
@@ -26,6 +26,7 @@
 		<em:locale>locale/es-ES/</em:locale>
 		<em:locale>locale/fa-IR/</em:locale>
 		<em:locale>locale/fi-FI/</em:locale>
+		<em:locale>locale/fr/</em:locale>
 		<em:locale>locale/fr-FR/</em:locale>
 		<em:locale>locale/ga-IE/</em:locale>
 		<em:locale>locale/he-IL/</em:locale>     
@@ -57,7 +58,7 @@
      <Description>
        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
        <em:minVersion>3.0</em:minVersion>
-       <em:maxVersion>3.5.*</em:maxVersion>
+       <em:maxVersion>3.6.*</em:maxVersion>
      </Description>
     </em:targetApplication>    
 
@@ -66,10 +67,17 @@
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>2.0</em:minVersion>
-        <em:maxVersion>2.0.0.*</em:maxVersion>
+        <em:maxVersion>3.0.*</em:maxVersion>
       </Description>
     </em:targetApplication>   
-    
+  <!-- SeaMonkey -->
+    <em:targetApplication>
+  	  <Description>
+        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
+        <em:minVersion>2.0</em:minVersion>
+        <em:maxVersion>2.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>       
   </Description>      
 </RDF>
 

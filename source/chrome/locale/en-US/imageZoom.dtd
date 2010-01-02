@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Context Menu">
 <!ENTITY iz.options.contextdisplay.label "Context Menu Display Options">
 <!ENTITY iz.options.tabs.contextmenu.label "Context Menu Items">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "General">
 <!ENTITY iz.options.reversescroll.label "Reverse Scroll">
 <!ENTITY iz.options.autocenter.label "Auto Center Images when using Image Fit">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Custom Zoom">
 <!ENTITY iz.menu.context.customdim.label "Custom Dimensions">
 <!ENTITY iz.menu.context.imagefit.label "Image Fit">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">

@@ -8,6 +8,11 @@ function isThunderbird() {
 	return (navigator.userAgent.search(/Thunderbird/gi) != -1);
 }
 
+function getGeckoVersion(){
+	var gVersion = navigator.userAgent.match(/rv\:.*\)/i).toString();
+	return gVersion.substring(3, gVersion.length - 1);
+}
+
 function isMozilla() {
 	return (!isFirefox() && !isThunderbird());
 }
@@ -35,21 +40,6 @@ function openURL(aURL)
 								  .getService(Components.interfaces.nsIExternalProtocolService);
 		protocolSvc.loadUrl(uri);
 	}
-}
-
-function initInstall() {
-	var bundle = document.getElementById("bundle_ImageZoom");
-	var oldversion = window.arguments[0];
-	var label = document.getElementById("install-notice");
-	if (oldversion == "0.0.0")
-		var strNotice = "iz.install.new.notice";
-	else
-		var strNotice = "iz.install.upgrade.notice"
-
-	label.setAttribute("value", bundle.getString(strNotice).replace(/%version%/, getAppVersion()));
-
-	var continueURL = "http://imagezoom.yellowgorilla.net/install/?old=" + oldversion + "&new=" + getAppVersion();
-	document.getElementById("continue").setAttribute("oncommand", "openURL(\"" + continueURL + "\"); window.close();");
 }
 
 function getAppName() {
@@ -113,18 +103,4 @@ function initAbout()
 	document.title = extName + " " + extVersion;
 	var versionlabel = document.getElementById("versionlabel");
 	versionlabel.setAttribute("value", versionlabel.getAttribute("value") + " " + extVersion);
-}
-
-
-function setDefaultGlobalZoom()
-{
-	ImageZoomManager.prototype.resetAllTabs();
-}
-
-function disableGlobalZoomWarning(izCheck)
-{
-	// Preference Service objects
-	var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-	var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
-	nsIPrefBranchObj.setBoolPref("globalZoomWarning", !izCheck.checked)
 }

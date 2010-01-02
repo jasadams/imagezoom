@@ -1,6 +1,6 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
-    Copyright (c) 2006  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
 
     This file is part of Image Zoom.
 
@@ -58,7 +58,7 @@ function optionCache () {
 }
 
 // Context Menu Items and their option equivalents
-if (isThunderbird())
+if (getGeckoVersion() < "1.9")
 {
 	var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
 	var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","smZoomIO","smZoomIO","smReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
@@ -74,25 +74,6 @@ var MenuOptions = new optionCache();
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
 var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
 
-// Initialise function for the options in Mozilla only
-function init(){
-
-	try {
-		setDisableAllChildren(document.getElementById('mouseoptions'), !document.getElementById("imagezoomusemouseoptions").checked);
-		setDisableAllChildren(document.getElementById('globalOptions'), !document.getElementById("imagezoomshowviewmenu").checked);
-	} catch(e) {
-		// do nothing
-	}
-
-    	try {
-		for (var i=0;i<MenuItems.length;i++) {
-			MenuOptions.setOption(OptionItems[i], nsIPrefBranchObj.getBoolPref(OptionItems[i]));
-		}
-		setImageZoomMenu();
-	} catch(e) {
-		// do nothing
-	}
-}
 
 // Save options for Firefox and Thunderbird
 function imagezoom_saveOptions()
@@ -118,10 +99,7 @@ function imagezoom_saveOptions()
     nsIPrefBranchObj.setBoolPref("toggleFitReset", document.getElementById("imagezoomtogglefitreset").checked);
 
     nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
-
-    nsIPrefBranchObj.setBoolPref("showViewMenu", document.getElementById("imagezoomshowviewmenu").checked);
-    nsIPrefBranchObj.setBoolPref("showAutoFitInMenu", document.getElementById("imagezoomshowautofit").checked);    
-    nsIPrefBranchObj.setBoolPref("globalZoomWarning", document.getElementById("imagezoomglobalzoomwarning").checked);    
+    
 }
 
 function validateOptions(){
@@ -144,7 +122,6 @@ function imagezoom_initializeOptions()
 {
 
     document.getElementById("imagezoomusemouseoptions").checked = nsIPrefBranchObj.getBoolPref("usescroll");
-    document.getElementById("imagezoomshowviewmenu").checked = nsIPrefBranchObj.getBoolPref("showViewMenu");
     
     var scroll = nsIPrefBranchObj.getIntPref("scrollvalue");
     var scrollValueBox = document.getElementById("imagezoomscrollvalue");
@@ -170,25 +147,19 @@ function imagezoom_initializeOptions()
     var zoomValueBox = document.getElementById("imagezoomzoomvalue");
     zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute( "value", zoom )[0];
 
-    document.getElementById("imagezoomshowautofit").checked = nsIPrefBranchObj.getBoolPref("showAutoFitInMenu");
     document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
     document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
     document.getElementById("imagezoomtogglefitreset").checked = nsIPrefBranchObj.getBoolPref("toggleFitReset");
-    document.getElementById("imagezoomglobalzoomwarning").checked = nsIPrefBranchObj.getBoolPref("globalZoomWarning");
 
 	for (var i=0;i<MenuItems.length;i++) {
 		MenuOptions.setOption(OptionItems[i], nsIPrefBranchObj.getBoolPref(OptionItems[i]));
 		document.getElementById(MenuItems[i]).setAttribute("hidden" ,false);
 	}
-	
-	if (isFirefox())
-	{
-		document.getElementById("rotateseparator").setAttribute("hidden" ,false);
-	}
 
 	setDisableAllChildren(document.getElementById('mouseoptions'), !document.getElementById("imagezoomusemouseoptions").checked);
-	setDisableAllChildren(document.getElementById('globalOptions'), !document.getElementById("imagezoomshowviewmenu").checked);
 
+	document.getElementById('rotateTab').setAttribute("hidden", (getGeckoVersion() < "1.9"));
+	
     setImageZoomMenu();
 }
 
@@ -203,10 +174,10 @@ function setImageZoomMenu() {
 		document.getElementById(MenuItems[i]).setAttribute("checked", MenuOptions.getOption(OptionItems[i]));
 	}
 	// Show the Zoom Image container if there are subitems visible, else hide
-	if (document.getElementById("submenu").getElementsByAttribute("checked", true).length > 0)
-		document.getElementById("context-zoomsub").checked = true;
+	if (document.getElementById("subrotatemenu").getElementsByAttribute("checked", true).length > 0)
+		document.getElementById("context-rotatesub").checked = true;
 	else
-		document.getElementById("context-zoomsub").checked = false;
+		document.getElementById("context-rotatesub").checked = false;
 }
 
 function setPreference(izCheck){
@@ -234,6 +205,16 @@ function toggleSubMenu() {
 	var checkboxes = document.getElementById("submenu").getElementsByTagName("checkbox");
 	for (var i=0; i<checkboxes.length; i++){
 		checkboxes[i].checked = document.getElementById("context-zoomsub").checked;
+		setPreference(checkboxes[i]);
+	}
+	setImageZoomMenu();
+}
+
+
+function toggleRotateMenu() {
+	var checkboxes = document.getElementById("subrotatemenu").getElementsByTagName("checkbox");
+	for (var i=0; i<checkboxes.length; i++){
+		checkboxes[i].checked = document.getElementById("context-rotatesub").checked;
 		setPreference(checkboxes[i]);
 	}
 	setImageZoomMenu();
