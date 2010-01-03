@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Kontextmenü">
 <!ENTITY iz.options.contextdisplay.label "Anzeigeoptionen für das Kontextmenü">
 <!ENTITY iz.options.tabs.contextmenu.label "Kontextmenü">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Allgemein">
 <!ENTITY iz.options.reversescroll.label "Scrollrichtung umkehren">
 <!ENTITY iz.options.autocenter.label "Grafik beim Anpassen an die Fenstergröße automatisch zentrieren">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Benutzerdefinierter Zoom">
 <!ENTITY iz.menu.context.customdim.label "Benutzerdefinierte Maße">
 <!ENTITY iz.menu.context.imagefit.label "Grafik an Fenstergröße anpassen">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Nach Rechts drehen">
 <!ENTITY iz.menu.context.rotate.right.accesskey "r">
 <!ENTITY iz.menu.context.imagerotateleft.label "Nach Links drehen">

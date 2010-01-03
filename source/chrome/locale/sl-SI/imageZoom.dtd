@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Kontekstni meni">
 <!ENTITY iz.options.contextdisplay.label "Možnosti prikaza v kontekstnem meniju">
 <!ENTITY iz.options.tabs.contextmenu.label "Možnosti kontekstnega menija">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Splošno">
 <!ENTITY iz.options.reversescroll.label "Drsenje naprej">
 <!ENTITY iz.options.autocenter.label "Samodejno postavi slike na sredino pri povečavi Na velikost okna">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Odstotek ...">
 <!ENTITY iz.menu.context.customdim.label "Mere ...">
 <!ENTITY iz.menu.context.imagefit.label "Na velikost okna">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Zasukaj desno">
 <!ENTITY iz.menu.context.rotate.right.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateleft.label "Zasukaj levo">

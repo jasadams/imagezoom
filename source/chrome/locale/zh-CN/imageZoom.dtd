@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "右健菜单">
 <!ENTITY iz.options.contextdisplay.label "右健菜单显示选项">
 <!ENTITY iz.options.tabs.contextmenu.label "右健菜单项">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "常规">
 <!ENTITY iz.options.reversescroll.label "反转滚动方向">
 <!ENTITY iz.options.autocenter.label "使用适度缩放功能时居中图片">
@@ -87,6 +89,16 @@
 <!ENTITY iz.menu.context.customzoom.label "自定义缩放">
 <!ENTITY iz.menu.context.customdim.label "自定义尺寸">
 <!ENTITY iz.menu.context.imagefit.label "适度缩放">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

@@ -1,0 +1,105 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.4">
+<!ENTITY iz.about.version.label "Version">
+<!ENTITY iz.about.createdby.label "Created By">
+<!ENTITY iz.about.help.label "Help">
+<!ENTITY iz.about.help.description "Help configuring and using Image Zoom">
+<!ENTITY iz.about.forums.label "Forums">
+<!ENTITY iz.about.forums.description "Support, Suggestions, Bugs">
+<!ENTITY iz.about.walkthrough.label "Walkthrough">
+<!ENTITY iz.about.walkthrough.description "Brief overview of Image Zoom features">
+<!ENTITY iz.about.close.label "Close">
+<!ENTITY iz.install.installed "Image Zoom Installed">
+<!ENTITY iz.install.options.label "Options">
+<!ENTITY iz.install.close.label "Close">
+<!ENTITY iz.install.continue.label "Continue &gt;&gt;">
+<!ENTITY iz.install.desc.line1 "Visit the Image Zoom website to get all the latest info and">
+<!ENTITY iz.install.desc.line2 "for a brief overview of all the Image Zoom features.">
+<!ENTITY iz.install.desc.line3 "Press &apos;Continue&apos; to go to the Image Zoom Website now">
+<!ENTITY iz.customzoom.label "Enter Zoom Factor">
+<!ENTITY iz.customzoom.title "Custom Zoom">
+<!ENTITY iz.customdim.width.label "Width:">
+<!ENTITY iz.customdim.height.label "Height:">
+<!ENTITY iz.customdim.title "Custom Dimension">
+<!ENTITY iz.customdim.aspect.label "Maintain Aspect Ratio">
+<!ENTITY iz.options.label "Preferences">
+<!ENTITY iz.options.help.label "Help Page">
+<!ENTITY iz.options.defaultzoom.label "Zoom In/Out Factor">
+<!ENTITY iz.options.defaultglobalzoom.label "Default Global Zoom">
+<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
+<!ENTITY iz.options.showviewmenu.label "Show Image Zoom in View Menu">
+<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.defaultscroll.label "Scroll Zoom Increments">
+<!ENTITY iz.options.scrollmode.label "Scroll Mode">
+<!ENTITY iz.options.scrollrelative.label "Relative">
+<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.singlezoom.label "Individual Zoom Options">
+<!ENTITY iz.options.globalzoom.label "Enable Global Zoom Functions">
+<!ENTITY iz.options.context.label "Context Menu">
+<!ENTITY iz.options.contextdisplay.label "Context Menu Display Options">
+<!ENTITY iz.options.tabs.contextmenu.label "Context Menu Items">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.main.label "General">
+<!ENTITY iz.options.reversescroll.label "Reverse Scroll">
+<!ENTITY iz.options.autocenter.label "Auto Center Images when using Image Fit">
+<!ENTITY iz.options.mouseaccess.label1 "Access functions by holding down the ">
+<!ENTITY iz.options.mouseaccess.label2 " mouse button.">
+<!ENTITY iz.options.imagefit.label "Image Fit Button">
+<!ENTITY iz.options.imagereset.label "Image Reset Button">
+<!ENTITY iz.options.none.label "Disabled">
+<!ENTITY iz.options.lmb.label "Left">
+<!ENTITY iz.options.mmb.label "Middle">
+<!ENTITY iz.options.rmb.label "Right">
+<!ENTITY iz.options.usemouse.label "Use Mouse Functions">
+<!ENTITY iz.options.contextdescription.label "Check the items that you want to be displayed in the Image Context Menu">
+<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
+<!ENTITY iz.options.menudummy.view.label "View Image">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Copy Image">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "Copy Image Location">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Save Image As">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.global.decrease.label "Smaller">
+<!ENTITY iz.menu.global.decrease.accesskey "S">
+<!ENTITY iz.menu.global.increase.label "Larger">
+<!ENTITY iz.menu.global.increase.accesskey "L">
+<!ENTITY iz.menu.global.custom.accesskey "O">
+<!ENTITY iz.menu.global.textscale.label "Zoom with Text">
+<!ENTITY iz.menu.global.textscale.accesskey "T">
+<!ENTITY iz.menu.global.autofit.label "Autofit Images">
+<!ENTITY iz.menu.global.autofit.accesskey "A">
+<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
+<!ENTITY iz.globalZoomWarning.no.label "No">
+<!ENTITY iz.globalZoomWarning.yes.label "Yes">
+<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&amp;#37;. This can">
+<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
+<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
+<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
+<!ENTITY iz.menu.context.zoomimage.label "Zoom Image">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ Zoom In">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Zoom Reset">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Zoom Out">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Custom Zoom">
+<!ENTITY iz.menu.context.customdim.label "Custom Dimensions">
+<!ENTITY iz.menu.context.imagefit.label "Image Fit">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
+<!ENTITY iz.command.reduce.commandkey ",">
+<!ENTITY iz.command.enlarge.commandkey ".">
+<!ENTITY iz.command.reset.commandkey "/">
+<!ENTITY iz.command.textscale.commandkey "\">

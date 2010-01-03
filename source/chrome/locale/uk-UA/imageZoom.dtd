@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Контекстне меню">
 <!ENTITY iz.options.contextdisplay.label "Відображення Контекстного меню">
 <!ENTITY iz.options.tabs.contextmenu.label "Пункти контекстного меню">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Основні">
 <!ENTITY iz.options.reversescroll.label "Реверс колеса миші">
 <!ENTITY iz.options.autocenter.label "Автоцетрування зображення при Розтягуванні на весь екран">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Особлива зміна">
 <!ENTITY iz.menu.context.customdim.label "Особливі розміри">
 <!ENTITY iz.menu.context.imagefit.label "На весь екран">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Повернути праворуч">
 <!ENTITY iz.menu.context.rotate.right.accesskey "п">
 <!ENTITY iz.menu.context.imagerotateleft.label "Повернути ліворуч">

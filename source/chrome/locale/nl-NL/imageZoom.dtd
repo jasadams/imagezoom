@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Context-menu">
 <!ENTITY iz.options.contextdisplay.label "Context-menu opties weergeven">
 <!ENTITY iz.options.tabs.contextmenu.label "Context-menu onderdelen">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Algemeen">
 <!ENTITY iz.options.reversescroll.label "Scroll-richting omkeren">
 <!ENTITY iz.options.autocenter.label "Afbeeldingen automatisch centreren bij gebruik van ImageFit">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Aangepaste zoom">
 <!ENTITY iz.menu.context.customdim.label "Aangepaste afmetingen">
 <!ENTITY iz.menu.context.imagefit.label "ImageFit">
+<!ENTITY iz.menu.context.rotateimage.label "Afbeelding draaien">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rechtsom roteren">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "Linksom roteren">
@@ -95,7 +99,6 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Roteren herstellen">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "h">
-<!ENTITY iz.menu.context.rotateimage.label "Afbeelding draaien">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

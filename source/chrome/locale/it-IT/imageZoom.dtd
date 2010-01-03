@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Menu contestuale">
 <!ENTITY iz.options.contextdisplay.label "Opzioni di visualizzazione del menu contestuale">
 <!ENTITY iz.options.tabs.contextmenu.label "Oggetti del menu contestuale">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Generale">
 <!ENTITY iz.options.reversescroll.label "Inverti scorrimento">
 <!ENTITY iz.options.autocenter.label "Centra automaticamente l'immagine quando si adattano le dimensioni">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Personalizza zoom">
 <!ENTITY iz.menu.context.customdim.label "Dimensioni personalizzate">
 <!ENTITY iz.menu.context.imagefit.label "Adatta immagine">
+<!ENTITY iz.menu.context.rotateimage.label "Ruota immagine">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Ruota a destra">
 <!ENTITY iz.menu.context.rotate.right.accesskey "D">
 <!ENTITY iz.menu.context.imagerotateleft.label "Ruota a sinistra">
@@ -95,7 +99,6 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Reimposta rotazione">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "p">
-<!ENTITY iz.menu.context.rotateimage.label "Ruota immagine">
 <!ENTITY iz.command.reduce.commandkey ",">
 <!ENTITY iz.command.enlarge.commandkey ".">
 <!ENTITY iz.command.reset.commandkey "/">

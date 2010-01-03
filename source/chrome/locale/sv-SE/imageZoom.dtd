@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Meny vid högerklick">
 <!ENTITY iz.options.contextdisplay.label "Visningsalternativ högerklicksmeny">
 <!ENTITY iz.options.tabs.contextmenu.label "Komponenter i högerklicksmeny">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "Allmänt">
 <!ENTITY iz.options.reversescroll.label "Omvänd rullning">
 <!ENTITY iz.options.autocenter.label "Centrera bilder automatisk när Bildanpassning används">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Egen zoom">
 <!ENTITY iz.menu.context.customdim.label "Egen storlek">
 <!ENTITY iz.menu.context.imagefit.label "Bildanpassning">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotera höger">
 <!ENTITY iz.menu.context.rotate.right.accesskey "ö">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotera vänster">

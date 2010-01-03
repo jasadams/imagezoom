@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "문맥 메뉴">
 <!ENTITY iz.options.contextdisplay.label "문맥 메뉴에서 보여줄 항목">
 <!ENTITY iz.options.tabs.contextmenu.label "문맥 메뉴 항목">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "일반">
 <!ENTITY iz.options.reversescroll.label "스크롤 반전">
 <!ENTITY iz.options.autocenter.label "창 크기에 맞추기를 사용했을 때 정중앙에 그림 놓기">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "배율 바꾸기">
 <!ENTITY iz.menu.context.customdim.label "크기 바꾸기">
 <!ENTITY iz.menu.context.imagefit.label "창 크기에 맞추기">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "오른족으로 돌리기">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "왼쪽으로 돌리기">

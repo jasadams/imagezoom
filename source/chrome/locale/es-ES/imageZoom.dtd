@@ -38,6 +38,8 @@
 <!ENTITY iz.options.context.label "Menú contextual">
 <!ENTITY iz.options.contextdisplay.label "Opciones de visualización del menú contextual">
 <!ENTITY iz.options.tabs.contextmenu.label "Items del menú contextual">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
 <!ENTITY iz.options.tabs.main.label "General">
 <!ENTITY iz.options.reversescroll.label "Invertir sentido rueda">
 <!ENTITY iz.options.autocenter.label "Autocentrar las imágenes al usar Ajustar imagen">
@@ -87,6 +89,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
 <!ENTITY iz.menu.context.customdim.label "Dimensiones personalizadas">
 <!ENTITY iz.menu.context.imagefit.label "Ajustar imagen">
+<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotar a derecha">
 <!ENTITY iz.menu.context.rotate.right.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateleft.label "Rotar a izquierda">
