@@ -14,7 +14,6 @@ locale imagezoom es-ES jar:chrome/imagezoom.jar!/locale/es-ES/
 locale imagezoom fa-IR jar:chrome/imagezoom.jar!/locale/fa-IR/
 locale imagezoom fi-FI jar:chrome/imagezoom.jar!/locale/fi-FI/
 locale imagezoom fr jar:chrome/imagezoom.jar!/locale/fr/
-locale imagezoom fr-FR jar:chrome/imagezoom.jar!/locale/fr-FR/
 locale imagezoom ga-IE jar:chrome/imagezoom.jar!/locale/ga-IE/
 locale imagezoom he-IL jar:chrome/imagezoom.jar!/locale/he-IL/
 locale imagezoom hr-HR jar:chrome/imagezoom.jar!/locale/hr-HR/
