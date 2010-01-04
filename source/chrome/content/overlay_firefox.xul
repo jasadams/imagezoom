@@ -20,23 +20,22 @@
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 ***** END LICENSE BLOCK ***** -->
-<!DOCTYPE overlay SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
+<!DOCTYPE overlay SYSTEM "chrome://net.yellowgorilla.imagezoom/locale/imageZoom.dtd">
 <overlay id="imageZoomOverlay"
     	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    	
-    <script type="application/x-javascript" src="chrome://imagezoom/content/izImage.js"/>
-    <script type="application/x-javascript" src="chrome://imagezoom/content/overlay.js"/>
-    <script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
+
+    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/overlay.js"/>
+    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/globals.js"/>
 
   <stringbundleset id="stringbundleset">
-    <stringbundle id="bundle_ImageZoom" src="chrome://imagezoom/locale/imageZoom.properties"/>
+    <stringbundle id="net.yellowgorilla.imagezoom.stringbundle" src="chrome://net.yellowgorilla.imagezoom/locale/imageZoom.properties"/>
   </stringbundleset>
 
 	<popup id="contentAreaContextMenu">
 			<menuitem id="context-zoom-zin"
 				label="&iz.menu.context.increase.label;"
 				accesskey="&iz.menu.context.increase.accesskey;"
-				oncommand="izZoomIn();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izZoomIn();"
 				insertbefore="context-sep-copyimage"
 				hidden="true"
 			/>
@@ -44,56 +43,56 @@
 				label="&iz.menu.context.reset.label;"
 				accesskey="&iz.menu.context.reset.accesskey;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izSetZoom(100);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(100);"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-zout"
 				label="&iz.menu.context.decrease.label;"
 				accesskey="&iz.menu.context.decrease.accesskey;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izZoomOut();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izZoomOut();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-zcustom"
 				label="&iz.menu.context.customzoom.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izShowCustomZoom();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izShowCustomZoom();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-dcustom"
 				label="&iz.menu.context.customdim.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izShowCustomDim();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izShowCustomDim();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-fit"
 				label="&iz.menu.context.imagefit.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izImageFit();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izImageFit();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-rotate-right"
 				label="&iz.menu.context.imagerotateright.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izRotateRight();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izRotateRight();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-rotate-left"
 				label="&iz.menu.context.imagerotateleft.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izRotateLeft();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izRotateLeft();"
 				hidden="true"
 			/>	
 			<menuitem id="context-zoom-rotate-180"
 				label="&iz.menu.context.imagerotate180.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izRotate180();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izRotate180();"
 				hidden="true"
 			/>
 			<menuitem id="context-zoom-rotate-reset"
 				label="&iz.menu.context.imagerotatereset.label;"
 				insertbefore="context-sep-copyimage"
-				oncommand="izRotateReset();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izRotateReset();"
 				hidden="true"
 			/>					
 		<menu id="context-zoomsub"
@@ -106,19 +105,19 @@
 			<menuitem id="zoomsub-zin"
 				label="&iz.menu.context.increase.label;"
 				accesskey="&iz.menu.context.increase.accesskey;"
-				oncommand="izZoomIn();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izZoomIn();"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-zreset"
 				label="&iz.menu.context.reset.label;"
 				accesskey="&iz.menu.context.reset.accesskey;"
-				oncommand="izSetZoom(100);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(100);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-zout"
 				label="&iz.menu.context.decrease.label;"
 				accesskey="&iz.menu.context.decrease.accesskey;"
-				oncommand="izZoomOut();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izZoomOut();"
 				hidden="true"
 			/>
 			<menuseparator id="zoomsub-s1"
@@ -126,12 +125,12 @@
 			/>		
 			<menuitem id="zoomsub-zcustom"
 				label="&iz.menu.context.customzoom.label;"
-				oncommand="izShowCustomZoom();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izShowCustomZoom();"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-dcustom"
 				label="&iz.menu.context.customdim.label;"
-				oncommand="izShowCustomDim();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izShowCustomDim();"
 				hidden="true"
 			/>
 			<menuseparator id="zoomsub-s2"
@@ -139,7 +138,7 @@
 			/>
 			<menuitem id="zoomsub-fit"
 				label="&iz.menu.context.imagefit.label;"
-				oncommand="izImageFit();"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izImageFit();"
 				hidden="true"
 			/>
 			<menuseparator id="zoomsub-s3"
@@ -147,22 +146,22 @@
 			/>
 			<menuitem id="zoomsub-z400"
 				label="400%"
-				oncommand="izSetZoom(400);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(400);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z200"
 				label="200%"
-				oncommand="izSetZoom(200);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(200);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z150"
 				label="150%"
-				oncommand="izSetZoom(150);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(150);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z125"
 				label="125%"
-				oncommand="izSetZoom(125);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(125);"
 				hidden="true"
 			/>
 			<menuseparator id="zoomsub-s4"
@@ -170,7 +169,7 @@
 			/>
 			<menuitem id="zoomsub-z100"
 				label="100%"
-				oncommand="izSetZoom(100);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(100);"
 				hidden="true"
 			/>
 			<menuseparator id="zoomsub-s5"
@@ -178,22 +177,22 @@
 			/>
 			<menuitem id="zoomsub-z75"
 				label="75%"
-				oncommand="izSetZoom(75);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(75);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z50"
 				label="50%"
-				oncommand="izSetZoom(50);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(50);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z25"
 				label="25%"
-				oncommand="izSetZoom(25);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(25);"
 				hidden="true"
 			/>
 			<menuitem id="zoomsub-z10"
 				label="10%"
-				oncommand="izSetZoom(10);"
+				oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(10);"
 				hidden="true"
 			/>
         	  </menupopup>
@@ -208,25 +207,25 @@
 				<menuitem id="rotatesub-rotate-right"
 					label="&iz.menu.context.imagerotateright.label;"
 					accesskey="&iz.menu.context.rotate.right.accesskey;"
-					oncommand="izRotateRight();"
+					oncommand="net.yellowgorilla.imagezoom.overlay.izRotateRight();"
 					hidden="true"
 				/>
 				<menuitem id="rotatesub-rotate-left"
 					label="&iz.menu.context.imagerotateleft.label;"
 					accesskey="&iz.menu.context.rotate.left.accesskey;"
-					oncommand="izRotateLeft();"
+					oncommand="net.yellowgorilla.imagezoom.overlay.izRotateLeft();"
 					hidden="true"
 				/>	
 				<menuitem id="rotatesub-rotate-180"
 					label="&iz.menu.context.imagerotate180.label;"
 					accesskey="&iz.menu.context.rotate.180.accesskey;"
-					oncommand="izRotate180();"
+					oncommand="net.yellowgorilla.imagezoom.overlay.izRotate180();"
 					hidden="true"
 				/>	
 				<menuitem id="rotatesub-rotate-reset"
 					label="&iz.menu.context.imagerotatereset.label;"
 					accesskey="&iz.menu.context.rotate.reset.accesskey;"
-					oncommand="izRotateReset();"
+					oncommand="net.yellowgorilla.imagezoom.overlay.izRotateReset();"
 					hidden="true"
 				/>
 	        	  </menupopup>

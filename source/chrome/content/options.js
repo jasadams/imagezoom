@@ -58,7 +58,7 @@ function optionCache () {
 }
 
 // Context Menu Items and their option equivalents
-if (getGeckoVersion() < "1.9")
+if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < "1.9")
 {
 	var MenuItems = new Array("context-zoom-zin","context-zoom-zout","context-zoom-zreset","context-zoom-zcustom","context-zoom-dcustom","context-zoom-fit","zoomsub-zin","zoomsub-zout","zoomsub-zreset","zoomsub-zcustom","zoomsub-dcustom","zoomsub-fit","zoomsub-z400","zoomsub-z200","zoomsub-z150","zoomsub-z125","zoomsub-z100","zoomsub-z75","zoomsub-z50","zoomsub-z25","zoomsub-z10");
 	var OptionItems = new Array("mmZoomIO","mmZoomIO","mmReset","mmCustomZoom","mmCustomDim","mmFitWindow","smZoomIO","smZoomIO","smReset","smCustomZoom","smCustomDim","smFitWindow","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts","smZoomPcts");
@@ -158,7 +158,7 @@ function imagezoom_initializeOptions()
 
 	setDisableAllChildren(document.getElementById('mouseoptions'), !document.getElementById("imagezoomusemouseoptions").checked);
 
-	document.getElementById('rotateTab').setAttribute("hidden", (getGeckoVersion() < "1.9"));
+	document.getElementById('rotateTab').setAttribute("hidden", (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < "1.9"));
 	
     setImageZoomMenu();
 }
@@ -174,6 +174,11 @@ function setImageZoomMenu() {
 		document.getElementById(MenuItems[i]).setAttribute("checked", MenuOptions.getOption(OptionItems[i]));
 	}
 	// Show the Zoom Image container if there are subitems visible, else hide
+	if (document.getElementById("submenu").getElementsByAttribute("checked", true).length > 0)
+		document.getElementById("context-zoomsub").checked = true;
+	else
+		document.getElementById("context-zoomsub").checked = false;	
+	// Show the Rotate Image container if there are subitems visible, else hide
 	if (document.getElementById("subrotatemenu").getElementsByAttribute("checked", true).length > 0)
 		document.getElementById("context-rotatesub").checked = true;
 	else
