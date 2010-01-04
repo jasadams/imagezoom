@@ -21,7 +21,7 @@
 
 ***** END LICENSE BLOCK ***** -->
 <!DOCTYPE overlay SYSTEM "chrome://net.yellowgorilla.imagezoom/locale/imageZoom.dtd">
-<overlay id="imageZoomOverlay"
+<overlay id="net.yellowgorilla.imagezoom.overlay_firefox"
     	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
     <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/overlay.js"/>
