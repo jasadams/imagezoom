@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Prezentare">
 <!ENTITY iz.about.walkthrough.description "Scurtă prezentare a funcțiilor Image Zoom">
 <!ENTITY iz.about.close.label "Închidere">
-<!ENTITY iz.install.installed "Image Zoom a fost instalat">
-<!ENTITY iz.install.options.label "Opțiuni">
-<!ENTITY iz.install.close.label "Închidere">
-<!ENTITY iz.install.continue.label "Continuare &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Intrați pe saitul Image Zoom pentru ultimele știri și">
-<!ENTITY iz.install.desc.line2 "pentru o scurtă prezentare a tuturor funcțiilor Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Apăsați &apos;Continuare&apos; pentru a intra acum pe saitul Image Zoom">
 <!ENTITY iz.customzoom.label "Alegeți factorul de scalare">
 <!ENTITY iz.customzoom.title "Scalare la alegere">
 <!ENTITY iz.customdim.width.label "Lățime:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "- Preferințe">
 <!ENTITY iz.options.help.label "Ghid">
 <!ENTITY iz.options.defaultzoom.label "Factorul de scalare:">
-<!ENTITY iz.options.defaultglobalzoom.label "Scalare globală implicită">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Avertizează dacă valoarea scalării globale diferă de cea implicită">
-<!ENTITY iz.options.showviewmenu.label "Include Image Zoom în meniul Vizualizare">
 <!ENTITY iz.options.showautofit.label "Include Potrivire automat în meniul global">
 <!ENTITY iz.options.defaultscroll.label "Mărirea cu rotița:">
 <!ENTITY iz.options.scrollmode.label "Modul de scalare:">
 <!ENTITY iz.options.scrollrelative.label "Relativ">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
 <!ENTITY iz.options.singlezoom.label "Opțiuni pentru scalarea individuală">
-<!ENTITY iz.options.globalzoom.label "Opțiuni pentru scalarea globală">
 <!ENTITY iz.options.context.label "Meniu contextual">
 <!ENTITY iz.options.contextdisplay.label "Opțiunile meniului contextual">
 <!ENTITY iz.options.tabs.contextmenu.label "Elementele meniului contextual">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "d">
 <!ENTITY iz.options.menudummy.save.label "Salvează imaginea ca">
 <!ENTITY iz.options.menudummy.save.accesskey "a">
-<!ENTITY iz.menu.global.decrease.label "Mai mică">
-<!ENTITY iz.menu.global.decrease.accesskey "c">
-<!ENTITY iz.menu.global.increase.label "Mai mare">
-<!ENTITY iz.menu.global.increase.accesskey "M">
-<!ENTITY iz.menu.global.custom.accesskey "l">
-<!ENTITY iz.menu.global.textscale.label "Scalează împreună cu textul">
-<!ENTITY iz.menu.global.textscale.accesskey "t">
-<!ENTITY iz.menu.global.autofit.label "Potrivește automat imaginile">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Atenționare Image Zoom">
-<!ENTITY iz.globalZoomWarning.no.label "Nu">
-<!ENTITY iz.globalZoomWarning.yes.label "Da">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Valoarea scalării globale nu este cea implicită, de 100&amp;#37;. S-ar putea ca">
-<!ENTITY iz.globalZoomWarning.WarningText2 "unele saituri să afişeze imaginea eronat, iar navigatorul să fie încetinit.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Doriți să aduc scalarea globală la valoarea implicită?">
-<!ENTITY iz.globalZoomWarning.disable.label "Nu mai afișa acest mesaj">
 <!ENTITY iz.menu.context.zoomimage.label "Scalează imaginea">
 <!ENTITY iz.menu.context.zoomimage.accesskey "a">
 <!ENTITY iz.menu.context.increase.label "+ Mărește">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

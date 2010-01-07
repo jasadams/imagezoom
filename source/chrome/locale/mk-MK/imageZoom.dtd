@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Преглед">
 <!ENTITY iz.about.walkthrough.description "Преглед на особините на проширувањето „Image Zoom“">
 <!ENTITY iz.about.close.label "Затвори">
-<!ENTITY iz.install.installed "„Image Zoom“ е инсталирано">
-<!ENTITY iz.install.options.label "Подесувања">
-<!ENTITY iz.install.close.label "Затвори">
-<!ENTITY iz.install.continue.label "Понатаму &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Посетете ја страната на „Image Zoom“ за најновите информации во врска со проширувањето и">
-<!ENTITY iz.install.desc.line2 "за запознавање и преглед на сите негови особини.">
-<!ENTITY iz.install.desc.line3 "Притиснете „Понатаму“ за да ја посетите веб страната на „Image Zoom“">
 <!ENTITY iz.customzoom.label "Внесете степен на зголемување">
 <!ENTITY iz.customzoom.title "Степен на зголемување">
 <!ENTITY iz.customdim.width.label "Ширина:">
@@ -25,21 +18,17 @@
 <!ENTITY iz.options.label "Подесувања">
 <!ENTITY iz.options.help.label "Помош (на англиски)">
 <!ENTITY iz.options.defaultzoom.label "Степен на зголемување/намалување">
-<!ENTITY iz.options.defaultglobalzoom.label "Стандардно општо зголемување">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Предупреди доколку вредноста за општото зголемување не е основната">
-<!ENTITY iz.options.showviewmenu.label "Додади „Големина на слики“ во менито „Поглед“">
 <!ENTITY iz.options.showautofit.label "Додади „Автоматска големина“ во општото мени">
 <!ENTITY iz.options.defaultscroll.label "Степен на зголемување на тркалото на глувчето">
 <!ENTITY iz.options.scrollmode.label "Начин за тркалање">
 <!ENTITY iz.options.scrollrelative.label "релативен">
 <!ENTITY iz.options.scrollabsolute.label "апсолутен">
 <!ENTITY iz.options.singlezoom.label "Засебни подесувања за зголемување">
-<!ENTITY iz.options.globalzoom.label "Општи подесувања за зголемување">
 <!ENTITY iz.options.context.label "Контекстно мени">
 <!ENTITY iz.options.contextdisplay.label "Подесувања за приказ на контекстното мени">
 <!ENTITY iz.options.tabs.contextmenu.label "Делови на контекстното мени">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Контекстуално мени на &quot;Зголемување&quot;">
+<!ENTITY iz.options.tabs.rotatecontext.label "Контекстуално мени на &quot;Ротирај&quot;">
 <!ENTITY iz.options.tabs.main.label "Општо">
 <!ENTITY iz.options.reversescroll.label "Обратно вртење (напред)">
 <!ENTITY iz.options.autocenter.label "Центрирај ја сликата при прилагодување">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "о">
 <!ENTITY iz.options.menudummy.save.label "Сними ја сликата како">
 <!ENTITY iz.options.menudummy.save.accesskey "С">
-<!ENTITY iz.menu.global.decrease.label "Намали">
-<!ENTITY iz.menu.global.decrease.accesskey "Н">
-<!ENTITY iz.menu.global.increase.label "Зголеми">
-<!ENTITY iz.menu.global.increase.accesskey "З">
-<!ENTITY iz.menu.global.custom.accesskey "Д">
-<!ENTITY iz.menu.global.textscale.label "Зголеми заедно со текстот">
-<!ENTITY iz.menu.global.textscale.accesskey "г">
-<!ENTITY iz.menu.global.autofit.label "Автоматска големина">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Предупредување">
-<!ENTITY iz.globalZoomWarning.no.label "Не">
-<!ENTITY iz.globalZoomWarning.yes.label "Да">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Општото зголемување ја нема основната вредност од 100&amp;#37;. Ова може да е причина">
-<!ENTITY iz.globalZoomWarning.WarningText2 "некои веб страни да се прикажуваат погрешно и да се забави прелистувачот">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Дали сакате да ја вратите основната вредност за општото зголемување?">
-<!ENTITY iz.globalZoomWarning.disable.label "Не ја прикажувај оваа порака">
 <!ENTITY iz.menu.context.zoomimage.label "Големина на сликата">
 <!ENTITY iz.menu.context.zoomimage.accesskey "г">
 <!ENTITY iz.menu.context.increase.label "Зголеми (+)">
@@ -89,17 +62,13 @@
 <!ENTITY iz.menu.context.customzoom.label "Степен на зголемување">
 <!ENTITY iz.menu.context.customdim.label "Димензии">
 <!ENTITY iz.menu.context.imagefit.label "Прилагоди ја сликата">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
-<!ENTITY iz.menu.context.rotateimage.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
-<!ENTITY iz.menu.context.rotate.right.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
-<!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
+<!ENTITY iz.menu.context.rotateimage.label "Ротирај ја сликата">
+<!ENTITY iz.menu.context.rotateimage.accesskey "Р">
+<!ENTITY iz.menu.context.imagerotateright.label "Ротирај Десно">
+<!ENTITY iz.menu.context.rotate.right.accesskey "Д">
+<!ENTITY iz.menu.context.imagerotateleft.label "Ротирај Лево">
+<!ENTITY iz.menu.context.rotate.left.accesskey "Л">
+<!ENTITY iz.menu.context.imagerotate180.label "Ротирај 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
-<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
-<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "с">
+<!ENTITY iz.menu.context.imagerotatereset.label "Ресетирај го Ротирањето">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "с">

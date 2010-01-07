@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Guida">
 <!ENTITY iz.about.walkthrough.description "Panoramica sulle funzioni di Image Zoom">
 <!ENTITY iz.about.close.label "Chiudi">
-<!ENTITY iz.install.installed "Image Zoom installata">
-<!ENTITY iz.install.options.label "Opzioni">
-<!ENTITY iz.install.close.label "Chiudi">
-<!ENTITY iz.install.continue.label "Continua &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Visitare il sito web di Image Zoom per conoscere le ultime informazioni e">
-<!ENTITY iz.install.desc.line2 "per avere una panoramica sulle sue caratteristiche.">
-<!ENTITY iz.install.desc.line3 "Premere 'Continua' per visitare ora al sito web di Image Zoom">
 <!ENTITY iz.customzoom.label "Inserire il fattore di zoom">
 <!ENTITY iz.customzoom.title "Personalizza zoom">
 <!ENTITY iz.customdim.width.label "Larghezza:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "- Impostazioni">
 <!ENTITY iz.options.help.label "Aiuto">
 <!ENTITY iz.options.defaultzoom.label "Fattore di ingrandimento o riduzione">
-<!ENTITY iz.options.defaultglobalzoom.label "Zoom globale predefinito">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Mostra un avviso se lo zoom globale non è impostato al valore predefinito">
-<!ENTITY iz.options.showviewmenu.label "Mostra Image Zoom nel menu 'Visualizza'">
 <!ENTITY iz.options.showautofit.label "Mostra 'Adatta automaticamente' nel menu globale">
 <!ENTITY iz.options.defaultscroll.label "Incremento rotellina del mouse">
 <!ENTITY iz.options.scrollmode.label "Modalità di scorrimento">
 <!ENTITY iz.options.scrollrelative.label "Relativa">
 <!ENTITY iz.options.scrollabsolute.label "Assoluta">
 <!ENTITY iz.options.singlezoom.label "Opzione zoom singola immagine">
-<!ENTITY iz.options.globalzoom.label "Attiva le opzioni di zoom globale">
 <!ENTITY iz.options.context.label "Menu contestuale">
 <!ENTITY iz.options.contextdisplay.label "Opzioni di visualizzazione del menu contestuale">
 <!ENTITY iz.options.tabs.contextmenu.label "Oggetti del menu contestuale">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "m">
 <!ENTITY iz.options.menudummy.save.label "Salva immagine con nome...">
 <!ENTITY iz.options.menudummy.save.accesskey "e">
-<!ENTITY iz.menu.global.decrease.label "Più piccola">
-<!ENTITY iz.menu.global.decrease.accesskey "p">
-<!ENTITY iz.menu.global.increase.label "Più grande">
-<!ENTITY iz.menu.global.increase.accesskey "r">
-<!ENTITY iz.menu.global.custom.accesskey "t">
-<!ENTITY iz.menu.global.textscale.label "Zoom testo">
-<!ENTITY iz.menu.global.textscale.accesskey "s">
-<!ENTITY iz.menu.global.autofit.label "Adatta immagini">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Avviso di Image Zoom">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Si">
-<!ENTITY iz.globalZoomWarning.WarningText1 "L'impostazione di zoom globale non sono è al suo valore predefinito del 100&amp;#37;. Ciò potrebbe">
-<!ENTITY iz.globalZoomWarning.WarningText2 "inficiare la corretta visualizzazione di alcuni siti web e rallentare la velocità di caricamento.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Impostare lo zoom globale al valore predefinito?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disattiva questo messaggio">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom immagine">
 <!ENTITY iz.menu.context.zoomimage.accesskey "i">
 <!ENTITY iz.menu.context.increase.label "+ Aumenta zoom">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Reimposta rotazione">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "p">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

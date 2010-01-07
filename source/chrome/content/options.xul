@@ -22,10 +22,10 @@
 ***** END LICENSE BLOCK ***** -->
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://imagezoom/skin/imagezoom.css" type="text/css"?>
+<?xml-stylesheet href="chrome://net.yellowgorilla.imagezoom/skin/imagezoom.css" type="text/css"?>
 <?xml-stylesheet href="chrome://mozapps/skin/pref/pref.css" type="text/css"?>
 
-<!DOCTYPE window SYSTEM "chrome://imagezoom/locale/imageZoom.dtd">
+<!DOCTYPE window SYSTEM "chrome://net.yellowgorilla.imagezoom/locale/imageZoom.dtd">
 
 <dialog buttons="accept, cancel"
         id="imagezoom-options-dialog"
@@ -34,12 +34,12 @@
         title="&iz.product.name; &iz.options.label;"
         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
-    <script type="application/x-javascript" src="chrome://imagezoom/content/options.js"/>
+    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/globals.js"/>
+    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/options.js"/>
    
 
   <stringbundleset id="stringbundleset">
-    <stringbundle id="bundle_ImageZoom" src="chrome://imagezoom/locale/imageZoom.properties"/>
+    <stringbundle id="bundle_ImageZoom" src="chrome://net.yellowgorilla.imagezoom/locale/imageZoom.properties"/>
   </stringbundleset>
 
   <tabbox id="wf_tabbox">
@@ -51,7 +51,7 @@
     <tabpanels flex="1">
       <tabpanel orient="vertical" flex="1">
        <vbox flex="1">
-       <label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=' + getAppVersion());" />
+       <label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
         <groupbox align="start">
         <caption>
         	<checkbox id="imagezoomusemouseoptions" label="&iz.options.usemouse.label;" prefstring="imagezoom.usescroll" oncommand="setDisableAllChildren(document.getElementById('mouseoptions'), !this.checked);"/>
@@ -74,6 +74,7 @@
 	          			<column />
 	          			<column />
 	          			<column />
+	          			<column />
 	          		</columns>
 	          		<rows>
 	            			<row align="center" flex="1">
@@ -88,11 +89,10 @@
 								</menupopup>
 							</menulist>
 						</hbox>
+						<spacer style="min-width: 15px" flex="1" />
 						<hbox align="center" flex="1">
-							<spacer style="min-width: 15px" flex="1" />
 							<checkbox id="imagezoomtogglefitreset" label="&iz.options.togglefitreset.label;" prefstring="imagezoom.toggleFitReset"/>
 						</hbox>						
-		    				<spacer flex="1" />
 					</row>
 					<row align="center" flex="1">
 						<label id="imagezoomimageresetbuttonlable" value="&iz.options.imagereset.label;" control="imagezoomimageresetbutton"/>
@@ -104,6 +104,7 @@
 		          					<menuitem label="&iz.options.rmb.label;" value="3"/>
 		          				</menupopup>
 			    			</menulist>
+			    			<spacer flex="1" />
 			    			<spacer flex="1" />
 			    		</row>
 		          		<row align="center" flex="1">
@@ -126,8 +127,8 @@
 				    			</menulist>
 				    			<label id="imagezoomscrollvaluelabelafter" value="%" />
 						</hbox>
+						<spacer style="min-width: 15px" flex="1" />
 						<hbox align="center" flex="1">
-							<spacer style="min-width: 15px" flex="1" />
 							<checkbox id="imagezoomreversescroll" label="&iz.options.reversescroll.label;" prefstring="imagezoom.reversescrollzoom"/>
 						</hbox>
 		          		</row>
@@ -139,6 +140,8 @@
 		          					<menuitem label="&iz.options.scrollabsolute.label;" value="1"/>
 							</menupopup>
 						</menulist>
+						<spacer flex="1" />
+						<spacer flex="1" />
 		          		</row>		          		
 		          	</rows>
 	          	</grid>
@@ -179,7 +182,7 @@
    <tabpanel orient="vertical">
        <hbox>
         <spacer flex="1" />
-      	<label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
+      	<label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
        </hbox>
    	<groupbox id="container" orient="horizontal" flex="1">
         <caption label="&iz.options.contextdisplay.label;"/>
@@ -187,7 +190,7 @@
         <vbox flex="1" />
 	<vbox>
 	        <hbox flex="1" />
-		<box id="mainmenu">
+		<box id="mainmenu" class="menu-right">
 			<menuitem label="..."
 				  class="dummy"/>
       			<menuseparator />
@@ -237,7 +240,7 @@
 				accesskey="&iz.menu.context.zoomimage.label;"
 				oncommand="toggleSubMenu();"
 			/></vbox>
-			<vbox><image class="right-arrow" src="chrome://global/skin/menu/Menu-arrow.png" /></vbox>
+			<vbox><image class="right-arrow" src="chrome://global/skin/menu/menu-arrow.gif" /></vbox>
 			</hbox>
    			<menuseparator />
    		        <menuitem id="context-saveimage"
@@ -335,7 +338,7 @@
    <tabpanel orient="vertical">
        <hbox>
         <spacer flex="1" />
-      	<label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
+      	<label id="visitHome" class= "url help" value="&iz.options.help.label;" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=options&amp;version=&iz.product.version;');" />
        </hbox>
    	<groupbox id="container" orient="horizontal" flex="1">
         <caption label="&iz.options.contextdisplay.label;"/>
@@ -390,7 +393,7 @@
 				accesskey="&iz.menu.context.rotateimage.label;"
 				oncommand="toggleRotateMenu();"
 			/></vbox>
-			<vbox><image class="right-arrow" src="chrome://global/skin/menu/Menu-arrow.png" /></vbox>
+			<vbox><image class="right-arrow" src="chrome://global/skin/menu/menu-arrow.gif" /></vbox>
 			</hbox>
    			<menuseparator />
    		        <menuitem id="context-saveimage"

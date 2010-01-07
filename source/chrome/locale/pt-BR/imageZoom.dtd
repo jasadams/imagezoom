@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Passo-a-Passo">
 <!ENTITY iz.about.walkthrough.description "Visão Geral das funcionalidades do Image Zoom">
 <!ENTITY iz.about.close.label "Fechar">
-<!ENTITY iz.install.installed "Image Zoom instalado">
-<!ENTITY iz.install.options.label "Opções">
-<!ENTITY iz.install.close.label "Fechar">
-<!ENTITY iz.install.continue.label "Continuar &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Visite o site do Image Zoom para obter as últimas informações e">
-<!ENTITY iz.install.desc.line2 "uma visão geral de todas as funcionalidades do Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Aperte 'Continuar' para ir para o site do Image Zoom agora">
 <!ENTITY iz.customzoom.label "Entre com o fator de Zoom">
 <!ENTITY iz.customzoom.title "Zoom personalizado">
 <!ENTITY iz.customdim.width.label "Largura:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "Preferências">
 <!ENTITY iz.options.help.label "Página de Ajuda">
 <!ENTITY iz.options.defaultzoom.label "Fator de Zoom In/Out">
-<!ENTITY iz.options.defaultglobalzoom.label "Zoom Global Padrão">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Avisar se Global Zoom não for o padrão">
-<!ENTITY iz.options.showviewmenu.label "Exibe Image Zoom no Menu Exibir">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Incremento da rolagem do Zoom">
 <!ENTITY iz.options.scrollmode.label "Scroll Mode">
 <!ENTITY iz.options.scrollrelative.label "Relative">
 <!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Opções de Zoom individual">
-<!ENTITY iz.options.globalzoom.label "Opções de Zoom Global">
 <!ENTITY iz.options.context.label "Menu de Contexto">
 <!ENTITY iz.options.contextdisplay.label "Opções de Exibição do Menu de Contexo">
 <!ENTITY iz.options.tabs.contextmenu.label "Itens do Menu de Contexo">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Salvar Imagem Como">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "Menor">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "Maior">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "Zoom com texto">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Auto Redimensionar Imagens">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Aviso Image Zoom">
-<!ENTITY iz.globalZoomWarning.no.label "Não">
-<!ENTITY iz.globalZoomWarning.yes.label "Sim">
-<!ENTITY iz.globalZoomWarning.WarningText1 "O &quot;Image Zoom&quot; não esta com o valor padrão de 100&amp;#37;. Isto pode">
-<!ENTITY iz.globalZoomWarning.WarningText2 "causar a incorreta vizualização de alguns sites e tornar lento o seu navegador.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Gostaria de voltar para o valor padrão?">
-<!ENTITY iz.globalZoomWarning.disable.label "Desabilitar esta mensagem">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom Image">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Zoom In">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Reiniciar Rotacionamento">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

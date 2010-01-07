@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "İlk adımlar">
 <!ENTITY iz.about.walkthrough.description "Image Zoom'un temel özellikleri hakkında bilgi">
 <!ENTITY iz.about.close.label "Kapat">
-<!ENTITY iz.install.installed "Image Zoom Kuruldu">
-<!ENTITY iz.install.options.label "Seçenekler">
-<!ENTITY iz.install.close.label "Kapat">
-<!ENTITY iz.install.continue.label "Devam &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Image Zoom web sitesini ziyaret edin, son bilgileri alın ve">
-<!ENTITY iz.install.desc.line2 "Image Zoom'un kullanımı ve özellikleri hakkında bilgi edinin.">
-<!ENTITY iz.install.desc.line3 "Image Zoom web sitesine gitmek için şimdi Devam'a tıklayın">
 <!ENTITY iz.customzoom.label "Yakınlaştırma oranını girin">
 <!ENTITY iz.customzoom.title "Özel yakınlaştırma">
 <!ENTITY iz.customdim.width.label "Genişlik:">
@@ -25,21 +18,17 @@
 <!ENTITY iz.options.label "Tercihleri">
 <!ENTITY iz.options.help.label "Yardım sayfası">
 <!ENTITY iz.options.defaultzoom.label "Yakınlaştırma artış/azalışı">
-<!ENTITY iz.options.defaultglobalzoom.label "Toplu boyutlandırma oranı">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Toplu yakınlaştırma varsayılan değere ayarlı değilse uyar">
-<!ENTITY iz.options.showviewmenu.label "Görünüm Menüsü'nde 'Resim yakınlaştırma'yı göster">
 <!ENTITY iz.options.showautofit.label "Toplu yakınlaştırma menüsünde 'Otomatik sığdır'ı göster">
 <!ENTITY iz.options.defaultscroll.label "Tekerlekle yakınlaştırma">
 <!ENTITY iz.options.scrollmode.label "Tekerlek modu">
 <!ENTITY iz.options.scrollrelative.label "Nisbi">
 <!ENTITY iz.options.scrollabsolute.label "Kesin">
 <!ENTITY iz.options.singlezoom.label "Tek resmi yakınlaştırma seçenekleri">
-<!ENTITY iz.options.globalzoom.label "Toplu yakınlaştırma etkin">
 <!ENTITY iz.options.context.label "Açılır menü">
 <!ENTITY iz.options.contextdisplay.label "Açılır Menü Görünüm Seçenekleri">
 <!ENTITY iz.options.tabs.contextmenu.label "Açılır Menü Öğeleri">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Yaklaştırma Açılır Menüsü">
+<!ENTITY iz.options.tabs.rotatecontext.label "Döndürme Açılır Menüsü">
 <!ENTITY iz.options.tabs.main.label "Genel">
 <!ENTITY iz.options.reversescroll.label "Tekerleği tersine çevir">
 <!ENTITY iz.options.autocenter.label "Resim sığdırıldığında otomatik olarak ortala">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "k">
 <!ENTITY iz.options.menudummy.save.label "Resmi farklı kaydet">
 <!ENTITY iz.options.menudummy.save.accesskey "r">
-<!ENTITY iz.menu.global.decrease.label "Küçült">
-<!ENTITY iz.menu.global.decrease.accesskey "k">
-<!ENTITY iz.menu.global.increase.label "Büyüt">
-<!ENTITY iz.menu.global.increase.accesskey "b">
-<!ENTITY iz.menu.global.custom.accesskey "D">
-<!ENTITY iz.menu.global.textscale.label "Metin boyutuyla birlikte">
-<!ENTITY iz.menu.global.textscale.accesskey "M">
-<!ENTITY iz.menu.global.autofit.label "Otomatik sığdır">
-<!ENTITY iz.menu.global.autofit.accesskey "s">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Uyarısı">
-<!ENTITY iz.globalZoomWarning.no.label "Hayır">
-<!ENTITY iz.globalZoomWarning.yes.label "Evet">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom toplu yakınlaştırma ayarı varsayılan değer olan &amp;#37;100'e ayarlı değil. Bu durum,">
-<!ENTITY iz.globalZoomWarning.WarningText2 "bazı sitelerin yanlış görüntülenmesine ve tarayıcınızın yavaşlamasına neden olabilir.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Toplu yakınlaştırmayı varsayılan değere sıfırlamak ister misiniz?">
-<!ENTITY iz.globalZoomWarning.disable.label "Bu uyarıyı gösterme">
 <!ENTITY iz.menu.context.zoomimage.label "Resim yakınlaştırma">
 <!ENTITY iz.menu.context.zoomimage.accesskey "R">
 <!ENTITY iz.menu.context.increase.label "+ Büyüt">
@@ -89,8 +62,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Özel yakınlaştırma">
 <!ENTITY iz.menu.context.customdim.label "Özel ebatlar">
 <!ENTITY iz.menu.context.imagefit.label "Resmi sığdır">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
-<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.rotateimage.label "Resmi döndür">
+<!ENTITY iz.menu.context.rotateimage.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateright.label "Sağa döndür">
 <!ENTITY iz.menu.context.rotate.right.accesskey "S">
 <!ENTITY iz.menu.context.imagerotateleft.label "Sola döndür">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "B">
 <!ENTITY iz.menu.context.imagerotatereset.label "Döndürmeyi sıfırla">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "D">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">
