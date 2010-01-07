@@ -7,7 +7,7 @@ content net.yellowgorilla.imagezoom jar:chrome/imagezoom.jar!/content/
 locale net.yellowgorilla.imagezoom be-BY jar:chrome/imagezoom.jar!/locale/be-BY/
 locale net.yellowgorilla.imagezoom ca-AD jar:chrome/imagezoom.jar!/locale/ca-AD/
 locale net.yellowgorilla.imagezoom cs-CZ jar:chrome/imagezoom.jar!/locale/cs-CZ/
-locale net.yellowgorilla.imagezoom de-DE jar:chrome/imagezoom.jar!/locale/de-DE/
+locale net.yellowgorilla.imagezoom de jar:chrome/imagezoom.jar!/locale/de/
 locale net.yellowgorilla.imagezoom en-US jar:chrome/imagezoom.jar!/locale/en-US/
 locale net.yellowgorilla.imagezoom es-AR jar:chrome/imagezoom.jar!/locale/es-AR/
 locale net.yellowgorilla.imagezoom es-ES jar:chrome/imagezoom.jar!/locale/es-ES/

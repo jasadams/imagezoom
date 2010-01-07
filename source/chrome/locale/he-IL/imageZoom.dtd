@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "עזרה במהלך">
 <!ENTITY iz.about.walkthrough.description "תיאור קצר של מאפייני Image Zoom">
 <!ENTITY iz.about.close.label "סגור">
-<!ENTITY iz.install.installed "Image Zoom מותקן">
-<!ENTITY iz.install.options.label "אפשרויות">
-<!ENTITY iz.install.close.label "סגור">
-<!ENTITY iz.install.continue.label "המשך &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "בקר באתר של Image Zoom כדי להשיג את כל המידע העדכני ו">
-<!ENTITY iz.install.desc.line2 "תיאור קצר של מאפייני Image Zoom">
-<!ENTITY iz.install.desc.line3 "לחץ &quot;המשך&quot; כדי ללכת לאתר של Image Zoom עכשיו">
 <!ENTITY iz.customzoom.label "הכנס אחוזי התמונה הרצויה">
 <!ENTITY iz.customzoom.title "התאמת אחוזי הזום">
 <!ENTITY iz.customdim.width.label "רוחב:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "אפשרויות">
 <!ENTITY iz.options.help.label "עמוד העזרה">
 <!ENTITY iz.options.defaultzoom.label "זום פנימה/החוצה">
-<!ENTITY iz.options.defaultglobalzoom.label "זום גלובלי ברירת מחדל">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
-<!ENTITY iz.options.showviewmenu.label "הראה Image Zoom בתפריט המראה">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "גלול בתוספת הזום">
 <!ENTITY iz.options.scrollmode.label "מצב גלילה">
 <!ENTITY iz.options.scrollrelative.label "קשור">
 <!ENTITY iz.options.scrollabsolute.label "קבוע">
 <!ENTITY iz.options.singlezoom.label "אפשרויות זום בלעדיות">
-<!ENTITY iz.options.globalzoom.label "אפשרויות זום גלובליות">
 <!ENTITY iz.options.context.label "תפריט העכבר">
 <!ENTITY iz.options.contextdisplay.label "תפריט העכבר אפשרויות מראה">
 <!ENTITY iz.options.tabs.contextmenu.label "פריטי תפריט העכבר">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "שמור תמונה כ..">
 <!ENTITY iz.options.menudummy.save.accesskey "o">
-<!ENTITY iz.menu.global.decrease.label "קטן יותר">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "גדול יותר">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "זום עם טקסט">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&amp;#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
 <!ENTITY iz.menu.context.zoomimage.label "הגדל/הקטן תמונה">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ זום פנימה">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

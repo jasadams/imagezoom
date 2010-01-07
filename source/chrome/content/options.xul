@@ -74,6 +74,7 @@
 	          			<column />
 	          			<column />
 	          			<column />
+	          			<column />
 	          		</columns>
 	          		<rows>
 	            			<row align="center" flex="1">
@@ -88,11 +89,10 @@
 								</menupopup>
 							</menulist>
 						</hbox>
+						<spacer style="min-width: 15px" flex="1" />
 						<hbox align="center" flex="1">
-							<spacer style="min-width: 15px" flex="1" />
 							<checkbox id="imagezoomtogglefitreset" label="&iz.options.togglefitreset.label;" prefstring="imagezoom.toggleFitReset"/>
 						</hbox>						
-		    				<spacer flex="1" />
 					</row>
 					<row align="center" flex="1">
 						<label id="imagezoomimageresetbuttonlable" value="&iz.options.imagereset.label;" control="imagezoomimageresetbutton"/>
@@ -104,6 +104,7 @@
 		          					<menuitem label="&iz.options.rmb.label;" value="3"/>
 		          				</menupopup>
 			    			</menulist>
+			    			<spacer flex="1" />
 			    			<spacer flex="1" />
 			    		</row>
 		          		<row align="center" flex="1">
@@ -126,8 +127,8 @@
 				    			</menulist>
 				    			<label id="imagezoomscrollvaluelabelafter" value="%" />
 						</hbox>
+						<spacer style="min-width: 15px" flex="1" />
 						<hbox align="center" flex="1">
-							<spacer style="min-width: 15px" flex="1" />
 							<checkbox id="imagezoomreversescroll" label="&iz.options.reversescroll.label;" prefstring="imagezoom.reversescrollzoom"/>
 						</hbox>
 		          		</row>
@@ -139,6 +140,8 @@
 		          					<menuitem label="&iz.options.scrollabsolute.label;" value="1"/>
 							</menupopup>
 						</menulist>
+						<spacer flex="1" />
+						<spacer flex="1" />
 		          		</row>		          		
 		          	</rows>
 	          	</grid>
@@ -187,7 +190,7 @@
         <vbox flex="1" />
 	<vbox>
 	        <hbox flex="1" />
-		<box id="mainmenu">
+		<box id="mainmenu" class="menu-right">
 			<menuitem label="..."
 				  class="dummy"/>
       			<menuseparator />

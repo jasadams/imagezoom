@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "漫游">
 <!ENTITY iz.about.walkthrough.description "Image Zoom 主要特征综述">
 <!ENTITY iz.about.close.label "关闭">
-<!ENTITY iz.install.installed "Image Zoom 已安装">
-<!ENTITY iz.install.options.label "选项">
-<!ENTITY iz.install.close.label "关闭">
-<!ENTITY iz.install.continue.label "继续 &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "访问 Image Zoom 网站获取更多最新消息和">
-<!ENTITY iz.install.desc.line2 "Image Zoom 的主要特征综述。">
-<!ENTITY iz.install.desc.line3 "按下 [继续 &gt;&gt;] 马上前往 Image Zoom 网站">
 <!ENTITY iz.customzoom.label "输入缩放系数">
 <!ENTITY iz.customzoom.title "自定义缩放">
 <!ENTITY iz.customdim.width.label "宽度：">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "属性">
 <!ENTITY iz.options.help.label "帮助页面">
 <!ENTITY iz.options.defaultzoom.label "缩放系数">
-<!ENTITY iz.options.defaultglobalzoom.label "默认全局缩放">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "全局缩放未被设为默认值时告警">
-<!ENTITY iz.options.showviewmenu.label "在 [查看] 菜单中显示 [图片缩放]">
 <!ENTITY iz.options.showautofit.label "在全局菜单中显示自动适应">
 <!ENTITY iz.options.defaultscroll.label "滚轮缩放增量">
 <!ENTITY iz.options.scrollmode.label "滚轮模式">
 <!ENTITY iz.options.scrollrelative.label "相对滚动">
 <!ENTITY iz.options.scrollabsolute.label "绝对滚动">
 <!ENTITY iz.options.singlezoom.label "单一缩放选项">
-<!ENTITY iz.options.globalzoom.label "全局缩放选项">
 <!ENTITY iz.options.context.label "右健菜单">
 <!ENTITY iz.options.contextdisplay.label "右健菜单显示选项">
 <!ENTITY iz.options.tabs.contextmenu.label "右健菜单项">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "另存图片为 (v)">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "缩小 (S)">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "放大 (L)">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "连同文字一同缩放 (T)">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "自动调整图像大小">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "图片缩放告警">
-<!ENTITY iz.globalZoomWarning.no.label "否">
-<!ENTITY iz.globalZoomWarning.yes.label "是">
-<!ENTITY iz.globalZoomWarning.WarningText1 "您的“图片缩放”全局缩放设置为被设为100&amp;#37;的默认值。这样可能会">
-<!ENTITY iz.globalZoomWarning.WarningText2 "导致一些网站不能正确渲染，并减慢浏览器速度。">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "您想重置全局缩放到默认值吗？">
-<!ENTITY iz.globalZoomWarning.disable.label "禁止该信息">
 <!ENTITY iz.menu.context.zoomimage.label "缩放图片 (Z)">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "放大 (+)">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Upute">
 <!ENTITY iz.about.walkthrough.description "Kratak pregled mogućnosti Image Zoom-a">
 <!ENTITY iz.about.close.label "Zatvori">
-<!ENTITY iz.install.installed "Image Zoom instaliran">
-<!ENTITY iz.install.options.label "Opcije">
-<!ENTITY iz.install.close.label "Zatvori">
-<!ENTITY iz.install.continue.label "Nastavi &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Posjeti internet stranice Image Zoom-a, pronađi novosti te">
-<!ENTITY iz.install.desc.line2 "kratak pregled mogućnosti Image Zoom-a">
-<!ENTITY iz.install.desc.line3 "Pritisni 'Continue' za odlazak na stranice Image Zoom-a">
 <!ENTITY iz.customzoom.label "Upiši postotak uvećanja">
 <!ENTITY iz.customzoom.title "Definiraj Zoom">
 <!ENTITY iz.customdim.width.label "Širina:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "Postavke">
 <!ENTITY iz.options.help.label "Pomoć">
 <!ENTITY iz.options.defaultzoom.label "Zoom In/Out Factor">
-<!ENTITY iz.options.defaultglobalzoom.label "Default Global Zoom">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
-<!ENTITY iz.options.showviewmenu.label "Show Image Zoom in View Menu">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Scroll Zoom Increments">
 <!ENTITY iz.options.scrollmode.label "Scroll Mode">
 <!ENTITY iz.options.scrollrelative.label "Relative">
 <!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Individual Zoom Options">
-<!ENTITY iz.options.globalzoom.label "Global Zoom Options">
 <!ENTITY iz.options.context.label "Context Menu">
 <!ENTITY iz.options.contextdisplay.label "Context Menu Display Options">
 <!ENTITY iz.options.tabs.contextmenu.label "Context Menu Items">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Spremi sliku kao">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "Manje">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "Veće">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "Uvećaj s tekstom">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom upozorenje">
-<!ENTITY iz.globalZoomWarning.no.label "Ne">
-<!ENTITY iz.globalZoomWarning.yes.label "Da">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&amp;#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Isključi ovu poruku">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom Image">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Povećaj">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

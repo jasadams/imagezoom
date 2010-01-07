@@ -1,0 +1,74 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.about.version.label "Version">
+<!ENTITY iz.about.createdby.label "Erstellt von">
+<!ENTITY iz.about.help.label "Hilfe (engl.)">
+<!ENTITY iz.about.help.description "Hilfe zur Konfiguration und Benutzung von Image Zoom">
+<!ENTITY iz.about.forums.label "Forum (engl.)">
+<!ENTITY iz.about.forums.description "Unterstützung, Vorschläge, Fehler">
+<!ENTITY iz.about.walkthrough.label "Überblick (engl.)">
+<!ENTITY iz.about.walkthrough.description "Überblick über die Funktionen von Image Zoom">
+<!ENTITY iz.about.close.label "Schließen">
+<!ENTITY iz.customzoom.label "Zoom-Faktor eingeben:">
+<!ENTITY iz.customzoom.title "Benutzerdefinierter Zoom">
+<!ENTITY iz.customdim.width.label "Breite:">
+<!ENTITY iz.customdim.height.label "Höhe:">
+<!ENTITY iz.customdim.title "Benutzerdefinierte Größe">
+<!ENTITY iz.customdim.aspect.label "Seitenverhältnis beibehalten">
+<!ENTITY iz.options.label "- Einstellungen">
+<!ENTITY iz.options.help.label "Hilfe (engl.)">
+<!ENTITY iz.options.defaultzoom.label "Zoom-Faktor beim Vergrößern/Verkleinern:">
+<!ENTITY iz.options.showautofit.label "Eintrag zum automatischen Anpassen an Fenstergröße im Menü &quot;Ansicht &gt; Grafik-Zoom&quot; anzeigen">
+<!ENTITY iz.options.defaultscroll.label "Zoom-Rate beim Scrollen des Mausrads:">
+<!ENTITY iz.options.scrollmode.label "Scroll-Modus:">
+<!ENTITY iz.options.scrollrelative.label "Relativ">
+<!ENTITY iz.options.scrollabsolute.label "Absolut">
+<!ENTITY iz.options.singlezoom.label "Zoom-Einstellungen für Einzelgrafiken">
+<!ENTITY iz.options.context.label "Kontextmenü">
+<!ENTITY iz.options.contextdisplay.label "Anzeigeoptionen für das Kontextmenü">
+<!ENTITY iz.options.tabs.contextmenu.label "Kontextmenü">
+<!ENTITY iz.options.tabs.zoomcontext.label "&quot;Grafik zoomen&quot;-Kontextmenü">
+<!ENTITY iz.options.tabs.rotatecontext.label "&quot;Grafik drehen&quot;-Kontextmenü">
+<!ENTITY iz.options.tabs.main.label "Allgemein">
+<!ENTITY iz.options.reversescroll.label "Scrollrichtung umkehren">
+<!ENTITY iz.options.autocenter.label "Grafik beim Anpassen an die Fenstergröße automatisch zentrieren">
+<!ENTITY iz.options.mouseaccess.label1 "Aktivierung der Funktionen durch Halten folgender Maustaste:">
+<!ENTITY iz.options.mouseaccess.label2 " ">
+<!ENTITY iz.options.imagefit.label "Taste zur Anpassung an Fenstergröße:">
+<!ENTITY iz.options.imagereset.label "Taste zum Zurücksetzen auf Originalgröße:">
+<!ENTITY iz.options.none.label "Deaktiviert">
+<!ENTITY iz.options.lmb.label "Links">
+<!ENTITY iz.options.mmb.label "Mitte">
+<!ENTITY iz.options.rmb.label "Rechts">
+<!ENTITY iz.options.usemouse.label "Mausfunktionen verwenden">
+<!ENTITY iz.options.contextdescription.label "Auswählen der Einträge, die im Grafik-Kontextmenü angezeigt werden sollen">
+<!ENTITY iz.options.togglefitreset.label "Anpassung an Fenstergröße umschalten/zurücksetzen">
+<!ENTITY iz.options.menudummy.view.label "Grafik anzeigen">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Grafik kopieren">
+<!ENTITY iz.options.menudummy.contents.accesskey "k">
+<!ENTITY iz.options.menudummy.image.label "Grafikadresse kopieren">
+<!ENTITY iz.options.menudummy.image.accesskey "d">
+<!ENTITY iz.options.menudummy.save.label "Grafik speichern unter">
+<!ENTITY iz.options.menudummy.save.accesskey "G">
+<!ENTITY iz.menu.context.zoomimage.label "Grafik zoomen">
+<!ENTITY iz.menu.context.zoomimage.accesskey "o">
+<!ENTITY iz.menu.context.increase.label "+  Grafik vergrößern">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "&lt;  Grafik zurücksetzen">
+<!ENTITY iz.menu.context.reset.accesskey "&lt;">
+<!ENTITY iz.menu.context.decrease.label "-   Grafik verkleinern">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Benutzerdefinierter Zoom">
+<!ENTITY iz.menu.context.customdim.label "Benutzerdefinierte Maße">
+<!ENTITY iz.menu.context.imagefit.label "Grafik an Fenstergröße anpassen">
+<!ENTITY iz.menu.context.rotateimage.label "Grafik drehen">
+<!ENTITY iz.menu.context.rotateimage.accesskey "d">
+<!ENTITY iz.menu.context.imagerotateright.label "Nach Rechts drehen">
+<!ENTITY iz.menu.context.rotate.right.accesskey "r">
+<!ENTITY iz.menu.context.imagerotateleft.label "Nach Links drehen">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "180° drehen">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Rotation zurücksetzen">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "z">
