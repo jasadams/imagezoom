@@ -1,3 +1,0 @@
-Internal re-write to reduce Namespace pollution
-Minor Bug Fixes in Options dialog
-Updated Translations
