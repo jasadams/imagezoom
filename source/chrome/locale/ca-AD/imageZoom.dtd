@@ -27,8 +27,8 @@
 <!ENTITY iz.options.context.label "Menú contextual">
 <!ENTITY iz.options.contextdisplay.label "Opcions de visualització del menú contextual">
 <!ENTITY iz.options.tabs.contextmenu.label "Elements del menú contextual">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Menú contextual Amplia/redueix">
+<!ENTITY iz.options.tabs.rotatecontext.label "Menú contextual Gira">
 <!ENTITY iz.options.tabs.main.label "General">
 <!ENTITY iz.options.reversescroll.label "Inverteix el desplaçament">
 <!ENTITY iz.options.autocenter.label "Centra automàticament les imatges en utilitzar l'opció d'ajustar la imatge">
@@ -63,7 +63,7 @@
 <!ENTITY iz.menu.context.customdim.label "Dimensions personalitzades">
 <!ENTITY iz.menu.context.imagefit.label "Ajusta la imatge">
 <!ENTITY iz.menu.context.rotateimage.label "Gira la imatge">
-<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.rotateimage.accesskey "G">
 <!ENTITY iz.menu.context.imagerotateright.label "Gira a la dreta">
 <!ENTITY iz.menu.context.rotate.right.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateleft.label "Gira a l'esquerra">

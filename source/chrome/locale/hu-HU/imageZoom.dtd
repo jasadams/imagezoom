@@ -27,8 +27,8 @@
 <!ENTITY iz.options.context.label "Helyzetérzékeny menü">
 <!ENTITY iz.options.contextdisplay.label "Kép helyzetérzékeny menü">
 <!ENTITY iz.options.tabs.contextmenu.label "Helyzetérzékeny menü">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Nagyítás helyi menü">
+<!ENTITY iz.options.tabs.rotatecontext.label "Forgatás helyi menü">
 <!ENTITY iz.options.tabs.main.label "Általános beállítások">
 <!ENTITY iz.options.reversescroll.label "Visszafelé görgetés">
 <!ENTITY iz.options.autocenter.label "A kép automatikus középre igazítás az ablakhoz méretezéskor.">
@@ -62,8 +62,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Egyedi nagyítás">
 <!ENTITY iz.menu.context.customdim.label "Egyedi méret">
 <!ENTITY iz.menu.context.imagefit.label "Ablakhoz méretezés">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
-<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.rotateimage.label "Kép forgatása">
+<!ENTITY iz.menu.context.rotateimage.accesskey "f">
 <!ENTITY iz.menu.context.imagerotateright.label "Forgatás jobbra">
 <!ENTITY iz.menu.context.rotate.right.accesskey "j">
 <!ENTITY iz.menu.context.imagerotateleft.label "Forgatás balra">

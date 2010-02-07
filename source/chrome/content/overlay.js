@@ -57,6 +57,13 @@ net.yellowgorilla.imagezoom.overlay = new function () {
             try {
                 // try to save the prefs
                 nsIPrefServiceObj.savePrefFile(null);
+                setTimeout(function()
+				{
+					if (gBrowser)
+					{
+                		gBrowser.selectedTab = gBrowser.addTab('http://imagezoom.yellowgorilla.net/install/?source=install&version=' + version);						
+					}
+				}, 100);
 
             } catch(e) {
                 //alert(e);
