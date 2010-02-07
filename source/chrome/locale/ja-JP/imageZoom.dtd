@@ -9,14 +9,7 @@
 <!ENTITY iz.about.walkthrough.label "チュートリアル (英語)">
 <!ENTITY iz.about.walkthrough.description "Image Zoom の機能について説明します。">
 <!ENTITY iz.about.close.label "閉じる">
-<!ENTITY iz.install.installed "Image Zoom をインストールしました。">
-<!ENTITY iz.install.options.label "オプション">
-<!ENTITY iz.install.close.label "閉じる">
-<!ENTITY iz.install.continue.label "続ける &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "あなたが Imaze Zoom を最大限に活用するのを助けるために">
-<!ENTITY iz.install.desc.line2 "Imaze Zoom のホームページにはこの拡張機能のチュートリアル(英語)が用意されています。">
-<!ENTITY iz.install.desc.line3 "今すぐチュートリアルを受けたい場合は '続ける' をクリックしてください。">
-<!ENTITY iz.customzoom.label "画像の拡大/縮小率(&amp;#37;)を入力">
+<!ENTITY iz.customzoom.label "画像の拡大/縮小率(&#37;)を入力">
 <!ENTITY iz.customzoom.title "画像の拡大/縮小">
 <!ENTITY iz.customdim.width.label "横幅:">
 <!ENTITY iz.customdim.height.label "高さ:">
@@ -25,21 +18,17 @@
 <!ENTITY iz.options.label "設定">
 <!ENTITY iz.options.help.label "ヘルプを表示">
 <!ENTITY iz.options.defaultzoom.label "1回に行う 拡大/縮小 の量">
-<!ENTITY iz.options.defaultglobalzoom.label "ページの拡大率 (初期値)">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "グローバルズームが初期値では無い時は警告する">
-<!ENTITY iz.options.showviewmenu.label "Image Zoom を [表示] メニューに表示">
 <!ENTITY iz.options.showautofit.label "[ウィンドウの大きさに合わせる] を [表示] メニューに表示">
 <!ENTITY iz.options.defaultscroll.label "ホイールの1目盛りで 拡大/縮小 する量">
 <!ENTITY iz.options.scrollmode.label "スクロール">
 <!ENTITY iz.options.scrollrelative.label "相対距離">
 <!ENTITY iz.options.scrollabsolute.label "絶対距離">
 <!ENTITY iz.options.singlezoom.label "画像の拡大 オプション">
-<!ENTITY iz.options.globalzoom.label "ページの拡大 オプション (ブラウザの再起動後に適用)">
 <!ENTITY iz.options.context.label "コンテキストメニュー">
 <!ENTITY iz.options.contextdisplay.label "コンテキストメニュー 表示オプション">
 <!ENTITY iz.options.tabs.contextmenu.label "コンテキストメニューの項目">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "拡大">
+<!ENTITY iz.options.tabs.rotatecontext.label "回転">
 <!ENTITY iz.options.tabs.main.label "全般">
 <!ENTITY iz.options.reversescroll.label "スクロールの反転">
 <!ENTITY iz.options.autocenter.label "ウィンドウに合わせて表示するさいに自動的に中央に寄せる">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "画像を名前を付けて保存">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "小さく">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "大きく">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "文字の大きさに合わせる">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "ウィンドウの大きさに合わせる">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom の警告表示">
-<!ENTITY iz.globalZoomWarning.no.label "いいえ">
-<!ENTITY iz.globalZoomWarning.yes.label "はい">
-<!ENTITY iz.globalZoomWarning.WarningText1 "&quot;Image Zoom&quot; のグローバルズームの設定は デフォルトの値(100&amp;#37;)に設定されていません。">
-<!ENTITY iz.globalZoomWarning.WarningText2 "この状態で Web ページを表示すると、表示が崩れたりブラウザの速度を遅くする可能性があります。">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "グローバルズームを初期値にリセットしてもよろしいですか?">
-<!ENTITY iz.globalZoomWarning.disable.label "このメッセージを表示しない">
 <!ENTITY iz.menu.context.zoomimage.label "画像の大きさ">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ 拡大">
@@ -89,7 +62,7 @@
 <!ENTITY iz.menu.context.customzoom.label "数値を入力して拡大/縮小">
 <!ENTITY iz.menu.context.customdim.label "数値を入力してサイズの変更">
 <!ENTITY iz.menu.context.imagefit.label "ウィンドウに合わせる">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.label "画像の回転">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "右方向へ回転">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "回転をリセット">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

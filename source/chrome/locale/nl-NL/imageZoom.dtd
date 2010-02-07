@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Analyse">
 <!ENTITY iz.about.walkthrough.description "Kort overzicht van ImageZoom mogelijkheden">
 <!ENTITY iz.about.close.label "Sluiten">
-<!ENTITY iz.install.installed "ImageZoom is geïnstalleerd">
-<!ENTITY iz.install.options.label "Opties">
-<!ENTITY iz.install.close.label "Sluiten">
-<!ENTITY iz.install.continue.label "Doorgaan &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Bezoek de ImageZoom website voor de laatste informatie en">
-<!ENTITY iz.install.desc.line2 "een kort overzicht van alle ImageZoom mogelijkheden.">
-<!ENTITY iz.install.desc.line3 "Druk op 'Doorgaan' om nu naar de ImageZoom website te gaan.">
 <!ENTITY iz.customzoom.label "Voer zoomfactor in">
 <!ENTITY iz.customzoom.title "Aangepaste zoom">
 <!ENTITY iz.customdim.width.label "Breedte:">
@@ -25,21 +18,17 @@
 <!ENTITY iz.options.label "Voorkeuren">
 <!ENTITY iz.options.help.label "Help pagina">
 <!ENTITY iz.options.defaultzoom.label "Zoom in/uit factor">
-<!ENTITY iz.options.defaultglobalzoom.label "Standaard algemene zoom">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Waarschuwen indien Algemene zoom niet als standaard waarde is ingesteld">
-<!ENTITY iz.options.showviewmenu.label "ImageZoom in menu Beeld weergeven">
 <!ENTITY iz.options.showautofit.label "AutoFit in menu Beeld &gt; ImageZoom weergeven">
 <!ENTITY iz.options.defaultscroll.label "Scroll zoom toename">
 <!ENTITY iz.options.scrollmode.label "Scroll mode">
 <!ENTITY iz.options.scrollrelative.label "relatief">
 <!ENTITY iz.options.scrollabsolute.label "absoluut">
 <!ENTITY iz.options.singlezoom.label "Individuele zoom opties">
-<!ENTITY iz.options.globalzoom.label "Algemene zoom opties">
-<!ENTITY iz.options.context.label "Context-menu">
-<!ENTITY iz.options.contextdisplay.label "Context-menu opties weergeven">
-<!ENTITY iz.options.tabs.contextmenu.label "Context-menu onderdelen">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.context.label "Contextmenu">
+<!ENTITY iz.options.contextdisplay.label "Contextmenu opties weergeven">
+<!ENTITY iz.options.tabs.contextmenu.label "Contextmenu onderdelen">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoom contextmenu">
+<!ENTITY iz.options.tabs.rotatecontext.label "Rotatie contextmenu">
 <!ENTITY iz.options.tabs.main.label "Algemeen">
 <!ENTITY iz.options.reversescroll.label "Scroll-richting omkeren">
 <!ENTITY iz.options.autocenter.label "Afbeeldingen automatisch centreren bij gebruik van ImageFit">
@@ -62,27 +51,11 @@
 <!ENTITY iz.options.menudummy.image.accesskey "l">
 <!ENTITY iz.options.menudummy.save.label "Afbeelding opslaan als">
 <!ENTITY iz.options.menudummy.save.accesskey "o">
-<!ENTITY iz.menu.global.decrease.label "Kleiner">
-<!ENTITY iz.menu.global.decrease.accesskey "K">
-<!ENTITY iz.menu.global.increase.label "Groter">
-<!ENTITY iz.menu.global.increase.accesskey "G">
-<!ENTITY iz.menu.global.custom.accesskey "A">
-<!ENTITY iz.menu.global.textscale.label "Met tekst zoomen">
-<!ENTITY iz.menu.global.textscale.accesskey "t">
-<!ENTITY iz.menu.global.autofit.label "AutoFit afbeeldingen">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom waarschuwing">
-<!ENTITY iz.globalZoomWarning.no.label "Nee">
-<!ENTITY iz.globalZoomWarning.yes.label "Ja">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Image Zoom algemene zoom instelling is niet ingesteld op de standaard waarde van 100&amp;#37;. Dit kan">
-<!ENTITY iz.globalZoomWarning.WarningText2 "het onjuist opbouwen van sommige websites tot gevolg hebben en de browser vertragen.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Algemene zoom herstellen naar de standaard waarde?">
-<!ENTITY iz.globalZoomWarning.disable.label "Deze melding uitschakelen">
 <!ENTITY iz.menu.context.zoomimage.label "Afbeelding zoomen">
 <!ENTITY iz.menu.context.zoomimage.accesskey "A">
 <!ENTITY iz.menu.context.increase.label "+ Inzoomen">
 <!ENTITY iz.menu.context.increase.accesskey "+">
-<!ENTITY iz.menu.context.reset.label "= Zoom resetten">
+<!ENTITY iz.menu.context.reset.label "= Zoom herstellen">
 <!ENTITY iz.menu.context.reset.accesskey "=">
 <!ENTITY iz.menu.context.decrease.label "- Uitzoomen">
 <!ENTITY iz.menu.context.decrease.accesskey "-">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Roteren herstellen">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "h">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

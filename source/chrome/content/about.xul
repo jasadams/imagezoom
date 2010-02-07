@@ -22,10 +22,10 @@
 ***** END LICENSE BLOCK ***** -->
 
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
-<?xml-stylesheet href="chrome://imagezoom/skin/imagezoom.css" type="text/css"?>
+<?xml-stylesheet href="chrome://net.yellowgorilla.imagezoom/skin/imagezoom.css" type="text/css"?>
 
  <!DOCTYPE window [
-   <!ENTITY % imagezoomDTD SYSTEM "chrome://imagezoom/locale/imageZoom.dtd" >
+   <!ENTITY % imagezoomDTD SYSTEM "chrome://net.yellowgorilla.imagezoom/locale/imageZoom.dtd" >
    %imagezoomDTD;
    <!ENTITY % systemaboutDTD SYSTEM "chrome://mozapps/locale/extensions/about.dtd" >
    %systemaboutDTD;
@@ -35,14 +35,14 @@
 	title="&iz.product.name; &iz.product.version;"
 	orient="vertical"
 	autostretch="always"
-	onload="initAbout()"
+	onload="net.yellowgorilla.imagezoom.globals.initAbout()"
 	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<script type="application/x-javascript" src="chrome://imagezoom/content/utils.js"/>
+	<script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/globals.js"/>
 
 <groupbox align="start" orient="horizontal" class="about-box">
   <vbox>
-    <text value="&iz.product.name;" class="main-title" onclick="openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=' + getAppVersion());" />
+    <text value="&iz.product.name;" class="main-title" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
     <text id="versionlabel" value="&iz.about.version.label;" class="version"/>
 
     <hbox>
@@ -74,19 +74,19 @@
     </hbox>
     
     <separator class="thin"/>
-    <text value="&iz.about.help.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=' + getAppVersion());" />
+    <text value="&iz.about.help.label;" class="url" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
     <text value="&iz.about.help.description;"/>
 
     <separator class="thin"/>
-    <text value="&iz.about.forums.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=' + getAppVersion());" />
+    <text value="&iz.about.forums.label;" class="url" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
 
     <separator class="thin"/>
-	<text value="&iz.about.walkthrough.label;" class="url" onclick="openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=' + getAppVersion());" />
+	<text value="&iz.about.walkthrough.label;" class="url" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
     <text value="&iz.about.walkthrough.description;"/>
 
   </vbox>
   <spring flex="1"/>
-  <image src="chrome://imagezoom/skin/imagezoom.png"/>
+  <image src="chrome://net.yellowgorilla.imagezoom/skin/imagezoom.png"/>
 </groupbox>
 
 <hbox>

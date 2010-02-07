@@ -1,21 +1,14 @@
-<!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.product.name "Povečava slike">
+<!ENTITY iz.product.version "0.4">
 <!ENTITY iz.about.version.label "Različica">
 <!ENTITY iz.about.createdby.label "Avtor">
 <!ENTITY iz.about.help.label "Pomoč">
-<!ENTITY iz.about.help.description "Pomoč pri prilagajanju in uporabi Image Zooma">
+<!ENTITY iz.about.help.description "Pomoč pri prilagajanju in uporabi Povečave slike">
 <!ENTITY iz.about.forums.label "Forumi">
 <!ENTITY iz.about.forums.description "Podpora, predlogi, napake">
 <!ENTITY iz.about.walkthrough.label "Povzetek">
-<!ENTITY iz.about.walkthrough.description "Kratek pregled značilnosti Image Zooma">
+<!ENTITY iz.about.walkthrough.description "Kratek pregled značilnosti Povečave slike">
 <!ENTITY iz.about.close.label "Zapri">
-<!ENTITY iz.install.installed "Image Zoom je nameščen">
-<!ENTITY iz.install.options.label "Možnosti">
-<!ENTITY iz.install.close.label "Zapri">
-<!ENTITY iz.install.continue.label "Nadaljuj &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Obiščite spletno stran razširitve za najnovejše informacije in">
-<!ENTITY iz.install.desc.line2 "kratek pregled značilnosti Image Zooma.">
-<!ENTITY iz.install.desc.line3 "Pritisnite &apos;Nadaljuj&apos;, da se odpre spletna stran Image Zoom">
 <!ENTITY iz.customzoom.label "Vnesite odstotek povečave">
 <!ENTITY iz.customzoom.title "Povečava po meri">
 <!ENTITY iz.customdim.width.label "Širina:">
@@ -25,21 +18,17 @@
 <!ENTITY iz.options.label "Možnosti">
 <!ENTITY iz.options.help.label "Stran pomoči">
 <!ENTITY iz.options.defaultzoom.label "Stopnja povečave/pomanjšave">
-<!ENTITY iz.options.defaultglobalzoom.label "Privzeta splošna povečava">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Opozori, če Splošna povečava ni nastavljena na privzeto vrednost">
-<!ENTITY iz.options.showviewmenu.label "Prikaz menija Image Zoom v meniju Pogled">
 <!ENTITY iz.options.showautofit.label "Pokaži Samoumeri v splošnem meniju">
 <!ENTITY iz.options.defaultscroll.label "Korak povečave z vrtenjem koleščka">
 <!ENTITY iz.options.scrollmode.label "Drsni način">
 <!ENTITY iz.options.scrollrelative.label "Relativno">
 <!ENTITY iz.options.scrollabsolute.label "Absolutno">
 <!ENTITY iz.options.singlezoom.label "Možnosti posamezne povečave">
-<!ENTITY iz.options.globalzoom.label "Splošne možnosti povečave">
 <!ENTITY iz.options.context.label "Kontekstni meni">
 <!ENTITY iz.options.contextdisplay.label "Možnosti prikaza v kontekstnem meniju">
 <!ENTITY iz.options.tabs.contextmenu.label "Možnosti kontekstnega menija">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Kontekstni meni povečave">
+<!ENTITY iz.options.tabs.rotatecontext.label "Kontekstni meni sukanja">
 <!ENTITY iz.options.tabs.main.label "Splošno">
 <!ENTITY iz.options.reversescroll.label "Drsenje naprej">
 <!ENTITY iz.options.autocenter.label "Samodejno postavi slike na sredino pri povečavi Na velikost okna">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Shrani sliko kot">
 <!ENTITY iz.options.menudummy.save.accesskey "s">
-<!ENTITY iz.menu.global.decrease.label "Pomanjšaj">
-<!ENTITY iz.menu.global.decrease.accesskey "M">
-<!ENTITY iz.menu.global.increase.label "Povečaj">
-<!ENTITY iz.menu.global.increase.accesskey "V">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "Povečava z besedilom">
-<!ENTITY iz.menu.global.textscale.accesskey "B">
-<!ENTITY iz.menu.global.autofit.label "Samoumeri slike">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Opozorilo povečave slike">
-<!ENTITY iz.globalZoomWarning.no.label "Ne">
-<!ENTITY iz.globalZoomWarning.yes.label "Da">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Vaša nastavitev splošne povečave v &quot;Image Zoom&quot; ni nastavljena na privzetih 100&amp;#37;. To lahko">
-<!ENTITY iz.globalZoomWarning.WarningText2 "povzroči, da se nekatera spletna mesta ne upodobijo pravilno, lahko pa tudi upočasni vaš brskalnik.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Želite ponastaviti splošno povečavo na privzeto vrednost?">
-<!ENTITY iz.globalZoomWarning.disable.label "Onemogoči to sporočilo">
 <!ENTITY iz.menu.context.zoomimage.label "Povečava">
 <!ENTITY iz.menu.context.zoomimage.accesskey "E">
 <!ENTITY iz.menu.context.increase.label "Povečaj (+)">
@@ -89,17 +62,13 @@
 <!ENTITY iz.menu.context.customzoom.label "Odstotek ...">
 <!ENTITY iz.menu.context.customdim.label "Mere ...">
 <!ENTITY iz.menu.context.imagefit.label "Na velikost okna">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
-<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.rotateimage.label "Zasukaj sliko">
+<!ENTITY iz.menu.context.rotateimage.accesskey "k">
 <!ENTITY iz.menu.context.imagerotateright.label "Zasukaj desno">
 <!ENTITY iz.menu.context.rotate.right.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateleft.label "Zasukaj levo">
 <!ENTITY iz.menu.context.rotate.left.accesskey "l">
-<!ENTITY iz.menu.context.imagerotate180.label "Zasukaj za 180&amp;#xB0;">
+<!ENTITY iz.menu.context.imagerotate180.label "Zasukaj za 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Ponastavi sukanje">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "P">
