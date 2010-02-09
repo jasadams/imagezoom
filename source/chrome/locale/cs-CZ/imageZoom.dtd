@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Prohlídka">
 <!ENTITY iz.about.walkthrough.description "Celkový přehled funkcí Image Zoom.">
 <!ENTITY iz.about.close.label "Zavřít">
-<!ENTITY iz.install.installed "Image Zoom nainstalováno.">
-<!ENTITY iz.install.options.label "Možnosti">
-<!ENTITY iz.install.close.label "Zavřít">
-<!ENTITY iz.install.continue.label "Pokračovat &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Navštivte domovskou stránku Image Zoom - získáte">
-<!ENTITY iz.install.desc.line2 "čerstvé informace a přehled všech funkcí tohoto rozšíření.">
-<!ENTITY iz.install.desc.line3 "Klepnutím na tlačítko &apos;Pokračovat&apos; přejdete na domovskou stránku">
 <!ENTITY iz.customzoom.label "Zadejte měřítko">
 <!ENTITY iz.customzoom.title "Vlastní měřítko">
 <!ENTITY iz.customdim.width.label "Délka:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "Možnosti">
 <!ENTITY iz.options.help.label "Nápověda">
 <!ENTITY iz.options.defaultzoom.label "Měřítko">
-<!ENTITY iz.options.defaultglobalzoom.label "Standartní obecné měřítko">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
-<!ENTITY iz.options.showviewmenu.label "Zobrazovat Image Zoom v nabídce Zobrazit">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Přírůstek při posouvání">
 <!ENTITY iz.options.scrollmode.label "Scroll Mode">
 <!ENTITY iz.options.scrollrelative.label "Relative">
 <!ENTITY iz.options.scrollabsolute.label "Absolute">
 <!ENTITY iz.options.singlezoom.label "Osobní nastavení měřítka">
-<!ENTITY iz.options.globalzoom.label "Obecné nastavení měřítka">
 <!ENTITY iz.options.context.label "Místní nabídka">
 <!ENTITY iz.options.contextdisplay.label "Nastavení položek místní nabídky">
 <!ENTITY iz.options.tabs.contextmenu.label "Položky místní nabídky">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Uložit obrázek jako...">
 <!ENTITY iz.options.menudummy.save.accesskey "U">
-<!ENTITY iz.menu.global.decrease.label "Menší">
-<!ENTITY iz.menu.global.decrease.accesskey "M">
-<!ENTITY iz.menu.global.increase.label "Větší">
-<!ENTITY iz.menu.global.increase.accesskey "V">
-<!ENTITY iz.menu.global.custom.accesskey "J">
-<!ENTITY iz.menu.global.textscale.label "Měnit podle textu">
-<!ENTITY iz.menu.global.textscale.accesskey "n">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&amp;#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
 <!ENTITY iz.menu.context.zoomimage.label "Měřítko obrázku">
 <!ENTITY iz.menu.context.zoomimage.accesskey "M">
 <!ENTITY iz.menu.context.increase.label "+ Přiblížit">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "O">

@@ -3,19 +3,12 @@
 <!ENTITY iz.about.version.label "versio">
 <!ENTITY iz.about.createdby.label "tehnyt:">
 <!ENTITY iz.about.help.label "Ohje">
-<!ENTITY iz.about.help.description "Ohjeita Image Zoomin käytöstä ja asetusten määrittämisestä">
+<!ENTITY iz.about.help.description "Image Zoomin asetus- ja käyttösohjeet">
 <!ENTITY iz.about.forums.label "Keskustelukanavat">
 <!ENTITY iz.about.forums.description "Tuki, ehdotukset, virheet">
 <!ENTITY iz.about.walkthrough.label "Läpikulku">
 <!ENTITY iz.about.walkthrough.description "Katsaus Image Zoomin ominaisuuksiin">
 <!ENTITY iz.about.close.label "Sulje">
-<!ENTITY iz.install.installed "Image Zoom asennettu">
-<!ENTITY iz.install.options.label "Valinnat">
-<!ENTITY iz.install.close.label "Sulje">
-<!ENTITY iz.install.continue.label "Jatka &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Käy Image Zoom -laajennuksen kotisivuilla katsomassa uusimmat">
-<!ENTITY iz.install.desc.line2 "tiedot ja katsomassa lyhyt katsaus Image Zoomin ominaisuuksista.">
-<!ENTITY iz.install.desc.line3 "Paina &apos;Jatka&apos; siirtyäksesi Image Zoomin kotisivuille.">
 <!ENTITY iz.customzoom.label "Syötä suurennuksen tekijä">
 <!ENTITY iz.customzoom.title "Mukautettu suurennus">
 <!ENTITY iz.customdim.width.label "Leveys:">
@@ -24,82 +17,58 @@
 <!ENTITY iz.customdim.aspect.label "Säilytä kuvasuhde">
 <!ENTITY iz.options.label "&gt;&gt; Asetukset">
 <!ENTITY iz.options.help.label "Ohjesivu">
-<!ENTITY iz.options.defaultzoom.label "Lähennyksen/loitonnuksen tekijä">
-<!ENTITY iz.options.defaultglobalzoom.label "Yleinen oletussuurennus">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Varoita, jos yleinen suurennusasetus ei ole oletusarvo">
-<!ENTITY iz.options.showviewmenu.label "Näytä &apos;&apos;Suurenna kuvaa&apos;&apos; -valinta Näytä-valikossa">
+<!ENTITY iz.options.defaultzoom.label "Suurennuksen ja pienennyksen tekijä">
 <!ENTITY iz.options.showautofit.label "Näytä &apos;&apos;Sovita kuvat automaattisesti&apos;&apos; yleisvalikossa">
-<!ENTITY iz.options.defaultscroll.label "Vierityssuurennuksen lisäys">
-<!ENTITY iz.options.scrollmode.label "Vieritystila">
+<!ENTITY iz.options.defaultscroll.label "Vieritys muuttaa kokoa">
+<!ENTITY iz.options.scrollmode.label "Vieritystapa">
 <!ENTITY iz.options.scrollrelative.label "Suhteellinen">
 <!ENTITY iz.options.scrollabsolute.label "Absoluuttinen">
 <!ENTITY iz.options.singlezoom.label "Yksilölliset suurennusvalinnat">
-<!ENTITY iz.options.globalzoom.label "Yleiset suurennusvalinnat">
-<!ENTITY iz.options.context.label "Pikavalikko">
-<!ENTITY iz.options.contextdisplay.label "Pikavalikon näyttövalinnat">
+<!ENTITY iz.options.context.label "Kuvan suurennuksen pikavalikko">
+<!ENTITY iz.options.contextdisplay.label "Pikavalikossa näytettävät kohteet">
 <!ENTITY iz.options.tabs.contextmenu.label "Pikavalikon kohteet">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Pikavalikko">
+<!ENTITY iz.options.tabs.rotatecontext.label "Kuvan kierron pikavalikko">
 <!ENTITY iz.options.tabs.main.label "Yleiset">
 <!ENTITY iz.options.reversescroll.label "Käänteinen vieritys">
 <!ENTITY iz.options.autocenter.label "Keskitä kuva käytettäessä Sovita kuva -toimintoa">
 <!ENTITY iz.options.mouseaccess.label1 "Käytä toimintoja painamalla alas">
 <!ENTITY iz.options.mouseaccess.label2 "hiiren painike.">
-<!ENTITY iz.options.imagefit.label "Kuvan koonsovittamispainike">
-<!ENTITY iz.options.imagereset.label "Kuvan koonpalautuspainike">
+<!ENTITY iz.options.imagefit.label "Kuvan koon sovittamispainike">
+<!ENTITY iz.options.imagereset.label "Kuvan koon palautuspainike">
 <!ENTITY iz.options.none.label "Poissa käytöstä">
 <!ENTITY iz.options.lmb.label "Vasen">
 <!ENTITY iz.options.mmb.label "Keskimmäinen">
 <!ENTITY iz.options.rmb.label "Oikea">
 <!ENTITY iz.options.usemouse.label "Käytä hiiritoimintoja">
 <!ENTITY iz.options.contextdescription.label "Valitse kohteet, joiden haluat näkyvän kuvan pikavalikossa">
-<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
+<!ENTITY iz.options.togglefitreset.label "Vaihda kuvan sovituksen ja nollauksen välillä">
 <!ENTITY iz.options.menudummy.view.label "Näytä kuva">
-<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.view.accesskey "ä">
 <!ENTITY iz.options.menudummy.contents.label "Kopioi kuva">
 <!ENTITY iz.options.menudummy.contents.accesskey "y">
 <!ENTITY iz.options.menudummy.image.label "Kopioi kuvan osoite">
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Tallenna kuva nimellä">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "Pienempi">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "Suurempi">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "Suurenna tekstin mukana">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Sovita kuvat automaattisesti">
-<!ENTITY iz.menu.global.autofit.accesskey "O">
-<!ENTITY iz.globalZoomWarning.title "Kuvansuurennusvaroitus">
-<!ENTITY iz.globalZoomWarning.no.label "Ei">
-<!ENTITY iz.globalZoomWarning.yes.label "Kyllä">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Yleistä suurennusasetusta ei ole asetettu oletusarvoon (100&amp;#37;). Tämä voi johtaa siihen,">
-<!ENTITY iz.globalZoomWarning.WarningText2 "että jotkin verkkosivut taittuvat virheellisesti, ja selain voi hidastua.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Haluatko asettaa yleisen suurennuksen oletusarvoilleen?">
-<!ENTITY iz.globalZoomWarning.disable.label "Poista tämä sanoma käytöstä">
 <!ENTITY iz.menu.context.zoomimage.label "Suurenna kuvaa">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
-<!ENTITY iz.menu.context.increase.label "+ Lähennä">
+<!ENTITY iz.menu.context.increase.label "+ Suurenna">
 <!ENTITY iz.menu.context.increase.accesskey "+">
 <!ENTITY iz.menu.context.reset.label "= Normaalikoko">
 <!ENTITY iz.menu.context.reset.accesskey "=">
-<!ENTITY iz.menu.context.decrease.label "- Loitonna">
+<!ENTITY iz.menu.context.decrease.label "- Pienennä">
 <!ENTITY iz.menu.context.decrease.accesskey "-">
 <!ENTITY iz.menu.context.customzoom.label "Mukautettu koko">
 <!ENTITY iz.menu.context.customdim.label "Mukautetut mittasuhteet">
 <!ENTITY iz.menu.context.imagefit.label "Sovita kuva">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.label "Kierrä kuvaa">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
+<!ENTITY iz.menu.context.imagerotateright.label "Kierrä oikealle">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
+<!ENTITY iz.menu.context.imagerotateleft.label "Kierrä vasemmalle">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
+<!ENTITY iz.menu.context.imagerotate180.label "Kierrä 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
-<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
-<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">
+<!ENTITY iz.menu.context.imagerotatereset.label "Nollaa kuvan kierto">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "N">

@@ -21,24 +21,6 @@
 
 ***** END LICENSE BLOCK ***** */
 
-#imagezoom-options-dialog
-{
-    height: 20em;
-    width: 40em;
-}
-
-#imagezoom-customdim-dialog
-{
-    height: 20em;
-    width: 40em;
-}
-
-#imagezoom-customzoom-dialog
-{
-    height: 20em;
-    width: 40em;
-}
-
 #mainmenu {
   	border: 2px solid;
   	-moz-border-top-colors: ThreeDLightShadow ThreeDHighlight;
@@ -82,8 +64,6 @@ checkbox {
 .right-arrow {
   margin-top: 6px;
   margin-right: 6px;
-  height: 7px;
-  width: 4px;
   float:right;
   -moz-image-region: auto;
 }

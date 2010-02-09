@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Prehliadka">
 <!ENTITY iz.about.walkthrough.description "Celkový prehľad funkcií Image Zoom.">
 <!ENTITY iz.about.close.label "Zavrieť">
-<!ENTITY iz.install.installed "Image Zoom je nainštalovaný.">
-<!ENTITY iz.install.options.label "Možnosti">
-<!ENTITY iz.install.close.label "Zavrieť">
-<!ENTITY iz.install.continue.label "Pokračovať &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Navštívte domovskú stránku Image Zoom - získate">
-<!ENTITY iz.install.desc.line2 "čerstvé informácie a prehľad všetkých funkcií tohto rozšírenia.">
-<!ENTITY iz.install.desc.line3 "Kliknutím na tlačidlo &apos;Pokračovať&apos; prejdete na domovskú stránku">
 <!ENTITY iz.customzoom.label "Zadajte pomer">
 <!ENTITY iz.customzoom.title "Vlastný pomer strán">
 <!ENTITY iz.customdim.width.label "Šírka:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "Možnosti">
 <!ENTITY iz.options.help.label "Pomoc">
 <!ENTITY iz.options.defaultzoom.label "Pomer strán">
-<!ENTITY iz.options.defaultglobalzoom.label "Štandardný pomer strán">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Varovať, ak nie je štandardný pomer strán nastavený na východziu hodnotu">
-<!ENTITY iz.options.showviewmenu.label "Zobrazovať Image Zoom v ponuke Zobraziť">
 <!ENTITY iz.options.showautofit.label "Zobraziť &apos;Automaticky prispôsobiť&apos; v hlavnej ponuke">
 <!ENTITY iz.options.defaultscroll.label "Prírastok pri zmene veľkosti">
 <!ENTITY iz.options.scrollmode.label "Režim rolovania">
 <!ENTITY iz.options.scrollrelative.label "Relatívne">
 <!ENTITY iz.options.scrollabsolute.label "Absolútne">
 <!ENTITY iz.options.singlezoom.label "Osobné nastavenie rozmerov">
-<!ENTITY iz.options.globalzoom.label "Štandardné nastavenie rozmerov">
 <!ENTITY iz.options.context.label "Položky kontextovej ponuky">
 <!ENTITY iz.options.contextdisplay.label "Nastavenia položiek kontextovej ponuky">
 <!ENTITY iz.options.tabs.contextmenu.label "Kontextová ponuka">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Uložit...">
 <!ENTITY iz.options.menudummy.save.accesskey "U">
-<!ENTITY iz.menu.global.decrease.label "Menší">
-<!ENTITY iz.menu.global.decrease.accesskey "M">
-<!ENTITY iz.menu.global.increase.label "Väčší">
-<!ENTITY iz.menu.global.increase.accesskey "V">
-<!ENTITY iz.menu.global.custom.accesskey "J">
-<!ENTITY iz.menu.global.textscale.label "Meniť s textom">
-<!ENTITY iz.menu.global.textscale.accesskey "n">
-<!ENTITY iz.menu.global.autofit.label "Automaticky prispôsobiť">
-<!ENTITY iz.menu.global.autofit.accesskey "M">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Upozornenie">
-<!ENTITY iz.globalZoomWarning.no.label "Nie">
-<!ENTITY iz.globalZoomWarning.yes.label "Áno">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Vaše nastavenie pre štandardný pomer strán nie je nastavené na východziu hodnotu 100&amp;#37;.">
-<!ENTITY iz.globalZoomWarning.WarningText2 "Môže to spoôsobiť zlé zobrazenie niektorých stránok a spomaliť váš prehliadač.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Chcete nastaviť štandardný pomer strán na východziu hodnotu?">
-<!ENTITY iz.globalZoomWarning.disable.label "Zakázať zobrazovanie tejto správy">
 <!ENTITY iz.menu.context.zoomimage.label "Zväčšiť obrázok">
 <!ENTITY iz.menu.context.zoomimage.accesskey "v">
 <!ENTITY iz.menu.context.increase.label "+ Zväčšiť">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "O">

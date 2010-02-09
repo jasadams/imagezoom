@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Tutorial">
 <!ENTITY iz.about.walkthrough.description "Un resumen de las funciones de Image Zoom">
 <!ENTITY iz.about.close.label "Cerrar">
-<!ENTITY iz.install.installed "Image Zoom instalado">
-<!ENTITY iz.install.options.label "Opciones">
-<!ENTITY iz.install.close.label "Cerrar">
-<!ENTITY iz.install.continue.label "Continuar &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Visite la página web de Image Zoom para obtener información actualizada">
-<!ENTITY iz.install.desc.line2 "y un breve recorrido por todas las funciones de Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Oprima &apos;Continuar&apos; para ir a la página web de Image Zoom">
 <!ENTITY iz.customzoom.label "Introduzca factor de zoom">
 <!ENTITY iz.customzoom.title "Zoom personalizado">
 <!ENTITY iz.customdim.width.label "Ancho:">
@@ -25,26 +18,22 @@
 <!ENTITY iz.options.label "Opciones">
 <!ENTITY iz.options.help.label "Página de ayuda">
 <!ENTITY iz.options.defaultzoom.label "Factor de zoom +/-">
-<!ENTITY iz.options.defaultglobalzoom.label "Zoom global predeterminado">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
-<!ENTITY iz.options.showviewmenu.label "Mostrar Image Zoom en menú Ver">
-<!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
+<!ENTITY iz.options.showautofit.label "Mostrar Autoajustar en menú">
 <!ENTITY iz.options.defaultscroll.label "Incremento de zoom cada paso de rueda">
-<!ENTITY iz.options.scrollmode.label "Scroll Mode">
-<!ENTITY iz.options.scrollrelative.label "Relative">
-<!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.scrollmode.label "Configuración de scroll">
+<!ENTITY iz.options.scrollrelative.label "Relativo">
+<!ENTITY iz.options.scrollabsolute.label "Absoluto">
 <!ENTITY iz.options.singlezoom.label "Opciones de zoom individual">
-<!ENTITY iz.options.globalzoom.label "Opciones de zoom global">
 <!ENTITY iz.options.context.label "Menú contextual">
 <!ENTITY iz.options.contextdisplay.label "Opciones de visualización del menú contextual">
 <!ENTITY iz.options.tabs.contextmenu.label "Items del menú contextual">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Menú contextual de zoom">
+<!ENTITY iz.options.tabs.rotatecontext.label "Menú contextual de rotar">
 <!ENTITY iz.options.tabs.main.label "Global">
 <!ENTITY iz.options.reversescroll.label "Invertir sentido de rueda">
 <!ENTITY iz.options.autocenter.label "Autocentrar las imágenes al usar Ajustar imagen">
-<!ENTITY iz.options.mouseaccess.label1 "Acceso a funciones oprimiendo botón ">
-<!ENTITY iz.options.mouseaccess.label2 " del mouse.">
+<!ENTITY iz.options.mouseaccess.label1 "Acceso a funciones oprimiendo botón">
+<!ENTITY iz.options.mouseaccess.label2 "del mouse.">
 <!ENTITY iz.options.imagefit.label "Botón ajustar imagen">
 <!ENTITY iz.options.imagereset.label "Botón restaurar imagen">
 <!ENTITY iz.options.none.label "desactivado">
@@ -53,7 +42,7 @@
 <!ENTITY iz.options.rmb.label "derecho">
 <!ENTITY iz.options.usemouse.label "Utilizar funciones del mouse">
 <!ENTITY iz.options.contextdescription.label "Items a mostrar en el menú contextual de imágenes">
-<!ENTITY iz.options.togglefitreset.label "Toggle Image Fit/Reset">
+<!ENTITY iz.options.togglefitreset.label "Conmutar ajustar/restaurar imagen">
 <!ENTITY iz.options.menudummy.view.label "Ver imagen">
 <!ENTITY iz.options.menudummy.view.accesskey "v">
 <!ENTITY iz.options.menudummy.contents.label "Copiar imagen">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Guardar imagen como">
 <!ENTITY iz.options.menudummy.save.accesskey "g">
-<!ENTITY iz.menu.global.decrease.label "menor">
-<!ENTITY iz.menu.global.decrease.accesskey "n">
-<!ENTITY iz.menu.global.increase.label "mayor">
-<!ENTITY iz.menu.global.increase.accesskey "M">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "Zoom con texto">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom Warning">
-<!ENTITY iz.globalZoomWarning.no.label "No">
-<!ENTITY iz.globalZoomWarning.yes.label "Yes">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&amp;#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Disable this message">
 <!ENTITY iz.menu.context.zoomimage.label "Zoom de imagen">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+  para zoom +">
@@ -89,17 +62,13 @@
 <!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
 <!ENTITY iz.menu.context.customdim.label "Dimensiones personalizadas">
 <!ENTITY iz.menu.context.imagefit.label "Ajustar imagen">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.label "Rotar imagen">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">
-<!ENTITY iz.menu.context.rotate.right.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateleft.label "Rotate Left">
-<!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "Rotate 180°">
+<!ENTITY iz.menu.context.imagerotateright.label "Rotar a derecha">
+<!ENTITY iz.menu.context.rotate.right.accesskey "d">
+<!ENTITY iz.menu.context.imagerotateleft.label "Rotar a izquierda">
+<!ENTITY iz.menu.context.rotate.left.accesskey "i">
+<!ENTITY iz.menu.context.imagerotate180.label "Rotar 180°">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
-<!ENTITY iz.menu.context.imagerotatereset.label "Rotate Reset">
-<!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">
+<!ENTITY iz.menu.context.imagerotatereset.label "Deshacer rotación">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "h">

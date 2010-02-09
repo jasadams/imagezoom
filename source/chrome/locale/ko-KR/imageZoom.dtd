@@ -1,21 +1,14 @@
 <!ENTITY iz.product.name "Image Zoom">
-<!ENTITY iz.product.version "0.3">
+<!ENTITY iz.product.version "0.4">
 <!ENTITY iz.about.version.label "버전">
 <!ENTITY iz.about.createdby.label "만든이">
 <!ENTITY iz.about.help.label "도움말">
 <!ENTITY iz.about.help.description "Image Zoom의 설정과 사용에 대한 도움말">
 <!ENTITY iz.about.forums.label "포럼">
-<!ENTITY iz.about.forums.description "지원, 제안하기, 버그 보고">
+<!ENTITY iz.about.forums.description "지원, 제안, 버그 보고">
 <!ENTITY iz.about.walkthrough.label "설명">
 <!ENTITY iz.about.walkthrough.description "Image Zoom의 기능에 대한 간단한 설명">
 <!ENTITY iz.about.close.label "닫기">
-<!ENTITY iz.install.installed "Image Zoom이 설치되었습니다.">
-<!ENTITY iz.install.options.label "설정">
-<!ENTITY iz.install.close.label "닫기">
-<!ENTITY iz.install.continue.label "계속 &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Image Zoom의 기능에 대한 간단한 개요와 최신의 정보를">
-<!ENTITY iz.install.desc.line2 "얻으시려면 Image Zoom 웹사이트를 방문하십시오.">
-<!ENTITY iz.install.desc.line3 "'계속'을 누르면 Image Zoom 웹사이트에 지금 접속합니다.">
 <!ENTITY iz.customzoom.label "그림의 배율">
 <!ENTITY iz.customzoom.title "배율 설정">
 <!ENTITY iz.customdim.width.label "너비:">
@@ -25,59 +18,39 @@
 <!ENTITY iz.options.label "설정">
 <!ENTITY iz.options.help.label "도움말 페이지">
 <!ENTITY iz.options.defaultzoom.label "확대/축소 비율">
-<!ENTITY iz.options.defaultglobalzoom.label "기본 일반 확대율">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "일반 확대율이 기본값이 아닐 때 경고하기">
-<!ENTITY iz.options.showviewmenu.label "Image Zoom을 보기 메뉴에 보이기">
-<!ENTITY iz.options.showautofit.label "자동맞춤을 일반 메뉴에 보이기">
+<!ENTITY iz.options.showautofit.label "자동 맞춤을 일반 메뉴에 보이기">
 <!ENTITY iz.options.defaultscroll.label "한번 스크롤할 때 확대/축소할 양">
 <!ENTITY iz.options.scrollmode.label "스크롤 방식">
 <!ENTITY iz.options.scrollrelative.label "상대 스크롤">
 <!ENTITY iz.options.scrollabsolute.label "절대 스크롤">
 <!ENTITY iz.options.singlezoom.label "그림 확대 설정">
-<!ENTITY iz.options.globalzoom.label "일반 확대 설정">
 <!ENTITY iz.options.context.label "문맥 메뉴">
 <!ENTITY iz.options.contextdisplay.label "문맥 메뉴에서 보여줄 항목">
 <!ENTITY iz.options.tabs.contextmenu.label "문맥 메뉴 항목">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "줌 문맥 메뉴">
+<!ENTITY iz.options.tabs.rotatecontext.label "회전 문맥 메뉴">
 <!ENTITY iz.options.tabs.main.label "일반">
 <!ENTITY iz.options.reversescroll.label "스크롤 반전">
 <!ENTITY iz.options.autocenter.label "창 크기에 맞추기를 사용했을 때 정중앙에 그림 놓기">
 <!ENTITY iz.options.mouseaccess.label1 "마우스의">
 <!ENTITY iz.options.mouseaccess.label2 "버튼을 누르고 있을 때 아래의 기능을 사용">
-<!ENTITY iz.options.imagefit.label "창크기에 맞추기">
-<!ENTITY iz.options.imagereset.label "원래 크기로 되돌리기">
-<!ENTITY iz.options.none.label "사용 안함">
+<!ENTITY iz.options.imagefit.label "창 크기에 맞추기 버튼">
+<!ENTITY iz.options.imagereset.label "그림 초기화 버튼">
+<!ENTITY iz.options.none.label "사용 안 함">
 <!ENTITY iz.options.lmb.label "왼쪽">
 <!ENTITY iz.options.mmb.label "가운데">
 <!ENTITY iz.options.rmb.label "오른쪽">
 <!ENTITY iz.options.usemouse.label "마우스 동작 사용">
-<!ENTITY iz.options.contextdescription.label "그림 문맥 메뉴에 표시할 항목을 선택">
-<!ENTITY iz.options.togglefitreset.label "그림을 창 크기에 맞추기/안맞추기">
+<!ENTITY iz.options.contextdescription.label "그림 문맥 메뉴에서 보여줄 항목을 선택">
+<!ENTITY iz.options.togglefitreset.label "그림을 창 크기에 맞추기/초기화">
 <!ENTITY iz.options.menudummy.view.label "그림 보기">
 <!ENTITY iz.options.menudummy.view.accesskey "i">
 <!ENTITY iz.options.menudummy.contents.label "그림 복사">
 <!ENTITY iz.options.menudummy.contents.accesskey "y">
 <!ENTITY iz.options.menudummy.image.label "그림 주소 복사">
 <!ENTITY iz.options.menudummy.image.accesskey "o">
-<!ENTITY iz.options.menudummy.save.label "그림을 새 이름으로 저장">
+<!ENTITY iz.options.menudummy.save.label "그림을 다른 이름으로 저장">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "작게">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "크게">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "글자 크기에 맞춤">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "그림 자동 맞춤">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "그림 확대 경고">
-<!ENTITY iz.globalZoomWarning.no.label "아니오">
-<!ENTITY iz.globalZoomWarning.yes.label "예">
-<!ENTITY iz.globalZoomWarning.WarningText1 "'그림 확대'의 일반 확대율이 100&amp;#37;로 설정되어 있지 않습니다.">
-<!ENTITY iz.globalZoomWarning.WarningText2 "이것은 몇몇 웹사이트의 모양이 깨지거나 브라우저를 느려지게 할 수 있습니다.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "정말, 일반 확대율을 기본값으로 되돌리시겠습니까?">
-<!ENTITY iz.globalZoomWarning.disable.label "이 메시지를 더 이상 보이지 않기">
 <!ENTITY iz.menu.context.zoomimage.label "그림 확대">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ 확대">
@@ -89,17 +62,13 @@
 <!ENTITY iz.menu.context.customzoom.label "배율 바꾸기">
 <!ENTITY iz.menu.context.customdim.label "크기 바꾸기">
 <!ENTITY iz.menu.context.imagefit.label "창 크기에 맞추기">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
+<!ENTITY iz.menu.context.rotateimage.label "그림 회전">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
-<!ENTITY iz.menu.context.imagerotateright.label "오른족으로 돌리기">
+<!ENTITY iz.menu.context.imagerotateright.label "오른쪽으로 돌리기">
 <!ENTITY iz.menu.context.rotate.right.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateleft.label "왼쪽으로 돌리기">
 <!ENTITY iz.menu.context.rotate.left.accesskey "L">
-<!ENTITY iz.menu.context.imagerotate180.label "180&amp;#xB0; 회전">
+<!ENTITY iz.menu.context.imagerotate180.label "180° 돌리기">
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "회전 취소">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "S">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

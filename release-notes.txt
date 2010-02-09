@@ -1,0 +1,1 @@
+Fixed Bug in German locale

@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Guide">
 <!ENTITY iz.about.walkthrough.description "Kortfattad översikt över funktioner i Image Zoom">
 <!ENTITY iz.about.close.label "Stäng">
-<!ENTITY iz.install.installed "Image Zoom installerat">
-<!ENTITY iz.install.options.label "Alternativ">
-<!ENTITY iz.install.close.label "Stäng">
-<!ENTITY iz.install.continue.label "Fortsätt &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Besök hemsidan för Image Zoom för att få tillgång till den senaste informationen och">
-<!ENTITY iz.install.desc.line2 "för en kortfattad sammanfattning av alla funktioner i Image Zoom.">
-<!ENTITY iz.install.desc.line3 "Klicka 'Fortsätt' för att gå till hemsidan nu">
 <!ENTITY iz.customzoom.label "Ange zoomfaktor">
 <!ENTITY iz.customzoom.title "Valfri zoom">
 <!ENTITY iz.customdim.width.label "Bredd:">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "Inställningar">
 <!ENTITY iz.options.help.label "Hjälpsida">
 <!ENTITY iz.options.defaultzoom.label "Zooma in/ut-faktor">
-<!ENTITY iz.options.defaultglobalzoom.label "Standard global zoom">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Varna om Global Zoom inte är satt till sitt standardvärde">
-<!ENTITY iz.options.showviewmenu.label "Visa Image Zoom i 'Visa'-menyn">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Rulla zoomförändringar">
 <!ENTITY iz.options.scrollmode.label "Rullmetod">
 <!ENTITY iz.options.scrollrelative.label "Relativ">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
 <!ENTITY iz.options.singlezoom.label "Individuella zoomalternativ">
-<!ENTITY iz.options.globalzoom.label "Globala zoomalternativ">
 <!ENTITY iz.options.context.label "Meny vid högerklick">
 <!ENTITY iz.options.contextdisplay.label "Visningsalternativ högerklicksmeny">
 <!ENTITY iz.options.tabs.contextmenu.label "Komponenter i högerklicksmeny">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "ö">
 <!ENTITY iz.options.menudummy.save.label "Spara bild som">
 <!ENTITY iz.options.menudummy.save.accesskey "m">
-<!ENTITY iz.menu.global.decrease.label "Mindre">
-<!ENTITY iz.menu.global.decrease.accesskey "i">
-<!ENTITY iz.menu.global.increase.label "Större">
-<!ENTITY iz.menu.global.increase.accesskey "t">
-<!ENTITY iz.menu.global.custom.accesskey "e">
-<!ENTITY iz.menu.global.textscale.label "Zooma med text">
-<!ENTITY iz.menu.global.textscale.accesskey "x">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom varning">
-<!ENTITY iz.globalZoomWarning.no.label "Nej">
-<!ENTITY iz.globalZoomWarning.yes.label "Ja">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Din &quot;Image Zoom&quot; globala zoominställning är inte satt till standardvärdet 100&amp;#37;. Detta kan">
-<!ENTITY iz.globalZoomWarning.WarningText2 "orsaka att vissa webbplatser renderar på ett felaktigt sätt och göra din webbläsare långsam.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Vill du återställa den globala zoominställningen till sitt standardvärde?">
-<!ENTITY iz.globalZoomWarning.disable.label "Visa inte detta meddelande igen">
 <!ENTITY iz.menu.context.zoomimage.label "Zooma bild">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Zooma in">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "8">
 <!ENTITY iz.menu.context.imagerotatereset.label "Återställ rotering">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "Å">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">

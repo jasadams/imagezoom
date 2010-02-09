@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Jellemzők">
 <!ENTITY iz.about.walkthrough.description "Az Image Zoom kiterjesztés tulajdonságainak leírása.">
 <!ENTITY iz.about.close.label "Bezár">
-<!ENTITY iz.install.installed "Image Zoom telepítve">
-<!ENTITY iz.install.options.label "Beállítások">
-<!ENTITY iz.install.close.label "Bezár">
-<!ENTITY iz.install.continue.label "Folytatás">
-<!ENTITY iz.install.desc.line1 "Látogassa meg az Image Zoom honlapját, ha">
-<!ENTITY iz.install.desc.line2 "információkat és leírást akar kapni a kiterjesztésről.">
-<!ENTITY iz.install.desc.line3 "A honlap meglátogatásához kattintson a Folytatás gombra.">
 <!ENTITY iz.customzoom.label "A nagyítás mértéke">
 <!ENTITY iz.customzoom.title "Egyedi nagyítás">
 <!ENTITY iz.customdim.width.label "Szélesség:">
@@ -25,21 +18,17 @@
 <!ENTITY iz.options.label "Beállítások">
 <!ENTITY iz.options.help.label "Image Zoom honlapja">
 <!ENTITY iz.options.defaultzoom.label "A képátméretezés léptéke">
-<!ENTITY iz.options.defaultglobalzoom.label "Alapértelmezett átméretezés">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Figyelmeztetés, ha az általános nagyítás értéke eltér az alapértelmezéstől.">
-<!ENTITY iz.options.showviewmenu.label "A „Nézet” menünél látható a „Képek mérete” menüpont.">
 <!ENTITY iz.options.showautofit.label "A „Nézet” menünél látható az „Automatikus ablakhoz igazítás” menüpont.">
 <!ENTITY iz.options.defaultscroll.label "Egérgörgővel való nagyítás">
 <!ENTITY iz.options.scrollmode.label "Görgetési mód">
 <!ENTITY iz.options.scrollrelative.label "Relatív">
 <!ENTITY iz.options.scrollabsolute.label "Abszolút">
 <!ENTITY iz.options.singlezoom.label "Képek egyedi átméretezése">
-<!ENTITY iz.options.globalzoom.label "Képek globális átméretezése">
 <!ENTITY iz.options.context.label "Helyzetérzékeny menü">
 <!ENTITY iz.options.contextdisplay.label "Kép helyzetérzékeny menü">
 <!ENTITY iz.options.tabs.contextmenu.label "Helyzetérzékeny menü">
-<!ENTITY iz.options.tabs.zoomcontext.label "Zoom Context Menu">
-<!ENTITY iz.options.tabs.rotatecontext.label "Rotate Context Menu">
+<!ENTITY iz.options.tabs.zoomcontext.label "Nagyítás helyi menü">
+<!ENTITY iz.options.tabs.rotatecontext.label "Forgatás helyi menü">
 <!ENTITY iz.options.tabs.main.label "Általános beállítások">
 <!ENTITY iz.options.reversescroll.label "Visszafelé görgetés">
 <!ENTITY iz.options.autocenter.label "A kép automatikus középre igazítás az ablakhoz méretezéskor.">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "c">
 <!ENTITY iz.options.menudummy.save.label "Kép mentése más néven...">
 <!ENTITY iz.options.menudummy.save.accesskey "p">
-<!ENTITY iz.menu.global.decrease.label "Kicsinyítés">
-<!ENTITY iz.menu.global.decrease.accesskey "K">
-<!ENTITY iz.menu.global.increase.label "Nagyítás">
-<!ENTITY iz.menu.global.increase.accesskey "N">
-<!ENTITY iz.menu.global.custom.accesskey "E">
-<!ENTITY iz.menu.global.textscale.label "Méretezés a szöveggel együtt">
-<!ENTITY iz.menu.global.textscale.accesskey "s">
-<!ENTITY iz.menu.global.autofit.label "Automatikus ablakhoz igazítás">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Image Zoom figyelmeztetés">
-<!ENTITY iz.globalZoomWarning.no.label "Nem">
-<!ENTITY iz.globalZoomWarning.yes.label "Igen">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Az &quot;Image Zoom&quot; általános beállítása nem az alapértelmezett 100&amp;#37;-ra van beállítva.">
-<!ENTITY iz.globalZoomWarning.WarningText2 "Ez problémát okozhat néhány weboldal megjelenítése során és lelassíthatja a böngészőt is.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Vissza kívánja állítani az nagyítást az alapértelmezett értékre?">
-<!ENTITY iz.globalZoomWarning.disable.label "Többé ne jelenjen meg ez az üzenet">
 <!ENTITY iz.menu.context.zoomimage.label "Kép átméretezése">
 <!ENTITY iz.menu.context.zoomimage.accesskey "á">
 <!ENTITY iz.menu.context.increase.label "+ Kép nagyítása">
@@ -89,8 +62,8 @@
 <!ENTITY iz.menu.context.customzoom.label "Egyedi nagyítás">
 <!ENTITY iz.menu.context.customdim.label "Egyedi méret">
 <!ENTITY iz.menu.context.imagefit.label "Ablakhoz méretezés">
-<!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
-<!ENTITY iz.menu.context.rotateimage.accesskey "R">
+<!ENTITY iz.menu.context.rotateimage.label "Kép forgatása">
+<!ENTITY iz.menu.context.rotateimage.accesskey "f">
 <!ENTITY iz.menu.context.imagerotateright.label "Forgatás jobbra">
 <!ENTITY iz.menu.context.rotate.right.accesskey "j">
 <!ENTITY iz.menu.context.imagerotateleft.label "Forgatás balra">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "F">
 <!ENTITY iz.menu.context.imagerotatereset.label "Alapállapot">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "A">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "e">

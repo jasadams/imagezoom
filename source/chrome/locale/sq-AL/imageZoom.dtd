@@ -9,13 +9,6 @@
 <!ENTITY iz.about.walkthrough.label "Kalo përmes">
 <!ENTITY iz.about.walkthrough.description "Përshkrim i shkurtër i mundësive të Zmadhuesit të Fotove">
 <!ENTITY iz.about.close.label "Mbylle">
-<!ENTITY iz.install.installed "Zmadhuesi i Fotove u instalua">
-<!ENTITY iz.install.options.label "Mundësitë">
-<!ENTITY iz.install.close.label "Mbylle">
-<!ENTITY iz.install.continue.label "Vazhdo &gt;&gt;">
-<!ENTITY iz.install.desc.line1 "Vizito faqen e internetit të Zmadhuesit të Fotove për t'i gjetur të gjitha informatat më të reja">
-<!ENTITY iz.install.desc.line2 "dhe përshkrimin e të gjitha mundësive të Zmadhuesit të Fotove">
-<!ENTITY iz.install.desc.line3 "Shtyp &apos;Vazhso&apos; për të shkruar tek faqja e Zmadhuesit të Fotove">
 <!ENTITY iz.customzoom.label "Hyr tek Faktori i Zmadhimit">
 <!ENTITY iz.customzoom.title "Zmadhimi i Përzgjedhur">
 <!ENTITY iz.customdim.width.label "Gjerësia">
@@ -25,16 +18,12 @@
 <!ENTITY iz.options.label "Preferencat">
 <!ENTITY iz.options.help.label "Faqja Ndihmëse">
 <!ENTITY iz.options.defaultzoom.label "Zoom In/Out Factor">
-<!ENTITY iz.options.defaultglobalzoom.label "Zmadhimi i Përgjithshëm Parazgjedhor">
-<!ENTITY iz.options.warnifnotdefaultglobalzoom.label "Warn if Global Zoom is not set to default value">
-<!ENTITY iz.options.showviewmenu.label "Show Image Zoom in View Menu">
 <!ENTITY iz.options.showautofit.label "Show Autofit in Global Menu">
 <!ENTITY iz.options.defaultscroll.label "Scroll Zoom Increments">
 <!ENTITY iz.options.scrollmode.label "Scroll Mode">
 <!ENTITY iz.options.scrollrelative.label "Relativ">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
 <!ENTITY iz.options.singlezoom.label "Mundësitë Individuale të Rritjes">
-<!ENTITY iz.options.globalzoom.label "Aktivizo Funksionet e Zmadhimit të Përgjithëshëm">
 <!ENTITY iz.options.context.label "Menyja Kontekstuale">
 <!ENTITY iz.options.contextdisplay.label "Context Menu Display Options">
 <!ENTITY iz.options.tabs.contextmenu.label "Context Menu Items">
@@ -62,22 +51,6 @@
 <!ENTITY iz.options.menudummy.image.accesskey "o">
 <!ENTITY iz.options.menudummy.save.label "Ruaje Foton Si">
 <!ENTITY iz.options.menudummy.save.accesskey "v">
-<!ENTITY iz.menu.global.decrease.label "Më e vogël">
-<!ENTITY iz.menu.global.decrease.accesskey "S">
-<!ENTITY iz.menu.global.increase.label "Më e madhe">
-<!ENTITY iz.menu.global.increase.accesskey "L">
-<!ENTITY iz.menu.global.custom.accesskey "O">
-<!ENTITY iz.menu.global.textscale.label "Zmadho me tekstin">
-<!ENTITY iz.menu.global.textscale.accesskey "T">
-<!ENTITY iz.menu.global.autofit.label "Autofit Images">
-<!ENTITY iz.menu.global.autofit.accesskey "A">
-<!ENTITY iz.globalZoomWarning.title "Paralajmërim i Rritjes së Fotos">
-<!ENTITY iz.globalZoomWarning.no.label "Jo">
-<!ENTITY iz.globalZoomWarning.yes.label "Po">
-<!ENTITY iz.globalZoomWarning.WarningText1 "Your &quot;Image Zoom&quot; global zoom setting is not set to the default value of 100&amp;#37;. This can">
-<!ENTITY iz.globalZoomWarning.WarningText2 "cause some websites to render incorrectly and may slow down your browser.">
-<!ENTITY iz.globalZoomWarning.WarningQuestion "Would you like to reset global zoom to the default value?">
-<!ENTITY iz.globalZoomWarning.disable.label "Pamundëso këtë porosi">
 <!ENTITY iz.menu.context.zoomimage.label "Zmadho Foton">
 <!ENTITY iz.menu.context.zoomimage.accesskey "Z">
 <!ENTITY iz.menu.context.increase.label "+ Zmadho">
@@ -99,7 +72,3 @@
 <!ENTITY iz.menu.context.rotate.180.accesskey "1">
 <!ENTITY iz.menu.context.imagerotatereset.label "Ribëj Rrotullimin">
 <!ENTITY iz.menu.context.rotate.reset.accesskey "s">
-<!ENTITY iz.command.reduce.commandkey ",">
-<!ENTITY iz.command.enlarge.commandkey ".">
-<!ENTITY iz.command.reset.commandkey "/">
-<!ENTITY iz.command.textscale.commandkey "\">
