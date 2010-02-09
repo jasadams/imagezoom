@@ -56,7 +56,7 @@
 <!ENTITY iz.menu.context.increase.label "+  Grafik vergrößern">
 <!ENTITY iz.menu.context.increase.accesskey "+">
 <!ENTITY iz.menu.context.reset.label "&lt;  Grafik zurücksetzen">
-<!ENTITY iz.menu.context.reset.accesskey "<">
+<!ENTITY iz.menu.context.reset.accesskey "&lt;">
 <!ENTITY iz.menu.context.decrease.label "-   Grafik verkleinern">
 <!ENTITY iz.menu.context.decrease.accesskey "-">
 <!ENTITY iz.menu.context.customzoom.label "Benutzerdefinierter Zoom">
