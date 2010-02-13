@@ -519,7 +519,6 @@ net.yellowgorilla.imagezoom.overlay = new function () {
                         pImage.style.height = pImage.originalHeight + pImage.originalHeightUnit;
                     }
                 }
-				setImageRendering("-moz-crisp-edges");
                 pImage.zoomFactor = 100;
                 pImage.pageFactor = 100;
                 pImage.autoFitBefore = 0;
