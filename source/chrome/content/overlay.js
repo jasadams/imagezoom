@@ -519,7 +519,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
                         pImage.style.height = pImage.originalHeight + pImage.originalHeightUnit;
                     }
                 }
-
+				setImageRendering("-moz-crisp-edges");
                 pImage.zoomFactor = 100;
                 pImage.pageFactor = 100;
                 pImage.autoFitBefore = 0;
@@ -529,6 +529,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
             enabled = true;
         }
 
+        izImage.prototype.setImageRendering = setImageRendering;
         izImage.prototype.getWidth = getWidth;
         izImage.prototype.getAngle = getAngle;
         izImage.prototype.getHeight = getHeight;
@@ -548,7 +549,47 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
         // Returns the pixel width of the image
 
+		function setImageRendering(cssStyle)
+		{
+			var styleSet = false;
+			var imgStyle = pImage.getAttribute("style");
+			if (imgStyle.charAt(imgStyle.length - 1) == ";")
+			{
+				imgStyle = imgStyle.substring(0,imgStyle.length - 1);
+			}
+			
+			var arrStyles = imgStyle.split(";");
+			for (var i=0; i< arrStyles.length; i++)
+			{
+				if (arrStyles[i].indexOf("image-rendering") >= 0)
+				{
+					arrStyles[i] = " image-rendering: " + cssStyle;
+					styleSet = true;
+				}
+			}
+			if (!styleSet)
+			{
+				arrStyles.push(" image-rendering: " + cssStyle);
+			}
+			pImage.setAttribute("style", arrStyles.join(";"));
+		}
+		
+		function getImageRendering()
+		{
+			var returnValue = "";
 
+			var arrStyles = pImage.getAttribute("style").split(";");
+			for (var i=0; i< arrStyles.length; i++)
+			{
+				if (arrStyles[i].indexOf("image-rendering") >= 0)
+				{
+					returnValue = arrStyles[i].split(":")[1].replace(/^\s*/, "").replace(/\s*$/, "");
+				}
+			}	
+			
+			return returnValue;
+		}
+		
         function getWidth() {
             return pImage.width;
         }
