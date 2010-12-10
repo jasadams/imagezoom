@@ -451,8 +451,11 @@ net.yellowgorilla.imagezoom.overlay = new function () {
             var OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
         }
 
-        var oizImage = new izImage(document.popupNode);
-
+		if (gContextMenu.onImage || gContextMenu.onCanvas)
+		{
+        	var oizImage = new izImage(document.popupNode);
+		}
+		
         // Display the correct menu items depending on options and whether an image was clicked
         for (var i = 0; i < MenuItems.length; i++)
         document.getElementById(MenuItems[i]).setAttribute("hidden", ((!gContextMenu.onImage && !gContextMenu.onCanvas) || !nsIPrefBranchObj.getBoolPref(OptionItems[i])));
@@ -529,6 +532,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         }
 
         izImage.prototype.setImageRendering = setImageRendering;
+        izImage.prototype.getImageRendering = getImageRendering;
         izImage.prototype.getWidth = getWidth;
         izImage.prototype.getAngle = getAngle;
         izImage.prototype.getHeight = getHeight;
@@ -551,6 +555,11 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 		function setImageRendering(cssStyle)
 		{
 			var styleSet = false;
+			if (cssStyle == "")
+			{
+				cssStyle = "auto";
+			}
+			
 			var imgStyle = pImage.getAttribute("style");
 			if (imgStyle.charAt(imgStyle.length - 1) == ";")
 			{
