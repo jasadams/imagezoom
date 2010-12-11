@@ -208,7 +208,10 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         var statusTextFld = "";
         var tmpStatus = ""
         //write the zoom factor to the status bar
-        if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
+		if(document.getElementById("net.yellowgorilla.imagezoom.statusText")){
+			statusTextFld = document.getElementById("net.yellowgorilla.imagezoom.statusText");
+		}
+        else if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
             statusTextFld = document.getElementById("statusText");
         } else {
             statusTextFld = document.getElementById("statusbar-display");

@@ -1,11 +1,50 @@
+/* ***** BEGIN LICENSE BLOCK *****
+
+    Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
+
+    This file is part of Image Zoom.
+
+    Image Zoom is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    Image Zoom is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Image Zoom; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+
+ * ***** END LICENSE BLOCK ***** */
+
 if (!net) var net = {};
 if (!net.yellowgorilla) net.yellowgorilla = {};
 if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
-if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = new function () {
 
-    this.izAppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}";
-	this.izAppName = "Image Zoom";
-	this.izAppVersion = "0.4.5";
+net.yellowgorilla.imagezoom.AppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}"
+net.yellowgorilla.imagezoom.AppName = "";
+net.yellowgorilla.imagezoom.AppVersion = "";
+
+net.yellowgorilla.imagezoom.globals = new function () {
+
+
+    this.init = function () {
+		if(this.getGeckoVersion() < "2")
+		{
+	        var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
+	        var imageZoomExtension = gExtensionManager.getItemForID(net.yellowgorilla.imagezoom.AppID);
+	        net.yellowgorilla.imagezoom.AppName = imageZoomExtension.name.toString();	
+			net.yellowgorilla.imagezoom.AppVersion = imageZoomExtension.version.toString();			
+		}
+		else
+		{
+			Components.utils.import("resource://gre/modules/AddonManager.jsm");
+			AddonManager.getAddonByID(net.yellowgorilla.imagezoom.AppID, function(izExtensionObject) { net.yellowgorilla.imagezoom.AppName = izExtensionObject.name.toString(); net.yellowgorilla.imagezoom.AppVersion = izExtensionObject.version.toString();});
+		}
+	}
 	
     this.openURL = function (aURL) {
         if (isFirefox()) {
@@ -30,11 +69,11 @@ if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = 
     }
 
     this.getAppName = function () {
-        return this.izAppName;
+        return net.yellowgorilla.imagezoom.AppName;
     }
 
     this.getAppVersion = function () {
-        return this.izAppVersion;
+        return net.yellowgorilla.imagezoom.AppVersion;
     }
 
     this.initAbout = function () {
@@ -63,10 +102,6 @@ if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = 
 
     // Private Functions
 
-	// Components.utils.import("resource://gre/modules/AddonManager.jsm");
-
-	// AddonManager.getAddonByID(this.izAppID, function(izExtensionObject) { this.izAppName = izExtensionObject.name.toString(); this.izAppVersion = izExtensionObject.version.toString();});
-	
     function getVersionLevel(versionNumber, level) {
         var beginDot = 0;
         var endDot = -1;
@@ -97,3 +132,5 @@ if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = 
     }
 
 }
+
+net.yellowgorilla.imagezoom.globals.init();

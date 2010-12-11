@@ -231,4 +231,7 @@
 	        	  </menupopup>
 	        	</menu>
 	</popup> 
+	<toolbar id="addon-bar">
+		<statusbarpanel id="net.yellowgorilla.imagezoom.statusText" />
+	</toolbar>
 </overlay>
