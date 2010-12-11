@@ -24,8 +24,8 @@
 <overlay id="net.yellowgorilla.imagezoom.overlay_firefox"
     	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/overlay.js"/>
     <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/globals.js"/>
+    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/overlay.js"/>
 
   <stringbundleset id="stringbundleset">
     <stringbundle id="net.yellowgorilla.imagezoom.stringbundle" src="chrome://net.yellowgorilla.imagezoom/locale/imageZoom.properties"/>

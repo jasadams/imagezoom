@@ -4,7 +4,6 @@ if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
 if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = new function () {
 
     this.izAppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}";
-
 	this.izAppName = "Image Zoom";
 	this.izAppVersion = "0.4.5";
 	
@@ -64,9 +63,9 @@ if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = 
 
     // Private Functions
 
-	Components.utils.import("resource://gre/modules/AddonManager.jsm");
+	// Components.utils.import("resource://gre/modules/AddonManager.jsm");
 
-	AddonManager.getAddonByID(this.izAppID, function(izExtensionObject) { this.izAppName = izExtensionObject.name.toString(); this.izAppVersion = izExtensionObject.version.toString();});
+	// AddonManager.getAddonByID(this.izAppID, function(izExtensionObject) { this.izAppName = izExtensionObject.name.toString(); this.izAppVersion = izExtensionObject.version.toString();});
 	
     function getVersionLevel(versionNumber, level) {
         var beginDot = 0;
