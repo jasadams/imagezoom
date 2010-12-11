@@ -1,11 +1,13 @@
 if (!net) var net = {};
 if (!net.yellowgorilla) net.yellowgorilla = {};
 if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
-
-net.yellowgorilla.imagezoom.globals = new function () {
+if (!net.yellowgorilla.imagezoom.globals) net.yellowgorilla.imagezoom.globals = new function () {
 
     this.izAppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}";
 
+	this.izAppName = "Image Zoom";
+	this.izAppVersion = "0.4.5";
+	
     this.openURL = function (aURL) {
         if (isFirefox()) {
             if (window.opener) {
@@ -29,15 +31,11 @@ net.yellowgorilla.imagezoom.globals = new function () {
     }
 
     this.getAppName = function () {
-        var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
-        var imageZoomExtension = gExtensionManager.getItemForID(this.izAppID);
-        return imageZoomExtension.name.toString();
+        return this.izAppName;
     }
 
     this.getAppVersion = function () {
-        var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
-        var imageZoomExtension = gExtensionManager.getItemForID(this.izAppID);
-        return imageZoomExtension.version.toString();
+        return this.izAppVersion;
     }
 
     this.initAbout = function () {
@@ -66,7 +64,10 @@ net.yellowgorilla.imagezoom.globals = new function () {
 
     // Private Functions
 
+	Components.utils.import("resource://gre/modules/AddonManager.jsm");
 
+	AddonManager.getAddonByID(this.izAppID, function(izExtensionObject) { this.izAppName = izExtensionObject.name.toString(); this.izAppVersion = izExtensionObject.version.toString();});
+	
     function getVersionLevel(versionNumber, level) {
         var beginDot = 0;
         var endDot = -1;
@@ -83,7 +84,7 @@ net.yellowgorilla.imagezoom.globals = new function () {
 
         return (versionNumber.substring(beginDot, endDot)) * 1;
     }
-
+	
     function isFirefox() {
         return ((navigator.userAgent.search(/Firefox/gi) != -1) || (navigator.userAgent.search(/Netscape/gi) != -1) || (navigator.userAgent.search(/Flock/gi) != -1));
     }

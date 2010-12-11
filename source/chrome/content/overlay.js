@@ -65,8 +65,8 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 					}
 				}, 100);
 
-            } catch(e) {
-                //alert(e);
+            } catch(event) {
+                //alert(event);
             }
         }
 
@@ -187,8 +187,8 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         return window;
     }
 
-    function izOnMouseOut(e) {
-        if ((e.originalTarget.tagName.toLowerCase() == "html") || (e.originalTarget.tagName.toLowerCase() == "xul:browser")) {
+    function izOnMouseOut(event) {
+        if ((event.originalTarget.tagName.toLowerCase() == "html") || (event.originalTarget.tagName.toLowerCase() == "xul:browser")) {
             cancelScrollZoom();
         }
     }
@@ -228,34 +228,34 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         }
     }
 
-    function disableContextMenu(e) {
+    function disableContextMenu(event) {
         if (document.popupNode.tagName.toLowerCase() == "img" || document.popupNode.tagName.toLowerCase() == "canvas") {
             linuxImage = document.popupNode;
-            izContext = e.originalTarget;
-            e.preventDefault();
+            izContext = event.originalTarget;
+            event.preventDefault();
             contextDisabled = true;
-            popupX = e.clientX;
-            popupY = e.clientY;
+            popupX = event.clientX;
+            popupY = event.clientY;
         }
         removeEventListener("popupshowing", disableContextMenu, true)
     }
 
-    function izOnMouseDown(e) {
+    function izOnMouseDown(event) {
 
-        var targetName = e.originalTarget.tagName.toLowerCase();
-        if ((targetName == "img" || targetName == "canvas") && (mousedown) && ((e.which == nsIPrefBranchObj.getIntPref("imageresetbutton")) || (e.which == nsIPrefBranchObj.getIntPref("imagefitbutton")) || (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")))) {
-            e.preventDefault();
-            e.stopPropagation();
+        var targetName = event.originalTarget.tagName.toLowerCase();
+        if ((targetName == "img" || targetName == "canvas") && (mousedown) && ((event.which == nsIPrefBranchObj.getIntPref("imageresetbutton")) || (event.which == nsIPrefBranchObj.getIntPref("imagefitbutton")) || (event.which == nsIPrefBranchObj.getIntPref("triggerbutton")))) {
+            event.preventDefault();
+            event.stopPropagation();
         }
 
         // prepare for the mouse functions on a right click when user option is true
-        if ((e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")) &&
+        if ((event.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")) &&
         // Prevent zooming from being initiated when an embedded object is clicked apon
         ! (targetName == "embed" || targetName == "object")) {
 
             if ((targetName == "img" || targetName == "canvas") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2)) {
                 if (nsIPrefBranchObj.getIntPref("scrollZoomMode") == 2) {
-                    currentImage = e.originalTarget;
+                    currentImage = event.originalTarget;
 
                 }
                 if (navigator.platform != "Win32" && navigator.platform != "OS/2") {
@@ -272,32 +272,32 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         }
     }
 
-    function izOnMouseUp(e) {
+    function izOnMouseUp(event) {
         // Right mouse button release, remove listeners
-        if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) {
+        if (event.which == nsIPrefBranchObj.getIntPref("triggerbutton")) {
             if (haveZoomed) {
-                e.preventDefault();
+                event.preventDefault();
             }
             cancelScrollZoom();
         }
     }
 
-    function izOnMouseClick(e) {
+    function izOnMouseClick(event) {
 
-        var targetName = e.originalTarget.tagName.toLowerCase();
+        var targetName = event.originalTarget.tagName.toLowerCase();
 
-        if (e.which == nsIPrefBranchObj.getIntPref("triggerbutton")) {
+        if (event.which == nsIPrefBranchObj.getIntPref("triggerbutton")) {
             if (haveZoomed) {
-                e.preventDefault();
-                e.stopPropagation();
+                event.preventDefault();
+                event.stopPropagation();
             } else {
                 // contextmenu on mousedown
                 if (contextDisabled) {
-                    document.popupNode = e.originalTarget;
+                    document.popupNode = event.originalTarget;
                     try {
-                        izContext.showPopup(null, e.screenX, e.screenY, "context", "bottomleft", "topleft");
+                        izContext.showPopup(null, event.screenX, event.screenY, "context", "bottomleft", "topleft");
                     }
-                    catch(e) {}
+                    catch(event) {}
                 }
             }
             cancelScrollZoom();
@@ -309,13 +309,13 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         if (mousedown) {
             // Invoke varios mouse function when mouse is over an image only
             if (targetName == "img" || targetName == "canvas") {
-                switch (e.which) {
+                switch (event.which) {
                     // Middle mouse button pressed while right button down, reset image
                 case nsIPrefBranchObj.getIntPref("imageresetbutton"):
-                    e.preventDefault();
-                    e.stopPropagation();
+                    event.preventDefault();
+                    event.stopPropagation();
                     haveZoomed = true;
-                    var oizImage = new izImage(e.originalTarget);
+                    var oizImage = new izImage(event.originalTarget);
                     if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100) {
                         oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
                     } else {
@@ -325,10 +325,10 @@ net.yellowgorilla.imagezoom.overlay = new function () {
                     break;
                     // Left mouse button pressed while right button down, fit image to screen
                 case nsIPrefBranchObj.getIntPref("imagefitbutton"):
-                    e.preventDefault();
-                    e.stopPropagation();
+                    event.preventDefault();
+                    event.stopPropagation();
                     haveZoomed = true;
-                    var oizImage = new izImage(e.originalTarget);
+                    var oizImage = new izImage(event.originalTarget);
                     if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.isFitted()) {
                         oizImage.setZoom(100);
                     } else {
@@ -344,7 +344,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     }
 
-    function ScrollImage(e) {
+    function ScrollImage(event) {
         var imageToScroll;
         // Scroll wheel invoked while right button down, zoom target image
         if ((window._content.document.location == currentURL) && (nsIPrefBranchObj.getBoolPref("usescroll"))) {
@@ -352,11 +352,11 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
                 // Mixed Mode (default)
             case 0:
-                if ((e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") || (linuxImage != null) || (currentImage != null)) {
+                if ((event.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") || (linuxImage != null) || (currentImage != null)) {
                     if (linuxImage != null) {
                         currentImage = linuxImage;
-                    } else if (e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") {
-                        currentImage = e.target;
+                    } else if (event.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") {
+                        currentImage = event.target;
                     }
                 } else {
                     currentImage = null;
@@ -366,11 +366,11 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
                 // Only Scroll when mouse over image mode
             case 1:
-                if ((e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") || (linuxImage != null)) {
+                if ((e.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") || (linuxImage != null)) {
                     if (linuxImage != null) {
                         imageToScroll = linuxImage;
-                    } else if (e.target.tagName.toLowerCase() == "img" || e.target.tagName.toLowerCase() == "canvas") {
-                        imageToScroll = e.target;
+                    } else if (event.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") {
+                        imageToScroll = event.target;
                     }
                 } else {
                     imageToScroll = null;
@@ -391,18 +391,18 @@ net.yellowgorilla.imagezoom.overlay = new function () {
             }
 
             if (imageToScroll != null) {
-                e.preventDefault();
-                e.stopPropagation();
+                event.preventDefault();
+                event.stopPropagation();
                 haveZoomed = true;
                 var oizImage = new izImage(imageToScroll);
 
                 if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
-                    if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) var zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+                    if (((event.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((event.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) var zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
                     else var zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
 
                     oizImage.zoom(zoomFactor);
                 } else {
-                    if (((e.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((e.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) var zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
+                    if (((event.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((event.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) var zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
                     else var zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
 
                     oizImage.setZoom(zoomFactor);
@@ -441,7 +441,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         return (beforeShow && afterShow);
     }
 
-    function imageZoomMenu(e) {
+    function imageZoomMenu(event) {
 
         if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < minGeckoForRotate) {
             var MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
