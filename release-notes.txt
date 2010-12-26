@@ -1,1 +1,1 @@
-added support for Firefox 4
+- Remove addon bar text for Firefox 4

@@ -208,20 +208,20 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         var statusTextFld = "";
         var tmpStatus = ""
         //write the zoom factor to the status bar
-		if(document.getElementById("net.yellowgorilla.imagezoom.statusText")){
-			statusTextFld = document.getElementById("net.yellowgorilla.imagezoom.statusText");
-		}
-        else if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
-            statusTextFld = document.getElementById("statusText");
-        } else {
-            statusTextFld = document.getElementById("statusbar-display");
-        }
+		if(this.getGeckoVersion() < "2")
+		{
+			if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
+				statusTextFld = document.getElementById("statusText");
+			} else {
+				statusTextFld = document.getElementById("statusbar-display");
+			}
 
-        tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
-        if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() >= minGeckoForRotate) {
-            tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0"
-        }
-        statusTextFld.label = tmpStatus;
+			tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
+			if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() >= minGeckoForRotate) {
+				tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0"
+			}
+			statusTextFld.label = tmpStatus;
+		}
     }
 
     function CallBackStatus() {
