@@ -1,1 +1,0 @@
-- Remove addon bar text for Firefox 4
