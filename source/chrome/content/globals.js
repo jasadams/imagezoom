@@ -86,8 +86,11 @@ net.yellowgorilla.imagezoom.globals = new function () {
 
 
     this.getGeckoVersion = function () {
-        var gVersion = navigator.userAgent.match(/rv\:.*\)/i).toString();
-        return gVersion.substring(3, gVersion.length - 1);
+	var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+		     .getService(Components.interfaces.nsIXULAppInfo);
+
+        var gVersion = xulAppInfo.platformVersion;
+        return gVersion;
     }
 
     this.newerVersion = function (oldVersion, newVersion) {
@@ -120,11 +123,15 @@ net.yellowgorilla.imagezoom.globals = new function () {
     }
 	
     function isFirefox() {
-        return ((navigator.userAgent.search(/Firefox/gi) != -1) || (navigator.userAgent.search(/Netscape/gi) != -1) || (navigator.userAgent.search(/Flock/gi) != -1));
+    	var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+		     .getService(Components.interfaces.nsIXULAppInfo);
+        return (xulAppInfo.name.toUpperCase().search(/FIREFOX/gi) != -1);
     }
 
     function isThunderbird() {
-        return (navigator.userAgent.search(/Thunderbird/gi) != -1);
+    	var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+		     .getService(Components.interfaces.nsIXULAppInfo);
+        return (xulAppInfo.name.toUpperCase().search(/THUNDERBIRD/gi) != -1);
     }
 
     function isMozilla() {

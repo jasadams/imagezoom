@@ -1,0 +1,1 @@
+Fixed bug where Image Zoom wouldn't work of the useragent string was modified
