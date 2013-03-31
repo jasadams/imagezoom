@@ -1,6 +1,6 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
- Copyright (c) 2006-2013  Jason Adams <imagezoom@yellowgorilla.net>
+ Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
 
  This file is part of Image Zoom.
 
@@ -20,7 +20,6 @@
 
  * ***** END LICENSE BLOCK ***** */
 
-// Initialize the global namespace for image zoom
 if (!net) var net = {};
 if (!net.yellowgorilla) net.yellowgorilla = {};
 if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
@@ -31,11 +30,8 @@ net.yellowgorilla.imagezoom.AppVersion = "";
 
 net.yellowgorilla.imagezoom.globals = new function () {
 
-  this.minGeckoForRotate = "1.9";
 
   this.init = function () {
-    console.log(this.getGeckoVersion());
-
     if (this.getGeckoVersion() < "2") {
       var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
       var imageZoomExtension = gExtensionManager.getItemForID(net.yellowgorilla.imagezoom.AppID);
@@ -91,8 +87,11 @@ net.yellowgorilla.imagezoom.globals = new function () {
 
 
   this.getGeckoVersion = function () {
-    var gVersion = navigator.userAgent.match(/rv\:.*\)/i).toString();
-    return gVersion.substring(3, gVersion.length - 1);
+    var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+
+    var gVersion = xulAppInfo.platformVersion;
+    return gVersion;
   }
 
   this.newerVersion = function (oldVersion, newVersion) {
@@ -125,11 +124,15 @@ net.yellowgorilla.imagezoom.globals = new function () {
   }
 
   function isFirefox() {
-    return ((navigator.userAgent.search(/Firefox/gi) != -1) || (navigator.userAgent.search(/Netscape/gi) != -1) || (navigator.userAgent.search(/Flock/gi) != -1));
+    var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+    return (xulAppInfo.name.toUpperCase().search(/FIREFOX/gi) != -1);
   }
 
   function isThunderbird() {
-    return (navigator.userAgent.search(/Thunderbird/gi) != -1);
+    var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+    return (xulAppInfo.name.toUpperCase().search(/THUNDERBIRD/gi) != -1);
   }
 
   function isMozilla() {
