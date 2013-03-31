@@ -1,6 +1,6 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
- Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
+ Copyright (c) 2006-2013  Jason Adams <imagezoom@yellowgorilla.net>
 
  This file is part of Image Zoom.
 
@@ -34,6 +34,8 @@ net.yellowgorilla.imagezoom.globals = new function () {
   this.minGeckoForRotate = "1.9";
 
   this.init = function () {
+    console.log(this.getGeckoVersion());
+
     if (this.getGeckoVersion() < "2") {
       var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
       var imageZoomExtension = gExtensionManager.getItemForID(net.yellowgorilla.imagezoom.AppID);

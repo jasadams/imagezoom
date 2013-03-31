@@ -4,7 +4,7 @@
   
     <em:id>{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}</em:id>
     <em:name>Image Zoom</em:name>
-    <em:version>0.4.6</em:version>
+    <em:version>0.4.7</em:version>
     <em:description>Adds zoom functionality for images</em:description>
     <em:creator>Jason Adams</em:creator>
     <em:homepageURL>http://imagezoom.yellowgorilla.net/</em:homepageURL>
@@ -56,7 +56,7 @@
      <Description>
        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
        <em:minVersion>3.0</em:minVersion>
-       <em:maxVersion>4.0.*</em:maxVersion>
+       <em:maxVersion>19.0.*</em:maxVersion>
      </Description>
     </em:targetApplication>    
 
