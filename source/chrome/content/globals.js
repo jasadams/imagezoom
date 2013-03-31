@@ -32,6 +32,7 @@ net.yellowgorilla.imagezoom.globals = new function () {
 
 
   this.init = function () {
+    console.log(this.getGeckoVersion());
     if (this.getGeckoVersion() < "2") {
       var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
       var imageZoomExtension = gExtensionManager.getItemForID(net.yellowgorilla.imagezoom.AppID);

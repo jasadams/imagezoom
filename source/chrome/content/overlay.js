@@ -180,8 +180,8 @@ net.yellowgorilla.imagezoom.overlay = new function () {
   }
   
   function izContentVariables() {
-    if (!content.document.{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}) content.document.{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68} = {};
-    return content.document.{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68};
+    if (!content.document.1A2D0EC4-75F5-4c91-89C4-3656F6E44B68) content.document.1A2D0EC4-75F5-4c91-89C4-3656F6E44B68 = {};
+    return content.document.1A2D0EC4-75F5-4c91-89C4-3656F6E44B68;
   }
 
   function izOnMouseOut(event) {
