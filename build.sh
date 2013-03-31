@@ -14,7 +14,7 @@ fi
 
 mkdir "$TMPDIR"
 
-git archive development  | tar -x -C "$TMPDIR"
+git archive develop  | tar -x -C "$TMPDIR"
 
 cd "$TMPDIR/source/chrome/" && zip -r -q "$TMPDIR/source/imagezoom.jar" "./"
 
@@ -26,14 +26,14 @@ mv "$TMPDIR/source/imagezoom.jar" "$TMPDIR/source/chrome/"
 
 XPINAME="imagezoom_${VERSION}.xpi"
 XPIPATH="${DESTDIR}/${XPINAME}"
-if [ -f "$XPINAME" ]
+if [ -f "$XPIPATH" ]
 then
- rm "$XPINAME"
+ rm "$XPIPATH"
 fi
 
 cd "$TMPDIR/source/" && zip -r -D -q "${XPIPATH}" "./"
 
-rm -R "$TMPDIR"
+#rm -R "$TMPDIR"
 
 echo "XPI file written to \"${XPINAME}\""
 
