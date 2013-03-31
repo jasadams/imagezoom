@@ -24,74 +24,78 @@
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
 <?xml-stylesheet href="chrome://net.yellowgorilla.imagezoom/skin/imagezoom.css" type="text/css"?>
 
- <!DOCTYPE window [
-   <!ENTITY % imagezoomDTD SYSTEM "chrome://net.yellowgorilla.imagezoom/locale/imageZoom.dtd" >
-   %imagezoomDTD;
-   <!ENTITY % systemaboutDTD SYSTEM "chrome://mozapps/locale/extensions/about.dtd" >
-   %systemaboutDTD;
- ]>
-  
+<!DOCTYPE window [
+        <!ENTITY % imagezoomDTD SYSTEM "chrome://net.yellowgorilla.imagezoom/locale/imageZoom.dtd" >
+        %imagezoomDTD;
+        <!ENTITY % systemaboutDTD SYSTEM "chrome://mozapps/locale/extensions/about.dtd" >
+        %systemaboutDTD;
+        ]>
+
 <window class="dialog about-dialog"
-	title="&iz.product.name; &iz.product.version;"
-	orient="vertical"
-	autostretch="always"
-	onload="net.yellowgorilla.imagezoom.globals.initAbout()"
-	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+        title="&iz.product.name; &iz.product.version;"
+        orient="vertical"
+        autostretch="always"
+        onload="net.yellowgorilla.imagezoom.globals.initAbout()"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 
-	<script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/globals.js"/>
+    <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/globals.js"/>
 
-<groupbox align="start" orient="horizontal" class="about-box">
-  <vbox>
-    <text value="&iz.product.name;" class="main-title" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
-    <text id="versionlabel" value="&iz.about.version.label;" class="version"/>
+    <groupbox align="start" orient="horizontal" class="about-box">
+        <vbox>
+            <text value="&iz.product.name;" class="main-title"
+                  onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
+            <text id="versionlabel" value="&iz.about.version.label;" class="version"/>
+
+            <hbox>
+                <vbox>
+                    <separator class="thin"/>
+                    <text value="&creator.label;" class="sub-title"/>
+                    <text value="Jason Adams" class="author"/>
+                </vbox>
+                <spring flex="1"/>
+                <vbox>
+                    <separator class="thin"/>
+                    <text value="&contributors.label;" class="sub-title"/>
+                    <text value="Pierre Soubourou" class="author"/>
+                    <text value="Leon Zobec" class="author"/>
+                    <text value="Willy Young" class="author"/>
+                    <text value="Norah" class="author"/>
+                    <text value="Markus Fassbender" class="author"/>
+                    <text value="Balogh Tibor (balti)" class="author"/>
+                    <text value="Urko" class="author"/>
+                    <text value="Hunmin Kim" class="author"/>
+                    <text value="Yamila Gurovich" class="author"/>
+                    <text value="Pedro" class="author"/>
+                    <text value="Aycan Demirel" class="author"/>
+                    <text value="rickcart" class="author"/>
+                    <text value="Alf" class="author"/>
+                    <text value="Golanlan" class="author"/>
+                    <text value="MozUA" class="author"/>
+                </vbox>
+            </hbox>
+
+            <separator class="thin"/>
+            <text value="&iz.about.help.label;" class="url"
+                  onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
+            <text value="&iz.about.help.description;"/>
+
+            <separator class="thin"/>
+            <text value="&iz.about.forums.label;" class="url"
+                  onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
+
+            <separator class="thin"/>
+            <text value="&iz.about.walkthrough.label;" class="url"
+                  onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
+            <text value="&iz.about.walkthrough.description;"/>
+
+        </vbox>
+        <spring flex="1"/>
+        <image src="chrome://net.yellowgorilla.imagezoom/skin/imagezoom.png"/>
+    </groupbox>
 
     <hbox>
-    <vbox>
-    	<separator class="thin"/>
-    	<text value="&creator.label;" class="sub-title"/>
-    	<text value="Jason Adams" class="author"/>
-    </vbox>
-    <spring flex="1"/>
-    <vbox>
-    	<separator class="thin"/>
-    	<text value="&contributors.label;" class="sub-title"/>
-    	<text value="Pierre Soubourou" class="author"/>
-    	<text value="Leon Zobec" class="author"/>
-    	<text value="Willy Young" class="author"/>
-    	<text value="Norah" class="author"/>
-    	<text value="Markus Fassbender" class="author"/>
-    	<text value="Balogh Tibor (balti)" class="author"/>
-    	<text value="Urko" class="author"/>
-    	<text value="Hunmin Kim" class="author"/>
-    	<text value="Yamila Gurovich" class="author"/>
-    	<text value="Pedro" class="author"/>
-    	<text value="Aycan Demirel" class="author"/>
-    	<text value="rickcart" class="author"/>
-    	<text value="Alf" class="author"/>
-    	<text value="Golanlan" class="author"/>    	
-    	<text value="MozUA" class="author"/>       	
-    </vbox>
+        <spacer flex="1"/>
+        <button label="&iz.about.close.label;" oncommand="window.close();"/>
     </hbox>
-    
-    <separator class="thin"/>
-    <text value="&iz.about.help.label;" class="url" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
-    <text value="&iz.about.help.description;"/>
-
-    <separator class="thin"/>
-    <text value="&iz.about.forums.label;" class="url" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
-
-    <separator class="thin"/>
-	<text value="&iz.about.walkthrough.label;" class="url" onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/install/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());" />
-    <text value="&iz.about.walkthrough.description;"/>
-
-  </vbox>
-  <spring flex="1"/>
-  <image src="chrome://net.yellowgorilla.imagezoom/skin/imagezoom.png"/>
-</groupbox>
-
-<hbox>
-  <spacer flex="1"/>
-  <button label="&iz.about.close.label;" oncommand="window.close();"/>
-</hbox>
 
 </window>

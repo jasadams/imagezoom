@@ -35,10 +35,10 @@
     <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/dialogs.js"/>
 
     <vbox flex="1">
-          <hbox>
-          <label value="&iz.customzoom.label;"/>          
-          <textbox id="customZoom" size="2" onkeypress="return validateKeyPress(event);"/>
-          <label value="%"/>          
-          </hbox>
+        <hbox>
+            <label value="&iz.customzoom.label;"/>
+            <textbox id="customZoom" size="2" onkeypress="return validateKeyPress(event);"/>
+            <label value="%"/>
+        </hbox>
     </vbox>
 </dialog>
