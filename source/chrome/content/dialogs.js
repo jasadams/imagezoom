@@ -35,7 +35,6 @@ function validateKeyPress(e) {
     case 8:
       //backspace
       return true;
-      break
     default:
       var key = String.fromCharCode(e.which);
       if (pIsNumeric(key)) {
@@ -54,7 +53,7 @@ function pIsNumeric(sText) {
   var IsNumber = true;
   var Char;
 
-  for (i = 0; i < sText.length && IsNumber == true; i++) {
+  for (i = 0; i < sText.length && IsNumber === true; i++) {
     Char = sText.charAt(i);
     if (ValidChars.indexOf(Char) == -1) {
       IsNumber = false;
@@ -72,7 +71,6 @@ function widthPress(e) {
     case 46:
       //delete
       return true;
-      break
     default:
       var key = String.fromCharCode(e.which);
       if (pIsNumeric(key) && key != ".") {
@@ -85,8 +83,8 @@ function widthPress(e) {
 
 function widthInput(e) {
   if (gDimAspect.checked) {
-    if (pIsNumeric(gDimWidth.value) && (gDimWidth.value != "")) {
-      gDimHeight.value = parseInt((parseInt(gDimWidth.value) / gDimRatio) + 0.5);
+    if (pIsNumeric(gDimWidth.value) && (gDimWidth.value !== "")) {
+      gDimHeight.value = parseInt((parseInt(gDimWidth.value,10) / gDimRatio) + 0.5, 10);
     } else {
       gDimHeight.value = "";
     }
@@ -95,8 +93,8 @@ function widthInput(e) {
 
 function heightInput(e) {
   if (gDimAspect.checked) {
-    if (pIsNumeric(gDimHeight.value) && gDimHeight.value != "") {
-      gDimWidth.value = parseInt((parseInt(gDimHeight.value) * gDimRatio) + 0.5);
+    if (pIsNumeric(gDimHeight.value) && gDimHeight.value !== "") {
+      gDimWidth.value = parseInt((parseInt(gDimHeight.value,10) * gDimRatio) + 0.5,10);
     } else {
       gDimWidth.value = "";
     }
@@ -105,8 +103,8 @@ function heightInput(e) {
 
 function checkInput(e) {
   if (!gDimAspect.checked) {
-    if (pIsNumeric(gDimWidth.value) && gDimWidth.value != "") {
-      gDimHeight.value = parseInt((parseInt(gDimWidth.value) / gDimRatio) + 0.5);
+    if (pIsNumeric(gDimWidth.value) && gDimWidth.value !== "") {
+      gDimHeight.value = parseInt((parseInt(gDimWidth.value,10) / gDimRatio) + 0.5,10);
     } else {
       gDimHeight.value = "";
     }

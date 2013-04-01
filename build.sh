@@ -14,15 +14,15 @@ fi
 
 mkdir "$TMPDIR"
 
-git archive develop  | tar -x -C "$TMPDIR"
+cp -R source/ "$TMPDIR"
 
-cd "$TMPDIR/source/chrome/" && zip -r -q "$TMPDIR/source/imagezoom.jar" "./"
+cd "$TMPDIR/chrome/" && zip -r -q "$TMPDIR/imagezoom.jar" "./"
 
-rm -R "$TMPDIR/source/chrome"
+rm -R "$TMPDIR/chrome"
 
-mkdir "$TMPDIR/source/chrome"
+mkdir "$TMPDIR/chrome"
 
-mv "$TMPDIR/source/imagezoom.jar" "$TMPDIR/source/chrome/"
+mv "$TMPDIR/imagezoom.jar" "$TMPDIR/chrome/"
 
 XPINAME="imagezoom_${VERSION}.xpi"
 XPIPATH="${DESTDIR}/${XPINAME}"
@@ -31,7 +31,7 @@ then
  rm "$XPIPATH"
 fi
 
-cd "$TMPDIR/source/" && zip -r -D -q "${XPIPATH}" "./"
+cd "$TMPDIR/" && zip -r -D -q "${XPIPATH}" "./"
 
 rm -R "$TMPDIR"
 

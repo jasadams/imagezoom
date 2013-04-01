@@ -52,36 +52,12 @@
                     <text value="&creator.label;" class="sub-title"/>
                     <text value="Jason Adams" class="author"/>
                 </vbox>
-                <spring flex="1"/>
-                <vbox>
-                    <separator class="thin"/>
-                    <text value="&contributors.label;" class="sub-title"/>
-                    <text value="Pierre Soubourou" class="author"/>
-                    <text value="Leon Zobec" class="author"/>
-                    <text value="Willy Young" class="author"/>
-                    <text value="Norah" class="author"/>
-                    <text value="Markus Fassbender" class="author"/>
-                    <text value="Balogh Tibor (balti)" class="author"/>
-                    <text value="Urko" class="author"/>
-                    <text value="Hunmin Kim" class="author"/>
-                    <text value="Yamila Gurovich" class="author"/>
-                    <text value="Pedro" class="author"/>
-                    <text value="Aycan Demirel" class="author"/>
-                    <text value="rickcart" class="author"/>
-                    <text value="Alf" class="author"/>
-                    <text value="Golanlan" class="author"/>
-                    <text value="MozUA" class="author"/>
-                </vbox>
             </hbox>
 
             <separator class="thin"/>
             <text value="&iz.about.help.label;" class="url"
                   onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/help/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
             <text value="&iz.about.help.description;"/>
-
-            <separator class="thin"/>
-            <text value="&iz.about.forums.label;" class="url"
-                  onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/forums/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
 
             <separator class="thin"/>
             <text value="&iz.about.walkthrough.label;" class="url"

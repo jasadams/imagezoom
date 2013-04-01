@@ -24,16 +24,15 @@ if (!net) var net = {};
 if (!net.yellowgorilla) net.yellowgorilla = {};
 if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
 
-net.yellowgorilla.imagezoom.AppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}"
+net.yellowgorilla.imagezoom.AppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}";
 net.yellowgorilla.imagezoom.AppName = "";
 net.yellowgorilla.imagezoom.AppVersion = "";
 
 net.yellowgorilla.imagezoom.globals = new function () {
 
-
+  this.minGeckoForRotate = 2.0;
   this.init = function () {
-    console.log(this.getGeckoVersion());
-    if (this.getGeckoVersion() < "2") {
+    if (this.getGeckoVersion() < 2.0) {
       var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
       var imageZoomExtension = gExtensionManager.getItemForID(net.yellowgorilla.imagezoom.AppID);
       net.yellowgorilla.imagezoom.AppName = imageZoomExtension.name.toString();
@@ -46,7 +45,7 @@ net.yellowgorilla.imagezoom.globals = new function () {
         net.yellowgorilla.imagezoom.AppVersion = izExtensionObject.version.toString();
       });
     }
-  }
+  };
 
   this.openURL = function (aURL) {
     if (isFirefox()) {
@@ -68,15 +67,15 @@ net.yellowgorilla.imagezoom.globals = new function () {
       var protocolSvc = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"].getService(Components.interfaces.nsIExternalProtocolService);
       protocolSvc.loadUrl(uri);
     }
-  }
+  };
 
   this.getAppName = function () {
     return net.yellowgorilla.imagezoom.AppName;
-  }
+  };
 
   this.getAppVersion = function () {
     return net.yellowgorilla.imagezoom.AppVersion;
-  }
+  };
 
   this.initAbout = function () {
     var extName = this.getAppName();
@@ -84,7 +83,7 @@ net.yellowgorilla.imagezoom.globals = new function () {
     document.title = extName + " " + extVersion;
     var versionlabel = document.getElementById("versionlabel");
     versionlabel.setAttribute("value", versionlabel.getAttribute("value") + " " + extVersion);
-  }
+  };
 
 
   this.getGeckoVersion = function () {
@@ -92,8 +91,8 @@ net.yellowgorilla.imagezoom.globals = new function () {
       .getService(Components.interfaces.nsIXULAppInfo);
 
     var gVersion = xulAppInfo.platformVersion;
-    return gVersion;
-  }
+    return parseFloat(gVersion);
+  };
 
   this.newerVersion = function (oldVersion, newVersion) {
     var maxToCheck = 2;
@@ -103,7 +102,7 @@ net.yellowgorilla.imagezoom.globals = new function () {
     }
 
     return false;
-  }
+  };
 
   // Private Functions
 
@@ -140,6 +139,6 @@ net.yellowgorilla.imagezoom.globals = new function () {
     return (!isFirefox() && !isThunderbird());
   }
 
-}
+}();
 
 net.yellowgorilla.imagezoom.globals.init();

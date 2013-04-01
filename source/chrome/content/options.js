@@ -22,8 +22,8 @@
 var gData;
 
 function optionCache() {
-  var optionNames = new Array();
-  var optionValues = new Array();
+  var optionNames = [];
+  var optionValues = [];
 
   function setOption(optionName, optionValue) {
     for (var i = 0; i < optionNames.length; i++) {
@@ -85,7 +85,6 @@ function imagezoom_saveOptions() {
   }
   nsIPrefBranchObj.setBoolPref("usescroll", document.getElementById("imagezoomusemouseoptions").checked);
   nsIPrefBranchObj.setIntPref("scrollvalue", document.getElementById("imagezoomscrollvalue").value);
-  nsIPrefBranchObj.setIntPref("scrollmode", document.getElementById("imagezoomscrollmode").value);
 
   nsIPrefBranchObj.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
   nsIPrefBranchObj.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
@@ -124,20 +123,16 @@ function imagezoom_initializeOptions() {
   var scrollValueBox = document.getElementById("imagezoomscrollvalue");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
-  var scroll = nsIPrefBranchObj.getIntPref("scrollmode");
-  var scrollValueBox = document.getElementById("imagezoomscrollmode");
+  scroll = nsIPrefBranchObj.getIntPref("triggerbutton");
+  scrollValueBox = document.getElementById("imagezoommouseaccess");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
-  var scroll = nsIPrefBranchObj.getIntPref("triggerbutton");
-  var scrollValueBox = document.getElementById("imagezoommouseaccess");
+  scroll = nsIPrefBranchObj.getIntPref("imagefitbutton");
+  scrollValueBox = document.getElementById("imagezoomimagefitbutton");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
-  var scroll = nsIPrefBranchObj.getIntPref("imagefitbutton");
-  var scrollValueBox = document.getElementById("imagezoomimagefitbutton");
-  scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
-
-  var scroll = nsIPrefBranchObj.getIntPref("imageresetbutton");
-  var scrollValueBox = document.getElementById("imagezoomimageresetbutton");
+  scroll = nsIPrefBranchObj.getIntPref("imageresetbutton");
+  scrollValueBox = document.getElementById("imagezoomimageresetbutton");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
   var zoom = nsIPrefBranchObj.getIntPref("zoomvalue");
@@ -164,7 +159,7 @@ function setImageZoomMenu() {
 
   // Display the correct menu items depending on options and whether an image was clicked
   for (var i = 0; i < MenuItems.length; i++) {
-    if (document.getElementById(MenuItems[i]) == null) {
+    if (document.getElementById(MenuItems[i]) === null) {
       alert(MenuItems[i]);
     }
     document.getElementById(MenuItems[i]).setAttribute("checked", MenuOptions.getOption(OptionItems[i]));

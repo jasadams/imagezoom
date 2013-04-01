@@ -26,9 +26,9 @@ if (!net) var net = {};
 if (!net.yellowgorilla) net.yellowgorilla = {};
 if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
 
-net.yellowgorilla.imagezoom.overlay = new function () {
+net.yellowgorilla.imagezoom.overlay = new ImageZoomOverlay();
 
-
+function ImageZoomOverlay() {
   // Private Global Variables
   // Preference Service objects
   var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -79,14 +79,14 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     imagezoomBundle = document.getElementById("net.yellowgorilla.imagezoom.stringbundle");
 
-  }
+  };
 
   this.izShowCustomZoom = function () {
     // Create the image object and pass it to the custom zoom dialog
     var oizImage = new izImage(document.popupNode);
     openDialog("chrome://net.yellowgorilla.imagezoom/content/customzoom.xul", "", "chrome,modal,centerscreen", "Image", oizImage);
     reportStatus(oizImage);
-  }
+  };
 
 //    this.izShowCustomZoomPage = function () {
 //        // Create the image object and pass it to the custom zoom dialog
@@ -99,60 +99,60 @@ net.yellowgorilla.imagezoom.overlay = new function () {
     var oizImage = new izImage(document.popupNode);
     openDialog("chrome://net.yellowgorilla.imagezoom/content/customdim.xul", "", "chrome,modal,centerscreen", oizImage);
     reportStatus(oizImage);
-  }
+  };
 
   this.izImageFit = function () {
     // Create the object and invoke its Fit to window method passing the autocenter option
     var oizImage = new izImage(document.popupNode);
     oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
     reportStatus(oizImage);
-  }
+  };
 
   this.izZoomIn = function () {
     //Create the object and invoke its zoom method passing the factor to zoom
     var oizImage = new izImage(document.popupNode);
     oizImage.zoom(nsIPrefBranchObj.getIntPref("zoomvalue") / 100);
     reportStatus(oizImage);
-  }
+  };
 
   this.izZoomOut = function () {
     //Create the object and invoke its zoom method passing the factor to zoom
     var oizImage = new izImage(document.popupNode);
     oizImage.zoom(100 / nsIPrefBranchObj.getIntPref("zoomvalue"));
     reportStatus(oizImage);
-  }
+  };
 
   this.izSetZoom = function (zFactor) {
     //Create the object and invoke its setZoom method passing the factor to zoom
     var oizImage = new izImage(document.popupNode);
     oizImage.setZoom(zFactor);
     reportStatus(oizImage);
-  }
+  };
 
   this.izRotateRight = function () {
     var oizImage = new izImage(document.popupNode);
     oizImage.rotate(90);
     izContentVariables().tmpIzImage = oizImage;
-  }
+  };
 
   this.izRotateLeft = function () {
     var oizImage = new izImage(document.popupNode);
     oizImage.rotate(-90);
     izContentVariables().tmpIzImage = oizImage;
-  }
+  };
 
   this.izRotate180 = function () {
     var oizImage = new izImage(document.popupNode);
     oizImage.rotate(180);
     izContentVariables().tmpIzImage = oizImage;
-  }
+  };
 
 
   this.izRotateReset = function () {
     var oizImage = new izImage(document.popupNode);
     oizImage.rotate(0 - oizImage.getAngle());
     izContentVariables().tmpIzImage = oizImage;
-  }
+  };
 
   //Private Functions
 
@@ -180,8 +180,8 @@ net.yellowgorilla.imagezoom.overlay = new function () {
   }
   
   function izContentVariables() {
-    if (!content.document.1A2D0EC4-75F5-4c91-89C4-3656F6E44B68) content.document.1A2D0EC4-75F5-4c91-89C4-3656F6E44B68 = {};
-    return content.document.1A2D0EC4-75F5-4c91-89C4-3656F6E44B68;
+    if (!content.document.guid1A2D0EC475F54c9189C43656F6E44B68) content.document.guid1A2D0EC475F54c9189C43656F6E44B68 = {};
+    return content.document.guid1A2D0EC475F54c9189C43656F6E44B68;
   }
 
   function izOnMouseOut(event) {
@@ -194,30 +194,27 @@ net.yellowgorilla.imagezoom.overlay = new function () {
     izContentVariables().linuxImage = null;
     izContentVariables().currentImage = null;
     izContentVariables().scrollZooming = false;
-    izContentVariables().haveZoomed = false;
 
-    gPanelContainer().removeEventListener("DOMMouseScroll", ScrollImage, true);
+    gPanelContainer().removeEventListener("wheel", ScrollImage, true);
     gPanelContainer().removeEventListener("mouseup", izOnMouseUp, true);
     gPanelContainer().removeEventListener("mouseout", izOnMouseOut, true);
   }
 
   function reportStatus(oizImage) {
     var statusTextFld = "";
-    var tmpStatus = ""
+    var tmpStatus = "";
     //write the zoom factor to the status bar
-    if (net.yellogorilla.imagezoom.globals.getGeckoVersion() < "2") {
-      if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
-        statusTextFld = document.getElementById("statusText");
-      } else {
-        statusTextFld = document.getElementById("statusbar-display");
-      }
-
-      tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
-      if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() >= net.yellowgorilla.imagezoom.globals.minGeckoForRotate) {
-        tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0"
-      }
-      statusTextFld.label = tmpStatus;
+    if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
+      statusTextFld = document.getElementById("statusText");
+    } else {
+      statusTextFld = document.getElementById("statusbar-display");
     }
+
+    tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
+    if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() >= net.yellowgorilla.imagezoom.globals.minGeckoForRotate) {
+      tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0";
+    }
+    statusTextFld.label = tmpStatus;
   }
 
   function CallBackStatus() {
@@ -236,7 +233,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
       popupX = event.clientX;
       popupY = event.clientY;
     }
-    removeEventListener("popupshowing", disableContextMenu, true)
+    removeEventListener("popupshowing", disableContextMenu, true);
   }
 
   function izOnMouseDown(event) {
@@ -249,25 +246,21 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     // prepare for the mouse functions on a right click when user option is true
     if ((event.which == nsIPrefBranchObj.getIntPref("triggerbutton")) && (nsIPrefBranchObj.getBoolPref("usescroll")) &&
-      // Prevent zooming from being initiated when an embedded object is clicked apon
-      !(targetName == "embed" || targetName == "object")) {
+       ((targetName == "img" || targetName == "canvas")) &&
+       // Prevent zooming from being initiated when an embedded object is clicked apon
+       !(targetName == "embed" || targetName == "object")) {
 
-      if ((targetName == "img" || targetName == "canvas") || (nsIPrefBranchObj.getIntPref("scrollZoomMode") != 2)) {
-        if (nsIPrefBranchObj.getIntPref("scrollZoomMode") == 2) {
-          izContentVariables().currentImage = event.originalTarget;
-
-        }
-        if (navigator.platform != "Win32" && navigator.platform != "OS/2") {
-          addEventListener("popupshowing", disableContextMenu, true);
-        }
-        izContentVariables().haveZoomed = false;
-        gPanelContainer().addEventListener("DOMMouseScroll", ScrollImage, true);
-        gPanelContainer().addEventListener("mouseup", izOnMouseUp, true);
-        gPanelContainer().addEventListener("click", izOnMouseClick, true);
-        gPanelContainer().addEventListener("mouseout", izOnMouseOut, true);
-
-        izContentVariables().scrollZooming = true;
+      if (navigator.platform != "Win32" && navigator.platform != "OS/2") {
+        addEventListener("popupshowing", disableContextMenu, true);
       }
+      izContentVariables().haveZoomed = false;
+      gPanelContainer().addEventListener("wheel", handleWheelEvent, true);
+      gPanelContainer().addEventListener("mouseup", izOnMouseUp, true);
+      gPanelContainer().addEventListener("click", izOnMouseClick, true);
+      gPanelContainer().addEventListener("mouseout", izOnMouseOut, true);
+
+      izContentVariables().scrollZooming = true;
+      izContentVariables().currentImage = event.originalTarget;
     }
   }
 
@@ -282,6 +275,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
   }
 
   function izOnMouseClick(event) {
+    var oizImage;
     var targetName = event.originalTarget.tagName.toLowerCase();
 
     if (event.which == nsIPrefBranchObj.getIntPref("triggerbutton")) {
@@ -295,11 +289,12 @@ net.yellowgorilla.imagezoom.overlay = new function () {
           try {
             izContext.showPopup(null, event.screenX, event.screenY, "context", "bottomleft", "topleft");
           }
-          catch (event) {
+          catch (e) {
           }
         }
       }
       cancelScrollZoom();
+      izContentVariables().haveZoomed = false;
       gPanelContainer().removeEventListener("click", izOnMouseClick, true);
     }
 
@@ -314,7 +309,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
             event.preventDefault();
             event.stopPropagation();
             izContentVariables().haveZoomed = true;
-            var oizImage = new izImage(event.originalTarget);
+            oizImage = new izImage(event.originalTarget);
             if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100) {
               oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
             } else {
@@ -327,7 +322,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
             event.preventDefault();
             event.stopPropagation();
             izContentVariables().haveZoomed = true;
-            var oizImage = new izImage(event.originalTarget);
+            oizImage = new izImage(event.originalTarget);
             if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.isFitted()) {
               oizImage.setZoom(100);
             } else {
@@ -343,71 +338,30 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
   }
 
-  function ScrollImage(event) {
+  function handleWheelEvent(event) {
+    if ((izContentVariables().scrollZooming) && (izContentVariables().currentImage) && (nsIPrefBranchObj.getBoolPref("usescroll"))) {
+      event.preventDefault();
+      ScrollImage(event.deltaY);
+    }
+  }
+  function ScrollImage(wheelIncrement) {
     var imageToScroll;
-    // Scroll wheel invoked while right button down, zoom target image
-    if ((izContentVariables().scrollZooming) && (nsIPrefBranchObj.getBoolPref("usescroll"))) {
-      switch (nsIPrefBranchObj.getIntPref("scrollZoomMode")) {
 
-        // Mixed Mode (default)
-        case 0:
-          if ((event.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") || (izContentVariables().linuxImage != null) || (izContentVariables().currentImage != null)) {
-            if (izContentVariables().linuxImage != null) {
-              izContentVariables().currentImage = izContentVariables().linuxImage;
-            } else if (event.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") {
-              izContentVariables().currentImage = event.target;
-            }
-          } else {
-            izContentVariables().currentImage = null;
-          }
-          imageToScroll = izContentVariables().currentImage;
-          break;
+    imageToScroll = izContentVariables().currentImage;
 
-        // Only Scroll when mouse over image mode
-        case 1:
-          if ((e.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") || (izContentVariables().linuxImage != null)) {
-            if (izContentVariables().linuxImage != null) {
-              imageToScroll = izContentVariables().linuxImage;
-            } else if (event.target.tagName.toLowerCase() == "img" || event.target.tagName.toLowerCase() == "canvas") {
-              imageToScroll = event.target;
-            }
-          } else {
-            imageToScroll = null;
-          }
-          break;
+    if (imageToScroll !== null) {
+      izContentVariables().haveZoomed = true;
+      var oizImage = new izImage(imageToScroll);
 
-        // Only Scroll the image that was right mouse clicked mode
-        case 2:
-          if (izContentVariables().currentImage != null) {
-            imageToScroll = izContentVariables().currentImage;
-          } else {
-            imageToScroll = null;
-          }
-          break;
-        default:
-          imageToScroll = null;
-          break;
+      var zoomFactor;
+      if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+        zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
       }
-
-      if (imageToScroll != null) {
-        event.preventDefault();
-        event.stopPropagation();
-        izContentVariables().haveZoomed = true;
-        var oizImage = new izImage(imageToScroll);
-
-        if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
-          if (((event.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((event.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) var zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
-          else var zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
-
-          oizImage.zoom(zoomFactor);
-        } else {
-          if (((event.detail < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((event.detail > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) var zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
-          else var zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
-
-          oizImage.setZoom(zoomFactor);
-        }
-        reportStatus(oizImage);
+      else {
+        zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
       }
+      oizImage.zoom(zoomFactor);
+      reportStatus(oizImage);
     } else {
       cancelScrollZoom();
     }
@@ -416,9 +370,9 @@ net.yellowgorilla.imagezoom.overlay = new function () {
   function insertSeparator(list, position) {
     var beforeShow = false;
     var afterShow = false;
-
+    var i;
     // Check for visable items before the separator
-    for (var i = position - 1; i >= 0; i--) {
+    for (i = position - 1; i >= 0; i--) {
       if ((list[i].tagName == "menuseparator") && (!list[i].hidden)) break;
       if ((list[i].tagName != "menuseparator") && (!list[i].hidden)) {
         beforeShow = true;
@@ -428,7 +382,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     // Check for visable items after the separator
     if (beforeShow) {
-      for (var i = position + 1; i < list.length; i++) {
+      for (i = position + 1; i < list.length; i++) {
         if ((list[i].tagName != "menuseparator") && (!list[i].hidden)) {
           afterShow = true;
           break;
@@ -441,28 +395,28 @@ net.yellowgorilla.imagezoom.overlay = new function () {
   }
 
   function imageZoomMenu(event) {
-
+    var MenuItems, OptionItems, i, oizImage;
     if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < net.yellowgorilla.imagezoom.globals.minGeckoForRotate) {
-      var MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-      var OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "smZoomIO", "smZoomIO", "smReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+      MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+      OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "smZoomIO", "smZoomIO", "smReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
     } else {
-      var MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "rotatesub-rotate-right", "rotatesub-rotate-left", "rotatesub-rotate-180", "rotatesub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-      var OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+      MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "rotatesub-rotate-right", "rotatesub-rotate-left", "rotatesub-rotate-180", "rotatesub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+      OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
     }
 
     if (gContextMenu.onImage || gContextMenu.onCanvas) {
-      var oizImage = new izImage(document.popupNode);
+      oizImage = new izImage(document.popupNode);
     }
 
     // Display the correct menu items depending on options and whether an image was clicked
-    for (var i = 0; i < MenuItems.length; i++)
+    for (i = 0; i < MenuItems.length; i++)
       document.getElementById(MenuItems[i]).setAttribute("hidden", ((!gContextMenu.onImage && !gContextMenu.onCanvas) || !nsIPrefBranchObj.getBoolPref(OptionItems[i])));
 
     var subPopUp = document.getElementById("zoompopup");
 
     // Insert the necesary separators if needed in the sub menu
     var subItems = document.getElementById("zoompopup").getElementsByTagName("*");
-    for (var i = 0; i < subItems.length; i++) {
+    for (i = 0; i < subItems.length; i++) {
       if (subItems[i].tagName == "menuseparator") subItems[i].setAttribute("hidden", !insertSeparator(subItems, i));
     }
 
@@ -470,7 +424,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     // Show the Zoom Image container if there are subitems visible, else hide
     if (subPopUp.getElementsByAttribute("hidden", false).length > 0) {
-      izMenuItem = document.getElementById("context-zoomsub")
+      izMenuItem = document.getElementById("context-zoomsub");
       izMenuItem.setAttribute("label", getContextSubMenuLabel().replace(/%zoom%/, oizImage.zoomFactor()));
       izMenuItem.setAttribute("hidden", false);
     } else document.getElementById("context-zoomsub").hidden = true;
@@ -479,7 +433,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     // Show the Zoom Image container if there are subitems visible, else hide
     if (rotatePopUp.getElementsByAttribute("hidden", false).length > 0) {
-      izMenuItem = document.getElementById("context-rotatesub")
+      izMenuItem = document.getElementById("context-rotatesub");
       izMenuItem.setAttribute("label", getContextRotateMenuLabel().replace(/%rotate%/, +oizImage.getAngle()));
       izMenuItem.setAttribute("hidden", false);
     } else document.getElementById("context-rotatesub").hidden = true;
@@ -489,7 +443,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
     var pImage = oImage;
     var enabled = false;
 
-    if ((pImage.naturalWidth != 0) || (pImage.naturalHeight != 0) || (pImage.style.width != "") || (pImage.style.height != "") || ((pImage.getAttribute("width")) && (pImage.getAttribute("height")))) {
+    if ((pImage.naturalWidth !== 0) || (pImage.naturalHeight !== 0) || (pImage.style.width !== "") || (pImage.style.height !== "") || ((pImage.getAttribute("width")) && (pImage.getAttribute("height")))) {
 
       // If this value is set in the image object, we have zoomed this image before
       if (!(pImage.originalPxWidth) || (!pImage.style.width && !pImage.style.height)) {
@@ -552,7 +506,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     function setImageRendering(cssStyle) {
       var styleSet = false;
-      if (cssStyle == "") {
+      if (cssStyle === "") {
         cssStyle = "auto";
       }
 
@@ -651,7 +605,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
     function zoom(factor) {
       if (enabled) {
 
-        pImage.zoomFactor = pImage.zoomFactor * factor
+        pImage.zoomFactor = pImage.zoomFactor * factor;
         pImage.autoFitBefore = 0;
         // Zoom the width style if it exists
         if (pImage.style.width) {
@@ -674,17 +628,18 @@ net.yellowgorilla.imagezoom.overlay = new function () {
     }
 
     function disactivateAutoFit() {
-      if (pImage.autoFitBefore != 0) {
+      if (pImage.autoFitBefore !== 0) {
         this.setZoom(pImage.autoFitBefore);
       }
     }
 
     function rotate(degrees) {
-
+      var theta;
       if (degrees >= 0) {
-        var theta = (Math.PI * degrees) / 180;
-      } else {
-        var theta = (Math.PI * (360 + degrees)) / 180;
+        theta = (Math.PI * degrees) / 180;
+      }
+      else {
+        theta = (Math.PI * (360 + degrees)) / 180;
       }
       var costheta = Math.cos(theta);
       var sintheta = Math.sin(theta);
@@ -712,11 +667,14 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
         if (theta <= Math.PI / 2) {
           ctx.translate(sintheta * canvas.oImage.naturalHeight, 0);
-        } else if (theta <= Math.PI) {
+        }
+        else if (theta <= Math.PI) {
           ctx.translate(canvas.width, -costheta * canvas.oImage.naturalHeight);
-        } else if (theta <= 1.5 * Math.PI) {
+        }
+        else if (theta <= 1.5 * Math.PI) {
           ctx.translate(-costheta * canvas.oImage.naturalWidth, canvas.height);
-        } else {
+        }
+        else {
           ctx.translate(0, -sintheta * canvas.oImage.naturalWidth);
         }
 
@@ -726,17 +684,18 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         pImage.originalPxHeight = tmpOriginalPxHeight;
         var tmpOriginalWidth = Math.abs(costheta * pImage.originalWidth) + Math.abs(sintheta * pImage.originalHeight);
         var tmpOriginalHeight = Math.abs(costheta * pImage.originalHeight) + Math.abs(sintheta * pImage.originalWidth);
-        pImage.originalWidth = tmpOriginalWidth
-        pImage.originalHeight = tmpOriginalHeight
+        pImage.originalWidth = tmpOriginalWidth;
+        pImage.originalHeight = tmpOriginalHeight;
         var tmpStypeWidth = Math.abs(costheta * getDimInt(pImage.style.width)) + Math.abs(sintheta * getDimInt(pImage.style.height));
         var tmpStyleHeight = Math.abs(costheta * getDimInt(pImage.style.height)) + Math.abs(sintheta * getDimInt(pImage.style.width));
-        pImage.style.width = tmpStypeWidth + pImage.originalWidthUnit
-        pImage.style.height = tmpStyleHeight + pImage.originalHeightUnit
+        pImage.style.width = tmpStypeWidth + getDimUnit(pImage.style.width);
+        pImage.style.height = tmpStyleHeight + getDimUnit(pImage.style.height);
 
         if (degrees < 0) {
-          pImage.angle = (pImage.angle + 360 + (degrees % 360)) % 360
-        } else {
-          pImage.angle = (pImage.angle + degrees) % 360
+          pImage.angle = (pImage.angle + 360 + (degrees % 360)) % 360;
+        }
+        else {
+          pImage.angle = (pImage.angle + degrees) % 360;
         }
 
 
@@ -748,7 +707,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
         pImage.src = canvas.toDataURL();
 
         CallBackStatus();
-      }
+      };
 
     }
 
@@ -791,22 +750,22 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
         // How we zoom depends on the ratio of the image to the screen
         if (screenDim < imageDim) {
-          setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5));
-        } else {
-          setDimension(parseInt(screenHeight * imageDim + 0.5), screenHeight);
+          setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5, 10));
+        }
+        else {
+          setDimension(parseInt(screenHeight * imageDim + 0.5, 10), screenHeight);
         }
 
         // In case scrollbars have been introduced, do the image fit again
-        var screenHeight = bScreen.getHeight();
-        var screenWidth = bScreen.getWidth();
+        screenHeight = bScreen.getHeight();
+        screenWidth = bScreen.getWidth();
 
         if (screenDim < imageDim) {
-          setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5));
-        } else {
-          setDimension(parseInt(screenHeight * imageDim + 0.5), screenHeight);
+          setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5,10));
         }
-
-        pImage.zoomFactor = ((pImage.width / (pImage.pageFactor / 100)) / pImage.originalPxWidth) * 100;
+        else {
+          setDimension(parseInt(screenHeight * imageDim + 0.5,10), screenHeight);
+        }
 
         // Scroll the browser screen to put the image in the center if requested
         if (autoScroll) {
@@ -832,7 +791,7 @@ net.yellowgorilla.imagezoom.overlay = new function () {
     }
 
     function zoomFactor() {
-      return parseInt(parseInt(pImage.zoomFactor) + 0.5);
+      return parseInt(parseInt(pImage.zoomFactor,10) + 0.5,10);
     }
 
     function pageFactor() {
@@ -891,34 +850,32 @@ net.yellowgorilla.imagezoom.overlay = new function () {
 
     function browserScreen(pImage) {
       var padValue = 17;
+      var screenWidth;
 
-      this.getWidth = getWidth;
-      this.getHeight = getHeight;
-      this.getPad = getPad;
-
-      function getWidth() {
+      this.getWidth = function() {
         if (pImage.ownerDocument.compatMode == "BackCompat") {
-          var screenWidth = pImage.ownerDocument.body.clientWidth - padValue;
+          screenWidth = pImage.ownerDocument.body.clientWidth - padValue;
         } else {
-          var screenWidth = pImage.ownerDocument.documentElement.clientWidth - padValue;
+          screenWidth = pImage.ownerDocument.documentElement.clientWidth - padValue;
         }
 
         return screenWidth;
-      }
+      };
 
-      function getHeight() {
+      this.getHeight = function() {
+        var screenHeight;
         if (pImage.ownerDocument.compatMode == "BackCompat") {
-          var screenHeight = pImage.ownerDocument.body.clientHeight - padValue;
+          screenHeight = pImage.ownerDocument.body.clientHeight - padValue;
         } else {
-          var screenHeight = pImage.ownerDocument.documentElement.clientHeight - padValue;
+          screenHeight = pImage.ownerDocument.documentElement.clientHeight - padValue;
         }
 
         return screenHeight;
-      }
+      };
 
-      function getPad() {
+      this.getPad = function() {
         return padValue / 2;
-      }
+      };
 
     }
 
