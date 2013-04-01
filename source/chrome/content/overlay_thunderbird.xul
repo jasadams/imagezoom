@@ -31,74 +31,74 @@
                       src="chrome://net.yellowgorilla.imagezoom/locale/imageZoom.properties"/>
     </stringbundleset>
 
-    <popup id="messagePaneContext">
+    <popup id="mailContext">
         <menuitem id="context-zoom-zin"
                   label="&iz.menu.context.increase.label;"
                   accesskey="&iz.menu.context.increase.accesskey;"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izZoomIn();"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   hidden="true"
                 />
         <menuitem id="context-zoom-zreset"
                   label="&iz.menu.context.reset.label;"
                   accesskey="&iz.menu.context.reset.accesskey;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izSetZoom(100);"
                   hidden="true"
                 />
         <menuitem id="context-zoom-zout"
                   label="&iz.menu.context.decrease.label;"
                   accesskey="&iz.menu.context.decrease.accesskey;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izZoomOut();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-zcustom"
                   label="&iz.menu.context.customzoom.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izShowCustomZoom();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-dcustom"
                   label="&iz.menu.context.customdim.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izShowCustomDim();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-fit"
                   label="&iz.menu.context.imagefit.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izImageFit();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-rotate-right"
                   label="&iz.menu.context.imagerotateright.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izRotateRight();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-rotate-left"
                   label="&iz.menu.context.imagerotateleft.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izRotateLeft();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-rotate-180"
                   label="&iz.menu.context.imagerotate180.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izRotate180();"
                   hidden="true"
                 />
         <menuitem id="context-zoom-rotate-reset"
                   label="&iz.menu.context.imagerotatereset.label;"
-                  insertbefore="messagePaneContext-sep-copy"
+                  insertbefore="mailContext-sep-copy"
                   oncommand="net.yellowgorilla.imagezoom.overlay.izRotateReset();"
                   hidden="true"
                 />
         <menu id="context-zoomsub"
               label="&iz.menu.context.zoomimage.label;"
               accesskey="&iz.menu.context.zoomimage.accesskey;"
-              insertbefore="messagePaneContext-sep-copy"
+              insertbefore="mailContext-sep-copy"
               hidden="true"
                 >
             <menupopup id="zoompopup">
@@ -200,7 +200,7 @@
         <menu id="context-rotatesub"
               label="&iz.menu.context.rotateimage.label;"
               accesskey="&iz.menu.context.rotateimage.accesskey;"
-              insertbefore="messagePaneContext-sep-copy"
+              insertbefore="mailContext-sep-copy"
               hidden="true"
                 >
             <menupopup id="rotatepopup">

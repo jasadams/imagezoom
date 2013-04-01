@@ -120,7 +120,7 @@ net.yellowgorilla.imagezoom.globals = new function () {
       }
     }
 
-    return (versionNumber.substring(beginDot, endDot)) * 1;
+    return parseInt(versionNumber.substring(beginDot, endDot), 10);
   }
 
   function isFirefox() {

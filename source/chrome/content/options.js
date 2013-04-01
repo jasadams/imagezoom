@@ -19,9 +19,8 @@
  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
  * ***** END LICENSE BLOCK ***** */
-var gData;
 
-function optionCache() {
+function OptionCache() {
   var optionNames = [];
   var optionValues = [];
 
@@ -38,9 +37,9 @@ function optionCache() {
 
   }
 
-  optionCache.prototype.getOption = getOption;
-  optionCache.prototype.setOption = setOption;
-  optionCache.prototype.length = length;
+  this.getOption = getOption;
+  this.setOption = setOption;
+  this.length = length;
 
   function getOption(optionName) {
 
@@ -49,7 +48,7 @@ function optionCache() {
         return optionValues[i];
       }
     }
-
+    return null;
   }
 
   function length() {
@@ -58,14 +57,16 @@ function optionCache() {
 }
 
 // Context Menu Items and their option equivalents
-if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < "1.9") {
-  var MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-  var OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "smZoomIO", "smZoomIO", "smReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+var menuItems, optionItems;
+
+if (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < 1.9) {
+  menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+  optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "smZoomIO", "smZoomIO", "smReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
 } else {
-  var MenuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-rotate-right", "zoomsub-rotate-left", "zoomsub-rotate-180", "zoomsub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-  var OptionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+  menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-rotate-right", "zoomsub-rotate-left", "zoomsub-rotate-180", "zoomsub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+  optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
 }
-var MenuOptions = new optionCache();
+var menuOptions = new OptionCache();
 
 // Preference Service objects
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
@@ -78,9 +79,9 @@ var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
 function imagezoom_saveOptions() {
   if (!validateOptions()) return false;
 
-  for (var i = 0; i < MenuItems.length; i++) {
-    if (document.getElementById(MenuItems[i]).tagName.toLowerCase() == "checkbox") {
-      nsIPrefBranchObj.setBoolPref(OptionItems[i], MenuOptions.getOption(OptionItems[i]));
+  for (var i = 0; i < menuItems.length; i++) {
+    if (document.getElementById(menuItems[i]).tagName.toLowerCase() == "checkbox") {
+      nsIPrefBranchObj.setBoolPref(optionItems[i], menuOptions.getOption(optionItems[i]));
     }
   }
   nsIPrefBranchObj.setBoolPref("usescroll", document.getElementById("imagezoomusemouseoptions").checked);
@@ -96,6 +97,7 @@ function imagezoom_saveOptions() {
 
   nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
 
+  return true;
 }
 
 function validateOptions() {
@@ -105,16 +107,8 @@ function validateOptions() {
   }
   return true;
 }
-// Mozilla calls this function when the options dialog is loaded
-
-
-function Startup() {
-  init();
-}
 
 // Initialise options for Firefox and Thunderbird
-
-
 function imagezoom_initializeOptions() {
 
   document.getElementById("imagezoomusemouseoptions").checked = nsIPrefBranchObj.getBoolPref("usescroll");
@@ -143,14 +137,14 @@ function imagezoom_initializeOptions() {
   document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
   document.getElementById("imagezoomtogglefitreset").checked = nsIPrefBranchObj.getBoolPref("toggleFitReset");
 
-  for (var i = 0; i < MenuItems.length; i++) {
-    MenuOptions.setOption(OptionItems[i], nsIPrefBranchObj.getBoolPref(OptionItems[i]));
-    document.getElementById(MenuItems[i]).setAttribute("hidden", false);
+  for (var i = 0; i < menuItems.length; i++) {
+    menuOptions.setOption(optionItems[i], nsIPrefBranchObj.getBoolPref(optionItems[i]));
+    document.getElementById(menuItems[i]).setAttribute("hidden", "false");
   }
 
   setDisableAllChildren(document.getElementById('mouseoptions'), !document.getElementById("imagezoomusemouseoptions").checked);
 
-  document.getElementById('rotateTab').setAttribute("hidden", (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < "1.9"));
+  document.getElementById('rotateTab').setAttribute("hidden", (net.yellowgorilla.imagezoom.globals.getGeckoVersion() < 1.9).toString());
 
   setImageZoomMenu();
 }
@@ -158,27 +152,25 @@ function imagezoom_initializeOptions() {
 function setImageZoomMenu() {
 
   // Display the correct menu items depending on options and whether an image was clicked
-  for (var i = 0; i < MenuItems.length; i++) {
-    if (document.getElementById(MenuItems[i]) === null) {
-      alert(MenuItems[i]);
+  for (var i = 0; i < menuItems.length; i++) {
+    if (document.getElementById(menuItems[i]) === null) {
+      alert(menuItems[i]);
     }
-    document.getElementById(MenuItems[i]).setAttribute("checked", MenuOptions.getOption(OptionItems[i]));
+    document.getElementById(menuItems[i]).setAttribute("checked", menuOptions.getOption(optionItems[i]));
   }
-  // Show the Zoom Image container if there are subitems visible, else hide
-  if (document.getElementById("submenu").getElementsByAttribute("checked", true).length > 0) document.getElementById("context-zoomsub").checked = true;
-  else document.getElementById("context-zoomsub").checked = false;
-  // Show the Rotate Image container if there are subitems visible, else hide
-  if (document.getElementById("subrotatemenu").getElementsByAttribute("checked", true).length > 0) document.getElementById("context-rotatesub").checked = true;
-  else document.getElementById("context-rotatesub").checked = false;
+  // Show the Zoom Image container if there are sub items visible, else hide
+  document.getElementById("context-zoomsub").checked = document.getElementById("submenu").getElementsByAttribute("checked", true).length > 0;
+  // Show the Rotate Image container if there are sub items visible, else hide
+  document.getElementById("context-rotatesub").checked = document.getElementById("subrotatemenu").getElementsByAttribute("checked", true).length > 0;
 }
 
 function setPreference(izCheck) {
   var i;
-  for (i = 0; i < MenuItems.length; i++) {
-    if (izCheck.id == MenuItems[i]) break;
+  for (i = 0; i < menuItems.length; i++) {
+    if (izCheck.id == menuItems[i]) break;
   }
 
-  MenuOptions.setOption(OptionItems[i], izCheck.checked);
+  menuOptions.setOption(optionItems[i], izCheck.checked);
 }
 
 function setOption(izCheck) {

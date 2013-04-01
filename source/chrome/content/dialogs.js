@@ -25,23 +25,21 @@ var gDimWidth;
 var gDimHeight;
 var gDimAspect;
 
-// returns true if it was a numeric keypress and false if it was not
-
-
+// returns true if it was a numeric key press and false if it was not
 function validateKeyPress(e) {
-  switch (e.which) {
+  switch (parseInt(e.which,10)) {
     case 0:
-    //misc
+      //misc
+      return true;
     case 8:
       //backspace
       return true;
+    case 46:
+      // Delete
+      return true;
     default:
-      var key = String.fromCharCode(e.which);
-      if (pIsNumeric(key)) {
-        return true;
-      } else {
-        return false;
-      }
+      var key = String.fromCharCode(parseInt(e.which, 10));
+      return pIsNumeric(key);
   }
 }
 
@@ -53,7 +51,7 @@ function pIsNumeric(sText) {
   var IsNumber = true;
   var Char;
 
-  for (i = 0; i < sText.length && IsNumber === true; i++) {
+  for (var i = 0; i < sText.length && IsNumber === true; i++) {
     Char = sText.charAt(i);
     if (ValidChars.indexOf(Char) == -1) {
       IsNumber = false;
@@ -62,26 +60,7 @@ function pIsNumeric(sText) {
   return IsNumber;
 }
 
-function widthPress(e) {
-  switch (e.which) {
-    case 0:
-    //misc
-    case 8:
-    //backspace
-    case 46:
-      //delete
-      return true;
-    default:
-      var key = String.fromCharCode(e.which);
-      if (pIsNumeric(key) && key != ".") {
-        return true;
-      } else {
-        return false;
-      }
-  }
-}
-
-function widthInput(e) {
+function widthInput() {
   if (gDimAspect.checked) {
     if (pIsNumeric(gDimWidth.value) && (gDimWidth.value !== "")) {
       gDimHeight.value = parseInt((parseInt(gDimWidth.value,10) / gDimRatio) + 0.5, 10);
@@ -91,7 +70,7 @@ function widthInput(e) {
   }
 }
 
-function heightInput(e) {
+function heightInput() {
   if (gDimAspect.checked) {
     if (pIsNumeric(gDimHeight.value) && gDimHeight.value !== "") {
       gDimWidth.value = parseInt((parseInt(gDimHeight.value,10) * gDimRatio) + 0.5,10);
@@ -101,7 +80,7 @@ function heightInput(e) {
   }
 }
 
-function checkInput(e) {
+function checkInput() {
   if (!gDimAspect.checked) {
     if (pIsNumeric(gDimWidth.value) && gDimWidth.value !== "") {
       gDimHeight.value = parseInt((parseInt(gDimWidth.value,10) / gDimRatio) + 0.5,10);
@@ -114,25 +93,15 @@ function checkInput(e) {
 function imagezoom_customZoom() {
   var zoomValue = document.getElementById("customZoom").value;
   if (pIsNumeric(zoomValue)) {
-    if (window.arguments[0] == "Image") {
-      var izoImage = window.arguments[1];
-      izoImage.setZoom(zoomValue);
-    } else {
-      var imgZoomManager = window.arguments[1];
-      imgZoomManager.imageZoom = zoomValue;
-    }
+    var izoImage = window.arguments[1];
+    izoImage.setZoom(zoomValue);
   }
 }
 
 function imagezoom_loadCustomZoom() {
   var zoomValueBox = document.getElementById("customZoom");
-  if (window.arguments[0] == "Image") {
-    var izoImage = window.arguments[1];
-    zoomValueBox.value = izoImage.zoomFactor();
-  } else {
-    var imgZoomManager = window.arguments[1];
-    zoomValueBox.value = imgZoomManager.factorOther;
-  }
+  var izoImage = window.arguments[1];
+  zoomValueBox.value = izoImage.zoomFactor();
 }
 
 function imagezoom_customDim() {
