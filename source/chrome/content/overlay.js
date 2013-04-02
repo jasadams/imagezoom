@@ -167,7 +167,7 @@ function ImageZoomOverlay() {
     izContentVariables().currentImage = null;
     izContentVariables().scrollZooming = false;
 
-    gPanelContainer().removeEventListener("wheel", ScrollImage, true);
+    gPanelContainer().removeEventListener("wheel", scrollImage, true);
     gPanelContainer().removeEventListener("mouseup", izOnMouseUp, true);
     gPanelContainer().removeEventListener("mouseout", izOnMouseOut, true);
   }
@@ -189,7 +189,7 @@ function ImageZoomOverlay() {
     statusTextFld.label = tmpStatus;
   }
 
-  function CallBackStatus() {
+  function callBackStatus() {
     if (izContentVariables().tmpIzImage) {
       reportStatus(izContentVariables().tmpIzImage);
       izContentVariables().tmpIzImage = null;
@@ -311,10 +311,11 @@ function ImageZoomOverlay() {
   function handleWheelEvent(event) {
     if ((izContentVariables().scrollZooming) && (izContentVariables().currentImage) && (nsIPrefBranchObj.getBoolPref("usescroll"))) {
       event.preventDefault();
-      ScrollImage(event.deltaY);
+      scrollImage(event.deltaY);
     }
   }
-  function ScrollImage(wheelIncrement) {
+
+  function scrollImage(wheelIncrement) {
     var imageToScroll;
 
     imageToScroll = izContentVariables().currentImage;
@@ -592,7 +593,7 @@ function ImageZoomOverlay() {
 
         pImage.src = canvas.toDataURL();
 
-        CallBackStatus();
+        callBackStatus();
       };
     }
 
