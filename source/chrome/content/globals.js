@@ -1,22 +1,22 @@
 /* ***** BEGIN LICENSE BLOCK *****
 
-    Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
+ Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
 
-    This file is part of Image Zoom.
+ This file is part of Image Zoom.
 
-    Image Zoom is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; either version 2 of the License, or
-    (at your option) any later version.
+ Image Zoom is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
 
-    Image Zoom is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+ Image Zoom is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
 
-    You should have received a copy of the GNU General Public License
-    along with Image Zoom; if not, write to the Free Software
-    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ You should have received a copy of the GNU General Public License
+ along with Image Zoom; if not, write to the Free Software
+ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
  * ***** END LICENSE BLOCK ***** */
 
@@ -24,120 +24,167 @@ if (!net) var net = {};
 if (!net.yellowgorilla) net.yellowgorilla = {};
 if (!net.yellowgorilla.imagezoom) net.yellowgorilla.imagezoom = {};
 
-net.yellowgorilla.imagezoom.AppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}"
-net.yellowgorilla.imagezoom.AppName = "";
-net.yellowgorilla.imagezoom.AppVersion = "";
+net.yellowgorilla.imagezoom.globals = new ImageZoomGlobals();
 
-net.yellowgorilla.imagezoom.globals = new function () {
+function ImageZoomGlobals() {
+
+  var self = this;
+  var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
+  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
+
+  self.AppName = "";
+  self.AppVersion = "0.0.0";
+
+  self.AppID = "{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}";
+  Components.utils.import("resource://gre/modules/AddonManager.jsm");
 
 
-    this.init = function () {
-		if(this.getGeckoVersion() < "2")
-		{
-	        var gExtensionManager = Components.classes["@mozilla.org/extensions/manager;1"].getService(Components.interfaces.nsIExtensionManager);
-	        var imageZoomExtension = gExtensionManager.getItemForID(net.yellowgorilla.imagezoom.AppID);
-	        net.yellowgorilla.imagezoom.AppName = imageZoomExtension.name.toString();	
-			net.yellowgorilla.imagezoom.AppVersion = imageZoomExtension.version.toString();			
-		}
-		else
-		{
-			Components.utils.import("resource://gre/modules/AddonManager.jsm");
-			AddonManager.getAddonByID(net.yellowgorilla.imagezoom.AppID, function(izExtensionObject) { net.yellowgorilla.imagezoom.AppName = izExtensionObject.name.toString(); net.yellowgorilla.imagezoom.AppVersion = izExtensionObject.version.toString();});
-		}
-	}
-	
-    this.openURL = function (aURL) {
-        if (isFirefox()) {
-            if (window.opener) {
-                window.opener.open(aURL);
-            } else {
-                openDialog("chrome://browser/content/browser.xul", "_blank", "chrome,all,dialog=no", aURL, null, null);
+  AddonManager.getAddonByID(self.AppID, function (izExtensionObject) {
+    self.AppName = izExtensionObject.name.toString();
+    self.AppVersion = izExtensionObject.version.toString();
+
+    var oldVersion = nsIPrefBranchObj.getCharPref("version");
+    var version = self.AppVersion;
+    if (self.newerVersion(oldVersion, version)) {
+      nsIPrefBranchObj.setCharPref("version", version);
+      try {
+        // try to save the prefs
+        nsIPrefServiceObj.savePrefFile(null);
+        setTimeout(function () {
+          var url = "http://imagezoom.yellowgorilla.net/install/?source=install&version=" + version;
+          var tabmail = document.getElementById("tabmail");
+          if (isThunderbird()){
+            if (!tabmail) {
+              // Try opening new tabs in an existing 3pane window
+              var mail3PaneWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                .getService(Components.interfaces.nsIWindowMediator)
+                .getMostRecentWindow("mail:3pane");
+              if (mail3PaneWindow) {
+                tabmail = mail3PaneWindow.document.getElementById("tabmail");
+                mail3PaneWindow.focus();
+              }
             }
-        } else if (isMozilla()) {
-            if (window.opener) {
-                window.opener.open(aURL);
-            } else {
-                openDialog("chrome://navigator/content/navigator.xul", "_blank", "chrome,all,dialog=no", aURL, null, null);
+
+            if (tabmail) {
+              tabmail.openTab("contentTab", {contentPage: url});
             }
-        } else {
-            var uri = Components.classes["@mozilla.org/network/standard-url;1"].createInstance(Components.interfaces.nsIURI);
-            uri.spec = aURL;
-
-            var protocolSvc = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"].getService(Components.interfaces.nsIExternalProtocolService);
-            protocolSvc.loadUrl(uri);
-        }
-    }
-
-    this.getAppName = function () {
-        return net.yellowgorilla.imagezoom.AppName;
-    }
-
-    this.getAppVersion = function () {
-        return net.yellowgorilla.imagezoom.AppVersion;
-    }
-
-    this.initAbout = function () {
-        var extName = this.getAppName();
-        var extVersion = this.getAppVersion();
-        document.title = extName + " " + extVersion;
-        var versionlabel = document.getElementById("versionlabel");
-        versionlabel.setAttribute("value", versionlabel.getAttribute("value") + " " + extVersion);
-    }
-
-
-    this.getGeckoVersion = function () {
-	var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
-		     .getService(Components.interfaces.nsIXULAppInfo);
-
-        var gVersion = xulAppInfo.platformVersion;
-        return gVersion;
-    }
-
-    this.newerVersion = function (oldVersion, newVersion) {
-        var maxToCheck = 2;
-        for (var i = 0; i < maxToCheck; i++) {
-            if (getVersionLevel(oldVersion, i + 1) < getVersionLevel(newVersion, i + 1)) return true;
-            if (getVersionLevel(oldVersion, i + 1) > getVersionLevel(newVersion, i + 1)) return false;
-        }
-
-        return false;
-    }
-
-    // Private Functions
-
-    function getVersionLevel(versionNumber, level) {
-        var beginDot = 0;
-        var endDot = -1;
-        for (var i = 0;
-        (i < level) && (endDot < versionNumber.length); i++) {
-            if (versionNumber.indexOf('.', endDot + 1) >= 0) {
-                beginDot = endDot + 1;
-                endDot = versionNumber.indexOf('.', endDot + 1);
-            } else {
-                beginDot = endDot + 1;
-                endDot = versionNumber.length;
+            else {
+              window.openDialog("chrome://messenger/content/", "_blank",
+                "chrome,dialog=no,all", null,
+                { tabType: "contentTab",
+                  tabParams: {contentPage: url} });
             }
-        }
+          } else {
+            if (typeof gBrowser !== 'undefined') {
+              // We are in Firefox
+              gBrowser.selectedTab = gBrowser.addTab(url);
+            }
+          }
+        }, 100);
+      }
+      catch(error) {
+        // Do nothing
+      }
+    }
+  });
 
-        return (versionNumber.substring(beginDot, endDot)) * 1;
+  self.openURL = function (aURL) {
+    if (isFirefox()) {
+      if (window.opener) {
+        window.opener.open(aURL);
+      } else {
+        openDialog("chrome://browser/content/browser.xul", "_blank", "chrome,all,dialog=no", aURL, null, null);
+      }
+    } else if (isMozilla()) {
+      if (window.opener) {
+        window.opener.open(aURL);
+      } else {
+        openDialog("chrome://navigator/content/navigator.xul", "_blank", "chrome,all,dialog=no", aURL, null, null);
+      }
+    } else {
+      var uri = Components.classes["@mozilla.org/network/standard-url;1"].createInstance(Components.interfaces.nsIURI);
+      uri.spec = aURL;
+
+      var protocolSvc = Components.classes["@mozilla.org/uriloader/external-protocol-service;1"].getService(Components.interfaces.nsIExternalProtocolService);
+      protocolSvc.loadUrl(uri);
     }
-	
-    function isFirefox() {
-    	var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
-		     .getService(Components.interfaces.nsIXULAppInfo);
-        return (xulAppInfo.name.toUpperCase().search(/FIREFOX/gi) != -1);
+  };
+
+  self.getAppName = function () {
+    return self.AppName;
+  };
+
+  self.getAppVersion = function () {
+    return self.AppVersion;
+  };
+
+  self.initAbout = function () {
+    var extName = self.getAppName();
+    var extVersion = self.getAppVersion();
+    document.title = extName + " " + extVersion;
+    var versionLabel = document.getElementById("versionLabel");
+    versionLabel.setAttribute("value", versionLabel.getAttribute("value") + " " + extVersion);
+  };
+
+
+  self.getGeckoVersion = function () {
+    var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+
+    var versionParts = xulAppInfo.platformVersion.split('.');
+    var gVersion;
+    if (versionParts.length>1) {
+      gVersion = parseFloat(versionParts[0] + "." + versionParts[0]);
+    }
+    else {
+      gVersion = parseFloat(versionParts[0]);
+    }
+    return gVersion;
+  };
+
+  self.newerVersion = function (oldVersion, newVersion) {
+    var maxToCheck = 2;
+    for (var i = 0; i < maxToCheck; i++) {
+      if (getVersionLevel(oldVersion, i + 1) < getVersionLevel(newVersion, i + 1)) return true;
+      if (getVersionLevel(oldVersion, i + 1) > getVersionLevel(newVersion, i + 1)) return false;
     }
 
-    function isThunderbird() {
-    	var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
-		     .getService(Components.interfaces.nsIXULAppInfo);
-        return (xulAppInfo.name.toUpperCase().search(/THUNDERBIRD/gi) != -1);
+    return false;
+  };
+
+  // Private Functions
+
+  function getVersionLevel(versionNumber, level) {
+    var beginDot = 0;
+    var endDot = -1;
+    for (var i = 0;
+         (i < level) && (endDot < versionNumber.length); i++) {
+      if (versionNumber.indexOf('.', endDot + 1) >= 0) {
+        beginDot = endDot + 1;
+        endDot = versionNumber.indexOf('.', endDot + 1);
+      } else {
+        beginDot = endDot + 1;
+        endDot = versionNumber.length;
+      }
     }
 
-    function isMozilla() {
-        return (!isFirefox() && !isThunderbird());
-    }
+    return parseInt(versionNumber.substring(beginDot, endDot), 10);
+  }
+
+  function isFirefox() {
+    var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+    return (xulAppInfo.name.toUpperCase().search(/FIREFOX/gi) != -1);
+  }
+
+  function isThunderbird() {
+    var xulAppInfo = Components.classes["@mozilla.org/xre/app-info;1"]
+      .getService(Components.interfaces.nsIXULAppInfo);
+    return (xulAppInfo.name.toUpperCase().search(/THUNDERBIRD/gi) != -1);
+  }
+
+  function isMozilla() {
+    return (!isFirefox() && !isThunderbird());
+  }
 
 }
-
-net.yellowgorilla.imagezoom.globals.init();

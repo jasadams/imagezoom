@@ -1,0 +1,4 @@
+*.xpi
+*.tmp*
+.idea/*
+other/

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- ***** BEGIN LICENSE BLOCK *****
     
-    Copyright (c) 2006-2010  Jason Adams <imagezoom@yellowgorilla.net>
+    Copyright (c) 2006-2013  Jason Adams <imagezoom@yellowgorilla.net>
     
     This file is part of Image Zoom.
 
@@ -35,12 +35,14 @@
     <script type="application/x-javascript" src="chrome://net.yellowgorilla.imagezoom/content/dialogs.js"/>
 
     <vbox flex="1">
-          <hbox>
-          <label value="&iz.customdim.width.label;"/>          
-          <textbox id="dimWidth" size="2" onkeypress="return validateKeyPress(event);" oninput="widthInput(event);"/>
-          <label value="&iz.customdim.height.label;"/>          
-          <textbox id="dimHeight" size="2" onkeypress="return validateKeyPress(event);" oninput="heightInput(event);"/>          
-          </hbox>
-          <checkbox id="dimAspect" class="indent" style="margin-top:5px;" label="&iz.customdim.aspect.label;" onclick="checkInput(event);"/>
+        <hbox>
+            <label value="&iz.customdim.width.label;"/>
+            <textbox id="dimWidth" size="2" onkeypress="return validateKeyPress(event);" oninput="widthInput(event);"/>
+            <label value="&iz.customdim.height.label;"/>
+            <textbox id="dimHeight" size="2" onkeypress="return validateKeyPress(event);"
+                     oninput="heightInput(event);"/>
+        </hbox>
+        <checkbox id="dimAspect" class="indent" style="margin-top:5px;" label="&iz.customdim.aspect.label;"
+                  onclick="checkInput(event);"/>
     </vbox>
 </dialog>
