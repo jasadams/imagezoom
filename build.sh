@@ -16,14 +16,6 @@ mkdir "$TMPDIR"
 
 cp -R source/ "$TMPDIR"
 
-cd "$TMPDIR/chrome/" && zip -r -q "$TMPDIR/imagezoom.jar" "./"
-
-rm -R "$TMPDIR/chrome"
-
-mkdir "$TMPDIR/chrome"
-
-mv "$TMPDIR/imagezoom.jar" "$TMPDIR/chrome/"
-
 XPINAME="imagezoom_${VERSION}.xpi"
 XPIPATH="${DESTDIR}/${XPINAME}"
 if [ -f "$XPIPATH" ]
