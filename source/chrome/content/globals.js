@@ -88,8 +88,6 @@ function ImageZoomGlobals() {
     }
   });
 
-  self.minGeckoForRotate = 2.0;
-
   self.openURL = function (aURL) {
     if (isFirefox()) {
       if (window.opener) {
