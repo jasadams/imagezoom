@@ -94,7 +94,7 @@ function imagezoom_saveOptions() {
 }
 
 function validateOptions() {
-  if ((document.getElementById("imagezoommouseaccess").value == document.getElementById("imagezoomimagefitbutton").value) || (document.getElementById("imagezoommouseaccess").value == document.getElementById("imagezoomimageresetbutton").value) || ((document.getElementById("imagezoomimageresetbutton").value == document.getElementById("imagezoomimagefitbutton").value) && (document.getElementById("imagezoomimagefitbutton").value !== 0))) {
+  if ((document.getElementById("imagezoommouseaccess").value == document.getElementById("imagezoomimagefitbutton").value) || (document.getElementById("imagezoommouseaccess").value == document.getElementById("imagezoomimageresetbutton").value) || ((document.getElementById("imagezoomimageresetbutton").value == document.getElementById("imagezoomimagefitbutton").value) && (document.getElementById("imagezoomimagefitbutton").value !== "0"))) {
     alert(document.getElementById("bundle_ImageZoom").getString("op_mouse_error"));
     return false;
   }
