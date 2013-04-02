@@ -47,25 +47,6 @@ function ImageZoomOverlay() {
 
   //Public Functions
   this.initImageZoom = function () {
-    // Check the version to display initialization page if appropriate
-    var version = net.yellowgorilla.imagezoom.globals.getAppVersion();
-    var oldVersion = nsIPrefBranchObj.getCharPref("version");
-
-    if (net.yellowgorilla.imagezoom.globals.newerVersion(oldVersion, version)) {
-      nsIPrefBranchObj.setCharPref("version", version);
-      try {
-        // try to save the prefs
-        nsIPrefServiceObj.savePrefFile(null);
-        setTimeout(function () {
-          if (typeof gBrowser !== 'undefined') {
-            gBrowser.selectedTab = gBrowser.addTab('http://imagezoom.yellowgorilla.net/install/?source=install&version=' + version);
-          }
-        }, 100);
-      }
-      catch(error) {
-        // Do nothing
-      }
-    }
 
     // For Mozilla and Firefox
     if (document.getElementById("contentAreaContextMenu")) {

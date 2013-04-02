@@ -13,7 +13,7 @@ pref("extensions.imagezoom.usescroll", true);
 pref("extensions.imagezoom.triggerbutton", 3);
 pref("extensions.imagezoom.imagefitbutton", 1);
 pref("extensions.imagezoom.imageresetbutton", 2);
-pref("extensions.imagezoom.scrollvalue", 2);
+pref("extensions.imagezoom.scrollvalue", 5);
 pref("extensions.imagezoom.smCustomDim", true);
 pref("extensions.imagezoom.smCustomZoom", true);
 pref("extensions.imagezoom.smFitWindow", true);

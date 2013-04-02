@@ -44,7 +44,7 @@
         <vbox>
             <text value="&iz.product.name;" class="main-title"
                   onclick="net.yellowgorilla.imagezoom.globals.openURL('http://imagezoom.yellowgorilla.net/?source=about&amp;version=' + net.yellowgorilla.imagezoom.globals.getAppVersion());"/>
-            <text id="versionlabel" value="&iz.about.version.label;" class="version"/>
+            <text id="versionLabel" value="&iz.about.version.label;" class="version"/>
 
             <hbox>
                 <vbox>
