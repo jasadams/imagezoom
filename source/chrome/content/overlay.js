@@ -156,12 +156,6 @@ function ImageZoomOverlay() {
     return content.document.guid1A2D0EC475F54c9189C43656F6E44B68;
   }
 
-  function izOnMouseOut(event) {
-    if ((event.originalTarget.tagName.toLowerCase() == "html") || (event.originalTarget.tagName.toLowerCase() == "xul:browser")) {
-      cancelScrollZoom();
-    }
-  }
-
   function cancelScrollZoom() {
     izContentVariables().linuxImage = null;
     izContentVariables().currentImage = null;
@@ -169,7 +163,6 @@ function ImageZoomOverlay() {
 
     gPanelContainer().removeEventListener("wheel", scrollImage, true);
     gPanelContainer().removeEventListener("mouseup", izOnMouseUp, true);
-    gPanelContainer().removeEventListener("mouseout", izOnMouseOut, true);
   }
 
   function reportStatus(oizImage) {
@@ -225,7 +218,6 @@ function ImageZoomOverlay() {
       gPanelContainer().addEventListener("wheel", handleWheelEvent, true);
       gPanelContainer().addEventListener("mouseup", izOnMouseUp, true);
       gPanelContainer().addEventListener("click", izOnMouseClick, true);
-      gPanelContainer().addEventListener("mouseout", izOnMouseOut, true);
 
       izContentVariables().scrollZooming = true;
       izContentVariables().currentImage = event.originalTarget;
@@ -250,7 +242,8 @@ function ImageZoomOverlay() {
       if (izContentVariables().haveZoomed) {
         event.preventDefault();
         event.stopPropagation();
-      } else {
+      }
+      else {
         // contextmenu on mousedown
         if (contextDisabled) {
           document.popupNode = event.originalTarget;
