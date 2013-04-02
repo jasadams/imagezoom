@@ -51,8 +51,34 @@ function ImageZoomGlobals() {
         // try to save the prefs
         nsIPrefServiceObj.savePrefFile(null);
         setTimeout(function () {
-          if (typeof gBrowser !== 'undefined') {
-            gBrowser.selectedTab = gBrowser.addTab('http://imagezoom.yellowgorilla.net/install/?source=install&version=' + version);
+          var url = "http://imagezoom.yellowgorilla.net/install/?source=install&version=" + version;
+          var tabmail = document.getElementById("tabmail");
+          if (isThunderbird()){
+            if (!tabmail) {
+              // Try opening new tabs in an existing 3pane window
+              var mail3PaneWindow = Components.classes["@mozilla.org/appshell/window-mediator;1"]
+                .getService(Components.interfaces.nsIWindowMediator)
+                .getMostRecentWindow("mail:3pane");
+              if (mail3PaneWindow) {
+                tabmail = mail3PaneWindow.document.getElementById("tabmail");
+                mail3PaneWindow.focus();
+              }
+            }
+
+            if (tabmail) {
+              tabmail.openTab("contentTab", {contentPage: url});
+            }
+            else {
+              window.openDialog("chrome://messenger/content/", "_blank",
+                "chrome,dialog=no,all", null,
+                { tabType: "contentTab",
+                  tabParams: {contentPage: url} });
+            }
+          } else {
+            if (typeof gBrowser !== 'undefined') {
+              // We are in Firefox
+              gBrowser.selectedTab = gBrowser.addTab(url);
+            }
           }
         }, 100);
       }
