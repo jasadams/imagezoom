@@ -30,7 +30,7 @@ function ImageZoomGlobals() {
 
   var self = this;
   var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
+  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
 
   self.AppName = "";
   self.AppVersion = "0.0.0";
