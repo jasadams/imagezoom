@@ -83,6 +83,8 @@ function imagezoom_saveOptions() {
   nsIPrefBranchObj.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
   nsIPrefBranchObj.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
 
+  nsIPrefBranchObj.setBoolPref("showStatus", document.getElementById("imagezoomshowstatus").checked);
+
   nsIPrefBranchObj.setIntPref("triggerbutton", document.getElementById("imagezoommouseaccess").value);
   nsIPrefBranchObj.setIntPref("imagefitbutton", document.getElementById("imagezoomimagefitbutton").value);
   nsIPrefBranchObj.setIntPref("imageresetbutton", document.getElementById("imagezoomimageresetbutton").value);
@@ -127,6 +129,7 @@ function imagezoom_initializeOptions() {
   zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute("value", zoom)[0];
 
   document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
+  document.getElementById("imagezoomshowstatus").checked = nsIPrefBranchObj.getBoolPref("showStatus");
   document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
   document.getElementById("imagezoomtogglefitreset").checked = nsIPrefBranchObj.getBoolPref("toggleFitReset");
 

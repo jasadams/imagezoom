@@ -184,6 +184,12 @@
                         <checkbox id="imagezoomautocenter" label="&iz.options.autocenter.label;"
                                   prefstring="imagezoom.autocenter"/>
                     </groupbox>
+                    <groupbox align="start">
+                        <caption label="&iz.options.misc.label;"/>
+                        <checkbox id="imagezoomshowstatus" label="&iz.options.showStatus.label;"
+                                  prefstring="imagezoom.showStatus"/>
+                    </groupbox>
+
                 </vbox>
             </tabpanel>
             <tabpanel orient="vertical">
