@@ -169,15 +169,17 @@ function ImageZoomOverlay() {
     var statusTextFld;
     var tmpStatus;
     //write the zoom factor to the status bar
-    if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
-      statusTextFld = document.getElementById("statusText");
-    } else {
-      statusTextFld = document.getElementById("statusbar-display");
-    }
+    if (nsIPrefBranchObj.getBoolPref("showStatus")) {
+      if (document.documentElement.getAttribute("windowtype") == "mail:3pane") {
+        statusTextFld = document.getElementById("statusText");
+      } else {
+        statusTextFld = document.getElementById("statusbar-display");
+      }
 
-    tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
-    tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0";
-    statusTextFld.label = tmpStatus;
+      tmpStatus = "Image Zoom: " + oizImage.zoomFactor() + "% | " + imagezoomBundle.getString("widthLabel") + ": " + oizImage.getWidth() + "px | " + imagezoomBundle.getString("heightLabel") + ": " + oizImage.getHeight() + "px";
+      tmpStatus = tmpStatus + " | " + imagezoomBundle.getString("rotateLabel") + ": " + oizImage.getAngle() + "\u00B0";
+      statusTextFld.label = tmpStatus;
+    }
   }
 
   function callBackStatus() {
@@ -302,7 +304,14 @@ function ImageZoomOverlay() {
   function handleWheelEvent(event) {
     if ((izContentVariables().scrollZooming) && (izContentVariables().currentImage) && (nsIPrefBranchObj.getBoolPref("usescroll"))) {
       event.preventDefault();
-      scrollImage(event.deltaY);
+      var scrollAmount;
+      if (Math.abs(event.deltaY) > Math.abs(event.deltaX)) {
+        scrollAmount = event.deltaY;
+      }
+      else {
+        scrollAmount = event.deltaX
+      }
+      scrollImage(scrollAmount);
     }
   }
 
