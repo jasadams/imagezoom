@@ -28,4 +28,5 @@ pref("imagezoom.zoomvalue", 200);
 pref("imagezoom.version", "0.0.0");
 pref("imagezoom.reversescrollzoom", false);
 pref("imagezoom.toggleFitReset", false);
+pref("imagezoom.showStatus", true);
 pref("extensions.{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}.description", "chrome://net.yellowgorilla.imagezoom/locale/imagezoom.properties");
