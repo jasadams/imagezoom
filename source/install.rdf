@@ -4,7 +4,7 @@
   
     <em:id>{1A2D0EC4-75F5-4c91-89C4-3656F6E44B68}</em:id>
     <em:name>Image Zoom</em:name>
-    <em:version>0.5.2</em:version>
+    <em:version>0.5.3</em:version>
     <em:type>2</em:type>
     <em:description>Adds zoom functionality for images</em:description>
     <em:creator>Jason Adams</em:creator>
