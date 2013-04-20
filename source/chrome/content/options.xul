@@ -148,6 +148,17 @@
                                                           prefstring="imagezoom.reversescrollzoom"/>
                                             </hbox>
                                         </row>
+                                        <row align="center" flex="1">
+                                            <label id="imagezoomscrollmodelabelbefore" value="&iz.options.scrollmode.label;" control="imagezoomscrollmode"/>
+                                            <menulist id="imagezoomscrollmode" prefstring="imagezoom.scrollmode">
+                                                <menupopup>
+                                                    <menuitem label="&iz.options.scrollrelative.label;" value="0"/>
+                                                    <menuitem label="&iz.options.scrollabsolute.label;" value="1"/>
+                                                </menupopup>
+                                            </menulist>
+                                            <spacer flex="1" />
+                                            <spacer flex="1" />
+                                        </row>
                                     </rows>
                                 </grid>
                             </hbox>

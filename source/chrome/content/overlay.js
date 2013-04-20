@@ -325,13 +325,25 @@ function ImageZoomOverlay() {
       var oizImage = new IzImage(imageToScroll);
 
       var zoomFactor;
-      if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
-        zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+      if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
+        if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+          zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+        }
+        else {
+          zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
+        }
+        oizImage.zoom(zoomFactor);
       }
       else {
-        zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
+        if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+          zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
+        }
+        else {
+          zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
+        }
+        oizImage.setZoom(zoomFactor);
       }
-      oizImage.zoom(zoomFactor);
+
       reportStatus(oizImage);
     } else {
       cancelScrollZoom();
