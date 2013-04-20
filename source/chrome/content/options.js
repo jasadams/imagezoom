@@ -63,7 +63,7 @@ var menuOptions = new OptionCache();
 
 // Preference Service objects
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
 
 
 // Save options for Firefox and Thunderbird

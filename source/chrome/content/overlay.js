@@ -37,7 +37,7 @@ function ImageZoomOverlay() {
   // Preference Service objects
 
   var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
 
   var izContext;
   var contextDisabled = false;
