@@ -79,6 +79,7 @@ function imagezoom_saveOptions() {
   }
   nsIPrefBranchObj.setBoolPref("usescroll", document.getElementById("imagezoomusemouseoptions").checked);
   nsIPrefBranchObj.setIntPref("scrollvalue", document.getElementById("imagezoomscrollvalue").value);
+  nsIPrefBranchObj.setIntPref("scrollmode", document.getElementById("imagezoomscrollmode").value);
 
   nsIPrefBranchObj.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
   nsIPrefBranchObj.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
@@ -108,6 +109,10 @@ function imagezoom_initializeOptions() {
 
   var scroll = nsIPrefBranchObj.getIntPref("scrollvalue");
   var scrollValueBox = document.getElementById("imagezoomscrollvalue");
+  scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
+
+  scroll = nsIPrefBranchObj.getIntPref("scrollmode");
+  scrollValueBox = document.getElementById("imagezoomscrollmode");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
   scroll = nsIPrefBranchObj.getIntPref("triggerbutton");
