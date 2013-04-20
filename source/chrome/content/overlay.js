@@ -84,6 +84,13 @@ function ImageZoomOverlay() {
     reportStatus(oizImage);
   };
 
+  this.izFitWidth = function () {
+    // Create the object and invoke its Fit to window method passing the autocenter option
+    var oizImage = new IzImage(document.popupNode);
+    oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"), true);
+    reportStatus(oizImage);
+  }
+
   this.izZoomIn = function () {
     //Create the object and invoke its zoom method passing the factor to zoom
     var oizImage = new IzImage(document.popupNode);
@@ -380,8 +387,8 @@ function ImageZoomOverlay() {
   function imageZoomMenu() {
     var menuItems, optionItems, i, oizImage;
 
-    menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "rotatesub-rotate-right", "rotatesub-rotate-left", "rotatesub-rotate-180", "rotatesub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-    optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+    menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-fitwidth", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "rotatesub-rotate-right", "rotatesub-rotate-left", "rotatesub-rotate-180", "rotatesub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-fitwidth", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+    optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmFitWidth", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smFitWidth", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
 
     if (gContextMenu.onImage || gContextMenu.onCanvas) {
       oizImage = new IzImage(document.popupNode);
@@ -626,7 +633,7 @@ function ImageZoomOverlay() {
       return imageDiff < 50;
     }
 
-    function fit(autoScroll) {
+    function fit(autoScroll, widthOnly) {
       if (enabled) {
 
         var bScreen = new BrowserScreen(pImage);
@@ -640,7 +647,7 @@ function ImageZoomOverlay() {
         var imageDim = pImage.width / pImage.height;
 
         // How we zoom depends on the ratio of the image to the screen
-        if (screenDim < imageDim) {
+        if (screenDim < imageDim || widthOnly) {
           setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5, 10));
         }
         else {
@@ -651,7 +658,7 @@ function ImageZoomOverlay() {
         screenHeight = bScreen.getHeight();
         screenWidth = bScreen.getWidth();
 
-        if (screenDim < imageDim) {
+        if (screenDim < imageDim || widthOnly) {
           setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5,10));
         }
         else {
@@ -672,7 +679,7 @@ function ImageZoomOverlay() {
           }
 
           // Now scroll the browser
-          if (screenDim < imageDim) {
+          if (screenDim < imageDim || widthOnly) {
             pImage.ownerDocument.defaultView.scroll(iLeft - (bScreen.getPad()), iTop - ((screenHeight - getDimInt(pImage.style.height)) / 2) - (bScreen.getPad()));
           } else {
             pImage.ownerDocument.defaultView.scroll(iLeft - ((screenWidth - getDimInt(pImage.style.width)) / 2) - (bScreen.getPad()), iTop - (bScreen.getPad()));

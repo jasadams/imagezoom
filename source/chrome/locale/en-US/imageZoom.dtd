@@ -64,6 +64,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Custom Zoom">
 <!ENTITY iz.menu.context.customdim.label "Custom Dimensions">
 <!ENTITY iz.menu.context.imagefit.label "Image Fit">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">

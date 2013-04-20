@@ -71,6 +71,12 @@
                   oncommand="net.yellowgorilla.imagezoom.overlay.izImageFit();"
                   hidden="true"
                 />
+        <menuitem id="context-zoom-fitwidth"
+                  label="&iz.menu.context.imagefitwidth.label;"
+                  insertbefore="context-sep-copyimage"
+                  oncommand="net.yellowgorilla.imagezoom.overlay.izFitWidth();"
+                  hidden="true"
+                />
         <menuitem id="context-zoom-rotate-right"
                   label="&iz.menu.context.imagerotateright.label;"
                   insertbefore="mailContext-sep-copy"
@@ -139,6 +145,11 @@
                 <menuitem id="zoomsub-fit"
                           label="&iz.menu.context.imagefit.label;"
                           oncommand="net.yellowgorilla.imagezoom.overlay.izImageFit();"
+                          hidden="true"
+                        />
+                <menuitem id="zoomsub-fitwidth"
+                          label="&iz.menu.context.imagefitwidth.label;"
+                          oncommand="net.yellowgorilla.imagezoom.overlay.izFitWidth();"
                           hidden="true"
                         />
                 <menuseparator id="zoomsub-s3"

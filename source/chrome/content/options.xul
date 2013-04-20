@@ -258,6 +258,10 @@
                                       label="&iz.menu.context.imagefit.label;"
                                       oncommand="setOption(this);"
                                     />
+                            <checkbox id="context-zoom-fitwidth"
+                                      label="&iz.menu.context.imagefitwidth.label;"
+                                      oncommand="setOption(this);"
+                                    />
                             <hbox>
                                 <vbox flex="1">
                                     <checkbox id="context-zoomsub"
@@ -311,6 +315,11 @@
                                       label="&iz.menu.context.imagefit.label;"
                                       oncommand="setOption(this);"
                                     />
+                            <checkbox id="zoomsub-fitwidth"
+                                      label="&iz.menu.context.imagefitwidth.label;"
+                                      oncommand="setOption(this);"
+                                    />
+
                             <menuseparator/>
                             <menuitem id="zoomsub-z400"
                                       class="dummy"
