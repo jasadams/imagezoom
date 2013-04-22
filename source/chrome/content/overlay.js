@@ -220,7 +220,7 @@ function ImageZoomOverlay() {
        // Prevent zooming from being initiated when an embedded object is clicked apon
        !(targetName == "embed" || targetName == "object")) {
 
-      if (navigator.platform != "Win32" && navigator.platform != "OS/2") {
+      if (navigator.platform !== "Win32" && navigator.platform !== "Win64" && navigator.platform !== "OS/2") {
         addEventListener("popupshowing", disableContextMenu, true);
       }
       izContentVariables().haveZoomed = false;
