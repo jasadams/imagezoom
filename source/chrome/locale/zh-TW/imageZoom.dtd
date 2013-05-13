@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "滾動模式">
 <!ENTITY iz.options.scrollrelative.label "相對定位">
 <!ENTITY iz.options.scrollabsolute.label "絕對定位">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "個別縮放選項">
 <!ENTITY iz.options.context.label "快顯功能表">
 <!ENTITY iz.options.contextdisplay.label "快顯功能表選項">
