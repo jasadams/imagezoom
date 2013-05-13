@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Scroll Mode">
 <!ENTITY iz.options.scrollrelative.label "Relative">
 <!ENTITY iz.options.scrollabsolute.label "Absolute">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Individual Zoom Options">
 <!ENTITY iz.options.misc.label "Miscellaneous Options">
 <!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">

@@ -159,6 +159,42 @@
                                             <spacer flex="1" />
                                             <spacer flex="1" />
                                         </row>
+                                        <row align="center" flex="1">
+                                            <label id="imagezoomrotatekeyslabelbefore" value="&iz.options.rotatekeys.label;" control="imagezoomrotatekeys"/>
+                                            <menulist id="imagezoomrotatekeys" prefstring="imagezoom.rotateKeys">
+                                                <menupopup>
+                                                    <menuitem label="&iz.options.none.label;" value="0"/>
+                                                    <menuitem label="Ctrl" value="1"/>
+                                                    <menuitem label="Alt" value="2"/>
+                                                    <menuitem label="Shift" value="4"/>
+                                                    <menuitem label="Ctrl+Alt" value="3"/>
+                                                    <menuitem label="Ctrl+Shift" value="5"/>
+                                                    <menuitem label="Alt+Shift" value="6"/>
+                                                    <menuitem label="Ctrl+Alt+Shift" value="7"/>
+                                                </menupopup>
+                                            </menulist>
+                                            <spacer flex="1" />
+                                            <spacer flex="1" />
+                                        </row>
+                                        <row align="center" flex="1">
+                                            <label id="imagezoomrotatevaluelabelbefore"
+                                                   value="&iz.options.defaultrotate.label;"
+                                                   control="imagezoomrotatevalue"/>
+                                            <hbox align="center">
+                                                <menulist id="imagezoomrotatevalue" prefstring="imagezoom.rotateValue">
+                                                    <menupopup>
+                                                        <menuitem label="90" value="90"/>
+                                                        <menuitem label="45" value="45"/>
+                                                        <menuitem label="30" value="30"/>
+                                                        <menuitem label="15" value="15"/>
+                                                        <menuitem label="10" value="10"/>
+                                                    </menupopup>
+                                                </menulist>
+                                                <label id="imagezoomrotatevaluelabelafter" value="°"/>
+                                            </hbox>
+                                            <spacer flex="1"/>
+                                            <spacer flex="1" />
+                                        </row>
                                     </rows>
                                 </grid>
                             </hbox>
