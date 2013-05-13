@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Vieritystapa">
 <!ENTITY iz.options.scrollrelative.label "Suhteellinen">
 <!ENTITY iz.options.scrollabsolute.label "Absoluuttinen">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Yksilölliset suurennusvalinnat">
 <!ENTITY iz.options.context.label "Kuvan suurennuksen pikavalikko">
 <!ENTITY iz.options.contextdisplay.label "Pikavalikossa näytettävät kohteet">

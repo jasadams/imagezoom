@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Drsni način">
 <!ENTITY iz.options.scrollrelative.label "Relativno">
 <!ENTITY iz.options.scrollabsolute.label "Absolutno">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Možnosti posamezne povečave">
 <!ENTITY iz.options.context.label "Kontekstni meni">
 <!ENTITY iz.options.contextdisplay.label "Možnosti prikaza v kontekstnem meniju">

@@ -93,6 +93,9 @@ function imagezoom_saveOptions() {
 
   nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
 
+  nsIPrefBranchObj.setIntPref("rotateKeys", document.getElementById("imagezoomrotatekeys").value);
+  nsIPrefBranchObj.setIntPref("rotateValue", document.getElementById("imagezoomrotatevalue").value);
+
   return true;
 }
 
@@ -127,6 +130,14 @@ function imagezoom_initializeOptions() {
 
   scroll = nsIPrefBranchObj.getIntPref("imageresetbutton");
   scrollValueBox = document.getElementById("imagezoomimageresetbutton");
+  scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
+
+  scroll = nsIPrefBranchObj.getIntPref("rotateKeys");
+  scrollValueBox = document.getElementById("imagezoomrotatekeys");
+  scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
+
+  scroll = nsIPrefBranchObj.getIntPref("rotateValue");
+  scrollValueBox = document.getElementById("imagezoomrotatevalue");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
   var zoom = nsIPrefBranchObj.getIntPref("zoomvalue");

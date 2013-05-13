@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Начин за тркалање">
 <!ENTITY iz.options.scrollrelative.label "релативен">
 <!ENTITY iz.options.scrollabsolute.label "апсолутен">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Засебни подесувања за зголемување">
 <!ENTITY iz.options.context.label "Контекстно мени">
 <!ENTITY iz.options.contextdisplay.label "Подесувања за приказ на контекстното мени">

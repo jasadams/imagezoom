@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Rullmetod">
 <!ENTITY iz.options.scrollrelative.label "Relativ">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Individuella zoomalternativ">
 <!ENTITY iz.options.context.label "Meny vid högerklick">
 <!ENTITY iz.options.contextdisplay.label "Visningsalternativ högerklicksmeny">

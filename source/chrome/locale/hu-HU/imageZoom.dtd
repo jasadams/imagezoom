@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Görgetési mód">
 <!ENTITY iz.options.scrollrelative.label "Relatív">
 <!ENTITY iz.options.scrollabsolute.label "Abszolút">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Képek egyedi átméretezése">
 <!ENTITY iz.options.context.label "Helyzetérzékeny menü">
 <!ENTITY iz.options.contextdisplay.label "Kép helyzetérzékeny menü">

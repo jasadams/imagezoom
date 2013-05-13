@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Mode de desplaçament">
 <!ENTITY iz.options.scrollrelative.label "Relatiu">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Opcions de zoom individual">
 <!ENTITY iz.options.context.label "Menú contextual">
 <!ENTITY iz.options.contextdisplay.label "Opcions de visualització del menú contextual">

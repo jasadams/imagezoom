@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "Рэжым скролінга">
 <!ENTITY iz.options.scrollrelative.label "Relative">
 <!ENTITY iz.options.scrollabsolute.label "Абсалютна">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Індывідуальныя опцыі павелічэння">
 <!ENTITY iz.options.context.label "Кантэкстнае меню">
 <!ENTITY iz.options.contextdisplay.label "Адлюстраванне Кантэкстнага меню">

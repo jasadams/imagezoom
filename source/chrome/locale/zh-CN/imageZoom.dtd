@@ -23,6 +23,8 @@
 <!ENTITY iz.options.scrollmode.label "滚轮模式">
 <!ENTITY iz.options.scrollrelative.label "相对滚动">
 <!ENTITY iz.options.scrollabsolute.label "绝对滚动">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "单一缩放选项">
 <!ENTITY iz.options.context.label "右健菜单">
 <!ENTITY iz.options.contextdisplay.label "右健菜单显示选项">
