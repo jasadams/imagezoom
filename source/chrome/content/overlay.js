@@ -44,6 +44,7 @@ function ImageZoomOverlay() {
   var imagezoomBundle;
   var contextSubMenuLabel;
   var contextRotateMenuLabel;
+  var lastRotating = 0;
 
   //Public Functions
   this.initImageZoom = function () {
@@ -280,10 +281,18 @@ function ImageZoomOverlay() {
             event.stopPropagation();
             izContentVariables().haveZoomed = true;
             oizImage = new IzImage(event.originalTarget);
-            if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100) {
-              oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
+            var rotateKeys = nsIPrefBranchObj.getIntPref("rotateKeys");
+            if(rotateKeys && modifierKeys(event) == rotateKeys){ //alt+click: reset rotation
+              oizImage.rotate(0 - oizImage.getAngle());
             } else {
-              oizImage.setZoom(100);
+              if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100) {
+                oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
+              } else if(oizImage.zoomFactor() != 100) {
+                oizImage.setZoom(100);
+              } else if(targetName == "img") {
+                var img = event.originalTarget;
+                oizImage.setDimension(img.naturalWidth, img.naturalHeight);
+              }
             }
             reportStatus(oizImage);
             break;
@@ -318,40 +327,48 @@ function ImageZoomOverlay() {
       else {
         scrollAmount = event.deltaX
       }
-      scrollImage(scrollAmount);
+      scrollImage(scrollAmount, event);
     }
   }
 
-  function scrollImage(wheelIncrement) {
+  function modifierKeys(event){
+    return event.ctrlKey + event.altKey*2 + event.shiftKey*4;
+  }
+
+  function scrollImage(wheelIncrement, event) {
     var imageToScroll;
 
     imageToScroll = izContentVariables().currentImage;
 
     if (imageToScroll !== null) {
-      izContentVariables().haveZoomed = true;
-      var oizImage = new IzImage(imageToScroll);
+        izContentVariables().haveZoomed = true;
+        var oizImage = new IzImage(imageToScroll);
+        var rotateKeys = nsIPrefBranchObj.getIntPref("rotateKeys");
+        if(rotateKeys && modifierKeys(event) == rotateKeys){ //alt+scroll: rotate image
+          oizImage.rotate(nsIPrefBranchObj.getIntPref("rotateValue") * (wheelIncrement > 0 ? 1 : -1));
+        } else{
+          var zoomFactor;
+          if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
+            if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+              zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+            }
+            else {
+              zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
+            }
+            oizImage.zoom(zoomFactor);
+          }
+          else {
+            if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+              zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
+            }
+            else {
+              zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
+            }
+            oizImage.setZoom(zoomFactor);
+          }
 
-      var zoomFactor;
-      if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
-        if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
-          zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+          reportStatus(oizImage);
         }
-        else {
-          zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
-        }
-        oizImage.zoom(zoomFactor);
-      }
-      else {
-        if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
-          zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
-        }
-        else {
-          zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
-        }
-        oizImage.setZoom(zoomFactor);
-      }
-
-      reportStatus(oizImage);
     } else {
       cancelScrollZoom();
     }
@@ -536,6 +553,9 @@ function ImageZoomOverlay() {
 
     // Rotate the image by a number of degrees
     function rotate(degrees) {
+      if(new Date().getTime() - lastRotating < 300) return;
+      lastRotating = new Date().getTime();
+
       var theta;
       if (degrees >= 0) {
         theta = (Math.PI * degrees) / 180;
