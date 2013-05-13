@@ -44,7 +44,7 @@ function ImageZoomOverlay() {
   var imagezoomBundle;
   var contextSubMenuLabel;
   var contextRotateMenuLabel;
-  var lastRotating = 0;
+  var rotateTime = 0;
 
   //Public Functions
   this.initImageZoom = function () {
@@ -553,8 +553,28 @@ function ImageZoomOverlay() {
 
     // Rotate the image by a number of degrees
     function rotate(degrees) {
-      if(new Date().getTime() - lastRotating < 300) return;
-      lastRotating = new Date().getTime();
+      if(new Date().getTime() - rotateTime < 200) return;
+      rotateTime = new Date().getTime();
+
+      if (!pImage.originalData) {
+        pImage.originalData = {
+          src: pImage.tagName.toLowerCase() === "canvas" ? pImage.getDataUrl() : pImage.src,
+          naturalWidth: pImage.naturalWidth,
+          naturalHeight: pImage.naturalHeight,
+          originalPxWidth: pImage.originalPxWidth,
+          originalPxHeight: pImage.originalPxHeight,
+          originalWidth: pImage.originalWidth,
+          originalHeight: pImage.originalHeight
+        };
+      }
+      var origData = pImage.originalData;
+
+      if (degrees < 0) {
+        degrees = (pImage.angle + 360 + (degrees % 360)) % 360;
+      }
+      else {
+        degrees = (pImage.angle + degrees) % 360;
+      }
 
       var theta;
       if (degrees >= 0) {
@@ -563,24 +583,19 @@ function ImageZoomOverlay() {
       else {
         theta = (Math.PI * (360 + degrees)) / 180;
       }
-      var costheta = Math.cos(theta);
-      var sintheta = Math.sin(theta);
+      var costheta = Math.abs(Math.cos(theta));
+      var sintheta = Math.abs(Math.sin(theta));
 
       var canvas = pImage.ownerDocument.createElement("canvas");
 
       // Set the new width of the image
-      canvas.width = Math.abs(costheta * pImage.naturalWidth) + Math.abs(sintheta * pImage.naturalHeight);
+      canvas.width = costheta * origData.naturalWidth + sintheta * origData.naturalHeight;
 
       // Set the new height of the image
-      canvas.height = Math.abs(costheta * pImage.naturalHeight) + Math.abs(sintheta * pImage.naturalWidth);
+      canvas.height = costheta * origData.naturalHeight + sintheta * origData.naturalWidth;
 
       canvas.oImage = new Image();
-
-      if (pImage.tagName.toLowerCase() === "canvas") {
-        canvas.oImage.src = pImage.toDataURL();
-      } else {
-        canvas.oImage.src = pImage.src;
-      }
+      canvas.oImage.src = origData.src;
 
       canvas.oImage.onload = function () {
 
@@ -588,38 +603,31 @@ function ImageZoomOverlay() {
         ctx.save();
 
         if (theta <= Math.PI / 2) {
-          ctx.translate(sintheta * canvas.oImage.naturalHeight, 0);
+          ctx.translate(Math.sin(theta) * canvas.oImage.naturalHeight, 0);
         }
         else if (theta <= Math.PI) {
-          ctx.translate(canvas.width, -costheta * canvas.oImage.naturalHeight);
+          ctx.translate(canvas.width, -Math.cos(theta) * canvas.oImage.naturalHeight);
         }
         else if (theta <= 1.5 * Math.PI) {
-          ctx.translate(-costheta * canvas.oImage.naturalWidth, canvas.height);
+          ctx.translate(-Math.cos(theta) * canvas.oImage.naturalWidth, canvas.height);
         }
         else {
-          ctx.translate(0, -sintheta * canvas.oImage.naturalWidth);
+          ctx.translate(0, -Math.sin(theta) * canvas.oImage.naturalWidth);
         }
 
-        var tmpOriginalPxWidth = Math.abs(costheta * pImage.originalPxWidth) + Math.abs(sintheta * pImage.originalPxHeight);
-        var tmpOriginalPxHeight = Math.abs(costheta * pImage.originalPxHeight) + Math.abs(sintheta * pImage.originalPxWidth);
-        pImage.originalPxWidth = tmpOriginalPxWidth;
-        pImage.originalPxHeight = tmpOriginalPxHeight;
-        var tmpOriginalWidth = Math.abs(costheta * pImage.originalWidth) + Math.abs(sintheta * pImage.originalHeight);
-        var tmpOriginalHeight = Math.abs(costheta * pImage.originalHeight) + Math.abs(sintheta * pImage.originalWidth);
-        pImage.originalWidth = tmpOriginalWidth;
-        pImage.originalHeight = tmpOriginalHeight;
-        var tmpStypeWidth = Math.abs(costheta * getDimInt(pImage.style.width)) + Math.abs(sintheta * getDimInt(pImage.style.height));
-        var tmpStyleHeight = Math.abs(costheta * getDimInt(pImage.style.height)) + Math.abs(sintheta * getDimInt(pImage.style.width));
-        pImage.style.width = tmpStypeWidth + getDimUnit(pImage.style.width);
-        pImage.style.height = tmpStyleHeight + getDimUnit(pImage.style.height);
+        pImage.originalPxWidth = costheta * origData.originalPxWidth + sintheta * origData.originalPxHeight;
+        pImage.originalPxHeight = costheta * origData.originalPxHeight + sintheta * origData.originalPxWidth;
+        pImage.originalWidth = costheta * origData.originalWidth + sintheta * origData.originalHeight;
+        pImage.originalHeight = costheta * origData.originalHeight + sintheta * origData.originalWidth;
 
-        if (degrees < 0) {
-          pImage.angle = (pImage.angle + 360 + (degrees % 360)) % 360;
-        }
-        else {
-          pImage.angle = (pImage.angle + degrees) % 360;
-        }
+        var t0 = Math.PI * pImage.angle / 180;
+        var natWidthT0 = Math.abs(Math.cos(t0)) * origData.naturalWidth + Math.abs(Math.sin(t0)) * origData.naturalHeight;
+        var natHeightT0 = Math.abs(Math.cos(t0)) * origData.naturalHeight + Math.abs(Math.sin(t0)) * origData.naturalWidth;
 
+        pImage.style.width = (getDimInt(pImage.style.width) * canvas.width / natWidthT0) + getDimUnit(pImage.style.width);
+        pImage.style.height = (getDimInt(pImage.style.height) * canvas.height / natHeightT0) + getDimUnit(pImage.style.height);
+
+        pImage.angle = degrees;
 
         ctx.rotate(theta);
         ctx.clearRect(0, 0, canvas.oImage.naturalWidth, canvas.oImage.naturalHeight);
