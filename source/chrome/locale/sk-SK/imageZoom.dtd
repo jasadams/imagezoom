@@ -23,8 +23,6 @@
 <!ENTITY iz.options.scrollmode.label "Režim rolovania">
 <!ENTITY iz.options.scrollrelative.label "Relatívne">
 <!ENTITY iz.options.scrollabsolute.label "Absolútne">
-<!ENTITY iz.options.rotatekeys.label "Rotate Key">
-<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Osobné nastavenie rozmerov">
 <!ENTITY iz.options.context.label "Položky kontextovej ponuky">
 <!ENTITY iz.options.contextdisplay.label "Nastavenia položiek kontextovej ponuky">

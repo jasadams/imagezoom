@@ -23,8 +23,6 @@
 <!ENTITY iz.options.scrollmode.label "Modul de scalare:">
 <!ENTITY iz.options.scrollrelative.label "Relativ">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
-<!ENTITY iz.options.rotatekeys.label "Rotate Key">
-<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Opțiuni pentru scalarea individuală">
 <!ENTITY iz.options.context.label "Meniu contextual">
 <!ENTITY iz.options.contextdisplay.label "Opțiunile meniului contextual">

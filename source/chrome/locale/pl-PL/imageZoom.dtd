@@ -23,8 +23,6 @@
 <!ENTITY iz.options.scrollmode.label "Tryb przewijania">
 <!ENTITY iz.options.scrollrelative.label "Względne">
 <!ENTITY iz.options.scrollabsolute.label "Absolutne">
-<!ENTITY iz.options.rotatekeys.label "Rotate Key">
-<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Osobiste opcje powiększania">
 <!ENTITY iz.options.context.label "Menu kontekstowe">
 <!ENTITY iz.options.contextdisplay.label "Menu kontekstowe - opcje">

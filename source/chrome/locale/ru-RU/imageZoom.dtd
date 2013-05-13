@@ -23,8 +23,6 @@
 <!ENTITY iz.options.scrollmode.label "Режим скроллинга">
 <!ENTITY iz.options.scrollrelative.label "Относительный">
 <!ENTITY iz.options.scrollabsolute.label "Абсолютный">
-<!ENTITY iz.options.rotatekeys.label "Rotate Key">
-<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Индивидуальные параметры увеличения">
 <!ENTITY iz.options.context.label "Контекстное меню">
 <!ENTITY iz.options.contextdisplay.label "Отображение контекстного меню">

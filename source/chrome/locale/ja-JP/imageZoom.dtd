@@ -23,8 +23,6 @@
 <!ENTITY iz.options.scrollmode.label "スクロール">
 <!ENTITY iz.options.scrollrelative.label "相対距離">
 <!ENTITY iz.options.scrollabsolute.label "絶対距離">
-<!ENTITY iz.options.rotatekeys.label "Rotate Key">
-<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "画像の拡大 オプション">
 <!ENTITY iz.options.context.label "コンテキストメニュー">
 <!ENTITY iz.options.contextdisplay.label "コンテキストメニュー 表示オプション">

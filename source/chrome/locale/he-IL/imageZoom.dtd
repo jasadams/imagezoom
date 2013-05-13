@@ -23,8 +23,6 @@
 <!ENTITY iz.options.scrollmode.label "מצב גלילה">
 <!ENTITY iz.options.scrollrelative.label "קשור">
 <!ENTITY iz.options.scrollabsolute.label "קבוע">
-<!ENTITY iz.options.rotatekeys.label "Rotate Key">
-<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "אפשרויות זום בלעדיות">
 <!ENTITY iz.options.context.label "תפריט העכבר">
 <!ENTITY iz.options.contextdisplay.label "תפריט העכבר אפשרויות מראה">
