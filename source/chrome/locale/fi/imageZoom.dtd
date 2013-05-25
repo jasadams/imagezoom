@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "Vieritystapa">
 <!ENTITY iz.options.scrollrelative.label "Suhteellinen">
 <!ENTITY iz.options.scrollabsolute.label "Absoluuttinen">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Yksilölliset suurennusvalinnat">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Kuvan suurennuksen pikavalikko">
 <!ENTITY iz.options.contextdisplay.label "Pikavalikossa näytettävät kohteet">
 <!ENTITY iz.options.tabs.contextmenu.label "Pikavalikon kohteet">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Mukautettu koko">
 <!ENTITY iz.menu.context.customdim.label "Mukautetut mittasuhteet">
 <!ENTITY iz.menu.context.imagefit.label "Sovita kuva">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Kierrä kuvaa">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Kierrä oikealle">

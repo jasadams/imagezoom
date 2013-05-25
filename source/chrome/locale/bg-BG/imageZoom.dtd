@@ -1,0 +1,79 @@
+<!ENTITY iz.product.name "Увеличение на изображения">
+<!ENTITY iz.product.version "0.4">
+<!ENTITY iz.about.version.label "Версия">
+<!ENTITY iz.about.createdby.label "Създадено от">
+<!ENTITY iz.about.help.label "Помощ">
+<!ENTITY iz.about.help.description "Помощ за конфигуриране и работа с Увеличение на изображения">
+<!ENTITY iz.about.forums.label "Форуми">
+<!ENTITY iz.about.forums.description "Поддръжка, Предложения, Бъгове">
+<!ENTITY iz.about.walkthrough.label "Репетиция">
+<!ENTITY iz.about.walkthrough.description "Кратък преглед на възможностите на Image Zoom">
+<!ENTITY iz.about.close.label "Затвори">
+<!ENTITY iz.customzoom.label "Въведете коефициент на увеличение">
+<!ENTITY iz.customzoom.title "Задаване на Увеличението">
+<!ENTITY iz.customdim.width.label "Ширина:">
+<!ENTITY iz.customdim.height.label "Височина:">
+<!ENTITY iz.customdim.title "Височина:">
+<!ENTITY iz.customdim.aspect.label "Поддържани пропорции">
+<!ENTITY iz.options.label "Предпочитания">
+<!ENTITY iz.options.help.label "Страница за помощ">
+<!ENTITY iz.options.defaultzoom.label "Коефициент на Приближаване/Отдалечаване">
+<!ENTITY iz.options.showautofit.label "Показвай Автопобиране в Главното Меню">
+<!ENTITY iz.options.defaultscroll.label "Превъртай стъпките на увеличение">
+<!ENTITY iz.options.scrollmode.label "Режим на превъртане">
+<!ENTITY iz.options.scrollrelative.label "Относително">
+<!ENTITY iz.options.scrollabsolute.label "Абсолютно">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
+<!ENTITY iz.options.singlezoom.label "Индивидуални опции за увеличение">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
+<!ENTITY iz.options.context.label "Контекстно меню">
+<!ENTITY iz.options.contextdisplay.label "Опции за показване на Контекстното меню">
+<!ENTITY iz.options.tabs.contextmenu.label "Редове в Контекстното меню">
+<!ENTITY iz.options.tabs.zoomcontext.label "Контекстно меню за увеличение">
+<!ENTITY iz.options.tabs.rotatecontext.label "Контекстно меню за Завъртане">
+<!ENTITY iz.options.tabs.main.label "Общи">
+<!ENTITY iz.options.reversescroll.label "Обратно превъртане">
+<!ENTITY iz.options.autocenter.label "Автоматично центриране на изображението при използване на Побиране на изображението">
+<!ENTITY iz.options.mouseaccess.label1 "Достъп до функциите при натискане на">
+<!ENTITY iz.options.mouseaccess.label2 "бутон на мишката">
+<!ENTITY iz.options.imagefit.label "Бутон за побиране на изображението">
+<!ENTITY iz.options.imagereset.label "Бутон за нулиране на изображението">
+<!ENTITY iz.options.none.label "Изключен">
+<!ENTITY iz.options.lmb.label "Ляво">
+<!ENTITY iz.options.mmb.label "Среден">
+<!ENTITY iz.options.rmb.label "Десен">
+<!ENTITY iz.options.usemouse.label "Използвай функциите на мишката">
+<!ENTITY iz.options.contextdescription.label "Маркирайте елементите, които искате да бъдат показани в Контекстното меню на изображението">
+<!ENTITY iz.options.togglefitreset.label "Превключване на Запълвне на изображението/Нулиране">
+<!ENTITY iz.options.menudummy.view.label "Покажи изображението">
+<!ENTITY iz.options.menudummy.view.accesskey "i">
+<!ENTITY iz.options.menudummy.contents.label "Копирай изображението">
+<!ENTITY iz.options.menudummy.contents.accesskey "y">
+<!ENTITY iz.options.menudummy.image.label "Място за копиране на изображението">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Запази изображението като">
+<!ENTITY iz.options.menudummy.save.accesskey "v">
+<!ENTITY iz.menu.context.zoomimage.label "Увеличи изображението">
+<!ENTITY iz.menu.context.zoomimage.accesskey "з">
+<!ENTITY iz.menu.context.increase.label "+Увеличение">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Нулиране на изображението">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Намаляване на изображението">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Задаване на Увеличение">
+<!ENTITY iz.menu.context.customdim.label "Задаване на Размери">
+<!ENTITY iz.menu.context.imagefit.label "Изпълване на изображението">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
+<!ENTITY iz.menu.context.rotateimage.label "Завъртане на изображението">
+<!ENTITY iz.menu.context.rotateimage.accesskey "Р">
+<!ENTITY iz.menu.context.imagerotateright.label "Завъртане надясно">
+<!ENTITY iz.menu.context.rotate.right.accesskey "R">
+<!ENTITY iz.menu.context.imagerotateleft.label "Завъртане наляво">
+<!ENTITY iz.menu.context.rotate.left.accesskey "L">
+<!ENTITY iz.menu.context.imagerotate180.label "Завъртане на 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "1">
+<!ENTITY iz.menu.context.imagerotatereset.label "Нулиране на завъртането">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "s">

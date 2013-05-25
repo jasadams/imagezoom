@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "滾動模式">
 <!ENTITY iz.options.scrollrelative.label "相對定位">
 <!ENTITY iz.options.scrollabsolute.label "絕對定位">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "個別縮放選項">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "快顯功能表">
 <!ENTITY iz.options.contextdisplay.label "快顯功能表選項">
 <!ENTITY iz.options.tabs.contextmenu.label "快顯功能表項目">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "自定比例">
 <!ENTITY iz.menu.context.customdim.label "自定大小">
 <!ENTITY iz.menu.context.imagefit.label "最適縮放">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">

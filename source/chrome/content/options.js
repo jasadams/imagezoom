@@ -57,13 +57,13 @@ function OptionCache() {
 }
 
 // Context Menu Items and their option equivalents
-var menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-rotate-right", "zoomsub-rotate-left", "zoomsub-rotate-180", "zoomsub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-var optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+var menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-fitwidth", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "zoomsub-rotate-right", "zoomsub-rotate-left", "zoomsub-rotate-180", "zoomsub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-fitwidth", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+var optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmFitWidth", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smFitWidth", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
 var menuOptions = new OptionCache();
 
 // Preference Service objects
 var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
 
 
 // Save options for Firefox and Thunderbird
@@ -84,12 +84,17 @@ function imagezoom_saveOptions() {
   nsIPrefBranchObj.setIntPref("zoomvalue", document.getElementById("imagezoomzoomvalue").value);
   nsIPrefBranchObj.setBoolPref("autocenter", document.getElementById("imagezoomautocenter").checked);
 
+  nsIPrefBranchObj.setBoolPref("showStatus", document.getElementById("imagezoomshowstatus").checked);
+
   nsIPrefBranchObj.setIntPref("triggerbutton", document.getElementById("imagezoommouseaccess").value);
   nsIPrefBranchObj.setIntPref("imagefitbutton", document.getElementById("imagezoomimagefitbutton").value);
   nsIPrefBranchObj.setIntPref("imageresetbutton", document.getElementById("imagezoomimageresetbutton").value);
   nsIPrefBranchObj.setBoolPref("toggleFitReset", document.getElementById("imagezoomtogglefitreset").checked);
 
   nsIPrefBranchObj.setBoolPref("reversescrollzoom", document.getElementById("imagezoomreversescroll").checked);
+
+  nsIPrefBranchObj.setIntPref("rotateKeys", document.getElementById("imagezoomrotatekeys").value);
+  nsIPrefBranchObj.setIntPref("rotateValue", document.getElementById("imagezoomrotatevalue").value);
 
   return true;
 }
@@ -127,11 +132,20 @@ function imagezoom_initializeOptions() {
   scrollValueBox = document.getElementById("imagezoomimageresetbutton");
   scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
 
+  scroll = nsIPrefBranchObj.getIntPref("rotateKeys");
+  scrollValueBox = document.getElementById("imagezoomrotatekeys");
+  scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
+
+  scroll = nsIPrefBranchObj.getIntPref("rotateValue");
+  scrollValueBox = document.getElementById("imagezoomrotatevalue");
+  scrollValueBox.selectedItem = scrollValueBox.getElementsByAttribute("value", scroll)[0];
+
   var zoom = nsIPrefBranchObj.getIntPref("zoomvalue");
   var zoomValueBox = document.getElementById("imagezoomzoomvalue");
   zoomValueBox.selectedItem = zoomValueBox.getElementsByAttribute("value", zoom)[0];
 
   document.getElementById("imagezoomautocenter").checked = nsIPrefBranchObj.getBoolPref("autocenter");
+  document.getElementById("imagezoomshowstatus").checked = nsIPrefBranchObj.getBoolPref("showStatus");
   document.getElementById("imagezoomreversescroll").checked = nsIPrefBranchObj.getBoolPref("reversescrollzoom");
   document.getElementById("imagezoomtogglefitreset").checked = nsIPrefBranchObj.getBoolPref("toggleFitReset");
 

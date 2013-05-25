@@ -30,7 +30,7 @@ function ImageZoomGlobals() {
 
   var self = this;
   var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
 
   self.AppName = "";
   self.AppVersion = "0.0.0";
@@ -46,6 +46,10 @@ function ImageZoomGlobals() {
     var oldVersion = nsIPrefBranchObj.getCharPref("version");
     var version = self.AppVersion;
     if (self.newerVersion(oldVersion, version)) {
+      // Migrate the preferences for older all versions prior to 0.6
+      if(self.newerVersion(oldVersion, '0.6')) {
+        migratePrefs();
+      }
       nsIPrefBranchObj.setCharPref("version", version);
       try {
         // try to save the prefs
@@ -153,6 +157,34 @@ function ImageZoomGlobals() {
   };
 
   // Private Functions
+
+  function migratePrefs() {
+
+    // Note for MOZILLA ADDON REVIEWERS.
+    // This function is meant to run only once to migrate the user's image zoom preferences from the original "imagezoom" branch
+    // (in use since 2004) to the new "extensions.imagezoom" branch. I realise that I am still writing to the old branch by clearing
+    // the user prefs on the old branch but I figure that cleaning up after myself is the best way forward. This way, Image zoom still
+    // retains ownership of the "imagezoom" branch during this transition period. In a future version of Image Zoom, after enough time has
+    // passed that 99% of people have upgraded, I will completely remove this code and therefore give up ownership of the "imagezoom" pref branch
+    // entirely
+
+    var oldNsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+    var boolPrefs = ['autocenter','mmCustomDim', 'mmCustomZoom', 'mmFitWindow', 'mmReset', 'mmZoomIO', 'mmZoomPcts','mmRotateRight', 'mmRotateLeft', 'mmRotate180', 'mmRotateReset', 'usescroll','smCustomDim','smCustomZoom','smFitWindow','smReset','smZoomIO','smZoomPcts','smRotateRight','smRotateLeft','smRotate180','smRotateReset','reversescrollzoom','toggleFitReset','showStatus'];
+    var intPrefs = ['triggerbutton', 'imagefitbutton', 'imageresetbutton', 'scrollmode', 'scrollvalue','zoomvalue'];
+    boolPrefs.forEach(function(prefName){
+      if (oldNsIPrefBranchObj.prefHasUserValue(prefName)) {
+        nsIPrefBranchObj.setBoolPref(prefName, oldNsIPrefBranchObj.getBoolPref(prefName));
+        oldNsIPrefBranchObj.clearUserPref(prefName);
+      }
+    });
+    intPrefs.forEach(function(prefName){
+      if (oldNsIPrefBranchObj.prefHasUserValue(prefName)) {
+        nsIPrefBranchObj.setIntPref(prefName, oldNsIPrefBranchObj.getIntPref(prefName));
+        oldNsIPrefBranchObj.clearUserPref(prefName);
+      }
+    });
+    oldNsIPrefBranchObj.clearUserPref('version');
+  }
 
   function getVersionLevel(versionNumber, level) {
     var beginDot = 0;

@@ -5,7 +5,7 @@
 <!ENTITY iz.about.help.label "Pomoc">
 <!ENTITY iz.about.help.description "Pomoc w konfiguracji Image Zoom">
 <!ENTITY iz.about.forums.label "Forum">
-<!ENTITY iz.about.forums.description "Pomoc, Sugestie, Błędy">
+<!ENTITY iz.about.forums.description "Wsparcie, Sugestie, Błędy">
 <!ENTITY iz.about.walkthrough.label "Przegląd">
 <!ENTITY iz.about.walkthrough.description "Charakterystyka funkcji Image Zoom">
 <!ENTITY iz.about.close.label "Zamknij">
@@ -22,8 +22,12 @@
 <!ENTITY iz.options.defaultscroll.label "Powiększaj przewijając o">
 <!ENTITY iz.options.scrollmode.label "Tryb przewijania">
 <!ENTITY iz.options.scrollrelative.label "Względne">
-<!ENTITY iz.options.scrollabsolute.label "Absolutne">
+<!ENTITY iz.options.scrollabsolute.label "Bezwzględne">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Osobiste opcje powiększania">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Menu kontekstowe">
 <!ENTITY iz.options.contextdisplay.label "Menu kontekstowe - opcje">
 <!ENTITY iz.options.tabs.contextmenu.label "Elementy menu kontekstowego">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Własne powiększenie">
 <!ENTITY iz.menu.context.customdim.label "Własne rozmiary">
 <!ENTITY iz.menu.context.imagefit.label "Dopasuj obrazek">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Obróć obrazek">
 <!ENTITY iz.menu.context.rotateimage.accesskey "O">
 <!ENTITY iz.menu.context.imagerotateright.label "Obróć w prawo">

@@ -37,13 +37,14 @@ function ImageZoomOverlay() {
   // Preference Service objects
 
   var nsIPrefServiceObj = Components.classes["@mozilla.org/preferences-service;1"].getService(Components.interfaces.nsIPrefService);
-  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("imagezoom.");
+  var nsIPrefBranchObj = nsIPrefServiceObj.getBranch("extensions.imagezoom.");
 
   var izContext;
   var contextDisabled = false;
   var imagezoomBundle;
   var contextSubMenuLabel;
   var contextRotateMenuLabel;
+  var rotateTime = 0;
 
   //Public Functions
   this.initImageZoom = function () {
@@ -83,6 +84,13 @@ function ImageZoomOverlay() {
     oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
     reportStatus(oizImage);
   };
+
+  this.izFitWidth = function () {
+    // Create the object and invoke its Fit to window method passing the autocenter option
+    var oizImage = new IzImage(document.popupNode);
+    oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"), true);
+    reportStatus(oizImage);
+  }
 
   this.izZoomIn = function () {
     //Create the object and invoke its zoom method passing the factor to zoom
@@ -213,7 +221,7 @@ function ImageZoomOverlay() {
        // Prevent zooming from being initiated when an embedded object is clicked apon
        !(targetName == "embed" || targetName == "object")) {
 
-      if (navigator.platform != "Win32" && navigator.platform != "OS/2") {
+      if (navigator.platform !== "Win32" && navigator.platform !== "Win64" && navigator.platform !== "OS/2") {
         addEventListener("popupshowing", disableContextMenu, true);
       }
       izContentVariables().haveZoomed = false;
@@ -273,10 +281,18 @@ function ImageZoomOverlay() {
             event.stopPropagation();
             izContentVariables().haveZoomed = true;
             oizImage = new IzImage(event.originalTarget);
-            if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100) {
-              oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
+            var rotateKeys = nsIPrefBranchObj.getIntPref("rotateKeys");
+            if(rotateKeys && modifierKeys(event) == rotateKeys){ //alt+click: reset rotation
+              oizImage.rotate(0 - oizImage.getAngle());
             } else {
-              oizImage.setZoom(100);
+              if (nsIPrefBranchObj.getBoolPref("toggleFitReset") && oizImage.zoomFactor() == 100) {
+                oizImage.fit(nsIPrefBranchObj.getBoolPref("autocenter"));
+              } else if(oizImage.zoomFactor() != 100) {
+                oizImage.setZoom(100);
+              } else if(targetName == "img") {
+                var img = event.originalTarget;
+                oizImage.setDimension(img.naturalWidth, img.naturalHeight);
+              }
             }
             reportStatus(oizImage);
             break;
@@ -311,40 +327,48 @@ function ImageZoomOverlay() {
       else {
         scrollAmount = event.deltaX
       }
-      scrollImage(scrollAmount);
+      scrollImage(scrollAmount, event);
     }
   }
 
-  function scrollImage(wheelIncrement) {
+  function modifierKeys(event){
+    return event.ctrlKey + event.altKey*2 + event.shiftKey*4;
+  }
+
+  function scrollImage(wheelIncrement, event) {
     var imageToScroll;
 
     imageToScroll = izContentVariables().currentImage;
 
     if (imageToScroll !== null) {
-      izContentVariables().haveZoomed = true;
-      var oizImage = new IzImage(imageToScroll);
+        izContentVariables().haveZoomed = true;
+        var oizImage = new IzImage(imageToScroll);
+        var rotateKeys = nsIPrefBranchObj.getIntPref("rotateKeys");
+        if(rotateKeys && modifierKeys(event) == rotateKeys){ //alt+scroll: rotate image
+          oizImage.rotate(nsIPrefBranchObj.getIntPref("rotateValue") * (wheelIncrement > 0 ? 1 : -1));
+        } else{
+          var zoomFactor;
+          if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
+            if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+              zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+            }
+            else {
+              zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
+            }
+            oizImage.zoom(zoomFactor);
+          }
+          else {
+            if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
+              zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
+            }
+            else {
+              zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
+            }
+            oizImage.setZoom(zoomFactor);
+          }
 
-      var zoomFactor;
-      if (nsIPrefBranchObj.getIntPref("scrollmode") == 0) {
-        if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
-          zoomFactor = 1 / (1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100));
+          reportStatus(oizImage);
         }
-        else {
-          zoomFactor = 1 + (nsIPrefBranchObj.getIntPref("scrollvalue") / 100);
-        }
-        oizImage.zoom(zoomFactor);
-      }
-      else {
-        if (((wheelIncrement < 0) && !nsIPrefBranchObj.getBoolPref("reversescrollzoom")) || ((wheelIncrement > 0) && nsIPrefBranchObj.getBoolPref("reversescrollzoom"))) {
-          zoomFactor = oizImage.zoomFactor() - nsIPrefBranchObj.getIntPref("scrollvalue");
-        }
-        else {
-          zoomFactor = oizImage.zoomFactor() + nsIPrefBranchObj.getIntPref("scrollvalue");
-        }
-        oizImage.setZoom(zoomFactor);
-      }
-
-      reportStatus(oizImage);
     } else {
       cancelScrollZoom();
     }
@@ -380,8 +404,8 @@ function ImageZoomOverlay() {
   function imageZoomMenu() {
     var menuItems, optionItems, i, oizImage;
 
-    menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "rotatesub-rotate-right", "rotatesub-rotate-left", "rotatesub-rotate-180", "rotatesub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
-    optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
+    menuItems = new Array("context-zoom-zin", "context-zoom-zout", "context-zoom-zreset", "context-zoom-zcustom", "context-zoom-dcustom", "context-zoom-fit", "context-zoom-fitwidth", "context-zoom-rotate-right", "context-zoom-rotate-left", "context-zoom-rotate-180", "context-zoom-rotate-reset", "zoomsub-zin", "zoomsub-zout", "zoomsub-zreset", "rotatesub-rotate-right", "rotatesub-rotate-left", "rotatesub-rotate-180", "rotatesub-rotate-reset", "zoomsub-zcustom", "zoomsub-dcustom", "zoomsub-fit", "zoomsub-fitwidth", "zoomsub-z400", "zoomsub-z200", "zoomsub-z150", "zoomsub-z125", "zoomsub-z100", "zoomsub-z75", "zoomsub-z50", "zoomsub-z25", "zoomsub-z10");
+    optionItems = new Array("mmZoomIO", "mmZoomIO", "mmReset", "mmCustomZoom", "mmCustomDim", "mmFitWindow", "mmFitWidth", "mmRotateRight", "mmRotateLeft", "mmRotate180", "mmRotateReset", "smZoomIO", "smZoomIO", "smReset", "smRotateRight", "smRotateLeft", "smRotate180", "smRotateReset", "smCustomZoom", "smCustomDim", "smFitWindow", "smFitWidth", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts", "smZoomPcts");
 
     if (gContextMenu.onImage || gContextMenu.onCanvas) {
       oizImage = new IzImage(document.popupNode);
@@ -529,6 +553,29 @@ function ImageZoomOverlay() {
 
     // Rotate the image by a number of degrees
     function rotate(degrees) {
+      if(new Date().getTime() - rotateTime < 200) return;
+      rotateTime = new Date().getTime();
+
+      if (!pImage.originalData) {
+        pImage.originalData = {
+          src: pImage.tagName.toLowerCase() === "canvas" ? pImage.getDataUrl() : pImage.src,
+          naturalWidth: pImage.naturalWidth,
+          naturalHeight: pImage.naturalHeight,
+          originalPxWidth: pImage.originalPxWidth,
+          originalPxHeight: pImage.originalPxHeight,
+          originalWidth: pImage.originalWidth,
+          originalHeight: pImage.originalHeight
+        };
+      }
+      var origData = pImage.originalData;
+
+      if (degrees < 0) {
+        degrees = (pImage.angle + 360 + (degrees % 360)) % 360;
+      }
+      else {
+        degrees = (pImage.angle + degrees) % 360;
+      }
+
       var theta;
       if (degrees >= 0) {
         theta = (Math.PI * degrees) / 180;
@@ -536,24 +583,19 @@ function ImageZoomOverlay() {
       else {
         theta = (Math.PI * (360 + degrees)) / 180;
       }
-      var costheta = Math.cos(theta);
-      var sintheta = Math.sin(theta);
+      var costheta = Math.abs(Math.cos(theta));
+      var sintheta = Math.abs(Math.sin(theta));
 
       var canvas = pImage.ownerDocument.createElement("canvas");
 
       // Set the new width of the image
-      canvas.width = Math.abs(costheta * pImage.naturalWidth) + Math.abs(sintheta * pImage.naturalHeight);
+      canvas.width = costheta * origData.naturalWidth + sintheta * origData.naturalHeight;
 
       // Set the new height of the image
-      canvas.height = Math.abs(costheta * pImage.naturalHeight) + Math.abs(sintheta * pImage.naturalWidth);
+      canvas.height = costheta * origData.naturalHeight + sintheta * origData.naturalWidth;
 
       canvas.oImage = new Image();
-
-      if (pImage.tagName.toLowerCase() === "canvas") {
-        canvas.oImage.src = pImage.toDataURL();
-      } else {
-        canvas.oImage.src = pImage.src;
-      }
+      canvas.oImage.src = origData.src;
 
       canvas.oImage.onload = function () {
 
@@ -561,38 +603,31 @@ function ImageZoomOverlay() {
         ctx.save();
 
         if (theta <= Math.PI / 2) {
-          ctx.translate(sintheta * canvas.oImage.naturalHeight, 0);
+          ctx.translate(Math.sin(theta) * canvas.oImage.naturalHeight, 0);
         }
         else if (theta <= Math.PI) {
-          ctx.translate(canvas.width, -costheta * canvas.oImage.naturalHeight);
+          ctx.translate(canvas.width, -Math.cos(theta) * canvas.oImage.naturalHeight);
         }
         else if (theta <= 1.5 * Math.PI) {
-          ctx.translate(-costheta * canvas.oImage.naturalWidth, canvas.height);
+          ctx.translate(-Math.cos(theta) * canvas.oImage.naturalWidth, canvas.height);
         }
         else {
-          ctx.translate(0, -sintheta * canvas.oImage.naturalWidth);
+          ctx.translate(0, -Math.sin(theta) * canvas.oImage.naturalWidth);
         }
 
-        var tmpOriginalPxWidth = Math.abs(costheta * pImage.originalPxWidth) + Math.abs(sintheta * pImage.originalPxHeight);
-        var tmpOriginalPxHeight = Math.abs(costheta * pImage.originalPxHeight) + Math.abs(sintheta * pImage.originalPxWidth);
-        pImage.originalPxWidth = tmpOriginalPxWidth;
-        pImage.originalPxHeight = tmpOriginalPxHeight;
-        var tmpOriginalWidth = Math.abs(costheta * pImage.originalWidth) + Math.abs(sintheta * pImage.originalHeight);
-        var tmpOriginalHeight = Math.abs(costheta * pImage.originalHeight) + Math.abs(sintheta * pImage.originalWidth);
-        pImage.originalWidth = tmpOriginalWidth;
-        pImage.originalHeight = tmpOriginalHeight;
-        var tmpStypeWidth = Math.abs(costheta * getDimInt(pImage.style.width)) + Math.abs(sintheta * getDimInt(pImage.style.height));
-        var tmpStyleHeight = Math.abs(costheta * getDimInt(pImage.style.height)) + Math.abs(sintheta * getDimInt(pImage.style.width));
-        pImage.style.width = tmpStypeWidth + getDimUnit(pImage.style.width);
-        pImage.style.height = tmpStyleHeight + getDimUnit(pImage.style.height);
+        pImage.originalPxWidth = costheta * origData.originalPxWidth + sintheta * origData.originalPxHeight;
+        pImage.originalPxHeight = costheta * origData.originalPxHeight + sintheta * origData.originalPxWidth;
+        pImage.originalWidth = costheta * origData.originalWidth + sintheta * origData.originalHeight;
+        pImage.originalHeight = costheta * origData.originalHeight + sintheta * origData.originalWidth;
 
-        if (degrees < 0) {
-          pImage.angle = (pImage.angle + 360 + (degrees % 360)) % 360;
-        }
-        else {
-          pImage.angle = (pImage.angle + degrees) % 360;
-        }
+        var t0 = Math.PI * pImage.angle / 180;
+        var natWidthT0 = Math.abs(Math.cos(t0)) * origData.naturalWidth + Math.abs(Math.sin(t0)) * origData.naturalHeight;
+        var natHeightT0 = Math.abs(Math.cos(t0)) * origData.naturalHeight + Math.abs(Math.sin(t0)) * origData.naturalWidth;
 
+        pImage.style.width = (getDimInt(pImage.style.width) * canvas.width / natWidthT0) + getDimUnit(pImage.style.width);
+        pImage.style.height = (getDimInt(pImage.style.height) * canvas.height / natHeightT0) + getDimUnit(pImage.style.height);
+
+        pImage.angle = degrees;
 
         ctx.rotate(theta);
         ctx.clearRect(0, 0, canvas.oImage.naturalWidth, canvas.oImage.naturalHeight);
@@ -626,7 +661,7 @@ function ImageZoomOverlay() {
       return imageDiff < 50;
     }
 
-    function fit(autoScroll) {
+    function fit(autoScroll, widthOnly) {
       if (enabled) {
 
         var bScreen = new BrowserScreen(pImage);
@@ -640,7 +675,7 @@ function ImageZoomOverlay() {
         var imageDim = pImage.width / pImage.height;
 
         // How we zoom depends on the ratio of the image to the screen
-        if (screenDim < imageDim) {
+        if (screenDim < imageDim || widthOnly) {
           setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5, 10));
         }
         else {
@@ -651,7 +686,7 @@ function ImageZoomOverlay() {
         screenHeight = bScreen.getHeight();
         screenWidth = bScreen.getWidth();
 
-        if (screenDim < imageDim) {
+        if (screenDim < imageDim || widthOnly) {
           setDimension(screenWidth, parseInt(screenWidth / imageDim + 0.5,10));
         }
         else {
@@ -672,7 +707,7 @@ function ImageZoomOverlay() {
           }
 
           // Now scroll the browser
-          if (screenDim < imageDim) {
+          if (screenDim < imageDim || widthOnly) {
             pImage.ownerDocument.defaultView.scroll(iLeft - (bScreen.getPad()), iTop - ((screenHeight - getDimInt(pImage.style.height)) / 2) - (bScreen.getPad()));
           } else {
             pImage.ownerDocument.defaultView.scroll(iLeft - ((screenWidth - getDimInt(pImage.style.width)) / 2) - (bScreen.getPad()), iTop - (bScreen.getPad()));

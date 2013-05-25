@@ -7,7 +7,7 @@
 <!ENTITY iz.about.forums.label "Forums">
 <!ENTITY iz.about.forums.description "Ondersteuning, suggesties, fouten">
 <!ENTITY iz.about.walkthrough.label "Analyse">
-<!ENTITY iz.about.walkthrough.description "Kort overzicht van ImageZoom mogelijkheden">
+<!ENTITY iz.about.walkthrough.description "Kort overzicht van ImageZoom-mogelijkheden">
 <!ENTITY iz.about.close.label "Sluiten">
 <!ENTITY iz.customzoom.label "Voer zoomfactor in">
 <!ENTITY iz.customzoom.title "Aangepaste zoom">
@@ -18,12 +18,16 @@
 <!ENTITY iz.options.label "Voorkeuren">
 <!ENTITY iz.options.help.label "Help pagina">
 <!ENTITY iz.options.defaultzoom.label "Zoom in/uit factor">
-<!ENTITY iz.options.showautofit.label "AutoFit in menu Beeld &gt; ImageZoom weergeven">
+<!ENTITY iz.options.showautofit.label "AutoFit in algemeen menu weergeven">
 <!ENTITY iz.options.defaultscroll.label "Scroll zoom toename">
 <!ENTITY iz.options.scrollmode.label "Scroll mode">
 <!ENTITY iz.options.scrollrelative.label "relatief">
 <!ENTITY iz.options.scrollabsolute.label "absoluut">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Individuele zoom opties">
+<!ENTITY iz.options.misc.label "Diverse opties">
+<!ENTITY iz.options.showStatus.label "Afbeeldingszoomstatus in de statusbalk weergeven">
 <!ENTITY iz.options.context.label "Contextmenu">
 <!ENTITY iz.options.contextdisplay.label "Contextmenu opties weergeven">
 <!ENTITY iz.options.tabs.contextmenu.label "Contextmenu onderdelen">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Aangepaste zoom">
 <!ENTITY iz.menu.context.customdim.label "Aangepaste afmetingen">
 <!ENTITY iz.menu.context.imagefit.label "ImageFit">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Afbeelding draaien">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rechtsom roteren">

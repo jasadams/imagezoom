@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "Tekerlek modu">
 <!ENTITY iz.options.scrollrelative.label "Nisbi">
 <!ENTITY iz.options.scrollabsolute.label "Kesin">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Tek resmi yakınlaştırma seçenekleri">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Açılır menü">
 <!ENTITY iz.options.contextdisplay.label "Açılır Menü Görünüm Seçenekleri">
 <!ENTITY iz.options.tabs.contextmenu.label "Açılır Menü Öğeleri">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Özel yakınlaştırma">
 <!ENTITY iz.menu.context.customdim.label "Özel ebatlar">
 <!ENTITY iz.menu.context.imagefit.label "Resmi sığdır">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Resmi döndür">
 <!ENTITY iz.menu.context.rotateimage.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateright.label "Sağa döndür">

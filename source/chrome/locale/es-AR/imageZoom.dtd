@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "Configuración de scroll">
 <!ENTITY iz.options.scrollrelative.label "Relativo">
 <!ENTITY iz.options.scrollabsolute.label "Absoluto">
+<!ENTITY iz.options.rotatekeys.label "Tecla de rotación">
+<!ENTITY iz.options.defaultrotate.label "Incremento de ángulo de rotación">
 <!ENTITY iz.options.singlezoom.label "Opciones de zoom individual">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Menú contextual">
 <!ENTITY iz.options.contextdisplay.label "Opciones de visualización del menú contextual">
 <!ENTITY iz.options.tabs.contextmenu.label "Items del menú contextual">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Zoom personalizado">
 <!ENTITY iz.menu.context.customdim.label "Dimensiones personalizadas">
 <!ENTITY iz.menu.context.imagefit.label "Ajustar imagen">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Rotar imagen">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotar a derecha">

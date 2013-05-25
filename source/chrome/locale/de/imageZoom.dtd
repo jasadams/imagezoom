@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "Scroll-Modus:">
 <!ENTITY iz.options.scrollrelative.label "Relativ">
 <!ENTITY iz.options.scrollabsolute.label "Absolut">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Zoom-Einstellungen für Einzelgrafiken">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Kontextmenü">
 <!ENTITY iz.options.contextdisplay.label "Anzeigeoptionen für das Kontextmenü">
 <!ENTITY iz.options.tabs.contextmenu.label "Kontextmenü">
@@ -56,12 +60,13 @@
 <!ENTITY iz.menu.context.increase.label "+  Grafik vergrößern">
 <!ENTITY iz.menu.context.increase.accesskey "+">
 <!ENTITY iz.menu.context.reset.label "&lt;  Grafik zurücksetzen">
-<!ENTITY iz.menu.context.reset.accesskey "&lt;">
+<!ENTITY iz.menu.context.reset.accesskey "<">
 <!ENTITY iz.menu.context.decrease.label "-   Grafik verkleinern">
 <!ENTITY iz.menu.context.decrease.accesskey "-">
 <!ENTITY iz.menu.context.customzoom.label "Benutzerdefinierter Zoom">
 <!ENTITY iz.menu.context.customdim.label "Benutzerdefinierte Maße">
 <!ENTITY iz.menu.context.imagefit.label "Grafik an Fenstergröße anpassen">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Grafik drehen">
 <!ENTITY iz.menu.context.rotateimage.accesskey "d">
 <!ENTITY iz.menu.context.imagerotateright.label "Nach Rechts drehen">
