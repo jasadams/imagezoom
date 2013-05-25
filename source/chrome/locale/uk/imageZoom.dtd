@@ -26,6 +26,8 @@
 <!ENTITY iz.options.rotatekeys.label "Rotate Key">
 <!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Індивідуальні опції збільшення">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Контекстне меню">
 <!ENTITY iz.options.contextdisplay.label "Відображення Контекстного меню">
 <!ENTITY iz.options.tabs.contextmenu.label "Пункти контекстного меню">
@@ -64,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Особлива зміна">
 <!ENTITY iz.menu.context.customdim.label "Особливі розміри">
 <!ENTITY iz.menu.context.imagefit.label "На весь екран">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Поворот зображення">
 <!ENTITY iz.menu.context.rotateimage.accesskey "П">
 <!ENTITY iz.menu.context.imagerotateright.label "Повернути праворуч">

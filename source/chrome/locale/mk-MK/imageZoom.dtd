@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "Начин за тркалање">
 <!ENTITY iz.options.scrollrelative.label "релативен">
 <!ENTITY iz.options.scrollabsolute.label "апсолутен">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "Засебни подесувања за зголемување">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "Контекстно мени">
 <!ENTITY iz.options.contextdisplay.label "Подесувања за приказ на контекстното мени">
 <!ENTITY iz.options.tabs.contextmenu.label "Делови на контекстното мени">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "Степен на зголемување">
 <!ENTITY iz.menu.context.customdim.label "Димензии">
 <!ENTITY iz.menu.context.imagefit.label "Прилагоди ја сликата">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Ротирај ја сликата">
 <!ENTITY iz.menu.context.rotateimage.accesskey "Р">
 <!ENTITY iz.menu.context.imagerotateright.label "Ротирај Десно">

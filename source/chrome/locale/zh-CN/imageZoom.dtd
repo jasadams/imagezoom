@@ -26,6 +26,8 @@
 <!ENTITY iz.options.rotatekeys.label "Rotate Key">
 <!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "单一缩放选项">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "右健菜单">
 <!ENTITY iz.options.contextdisplay.label "右健菜单显示选项">
 <!ENTITY iz.options.tabs.contextmenu.label "右健菜单项">
@@ -64,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "自定义缩放">
 <!ENTITY iz.menu.context.customdim.label "自定义尺寸">
 <!ENTITY iz.menu.context.imagefit.label "适度缩放">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "Rotate Image">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "Rotate Right">

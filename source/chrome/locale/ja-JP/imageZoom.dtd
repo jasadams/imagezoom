@@ -23,7 +23,11 @@
 <!ENTITY iz.options.scrollmode.label "スクロール">
 <!ENTITY iz.options.scrollrelative.label "相対距離">
 <!ENTITY iz.options.scrollabsolute.label "絶対距離">
+<!ENTITY iz.options.rotatekeys.label "Rotate Key">
+<!ENTITY iz.options.defaultrotate.label "Rotate Angle Increments">
 <!ENTITY iz.options.singlezoom.label "画像の拡大 オプション">
+<!ENTITY iz.options.misc.label "Miscellaneous Options">
+<!ENTITY iz.options.showStatus.label "Show Image Zoom status in the Status Bar">
 <!ENTITY iz.options.context.label "コンテキストメニュー">
 <!ENTITY iz.options.contextdisplay.label "コンテキストメニュー 表示オプション">
 <!ENTITY iz.options.tabs.contextmenu.label "コンテキストメニューの項目">
@@ -62,6 +66,7 @@
 <!ENTITY iz.menu.context.customzoom.label "数値を入力して拡大/縮小">
 <!ENTITY iz.menu.context.customdim.label "数値を入力してサイズの変更">
 <!ENTITY iz.menu.context.imagefit.label "ウィンドウに合わせる">
+<!ENTITY iz.menu.context.imagefitwidth.label "Fit Width">
 <!ENTITY iz.menu.context.rotateimage.label "画像の回転">
 <!ENTITY iz.menu.context.rotateimage.accesskey "R">
 <!ENTITY iz.menu.context.imagerotateright.label "右方向へ回転">

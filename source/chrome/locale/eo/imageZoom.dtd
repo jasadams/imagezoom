@@ -1,0 +1,79 @@
+<!ENTITY iz.product.name "Image Zoom">
+<!ENTITY iz.product.version "0.6">
+<!ENTITY iz.about.version.label "Versio">
+<!ENTITY iz.about.createdby.label "Kreita de">
+<!ENTITY iz.about.help.label "Helpo">
+<!ENTITY iz.about.help.description "Helpo por agordi kaj uzi Image Zoom">
+<!ENTITY iz.about.forums.label "Forumoj">
+<!ENTITY iz.about.forums.description "Subteno, proponoj, cimoj">
+<!ENTITY iz.about.walkthrough.label "Prezento">
+<!ENTITY iz.about.walkthrough.description "Mallonga prezento de la funkcioj de Image Zoom">
+<!ENTITY iz.about.close.label "Fermi">
+<!ENTITY iz.customzoom.label "Entajpi zoman faktoron">
+<!ENTITY iz.customzoom.title "Laŭvola zomo">
+<!ENTITY iz.customdim.width.label "Larĝo:">
+<!ENTITY iz.customdim.height.label "Alto:">
+<!ENTITY iz.customdim.title "Laŭvola grandeco">
+<!ENTITY iz.customdim.aspect.label "Konservi grandorejŝon">
+<!ENTITY iz.options.label "Preferoj">
+<!ENTITY iz.options.help.label "Helpopaĝo">
+<!ENTITY iz.options.defaultzoom.label "Zoma/Malzoma faktoro">
+<!ENTITY iz.options.showautofit.label "Vidigi alĝustigan funkcion en ĉefmenuo">
+<!ENTITY iz.options.defaultscroll.label "Krementaĵo de ruluma zomo">
+<!ENTITY iz.options.scrollmode.label "Rulumreĝimo">
+<!ENTITY iz.options.scrollrelative.label "Relativa">
+<!ENTITY iz.options.scrollabsolute.label "Absoluta">
+<!ENTITY iz.options.rotatekeys.label "Turnada klavo">
+<!ENTITY iz.options.defaultrotate.label "Turnadaj angulaj alkrementoj">
+<!ENTITY iz.options.singlezoom.label "Individuaj zomopcioj">
+<!ENTITY iz.options.misc.label "Diversaj agordoj">
+<!ENTITY iz.options.showStatus.label "Montri staton de Image Zoom en statlinio">
+<!ENTITY iz.options.context.label "Kunteksta menuo">
+<!ENTITY iz.options.contextdisplay.label "Vidigopcioj de kunteksta menuo">
+<!ENTITY iz.options.tabs.contextmenu.label "Enskriboj de kunteksta menuo">
+<!ENTITY iz.options.tabs.zoomcontext.label "Zoma kuntekstmenuo">
+<!ENTITY iz.options.tabs.rotatecontext.label "Turnada kunteksta menuo">
+<!ENTITY iz.options.tabs.main.label "Ĝenerala">
+<!ENTITY iz.options.reversescroll.label "Reen rulumi">
+<!ENTITY iz.options.autocenter.label "Aŭtomate centrigi bildojn per alĝustiga funkcio">
+<!ENTITY iz.options.mouseaccess.label1 "Atingi funkciojn per la">
+<!ENTITY iz.options.mouseaccess.label2 "musbutono.">
+<!ENTITY iz.options.imagefit.label "Bildalĝustiga butono">
+<!ENTITY iz.options.imagereset.label "Butono 'Restaŭri bildon'">
+<!ENTITY iz.options.none.label "Malŝaltita">
+<!ENTITY iz.options.lmb.label "maldekstra">
+<!ENTITY iz.options.mmb.label "meza">
+<!ENTITY iz.options.rmb.label "dekstra">
+<!ENTITY iz.options.usemouse.label "Uzi musfunkciojn">
+<!ENTITY iz.options.contextdescription.label "Kontroli la enskribojn, kiujn vi volas vidigi en la kunteksta bildmenuo">
+<!ENTITY iz.options.togglefitreset.label "Alternigi akomodi/restaŭri bildon">
+<!ENTITY iz.options.menudummy.view.label "Vidigi bildon">
+<!ENTITY iz.options.menudummy.view.accesskey "v">
+<!ENTITY iz.options.menudummy.contents.label "Kopii bildon">
+<!ENTITY iz.options.menudummy.contents.accesskey "i">
+<!ENTITY iz.options.menudummy.image.label "Kopii bildlokon">
+<!ENTITY iz.options.menudummy.image.accesskey "o">
+<!ENTITY iz.options.menudummy.save.label "Konservi bildon kiel">
+<!ENTITY iz.options.menudummy.save.accesskey "k">
+<!ENTITY iz.menu.context.zoomimage.label "Zomi bildon">
+<!ENTITY iz.menu.context.zoomimage.accesskey "Z">
+<!ENTITY iz.menu.context.increase.label "+ Zomi">
+<!ENTITY iz.menu.context.increase.accesskey "+">
+<!ENTITY iz.menu.context.reset.label "= Originala grandeco">
+<!ENTITY iz.menu.context.reset.accesskey "=">
+<!ENTITY iz.menu.context.decrease.label "- Malzomi">
+<!ENTITY iz.menu.context.decrease.accesskey "-">
+<!ENTITY iz.menu.context.customzoom.label "Propra zomo">
+<!ENTITY iz.menu.context.customdim.label "Propraj dimensioj">
+<!ENTITY iz.menu.context.imagefit.label "Akomodi bildon">
+<!ENTITY iz.menu.context.imagefitwidth.label "Adapti larĝecon">
+<!ENTITY iz.menu.context.rotateimage.label "Turni bildon">
+<!ENTITY iz.menu.context.rotateimage.accesskey "T">
+<!ENTITY iz.menu.context.imagerotateright.label "Turni dekstren">
+<!ENTITY iz.menu.context.rotate.right.accesskey "D">
+<!ENTITY iz.menu.context.imagerotateleft.label "Turni maldekstren">
+<!ENTITY iz.menu.context.rotate.left.accesskey "M">
+<!ENTITY iz.menu.context.imagerotate180.label "Turni je 180°">
+<!ENTITY iz.menu.context.rotate.180.accesskey "U">
+<!ENTITY iz.menu.context.imagerotatereset.label "Returni">
+<!ENTITY iz.menu.context.rotate.reset.accesskey "R">
