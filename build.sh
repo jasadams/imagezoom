@@ -14,6 +14,7 @@ fi
 
 mkdir "$TMPDIR"
 
+find ./source -iname ".DS_Store" -exec rm "{}" \;
 cp -R source/ "$TMPDIR"
 
 XPINAME="imagezoom_${VERSION}.xpi"
