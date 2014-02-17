@@ -198,7 +198,8 @@ function ImageZoomOverlay() {
   }
 
   function disableContextMenu(event) {
-    if (document.popupNode.tagName.toLowerCase() == "img" || document.popupNode.tagName.toLowerCase() == "canvas") {
+    if (document.popupNode && (document.popupNode.tagName.toLowerCase() == "img"
+                               || document.popupNode.tagName.toLowerCase() == "canvas")) {
       izContentVariables().linuxImage = document.popupNode;
       izContext = event.originalTarget;
       event.preventDefault();
