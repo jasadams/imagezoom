@@ -30,7 +30,8 @@
         <em:maxVersion>18.*</em:maxVersion>
       </Description>
     </em:targetApplication>
-  <!-- SeaMonkey -->
+    
+    <!-- SeaMonkey -->
     <em:targetApplication>
   	  <Description>
         <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
@@ -38,6 +39,15 @@
         <em:maxVersion>2.17.*</em:maxVersion>
       </Description>
     </em:targetApplication>
+
+    <!-- Palemoon -->
+    <em:targetApplication>
+      <Description>
+        <em:id>{8de7fcbb-c55c-4fbe-bfc5-fc555c87dbc4}</em:id>
+        <em:minVersion>28.9.3.0</em:minVersion>
+        <em:maxVersion>29.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
   </Description>
 </RDF>
-
